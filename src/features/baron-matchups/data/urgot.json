@@ -1,0 +1,86 @@
+{
+  "enemy": "urgot",
+  "patch": "draft",
+  "reviewed": false,
+  "summary": "Short-range juggernaut who shreds melee champions with his leg shotguns and W machine-gun. He's tanky and slow, and his E flip is his only real engage. Out-range him or dodge E, and he can't trade.",
+  "threats": [
+    "Passive (Echoing Flames): each leg fires a shotgun blast in a cone; standing in front of him in melee range eats them all.",
+    "E (Disdain) charges forward and gives him a shield; if it hits you, he flips you behind him and stuns you.",
+    "W (Purge) auto-fires at nearby enemies. In melee range you take constant damage.",
+    "R (Fear Beyond Death) at 5 executes below 25% HP and fears everyone nearby."
+  ],
+  "matchups": [
+    {
+      "champion": "fiora",
+      "rating": "good",
+      "confidence": "medium",
+      "why": "Riposte parries Urgot's E flip and stuns him back, and vitals deal true %HP damage through his tankiness. Fiora can dash in to hit a vital and dash out before his shotguns fire again.",
+      "trading": [
+        "Hold W (Riposte) for his E flip; parry it and stun him back.",
+        "Lunge onto a vital, then Lunge out before his leg shotguns cycle.",
+        "Approach from the side rather than straight on; his shotguns fire in front of his legs.",
+        "Stay above 25% HP when his R is up; it executes."
+      ],
+      "early": "Trade on vitals from level 1, but don't stand in melee range for extended trades.",
+      "spike": "At 5 his R executes below 25%. Your R heal zone keeps you above that threshold.",
+      "wave": "Slow-push and take plates while he can't trade back.",
+      "jungle": "He's slow without E. Gank once he's used it.",
+      "build": "Conqueror. Bruiser items; armor boots.",
+      "remember": "Parry the flip, hit vitals, get out."
+    },
+    {
+      "champion": "vayne",
+      "rating": "good",
+      "confidence": "low",
+      "why": "Vayne out-ranges Urgot's W and kites him, and her W (Silver Bolts) true damage shreds his tankiness. Condemn knocks him back during his E charge.",
+      "trading": [
+        "Auto him whenever he walks up; stay out of his W range.",
+        "Tumble (Q) sideways out of his E charge.",
+        "Condemn him away when he charges at you.",
+        "Stay above 25% HP when his R is up."
+      ],
+      "early": "Kite and farm. He's slow, so never let him reach melee range for free.",
+      "spike": "At 5 his R executes below 25%. Play away from him when you're low.",
+      "wave": "Slow-push and kite; take plates when he backs.",
+      "jungle": "He has no escape besides E. Gank once he's used it.",
+      "build": "Lethal Tempo. Crit and on-hit; armor boots.",
+      "remember": "Out-range the W, dodge the flip."
+    },
+    {
+      "champion": "darius",
+      "rating": "neutral",
+      "confidence": "low",
+      "why": "Both are slow juggernauts. Darius out-damages Urgot in short trades with bleed stacks, but Urgot's shotguns and W machine-gun out-trade Darius in extended melee fights. Darius wins if he trades and leaves.",
+      "trading": [
+        "E (Apprehend) pull him when he walks up, then trade and leave.",
+        "Step out of his E charge path; the flip stun loses you the trade.",
+        "Don't stand in front of his legs for extended trades.",
+        "Hit the outer edge of Q on him to heal through his shotguns."
+      ],
+      "early": "Even. Trade short with E into autos and leave before his shotguns cycle.",
+      "spike": "At 5 both of you have an execute. Track his HP and land yours first.",
+      "wave": "Slow-push and trade on cooldown windows.",
+      "jungle": "He escapes with E. Gank after he's used it.",
+      "build": "Conqueror. Armor boots against his shotguns.",
+      "remember": "Pull, trade, leave."
+    },
+    {
+      "champion": "nasus",
+      "rating": "bad",
+      "confidence": "medium",
+      "why": "Urgot's W machine-gun and shotguns punish Nasus every time he walks up to stack Q. Urgot out-trades him in extended melee fights, and Nasus can only farm safely and outscale.",
+      "trading": [
+        "W (Wither) him when he charges E to slow his follow-up.",
+        "Stack Q only when his E is on cooldown.",
+        "Don't stand in front of his legs for extended trades.",
+        "Stay above 25% HP when his R is up."
+      ],
+      "early": "Give up some creeps and farm under tower. Don't trade into his shotguns.",
+      "spike": "At 5 his R executes below 25%; your R gives HP to stay above it.",
+      "wave": "Farm under tower; stack Q on cannon minions.",
+      "jungle": "Ask for an early gank when he overextends without E.",
+      "build": "Grasp. Armor boots early.",
+      "remember": "Survive and stack."
+    }
+  ]
+}

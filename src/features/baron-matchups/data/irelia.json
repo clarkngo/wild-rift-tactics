@@ -1,0 +1,86 @@
+{
+  "enemy": "irelia",
+  "patch": "draft",
+  "reviewed": false,
+  "summary": "Wave-dependent duelist who dashes through minions with Q resets and wins extended fights at full passive stacks. She's strongest when there are low-HP minions to dash on and weakest when you deny her stacks or land CC on her before she stuns you.",
+  "threats": [
+    "Q (Bladesurge) resets on kills or on marked targets, so a low-HP wave is her highway to you.",
+    "Passive (Ionian Fervor): at max stacks she gains big attack speed and bonus on-hit damage. Don't fight her at 4+ stacks.",
+    "E (Flawless Duet) stuns along the line between her two blades and marks you for a Q reset.",
+    "R (Vanguard's Edge) at 5 marks everyone it hits and leaves a blade wall that slows you if you walk through it."
+  ],
+  "matchups": [
+    {
+      "champion": "malphite",
+      "rating": "good",
+      "confidence": "medium",
+      "why": "Irelia's damage is mostly physical autos and on-hit, which Malphite's armor and E (Ground Slam) attack-speed slow cut down hard. His targeted Q poke chips her every time she dashes into the wave, and she can't kill him through stacked armor.",
+      "trading": [
+        "Q (Seismic Shard) her as she dashes onto a minion near you; the speed steal makes her follow-up dash harder.",
+        "The moment she's in melee range, E (Ground Slam) to slow her attack speed before her passive stacks up.",
+        "Keep Granite Shield up before she engages; don't let minion aggro pop it.",
+        "Walk sideways out of her E line rather than backwards. The stun only hits along the line between the blades."
+      ],
+      "early": "Farm safely and Q poke. She'll try to dash in with stacks; slow her attacks with E and let your armor do the work.",
+      "spike": "At 5, your R lets your jungler kill her through her dashes. Her R slows you, so don't chase through the blade wall.",
+      "wave": "Keep the wave near your tower and avoid letting it get low near you; low-HP minions give her free Q resets.",
+      "jungle": "She escapes by dashing on minions. Ping your jungler when she's dashed in and the nearby minions are healthy.",
+      "build": "Grasp of the Undying. Plated Steelcaps and early armor (Bramble Vest).",
+      "remember": "Armor up, slow her attacks, deny her dash targets."
+    },
+    {
+      "champion": "jax",
+      "rating": "good",
+      "confidence": "medium",
+      "why": "Counter Strike dodges Irelia's autos, which is most of her damage, and stuns her if she stays in. Jax trades well whenever she dashes in, and his R resists blunt her on-hit damage later.",
+      "trading": [
+        "Hold E (Counter Strike) until she dashes onto you, then activate it to dodge her autos and stun her.",
+        "Leap Strike (Q) onto her or a nearby minion to follow her if she dashes away.",
+        "Don't trade while Counter Strike is on cooldown and she has 4+ passive stacks.",
+        "Use W (Empower) to reset your auto timer and burst her during the stun."
+      ],
+      "early": "Even at level 1, then favored once you have E. Trade when she dashes into you and your E is ready.",
+      "spike": "At 5 your R gives armor/MR and on-hit damage, and you win extended fights. Her R slows you, so hold Q to cross it.",
+      "wave": "Keep the wave healthy near you so she has no low minions to dash through.",
+      "jungle": "She's gankable after she's used Q on you; call when she's stunned by your E.",
+      "build": "Conqueror. Trinity Force-style bruiser items; armor boots.",
+      "remember": "Counter Strike her dash-in."
+    },
+    {
+      "champion": "darius",
+      "rating": "neutral",
+      "confidence": "medium",
+      "why": "Darius wins any fight he can start with E pull, but Irelia's dash through minions can avoid his E, and her E stun interrupts his combo. The lane comes down to whether you land E before she lands her stun.",
+      "trading": [
+        "E (Apprehend) pull her as soon as she dashes onto a minion within range.",
+        "Stack Hemorrhage with W and autos while she's stuck in melee range.",
+        "Walk sideways out of her E line rather than backwards.",
+        "Hit her with the outer edge of Q as she dashes away for damage and healing."
+      ],
+      "early": "Even. Trade when she dashes in and your E is ready; don't chase her through her wave.",
+      "spike": "At 5 your R resets on kill, but her R slows you. Track her R before committing.",
+      "wave": "Freeze near your tower so she has to dash through your E range.",
+      "jungle": "She escapes with Q dashes on minions. Gank when the nearby minions are healthy.",
+      "build": "Conqueror. Armor boots; anti-heal isn't needed.",
+      "remember": "Pull before she stuns."
+    },
+    {
+      "champion": "yasuo",
+      "rating": "bad",
+      "confidence": "low",
+      "why": "Wind Wall can't block Irelia's melee damage, and she dashes through the same minions Yasuo uses. Her E stun interrupts his Q knockup setups, and she wins extended trades at max passive.",
+      "trading": [
+        "Use E (Sweeping Blade) to dodge her Q dashes rather than trading back into a full passive.",
+        "Throw your Q3 tornado through her when she's lining up her E blades; the knockup cancels the stun setup.",
+        "Back off when she has 4+ passive stacks; that's when she wins every extended trade.",
+        "Trade only after she's used E. Without it she has no stun to stop your combo."
+      ],
+      "early": "Farm safely and trade only when her E is on cooldown. Don't dash through the wave toward her.",
+      "spike": "At 5 your R needs a knockup from your Q3 or a teammate; land it on her after she's spent E.",
+      "wave": "Keep the wave near your tower; don't fight her through low-HP minions.",
+      "jungle": "Ask for ganks; your Q3 knockup sets them up.",
+      "build": "Conqueror. Crit items; armor boots.",
+      "remember": "Wait out her E, then knock her up."
+    }
+  ]
+}
