@@ -1,4 +1,4 @@
-import type { Champion } from '../types';
+import type { Champion } from './types';
 
 /** Champions commonly played in Baron lane. Add more as needed. */
 export const BARON_CHAMPIONS: Champion[] = [

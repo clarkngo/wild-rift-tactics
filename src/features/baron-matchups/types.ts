@@ -1,13 +1,6 @@
 export type Rating = 'good' | 'neutral' | 'bad';
 export type Confidence = 'high' | 'medium' | 'low';
 
-export interface Champion {
-  id: string;
-  name: string;
-  /** Data Dragon image key, e.g. "MonkeyKing" for Wukong. */
-  img: string;
-}
-
 /** How the player's champion fares into the enemy. */
 export interface Matchup {
   champion: string;

@@ -1,9 +1,9 @@
-// Validates src/data/baron/*.json: schema, champion ids, and mirror-rating consistency.
+// Validates src/features/baron-matchups/data/*.json: schema, champion ids, and mirror-rating consistency.
 import { readFileSync, readdirSync } from 'node:fs';
 
-const dir = new URL('../src/data/baron/', import.meta.url);
+const dir = new URL('../src/features/baron-matchups/data/', import.meta.url);
 const roster = new Set(
-  [...readFileSync(new URL('../src/data/champions.ts', import.meta.url), 'utf8').matchAll(/id: '([a-z]+)'/g)].map((m) => m[1]),
+  [...readFileSync(new URL('../src/shared/champions.ts', import.meta.url), 'utf8').matchAll(/id: '([a-z]+)'/g)].map((m) => m[1]),
 );
 const RATINGS = ['good', 'neutral', 'bad'];
 const MIRROR = { good: 'bad', neutral: 'neutral', bad: 'good' };

@@ -40,6 +40,7 @@ a { color: var(--gold); }
 }
 .brand { font-weight: 700; letter-spacing: 0.02em; text-decoration: none; color: var(--text); }
 .brand span { color: var(--gold); }
+.site-header nav { display: flex; gap: 14px; }
 .site-header nav a { font-size: 14px; text-decoration: none; color: var(--muted); }
 .site-header nav a[aria-current] { color: var(--text); }
 
@@ -191,6 +192,21 @@ a.champ:hover, a.champ:focus-visible { border-color: var(--gold); transform: tra
   border-radius: 8px;
   background: color-mix(in srgb, var(--rating) 14%, transparent);
 }
+
+.cards { display: grid; gap: 12px; margin-top: 8px; }
+.card {
+  display: block;
+  padding: 16px;
+  border-radius: var(--radius);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text);
+  text-decoration: none;
+  transition: border-color 0.15s;
+}
+.card:hover, .card:focus-visible { border-color: var(--gold); outline: none; }
+.card h2 { margin: 0 0 4px; font-size: 1.15rem; color: var(--gold); }
+.card p { margin: 0; color: var(--muted); }
 
 .empty { color: var(--muted); }
 
