@@ -1,0 +1,83 @@
+{
+  "enemy": "fiora",
+  "patch": "draft",
+  "reviewed": false,
+  "summary": "Duelist who wins through vitals (true %HP damage) and Riposte (W), which parries your key crowd control. Strong 1v1 at every stage; beat her by baiting W and punishing its cooldown.",
+  "threats": [
+    "Vitals (Duelist's Dance): she repositions to strike the marked side for true damage and move speed.",
+    "Riposte (W) blocks damage and debuffs, and stuns you if it parried your CC.",
+    "Q (Lunge) cooldown is refunded when she hits a vital, so short trades favor her.",
+    "R (Grand Challenge) at level 5 marks four vitals; hitting all of them creates a healing zone."
+  ],
+  "matchups": [
+    {
+      "champion": "pantheon",
+      "rating": "good",
+      "confidence": "medium",
+      "why": "Pantheon's level 1–5 damage is among the highest in Baron lane, and Comet Spear poke keeps her low before she can trade. Aegis Assault (E) blocks her damage from the front.",
+      "trading": [
+        "Throw empowered Q (at 5 Mortal Will stacks) when she walks up to last-hit.",
+        "Only use W (Shield Vault) stun after she has used Riposte.",
+        "When she Lunges in, E to block her trade, then counter-trade.",
+        "Keep facing her so she can't easily hit the vital behind you."
+      ],
+      "early": "Win the lane early. Pantheon falls off, so push for a kill or plates before 10 minutes.",
+      "spike": "At 5, R gives map pressure. If she's farming safely, use it to swing mid or Dragon lane.",
+      "wave": "Push and take plates while she can't contest your poke.",
+      "jungle": "W stun sets up a kill for your jungler; call the gank once her W is down.",
+      "build": "Conqueror or Electrocute. Lethality items.",
+      "remember": "Bait Riposte first, then stun."
+    },
+    {
+      "champion": "kennen",
+      "rating": "good",
+      "confidence": "medium",
+      "why": "Kennen is ranged and fast; Fiora must Lunge onto him to trade, and he can walk away with Lightning Rush. Riposte can only parry one ability, not the whole poke pattern.",
+      "trading": [
+        "Auto + Q (Thundering Shuriken) poke at range; she must use Q to answer.",
+        "After she Lunges in, E (Lightning Rush) away and resume poking.",
+        "Don't apply your third stun mark while her W is up; she'll parry and stun you back."
+      ],
+      "early": "Your early poke grounds her. Harass her off every last-hit and keep the wave near your side.",
+      "spike": "At 5, R plus ignite makes her all-in very risky; if she dives you, stand in your R and stun her.",
+      "wave": "Hold the wave on your side; she can't reach you without walking through poke.",
+      "jungle": "Once you land the stun, call your jungler. Avoid playing for it while her W is ready.",
+      "build": "Electrocute. AP damage items; early boots for spacing.",
+      "remember": "Respect W. You win by poke, not by stun."
+    },
+    {
+      "champion": "jax",
+      "rating": "neutral",
+      "confidence": "medium",
+      "why": "Both are cooldown duelists: Jax's Counter Strike dodges her autos, but her Riposte can parry his stun. Whoever wastes their parry first usually loses the trade.",
+      "trading": [
+        "Hold E (Counter Strike) until she commits to an auto or Lunge.",
+        "If she parries your E stun, back off; she has the next trade.",
+        "Leap Strike (Q) onto her only after her W is down for an extended fight."
+      ],
+      "early": "Even. Track her W and your E cooldowns and only fight when yours is up and hers isn't.",
+      "spike": "R gives you armor and MR plus extra on-hit; both of you scale well into side-lane 1v1s.",
+      "wave": "Slow-push and fight on cooldown windows; don't fight in a big enemy wave.",
+      "jungle": "Ganks work best after she's used W on a creep wave or your E.",
+      "build": "Conqueror. Trinity Force-style bruiser items; armor boots.",
+      "remember": "Whoever burns their parry first loses."
+    },
+    {
+      "champion": "garen",
+      "rating": "bad",
+      "confidence": "high",
+      "why": "Fiora parries Garen's Q silence with Riposte and stuns him, then shreds his HP with vitals. Garen has no way to stick to her when she dashes out.",
+      "trading": [
+        "Never Q into her while W is up. It gets parried and you get stunned.",
+        "W (Courage) tenacity cuts her stun duration; activate it when she commits.",
+        "Short trades only after she has used W."
+      ],
+      "early": "Play safe and farm with E. Don't contest her for creeps when Q is up.",
+      "spike": "Your R can execute her, but Riposte can block it, so use R after her W is down.",
+      "wave": "Let her push into you and farm under tower.",
+      "jungle": "Ask for a gank early. She's weak to CC chains once W is used.",
+      "build": "Phase Rush to kite away. Armor boots.",
+      "remember": "Make her use W before you commit."
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "enemy": "garen",
+  "patch": "draft",
+  "reviewed": false,
+  "summary": "Simple and strong: Q silence and speed burst, E spin, passive regen, R execute. Wins short melee trades early, but has no ranged answer and falls off against kiting and true damage.",
+  "threats": [
+    "Q (Decisive Strike) silences you; you can't cast spells for its duration.",
+    "W (Courage) gives tenacity and damage reduction during your trade.",
+    "Perseverance (passive) regenerates HP if he isn't hit for a few seconds.",
+    "R (Demacian Justice) at level 5 is an execute that scales with your missing HP."
+  ],
+  "matchups": [
+    {
+      "champion": "teemo",
+      "rating": "good",
+      "confidence": "medium",
+      "why": "Garen has no ranged option, so every Teemo auto is free damage and keeps his passive regen off. Blinding Dart makes his autos miss, including the empowered Q strike.",
+      "trading": [
+        "Auto him whenever he steps up; constant chip damage stops Perseverance regen.",
+        "When he Qs toward you, Blinding Dart then Move Quick away.",
+        "Never let him get on you with E up and no blind available."
+      ],
+      "early": "Bully him at level 1. Keep him low so he can't contest creeps.",
+      "spike": "At 5 his R can execute you through a blind. Stay above ~40% HP and shroom his approach paths.",
+      "wave": "Hold the wave near your side; he has to cross open ground to reach you.",
+      "jungle": "Garen relies on Q speed and Flash to escape. Ping your jungler when Q is down.",
+      "build": "Electrocute or Phase Rush. AP damage items; boots early.",
+      "remember": "Keep hitting him. No regen, no reach."
+    },
+    {
+      "champion": "fiora",
+      "rating": "good",
+      "confidence": "high",
+      "why": "Riposte parries Garen's Q silence and stuns him back, and vitals' true damage ignores his armor and W damage reduction. Fiora wins the lane and the side lane later.",
+      "trading": [
+        "Hold W (Riposte) for his Q.",
+        "Lunge onto vitals and get out before his E spin finishes.",
+        "Re-engage before his passive regen kicks in."
+      ],
+      "early": "Pressure him from level 1; trade on vitals and deny his regen windows.",
+      "spike": "At 5, your R heal zone wins any extended fight with him.",
+      "wave": "Push and look for plates when his Q is on cooldown.",
+      "jungle": "Your jungler isn't needed, but a gank after you parry his Q is an easy kill.",
+      "build": "Conqueror. Bruiser items; armor boots.",
+      "remember": "Parry the Q, then punish."
+    },
+    {
+      "champion": "darius",
+      "rating": "neutral",
+      "confidence": "medium",
+      "why": "Darius out-sustains Garen in long fights if he reaches 5 stacks, but Garen's Q silence can interrupt his combo. Trades come down to who uses key spells first.",
+      "trading": [
+        "Pull with E when his Q is down to avoid the silence.",
+        "Hit the outer edge of Q on him to heal through his spin.",
+        "Don't let him reset with passive; keep pressure on him."
+      ],
+      "early": "Even at levels 1–2. Use your E pull when he steps up after using Q.",
+      "spike": "Both ults execute at 5. Count stacks and his R damage before committing.",
+      "wave": "Slow-push; trade when he walks up to farm.",
+      "jungle": "He's gankable once Q (his speed burst) is down.",
+      "build": "Conqueror. Bruiser items and armor boots.",
+      "remember": "Wait out the silence, then stack him."
+    },
+    {
+      "champion": "nasus",
+      "rating": "bad",
+      "confidence": "high",
+      "why": "Garen silences Nasus every time he walks up to stack Q, and wins every early trade. Nasus only catches up if he farms safely to mid-game.",
+      "trading": [
+        "Avoid trading early. Use W (Wither) to slow him if he commits.",
+        "Stack Q only when his Q is down.",
+        "Back off when he gets to you; you lose extended trades early."
+      ],
+      "early": "Give up some creeps and survive.",
+      "spike": "R helps you survive his R execute. Still avoid 1v1 until you have items.",
+      "wave": "Farm under tower; stack Q on cannon minions.",
+      "jungle": "Ask for an early gank when he overextends.",
+      "build": "Grasp or Phase Rush. Armor boots.",
+      "remember": "Survive and stack."
+    }
+  ]
+}
