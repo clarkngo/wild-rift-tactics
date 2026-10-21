@@ -1,0 +1,86 @@
+{
+  "enemy": "aatrox",
+  "patch": "draft",
+  "reviewed": false,
+  "summary": "Sustain-heavy bruiser who poke-trades with three-part Q swings and heals off every hit. His damage is in the Q sweet spots, the edges of each swing, so dodging those (or getting inside them) wins trades. Anti-heal and true damage blunt him.",
+  "threats": [
+    "Q (The Darkin Blade) is cast three times; each sweet spot (the outer edge) deals bonus damage and knocks up.",
+    "W (Infernal Chains) slows you, then pulls you back to the centre if you haven't walked out in time.",
+    "E (Umbral Dash) repositions him between Q casts, so the sweet spots move.",
+    "R (World Ender) at 5 boosts his healing and damage. Fighting him while it's active is a losing trade."
+  ],
+  "matchups": [
+    {
+      "champion": "fiora",
+      "rating": "good",
+      "confidence": "medium",
+      "why": "Riposte parries one of Aatrox's Q knockups and stuns him back, breaking his combo. Vitals deal true damage his healing struggles to keep up with, and Fiora's Lunge lets her dodge Q sweet spots by dashing inside them.",
+      "trading": [
+        "Hold W (Riposte) for his second or third Q; a parried knockup stuns him mid-combo.",
+        "Lunge (Q) inside his Q sweet spot rather than away from it; the centre does far less damage.",
+        "Walk out of W (Infernal Chains) immediately so you don't get pulled back into Q3.",
+        "Trade on vitals when his Q is on cooldown; he has almost no damage without it."
+      ],
+      "early": "Even at level 1, then favored. Trade when his Q is on cooldown and deny the poke-heal pattern he wants.",
+      "spike": "At 5 his R boosts his healing. Don't fight into it; back off and re-engage once it ends, then use your R heal zone.",
+      "wave": "Slow-push and fight in his cooldown windows; avoid trading near his minions, where he heals more.",
+      "jungle": "His only escape is E. Gank once he's used it to reposition for a Q.",
+      "build": "Conqueror. Anti-heal item early (Executioner's-style) plus armor boots.",
+      "remember": "Parry the knockup, get inside the sweet spot."
+    },
+    {
+      "champion": "irelia",
+      "rating": "good",
+      "confidence": "low",
+      "why": "Irelia's Q dashes let her dodge Aatrox's Q sweet spots by stepping inside or through them, and her extended-fight damage at max passive outpaces his healing. His W chain is easy to break with a dash.",
+      "trading": [
+        "Q (Bladesurge) through a minion to dodge his Q sweet spot as it lands.",
+        "Land E (Flawless Duet) after he commits his Q so he can't knock you up while you're stunned.",
+        "Dash out of his W chain before it pulls you back.",
+        "Fight only with 3+ passive stacks; without them, his poke heals out-trade you."
+      ],
+      "early": "Even at levels 1–3. Build passive stacks on the wave and trade when his Q is on cooldown.",
+      "spike": "At 5 his R heals him through extended fights; back off and use your R to slow him once it ends.",
+      "wave": "Keep low-HP minions near him so you have dash targets; avoid fighting with no minions around.",
+      "jungle": "He's gankable after he's used E. Your E stun sets up the kill.",
+      "build": "Conqueror. Anti-heal and bruiser items; armor boots.",
+      "remember": "Dash through the sweet spots."
+    },
+    {
+      "champion": "darius",
+      "rating": "neutral",
+      "confidence": "medium",
+      "why": "Both are sustain bruisers with outer-edge sweet spots. Darius wins if he pulls Aatrox in and stacks Hemorrhage, but Aatrox's Q knockups interrupt Darius's combo and his healing out-sustains long poke trades.",
+      "trading": [
+        "E (Apprehend) pull him after he's used Q, so he can't knock you up mid-combo.",
+        "Walk inside his Q sweet spots rather than away from them.",
+        "Hit the outer edge of your own Q on him to heal through his poke.",
+        "Don't trade into his R; back off and re-engage once it ends."
+      ],
+      "early": "Even. Trade when his Q is on cooldown and you can stack Hemorrhage freely.",
+      "spike": "At 5 his R out-heals you in extended fights; your R execute is strongest right after his R ends.",
+      "wave": "Slow-push and trade on his cooldown windows; don't fight in his full wave.",
+      "jungle": "He escapes with E. Gank once he's used it.",
+      "build": "Conqueror. Anti-heal item early.",
+      "remember": "Pull after his Q, execute after his R."
+    },
+    {
+      "champion": "nasus",
+      "rating": "bad",
+      "confidence": "medium",
+      "why": "Aatrox's Q poke punishes Nasus every time he walks up to stack, and his healing out-sustains Nasus's short trades. Nasus can only farm safely and outscale with items and stacks.",
+      "trading": [
+        "W (Wither) him as he starts his Q combo to slow his repositioning.",
+        "Stack Q on minions only when his Q is on cooldown.",
+        "Walk inside his Q sweet spots rather than away from them.",
+        "Walk out of his W chain immediately so you aren't pulled back."
+      ],
+      "early": "Give up contested creeps and farm under tower; don't stand in his Q range.",
+      "spike": "At 5 your R gives HP and resists to survive his R all-in; use it defensively.",
+      "wave": "Farm under tower; stack Q on cannon minions.",
+      "jungle": "Ask for an early gank when he overextends without E.",
+      "build": "Grasp. Armor boots and an early anti-heal item.",
+      "remember": "Survive and stack."
+    }
+  ]
+}

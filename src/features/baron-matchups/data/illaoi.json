@@ -1,0 +1,86 @@
+{
+  "enemy": "illaoi",
+  "patch": "draft",
+  "reviewed": false,
+  "summary": "Zone-control juggernaut whose tentacles slam the ground around her. Her whole lane depends on landing E: if it hits, she pulls your spirit out and you lose the trade. Dodge E and she's slow, with no escape.",
+  "threats": [
+    "E (Test of Spirit) pulls your spirit out; hitting the spirit damages you, and tentacles spawn if you walk away.",
+    "Tentacles (passive) slam where she aims; standing near them in a fight is deadly.",
+    "Q (Tentacle Smash) is a slow skillshot; her tentacles also make it hit harder.",
+    "R (Leap of Faith) at 5 spawns tentacles for every enemy champion hit. Fight her away from them."
+  ],
+  "matchups": [
+    {
+      "champion": "vayne",
+      "rating": "good",
+      "confidence": "medium",
+      "why": "Vayne out-ranges Illaoi and Tumbles out of her E, so she rarely lands the pull that makes her lane work. W (Silver Bolts) true damage chips her down, and she has no gap closer.",
+      "trading": [
+        "Auto her whenever she walks up; she can't reach you without E.",
+        "Tumble (Q) sideways out of her E skillshot.",
+        "Never fight near her tentacles; kite her away from them.",
+        "Condemn her into a wall if she charges in."
+      ],
+      "early": "Kite and farm. She's slow and can't trade back without landing E.",
+      "spike": "At 5 her R spawns tentacles; don't fight inside it. Walk away and wait it out.",
+      "wave": "Slow-push and take plates while she can't contest.",
+      "jungle": "She has no escape. Gank when her E is down.",
+      "build": "Lethal Tempo. Crit and on-hit; armor boots.",
+      "remember": "Dodge E, kite away from tentacles."
+    },
+    {
+      "champion": "kennen",
+      "rating": "good",
+      "confidence": "medium",
+      "why": "Kennen is ranged and fast enough to dodge Illaoi's E with Lightning Rush. He pokes her from range, and she has no way to reach him without landing E.",
+      "trading": [
+        "Auto + Q (Thundering Shuriken) poke when she walks up.",
+        "E (Lightning Rush) sideways out of her E skillshot.",
+        "Stun her with the third mark if she charges in after you.",
+        "Never fight near her tentacles; kite her away from them first."
+      ],
+      "early": "Poke freely and dodge E. She can't trade back without landing it.",
+      "spike": "At 5 your R plus stun stops her R all-in; don't fight inside her tentacles.",
+      "wave": "Hold the wave on your side so she has to walk through your poke.",
+      "jungle": "She has no escape. Gank when her E is down.",
+      "build": "Electrocute. AP items; boots early.",
+      "remember": "Rush out of E."
+    },
+    {
+      "champion": "darius",
+      "rating": "neutral",
+      "confidence": "low",
+      "why": "Darius out-damages Illaoi in short fights if he dodges E and pulls her away from her tentacles. If she lands E, she wins the trade. The lane comes down to whether her E hits.",
+      "trading": [
+        "Sidestep her E; walk behind minions so it hits them instead.",
+        "E (Apprehend) pull her away from her tentacles.",
+        "Stack Hemorrhage quickly once you're out of tentacle range.",
+        "If she lands E, walk back to your spirit instead of trading."
+      ],
+      "early": "Even. Trade when her E is down and she's away from tentacles.",
+      "spike": "At 5 her R spawns tentacles; don't fight inside it. Your R executes once it's over.",
+      "wave": "Slow-push and trade when her E is on cooldown.",
+      "jungle": "She has no escape. Gank when her E is down.",
+      "build": "Conqueror. Armor boots against her tentacle damage.",
+      "remember": "Dodge E, pull her off her tentacles."
+    },
+    {
+      "champion": "malphite",
+      "rating": "bad",
+      "confidence": "low",
+      "why": "Illaoi's tentacles and healing out-sustain Malphite's poke, and his armor does little against her repeated tentacle slams. He can't kill her alone, and she wins any extended fight near her tentacles.",
+      "trading": [
+        "Q (Seismic Shard) her when she walks up, then walk away.",
+        "Stand behind minions so her E hits them instead of you.",
+        "Never fight near her tentacles; they out-damage your armor.",
+        "If she lands E, walk back to your spirit instead of trading."
+      ],
+      "early": "Farm safely and Q poke. Don't stand near her tentacles to trade.",
+      "spike": "At 5 your R plus your jungler can kill her, as long as you don't fight inside her R.",
+      "wave": "Let her push and farm under tower; tentacles can't reach you there.",
+      "jungle": "Ask for ganks; she has no escape once her E is down.",
+      "build": "Grasp. Health and armor items.",
+      "remember": "Dodge E, stay off tentacles."
+    }
+  ]
+}

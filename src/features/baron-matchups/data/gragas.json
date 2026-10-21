@@ -1,0 +1,86 @@
+{
+  "enemy": "gragas",
+  "patch": "draft",
+  "reviewed": false,
+  "summary": "AP tank who pokes with barrels, dashes in with a stun, and knocks you away with his ult. He trades in short bursts and disengages. Bait his E, stay out of barrel range, and he has little left.",
+  "threats": [
+    "Q (Barrel Roll) is his main poke; it grows stronger the longer it sits before exploding.",
+    "E (Body Slam) dashes and stuns. It's both his engage and his escape.",
+    "W (Drunken Rage) reduces the damage he takes and empowers his next auto.",
+    "R (Explosive Cask) at 5 knocks you away. It can knock you into his jungler or out of a fight."
+  ],
+  "matchups": [
+    {
+      "champion": "fiora",
+      "rating": "good",
+      "confidence": "medium",
+      "why": "Riposte parries Gragas's E stun or R knockback and turns it back on him, and vitals deal true damage through his W damage reduction. Fiora has the dashes to dodge his barrels.",
+      "trading": [
+        "Hold W (Riposte) for his E Body Slam; parry it and stun him back.",
+        "Lunge (Q) sideways out of his barrel before it explodes.",
+        "Trade on vitals when his E is on cooldown; he can't escape.",
+        "Save W for his R if his E has already been used."
+      ],
+      "early": "Trade on vitals once his E is down; he can't disengage without it.",
+      "spike": "At 5 his R can knock you away; keep W ready for it in extended fights.",
+      "wave": "Slow-push and fight in his cooldown windows.",
+      "jungle": "He escapes with E. Gank once he's used it.",
+      "build": "Conqueror. MR boots against his AP poke.",
+      "remember": "Parry the Body Slam."
+    },
+    {
+      "champion": "olaf",
+      "rating": "good",
+      "confidence": "low",
+      "why": "Olaf's R (Ragnarok) makes him immune to Gragas's stun and knockback, and E (Reckless Swing) true damage ignores Gragas's W damage reduction. Olaf wins every all-in once he can run through Gragas's CC.",
+      "trading": [
+        "Q (Undertow) him to slow his escape, then pick up the axe and stay on him.",
+        "Use E (Reckless Swing) for true damage through his W.",
+        "At 5, activate R before he E's or R's you so his CC doesn't land.",
+        "Sidestep his barrel before it explodes."
+      ],
+      "early": "Bully him at levels 1–3 with Q and E; he can't stop your all-in early.",
+      "spike": "At 5 your R ignores his CC. Use it to stick to him through his R knockback.",
+      "wave": "Slow-push and all-in when his E is down.",
+      "jungle": "He escapes with E. Gank once he's used it.",
+      "build": "Conqueror. Bruiser items; MR boots.",
+      "remember": "Ragnarok through his CC."
+    },
+    {
+      "champion": "malphite",
+      "rating": "neutral",
+      "confidence": "medium",
+      "why": "Gragas's damage is magic, so Malphite's armor doesn't help, but Malphite's Q poke and R give him kill pressure with a jungler. Neither can kill the other alone.",
+      "trading": [
+        "Q (Seismic Shard) him when he walks up to farm.",
+        "Sidestep his barrel before it explodes.",
+        "Don't trade long; he disengages with E.",
+        "Buy MR early; armor won't help here."
+      ],
+      "early": "Farm and Q poke. Neither of you can kill the other alone, so don't waste HP.",
+      "spike": "At 5 your R plus your jungler kills him; his R can knock you away from your engage.",
+      "wave": "Slow-push and roam once your R is up; he can't stop the wave fast.",
+      "jungle": "Your R sets up ganks. Call when his E is down.",
+      "build": "Grasp. MR boots and early MR items.",
+      "remember": "Buy MR, wait for R."
+    },
+    {
+      "champion": "darius",
+      "rating": "bad",
+      "confidence": "low",
+      "why": "Gragas pokes Darius with barrels and disengages with E and R before Darius can stack Hemorrhage. Darius has to land E pull to win any trade, and Gragas rarely stays in range.",
+      "trading": [
+        "Sidestep his barrel before it explodes.",
+        "E (Apprehend) pull him only when he's used his E.",
+        "Stack Hemorrhage quickly once you've pulled him; he'll try to disengage.",
+        "Don't chase him through his R knockback."
+      ],
+      "early": "Farm safely and accept some poke; wait for him to waste E before you walk up.",
+      "spike": "At 5 his R knocks you out of fights; your R execute needs him in range.",
+      "wave": "Let him push and farm under tower, where his barrel poke is less safe for him.",
+      "jungle": "Ask for ganks once his E is down; he has no escape.",
+      "build": "Conqueror. Ghost for chasing. MR boots.",
+      "remember": "Wait for his E, then pull."
+    }
+  ]
+}

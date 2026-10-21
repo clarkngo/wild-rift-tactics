@@ -1,0 +1,122 @@
+{
+  "enemy": "vayne",
+  "patch": "draft",
+  "reviewed": false,
+  "summary": "Ranged hyper-carry played in Baron lane to bully melee champions and shred tanks with true damage. She's squishy and weak to burst and point-and-click CC, and her lane falls apart if she can't kite. Reach her, or out-range her.",
+  "threats": [
+    "W (Silver Bolts): every third hit deals true %max-HP damage, so tanky builds don't save you.",
+    "E (Condemn) knocks you back; into a wall it stuns. Never fight her with a wall behind you.",
+    "Q (Tumble) is a short dash she uses to dodge skillshots and reset spacing.",
+    "R (Final Hour) at 5 gives bonus damage and makes her invisible on Tumble. Don't chase into it."
+  ],
+  "matchups": [
+    {
+      "champion": "pantheon",
+      "rating": "good",
+      "confidence": "medium",
+      "why": "Pantheon's W (Shield Vault) is a point-and-click dash and stun that reaches Vayne from range, so Tumble can't dodge it. His early burst kills her before her Silver Bolts damage adds up, and his empowered spear out-pokes her autos.",
+      "trading": [
+        "W onto her when she walks up to farm, then Q and autos during the stun.",
+        "Wait until she's used Tumble before you W, so she can't reposition out of your follow-up.",
+        "Hold E (Aegis Assault) facing her to block her autos and Condemn damage.",
+        "Fight in open lane, away from walls she could Condemn you into."
+      ],
+      "early": "Levels 1–3 are yours. Trade aggressively and zone her off farm before her items.",
+      "spike": "At 5 her R makes her invisible on Tumble. Use your R to roam instead of chasing her into it.",
+      "wave": "Slow-push and crash; take plates while she can't contest your burst.",
+      "jungle": "W stun sets up ganks, and she has only Tumble to escape. Call it once she's used it.",
+      "build": "Conqueror or Electrocute. Lethality items; armor boots against her autos.",
+      "remember": "Point-and-click stun beats Tumble."
+    },
+    {
+      "champion": "teemo",
+      "rating": "good",
+      "confidence": "medium",
+      "why": "Blinding Dart makes Vayne's autos miss, which is nearly all of her damage, including the hits that stack Silver Bolts. Teemo matches her range and pokes her back with Toxic Shot, so she can't bully him like a melee champion.",
+      "trading": [
+        "Auto + Toxic Shot poke whenever she walks up to farm.",
+        "Blind her the moment she commits to a trade; her autos all miss for the duration.",
+        "Move Quick away from walls so she can't Condemn-stun you.",
+        "Shroom the brush and her Tumble paths at 5."
+      ],
+      "early": "Even range, but your blind wins every trade she starts. Poke and deny her farm.",
+      "spike": "At 5 her R makes her invisible on Tumble; mushrooms reveal and slow her approach.",
+      "wave": "Hold the wave on your side so she has to walk through your poke to farm.",
+      "jungle": "She has only Tumble to escape. Gank once she's used it or Condemned a minion.",
+      "build": "Electrocute. AP items; armor boots if she gets ahead.",
+      "remember": "Blind her autos, stay off walls."
+    },
+    {
+      "champion": "jayce",
+      "rating": "good",
+      "confidence": "medium",
+      "why": "Jayce's gated Shock Blast out-ranges Vayne by a long way, so she takes poke every time she walks up to farm. Hammer E knocks her away if she tries to all-in, and she has no way to block his poke.",
+      "trading": [
+        "Gated Cannon Q when she walks up to farm; it out-ranges her autos.",
+        "Hammer E (Thundering Blow) her away if she Tumbles in.",
+        "Stay in cannon form; her autos win the close-range fight.",
+        "Fight in open lane, away from walls she could Condemn you into."
+      ],
+      "early": "Poke from range at levels 1–3; she can't reach you without walking through Shock Blast.",
+      "spike": "At 5 her R makes her invisible on Tumble. Keep poking from range rather than diving her.",
+      "wave": "Slow-push and take plates while she can't contest from range.",
+      "jungle": "She has only Tumble to escape. Gank once she's used it.",
+      "build": "Electrocute or Phase Rush. Lethality items.",
+      "remember": "Out-range her, never brawl."
+    },
+    {
+      "champion": "malphite",
+      "rating": "good",
+      "confidence": "medium",
+      "why": "Malphite's armor blunts Vayne's autos early, and his targeted Q poke chips her every time she walks up. His R is unstoppable once cast, so it's a near-guaranteed engage on a squishy carry once he's level 5.",
+      "trading": [
+        "Q (Seismic Shard) her when she walks up to farm, then walk away with the speed.",
+        "Stand away from walls so she can't Condemn-stun you.",
+        "Keep Granite Shield up; walk out of her range to let it recharge.",
+        "Save your R for when she's used Tumble, so she can't dodge your follow-up."
+      ],
+      "early": "Farm safely and Q poke. Build armor early; her true damage hurts later, not now.",
+      "spike": "At 5 your R plus your jungler kills her; she has only Tumble to escape.",
+      "wave": "Let her push and farm under tower; she can't dive you through armor.",
+      "jungle": "Your R sets up ganks. Call when she's pushed past mid-lane.",
+      "build": "Grasp. Plated Steelcaps and early armor; add HP later against her true damage.",
+      "remember": "Armor up, ult her when Tumble is down."
+    },
+    {
+      "champion": "sett",
+      "rating": "bad",
+      "confidence": "medium",
+      "why": "Sett has no ranged option, so Vayne kites him all lane, and her true damage shreds his HP. Condemn knocks him back during his Q run-in, and he can't trade until he reaches her.",
+      "trading": [
+        "Q (Knuckle Down) toward her only when her Condemn is on cooldown.",
+        "Fight away from walls so her Condemn can't stun you.",
+        "Use W (Haymaker) once your Grit is full to shield her poke and burst her back.",
+        "E (Facebreaker) her only when you're close enough to land it."
+      ],
+      "early": "Farm safely and accept some poke; wait for her to waste Condemn before going in.",
+      "spike": "At 5 your R suplexes her into your team or tower. Use it when she's out of position.",
+      "wave": "Let her push and farm under tower; don't walk through her poke.",
+      "jungle": "Ask for ganks; she has only Tumble to escape.",
+      "build": "Conqueror. Armor boots against her autos.",
+      "remember": "Wait for Condemn, then go."
+    },
+    {
+      "champion": "mordekaiser",
+      "rating": "bad",
+      "confidence": "medium",
+      "why": "Mordekaiser has no dash, so Vayne kites him all lane, and her true damage ignores his shield. She can Tumble out of his Q and E, and he has to land both to trade.",
+      "trading": [
+        "E (Death's Grasp) pull her only when she's in range and her Tumble is down.",
+        "Q (Obliterate) her immediately after the pull.",
+        "Use W (Indestructible) to absorb her poke.",
+        "Fight away from walls so her Condemn can't stun you."
+      ],
+      "early": "Farm safely and accept some poke; wait for her to waste Tumble before pulling.",
+      "spike": "At 5 your R takes her into a 1v1 where she still has to kite you; land Q inside it.",
+      "wave": "Let her push and farm under tower; don't walk through her poke.",
+      "jungle": "Ask for ganks; she has only Tumble to escape.",
+      "build": "Conqueror. Armor boots against her autos.",
+      "remember": "Pull when Tumble is down."
+    }
+  ]
+}

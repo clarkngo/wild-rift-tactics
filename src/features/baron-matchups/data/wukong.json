@@ -1,0 +1,86 @@
+{
+  "enemy": "wukong",
+  "patch": "draft",
+  "reviewed": false,
+  "summary": "Burst bruiser who dashes in with E, shreds armor with Q, and dodges with a decoy clone. He's strong at levels 1–5 and wins short trades with his burst. Armor, auto-dodges, and CC that catches him through his clone beat him.",
+  "threats": [
+    "Q (Crushing Blow) extends his next auto's range and reduces your armor.",
+    "E (Nimbus Strike) dashes to you and gives him attack speed for the trade.",
+    "W (Warrior Trickster) dashes, turns him invisible briefly, and leaves a clone. Don't waste your spells on the clone.",
+    "R (Cyclone) at 5 spins and knocks up everyone nearby. It's his teamfight and all-in engage."
+  ],
+  "matchups": [
+    {
+      "champion": "malphite",
+      "rating": "good",
+      "confidence": "medium",
+      "why": "Wukong's damage is physical burst, which Malphite's armor and passive shield absorb, even through Q's armor shred. Malphite's E attack-speed slow cuts Wukong's E trade, and his targeted Q poke chips him every time he walks up.",
+      "trading": [
+        "Q (Seismic Shard) him when he walks up to farm, then walk away with the speed.",
+        "Keep Granite Shield up before he E's in; it soaks his opening burst.",
+        "E (Ground Slam) the moment he lands E to slow his attack speed.",
+        "Don't Q his clone; wait for the real Wukong to reappear."
+      ],
+      "early": "Farm safely and Q poke. Build armor early; he can't burst you through it.",
+      "spike": "At 5 your R plus your jungler kills him once his W clone is down.",
+      "wave": "Let him push and farm under tower; he can't dive you through armor.",
+      "jungle": "Your R sets up ganks. Call when his W is down, so he can't clone away.",
+      "build": "Grasp. Plated Steelcaps and early armor.",
+      "remember": "Armor up, ignore the clone."
+    },
+    {
+      "champion": "jax",
+      "rating": "good",
+      "confidence": "medium",
+      "why": "Counter Strike dodges Wukong's autos, which are most of his damage, and stuns him if he stays in. Jax wins every trade where E is up, and his R resists blunt Wukong's burst later.",
+      "trading": [
+        "Activate E (Counter Strike) the moment he Nimbus Strikes onto you.",
+        "Leap Strike (Q) onto him after the stun to keep the trade going.",
+        "Don't trade while your E is on cooldown; his burst out-trades you then.",
+        "Don't Leap onto his clone; wait for the real Wukong to reappear."
+      ],
+      "early": "Even at level 1, then favored once you have E. Trade whenever he dashes in.",
+      "spike": "At 5 both R's make all-ins stronger. Keep E for his R knockup if you can.",
+      "wave": "Slow-push and fight in his cooldown windows.",
+      "jungle": "He escapes with W. Gank once he's used it.",
+      "build": "Conqueror. Trinity Force-style bruiser items; armor boots.",
+      "remember": "Counter Strike the dash."
+    },
+    {
+      "champion": "darius",
+      "rating": "neutral",
+      "confidence": "medium",
+      "why": "Wukong out-bursts Darius in short trades, but Darius wins extended fights once he pulls Wukong in and stacks Hemorrhage. The lane comes down to whether Darius lands E after Wukong's W clone is used.",
+      "trading": [
+        "E (Apprehend) pull him after he's used W, so he can't clone away.",
+        "Stack Hemorrhage quickly before his burst finishes.",
+        "Don't waste E or Q on his clone; wait for the real Wukong.",
+        "Hit the outer edge of Q on him to heal through his burst."
+      ],
+      "early": "Even. Trade when his W is on cooldown and force long fights.",
+      "spike": "At 5 his R knocks you up; your R resets on kill. Count stacks before going in.",
+      "wave": "Slow-push and trade on his cooldown windows.",
+      "jungle": "He escapes with W. Gank once he's used it.",
+      "build": "Conqueror. Armor boots against his burst.",
+      "remember": "Pull the real one, after the clone."
+    },
+    {
+      "champion": "nasus",
+      "rating": "bad",
+      "confidence": "medium",
+      "why": "Wukong's early burst out-trades Nasus every time he walks up to stack Q, and his clone lets him escape Wither. Nasus can only farm safely and outscale with stacks and items.",
+      "trading": [
+        "W (Wither) him as he E's in to slow his attack speed and his escape.",
+        "Stack Q on minions only when his E is on cooldown.",
+        "Don't Wither his clone; wait for the real Wukong to reappear.",
+        "E (Spirit Fire) the wave from range so you don't walk into his burst."
+      ],
+      "early": "Give up contested creeps and farm under tower; he wins every early trade.",
+      "spike": "At 5 your R gives HP and resists to survive his R all-in, but don't start fights with it.",
+      "wave": "Farm under tower and stack Q on cannon minions; he can't dive you early.",
+      "jungle": "Ask for an early gank when he overextends without W.",
+      "build": "Grasp. Armor boots early.",
+      "remember": "Survive and stack."
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "enemy": "riven",
+  "patch": "draft",
+  "reviewed": false,
+  "summary": "High-skill combo fighter who dashes in with Q, stuns with W, shields with E, and dashes out again. She's all burst and mobility with no sustain, so armor, crowd control, and champions that punish her short trades beat her.",
+  "threats": [
+    "Q (Broken Wings) has three dashes; the third knocks up. She uses them both to engage and to escape.",
+    "W (Ki Burst) is a short-range AoE stun; it comes out fast right after a dash.",
+    "E (Valor) dashes and shields her, absorbing your counter-trade.",
+    "R (Blade of the Exile) at 5 extends her range and adds a long-range execute wave."
+  ],
+  "matchups": [
+    {
+      "champion": "renekton",
+      "rating": "good",
+      "confidence": "medium",
+      "why": "Renekton out-damages Riven in short trades with E-W-Q, and his Q heal undoes her poke. He wins the burst-for-burst trades she wants to take, and his stun interrupts her combo.",
+      "trading": [
+        "E in, W stun, Q, then recast E to dash out before her third Q lands.",
+        "Use full Fury for empowered W when she commits to a combo.",
+        "Q (Cull the Meek) her and minions together to heal through her burst.",
+        "Don't chase her through her Q dashes; she'll escape and come back with cooldowns."
+      ],
+      "early": "Levels 1–3 favor you on short trades. Punish her every time she walks up to farm.",
+      "spike": "At 5 both R's make all-ins stronger. Fight after she's used E so her shield can't absorb your burst.",
+      "wave": "Slow-push and trade when she walks up; freeze if you get ahead so she has to come to you.",
+      "jungle": "She escapes with Q dashes. Gank once she's used them on the wave or on you.",
+      "build": "Conqueror. Bruiser items; armor boots against her burst.",
+      "remember": "Win the short trade, don't chase."
+    },
+    {
+      "champion": "malphite",
+      "rating": "good",
+      "confidence": "medium",
+      "why": "Riven's damage is physical burst, which Malphite's armor and passive shield absorb. She can't kill him early, and his E attack-speed slow and Q poke make every trade a losing one for her.",
+      "trading": [
+        "Q (Seismic Shard) her when she walks up to farm, then walk away with the speed.",
+        "Keep Granite Shield up before she dashes in; it soaks her opening burst.",
+        "E (Ground Slam) the moment she lands her combo to slow her attack speed.",
+        "Don't chase her through her Q dashes; she'll escape with E."
+      ],
+      "early": "Farm safely and Q poke. Build armor early; she can't burst you through it.",
+      "spike": "At 5 your R plus your jungler kills her once her Q dashes are on cooldown.",
+      "wave": "Let her push and farm under tower; she can't dive you through armor.",
+      "jungle": "Your R sets up ganks. Call when she's used her Q dashes.",
+      "build": "Grasp of the Undying. Plated Steelcaps and early armor.",
+      "remember": "Armor up, slow her combo."
+    },
+    {
+      "champion": "fiora",
+      "rating": "neutral",
+      "confidence": "medium",
+      "why": "A skill matchup between two duelists. Riposte parries Riven's W stun or third Q knockup and turns it back on her, but Riven's burst and shield trade well against Fiora. Whoever wastes their key spell first loses.",
+      "trading": [
+        "Hold W (Riposte) for her W stun or third Q knockup.",
+        "Hit vitals, then back off before her shield absorbs your counter-trade.",
+        "Don't chase her through her Q dashes; she'll escape and come back.",
+        "Trade when her E shield is on cooldown so your damage isn't absorbed."
+      ],
+      "early": "Even. Trade when her E is down and your W is up; otherwise farm and wait.",
+      "spike": "At 5 your R heal zone wins extended fights; her R adds range and an execute, so stay healthy.",
+      "wave": "Slow-push and fight in her cooldown windows; don't fight in her full wave.",
+      "jungle": "She escapes with Q dashes. Gank once she's used them on the wave or on you.",
+      "build": "Conqueror. Bruiser items; armor boots.",
+      "remember": "Parry the stun, punish the cooldown."
+    },
+    {
+      "champion": "nasus",
+      "rating": "bad",
+      "confidence": "medium",
+      "why": "Riven's early burst out-trades Nasus every time he walks up to stack Q, and her dashes let her escape his Wither. Nasus can only farm safely and outscale once he has stacks and items.",
+      "trading": [
+        "W (Wither) her as she dashes in to slow her follow-up and her escape.",
+        "Stack Q on minions only when her Q dashes are on cooldown.",
+        "Don't chase her through her dashes; she'll escape and come back.",
+        "E (Spirit Fire) the wave from range so you don't walk into her combo."
+      ],
+      "early": "Give up contested creeps and farm under tower; she wins every early trade.",
+      "spike": "At 5 your R gives HP and resists to survive her all-in, but don't start fights with it.",
+      "wave": "Farm under tower and stack Q on cannon minions; she can't dive you early.",
+      "jungle": "Ask for an early gank when she overextends without Q dashes.",
+      "build": "Grasp. Armor boots early.",
+      "remember": "Survive and stack."
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "enemy": "olaf",
+  "patch": "draft",
+  "reviewed": false,
+  "summary": "All-in berserker who gets stronger the lower his HP, deals true damage with E, and ignores CC during R. He wins extended melee fights; ranged champions who kite him and avoid his axe beat him.",
+  "threats": [
+    "Q (Undertow) throws an axe that slows; picking it up resets the cooldown, so he can keep you slowed.",
+    "E (Reckless Swing) deals true damage at the cost of his own HP.",
+    "Passive (Berserker Rage): lower HP means more attack speed. Don't fight him when he's low and you're not.",
+    "R (Ragnarok) at 5 makes him immune to CC; your stuns and slows won't save you."
+  ],
+  "matchups": [
+    {
+      "champion": "teemo",
+      "rating": "good",
+      "confidence": "medium",
+      "why": "Blinding Dart makes Olaf's autos miss, and Teemo kites him with Move Quick. Olaf has no gap closer besides his axe slow, so Teemo poke wins every trade before level 5.",
+      "trading": [
+        "Auto + Toxic Shot poke when he walks up.",
+        "Blind him the moment he commits; his autos and attack speed are his damage.",
+        "Sidestep his axe; dodging Q means he can't stick to you.",
+        "Once he's level 5, start walking away early; his R stops your Move Quick kite from saving you."
+      ],
+      "early": "Poke freely from level 1; he can't reach you without landing Q.",
+      "spike": "At 5 his R makes him immune to slows and CC. Don't count on shrooms to stop him; keep your distance and back off early.",
+      "wave": "Hold the wave on your side so he has to walk through your poke.",
+      "jungle": "He has no escape. Gank when his Q is down.",
+      "build": "Electrocute. AP items; boots early.",
+      "remember": "Dodge the axe, blind the all-in."
+    },
+    {
+      "champion": "vayne",
+      "rating": "good",
+      "confidence": "medium",
+      "why": "Vayne out-ranges and kites Olaf, and W (Silver Bolts) true damage shreds him. Tumble dodges his axe, so he can't keep her slowed long enough to all-in.",
+      "trading": [
+        "Auto him whenever he walks up; he can't reach you without landing Q.",
+        "Tumble (Q) sideways out of his axe.",
+        "Condemn him into a wall if he runs at you before level 5.",
+        "At 5, his R ignores Condemn; kite instead of fighting."
+      ],
+      "early": "Kite and farm. He's slow, and every trade adds up to true damage.",
+      "spike": "At 5 his R makes him CC-immune. Kite until it ends instead of fighting.",
+      "wave": "Slow-push and take plates while he can't contest.",
+      "jungle": "He has no escape. Gank when his Q is down.",
+      "build": "Lethal Tempo. Crit and on-hit; armor boots.",
+      "remember": "Dodge the axe, kite the Ragnarok."
+    },
+    {
+      "champion": "darius",
+      "rating": "neutral",
+      "confidence": "medium",
+      "why": "Both are all-in bruisers. Darius wins if he pulls Olaf in and stacks Hemorrhage, but Olaf's true damage and low-HP attack speed beat Darius in extended fights when Olaf is low.",
+      "trading": [
+        "E (Apprehend) pull him when he walks up to farm.",
+        "Stack Hemorrhage quickly before his attack speed climbs.",
+        "Sidestep his axe so he can't keep you slowed.",
+        "Execute him with R before his attack speed spikes at low HP."
+      ],
+      "early": "Even. Trade when his Q is on cooldown and you can stack freely.",
+      "spike": "At 5 his R ignores your E pull and slow; your R executes once he's low enough.",
+      "wave": "Slow-push and trade on his cooldown windows.",
+      "jungle": "He has no escape. Gank when his Q is down.",
+      "build": "Conqueror. Armor boots against his autos.",
+      "remember": "Execute before he berserks."
+    },
+    {
+      "champion": "nasus",
+      "rating": "bad",
+      "confidence": "medium",
+      "why": "Olaf's early all-in and true-damage E bully Nasus off every stack. Wither slows him, but his R makes him immune to it at level 5, so Nasus can only farm safely and outscale.",
+      "trading": [
+        "W (Wither) him when he commits before level 5.",
+        "Stack Q on minions only when his Q is on cooldown.",
+        "Sidestep his axe so he can't keep you slowed.",
+        "Don't trade into his R; Wither won't slow him."
+      ],
+      "early": "Give up contested creeps and farm under tower; he wins every early all-in.",
+      "spike": "At 5 his R ignores your Wither; use your R to survive, not to trade.",
+      "wave": "Farm under tower; stack Q on cannon minions.",
+      "jungle": "Ask for an early gank when he overextends without Q.",
+      "build": "Grasp. Armor boots early.",
+      "remember": "Survive and stack."
+    }
+  ]
+}
