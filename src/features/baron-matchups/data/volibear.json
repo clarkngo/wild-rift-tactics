@@ -14,7 +14,7 @@
       "champion": "vayne",
       "rating": "good",
       "confidence": "medium",
-      "why": "Vayne out-ranges and out-kites him, and W (Silver Bolts) true damage shreds his bulk. E (Condemn) knocks him back during his Q run-in.",
+      "why": "Vayne out-ranges and out-kites Volibear, and W (Silver Bolts) true damage shreds his bulk. E (Condemn) knocks him back during his Q run-in, so he rarely lands the stun that starts his all-in.",
       "trading": [
         "Auto him whenever he walks up; he can't reach you without Q.",
         "When he Qs at you, Tumble (Q) away or Condemn him back.",
@@ -57,7 +57,7 @@
         "Step out of the Sky Splitter circle; fighting inside it gives him a shield.",
         "If he lands Q while your W is down, disengage and wait for it."
       ],
-      "early": "Even. Trade only when your W is up and his Q is down.",
+      "early": "Even. Trade only when your W is up and his Q is down, then get out before his second W.",
       "spike": "At 5 your R heal zone counters his W sustain, but his R tower dive threatens you. Fight away from your tower when low.",
       "wave": "Slow-push and fight in cooldown windows.",
       "jungle": "He's slow without Q. Gank once he's used it.",
@@ -68,14 +68,14 @@
       "champion": "nasus",
       "rating": "bad",
       "confidence": "medium",
-      "why": "Volibear wins every early brawl: Q stun into W heal out-trades Nasus before his stacks matter. Nasus can only farm safely and outscale.",
+      "why": "Volibear wins every early brawl: a Q stun into a double W heal out-trades Nasus before his stacks matter. Nasus can only farm safely and outscale once he has items and R.",
       "trading": [
-        "W (Wither) him as he Qs at you to slow his run-in.",
-        "Stack Q only when his Q is down.",
+        "W (Wither) him as he Qs at you to slow his run-in and cut his damage.",
+        "Stack Q on minions only when his Q is on cooldown.",
         "E (Spirit Fire) to reduce his armor before you trade back.",
-        "Don't trade inside Sky Splitter."
+        "Step out of Sky Splitter before it lands; fighting inside it shields him."
       ],
-      "early": "Give up some creeps and farm under tower.",
+      "early": "Give up contested creeps and farm under tower; don't let him trade every time you walk up.",
       "spike": "At 5 his R tower dive is lethal. Stay healthy near tower; your R gives HP to survive.",
       "wave": "Farm under tower; stack Q on cannon minions.",
       "jungle": "Ask for an early gank when he overextends.",

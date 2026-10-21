@@ -33,12 +33,13 @@
       "confidence": "high",
       "why": "Riposte parries Garen's Q silence and stuns him back, and vitals' true damage ignores his armor and W damage reduction. Fiora wins the lane and the side lane later.",
       "trading": [
-        "Hold W (Riposte) for his Q.",
-        "Lunge onto vitals and get out before his E spin finishes.",
-        "Re-engage before his passive regen kicks in."
+        "Hold W (Riposte) for his Q; a parried silence leaves him stunned in vitals range.",
+        "Lunge onto vitals and get out before his E spin finishes its full duration.",
+        "Re-engage just before his passive regen kicks in so he never heals between trades.",
+        "Don't Riposte his E spin; save it for the Q or his R."
       ],
       "early": "Pressure him from level 1; trade on vitals and deny his regen windows.",
-      "spike": "At 5, your R heal zone wins any extended fight with him.",
+      "spike": "At 5 your R heal zone wins any extended fight with him, and his R execute only matters if you're already low.",
       "wave": "Push and look for plates when his Q is on cooldown.",
       "jungle": "Your jungler isn't needed, but a gank after you parry his Q is an easy kill.",
       "build": "Conqueror. Bruiser items; armor boots.",
@@ -65,13 +66,14 @@
       "champion": "nasus",
       "rating": "bad",
       "confidence": "high",
-      "why": "Garen silences Nasus every time he walks up to stack Q, and wins every early trade. Nasus only catches up if he farms safely to mid-game.",
+      "why": "Garen silences Nasus every time he walks up to stack Q, and his short Q + E trades out-damage Nasus at levels 1–5. Nasus only catches up if he farms safely to mid-game and his stacks take over.",
       "trading": [
-        "Avoid trading early. Use W (Wither) to slow him if he commits.",
-        "Stack Q only when his Q is down.",
-        "Back off when he gets to you; you lose extended trades early."
+        "Avoid trading early; when he commits with Q, W (Wither) him so he can't chase or spin at full speed.",
+        "Stack Q on minions only when his Q is on cooldown, so he can't silence you mid-stack.",
+        "Back off as soon as he gets to you; you lose extended trades until you have stacks and items.",
+        "E (Spirit Fire) the wave from range to clear it without walking into his spin."
       ],
-      "early": "Give up some creeps and survive.",
+      "early": "Give up contested creeps and survive; last-hit with Q only when Garen's Q is on cooldown.",
       "spike": "R helps you survive his R execute. Still avoid 1v1 until you have items.",
       "wave": "Farm under tower; stack Q on cannon minions.",
       "jungle": "Ask for an early gank when he overextends.",

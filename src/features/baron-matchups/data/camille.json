@@ -32,7 +32,7 @@
       "champion": "darius",
       "rating": "good",
       "confidence": "medium",
-      "why": "Darius out-damages Camille early with Hemorrhage stacks, and E pull stops her hookshot escapes. She can't trade with him before items.",
+      "why": "Darius out-damages Camille at levels 1–3, before her items and Q true damage matter, and his Hemorrhage stacks punish her for staying in melee range. E (Apprehend) can pull her out of her Hookshot escape, so she has no safe way to trade.",
       "trading": [
         "E (Apprehend) pull her when she E's off a wall toward you.",
         "Stack Hemorrhage with autos and W before she can disengage.",
@@ -41,9 +41,9 @@
       ],
       "early": "Bully her at levels 1–3 and look for an all-in at 3+ stacks.",
       "spike": "At 5 your R resets on kill. Her R can trap you, so fight in the open.",
-      "wave": "Slow-push and crash.",
+      "wave": "Slow-push and crash for plates while she can't contest; deny her the safe farm she needs to scale.",
       "jungle": "She escapes with E. Gank away from walls.",
-      "build": "Conqueror. Armor boots.",
+      "build": "Conqueror. Armor boots; her early damage is physical until Q2 converts to true.",
       "remember": "Pull her mid-air."
     },
     {
