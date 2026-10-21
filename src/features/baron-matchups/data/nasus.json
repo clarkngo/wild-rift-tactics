@@ -21,7 +21,7 @@
         "Hit him with the outer edge of Q for bonus damage and healing.",
         "Back off when he Withers you; your attack speed drops."
       ],
-      "early": "Bully him at levels 1–3 and deny Q stacks.",
+      "early": "Bully him at levels 1–3 and deny Q stacks; he can't trade back before his first item.",
       "spike": "At 5 your R resets on kill. His R makes him tankier, so execute before he uses it.",
       "wave": "Freeze near your tower so he has to walk up to farm.",
       "jungle": "Wither is his only defensive tool. Gank when it's on cooldown.",
@@ -50,18 +50,18 @@
       "champion": "garen",
       "rating": "good",
       "confidence": "high",
-      "why": "Garen's Q silence stops Nasus mid-stack, and his early trades out-damage him. Garen wins the lane and can deny stacks.",
+      "why": "Garen's Q silence stops Nasus mid-stack, and his short Q + E trades out-damage him early. Garen wins the lane and can freeze to deny the stacks Nasus needs to scale.",
       "trading": [
         "Q silence him when he walks up to stack; a silenced Nasus can't Wither you.",
         "E spin while he's silenced, then walk away.",
         "Back off after short trades to let your passive regen.",
         "If he Withers you, walk out; you lose attack speed and movement."
       ],
-      "early": "Bully him at levels 1–3 and deny Q stacks.",
+      "early": "Bully him at levels 1–3 and deny Q stacks; trade every time he walks up to last-hit.",
       "spike": "At 5 your R executes him if he's low; his R makes him tankier, so time it.",
       "wave": "Freeze near your tower so he must walk up to farm.",
       "jungle": "Gank when Wither is down; your Q speed lets you chase.",
-      "build": "Conqueror. Armor boots.",
+      "build": "Conqueror. Armor boots; his early damage is physical.",
       "remember": "Silence the stack."
     },
     {
@@ -75,28 +75,28 @@
         "Avoid extended trades; his Wither slows your attack speed and movement.",
         "Keep your shield up before he walks up to stack."
       ],
-      "early": "Farm and poke. Neither of you can kill the other alone.",
+      "early": "Farm and poke. Neither of you can kill the other alone, so don't waste HP on long trades.",
       "spike": "At 5 your R sets up ganks. Call your jungler before his stacks grow.",
       "wave": "Slow-push so he has to farm in your Q range.",
-      "jungle": "Gank when Wither is down.",
-      "build": "Grasp. Armor boots.",
+      "jungle": "Gank when Wither is down; your R plus your jungler can kill him before his stacks matter.",
+      "build": "Grasp. Armor boots and early armor items.",
       "remember": "Poke the stacks."
     },
     {
       "champion": "tryndamere",
       "rating": "bad",
       "confidence": "medium",
-      "why": "Wither slows Tryndamere's attack speed and movement, shutting down his auto-based damage. Nasus wins trades whenever Wither is up.",
+      "why": "Wither slows Tryndamere's attack speed and movement, shutting down his auto-based damage. Nasus wins every trade where Wither is up, and he scales just as hard into the split-push game.",
       "trading": [
         "Trade only when Wither is on cooldown. It slows your attack speed and movement.",
         "Use E (Spinning Slash) to get in or out before he can Wither you.",
         "Use Q (Bloodlust) to heal off his trades.",
         "Back off once he's Withered you; you lose most of your damage."
       ],
-      "early": "Farm and build Fury. Trade only in his cooldown windows.",
+      "early": "Farm and build Fury. Trade only in his cooldown windows, after he's used Wither.",
       "spike": "At 5 your R keeps you alive in an all-in, but his R gives him HP and resists. Don't force fights.",
-      "wave": "Farm under tower and split-push later.",
-      "jungle": "Gank when his W is down.",
+      "wave": "Farm under tower, then split-push the opposite side once you have items.",
+      "jungle": "Ask for ganks when his W (Wither) is down; he can't slow your escape then.",
       "build": "Lethal Tempo. Crit items.",
       "remember": "Trade when Wither is down."
     }

@@ -14,7 +14,7 @@
       "champion": "fiora",
       "rating": "good",
       "confidence": "medium",
-      "why": "Vitals deal true %HP damage, so K'Sante's armor and MR don't matter. Riposte parries his W stun or Q3 pull and turns it back on him.",
+      "why": "Vitals deal true %HP damage, so K'Sante's armor and MR don't matter. Riposte parries his W stun or Q3 pull and turns it back on him, and when he goes All Out he gives up the tankiness that was keeping him alive.",
       "trading": [
         "Hold W (Riposte) for his W dash or Q3 pull; both are trade-defining.",
         "After the parry, Lunge onto vitals while he's stunned.",
@@ -32,16 +32,16 @@
       "champion": "vayne",
       "rating": "good",
       "confidence": "medium",
-      "why": "W (Silver Bolts) true %HP damage ignores his tank stats, and Vayne out-ranges him. Condemn knocks him back during his W dash.",
+      "why": "W (Silver Bolts) true %HP damage ignores K'Sante's tank stats, and Vayne out-ranges his short Q. Condemn knocks him back during his W dash, so he has a hard time ever landing his engage.",
       "trading": [
-        "Auto him whenever he walks up; his Q range is short.",
-        "Tumble (Q) away from his Q3 pull.",
-        "Condemn him into a wall when he charges W.",
-        "Don't stand near walls when his R is up."
+        "Auto him whenever he walks up; his Q range is short and he can't trade back.",
+        "Tumble (Q) away from his Q3 pull before the third cast comes out.",
+        "Condemn him into a wall when he charges W to stop his dash.",
+        "Don't stand near walls when his R is up; he can kick you through them."
       ],
-      "early": "Kite and farm. He can't reach you without landing W.",
+      "early": "Kite and farm. He can't reach you without landing W, so poke him every time he walks up.",
       "spike": "At 5 his R kicks you toward his team or tower. Stay away from walls.",
-      "wave": "Slow-push and kite.",
+      "wave": "Slow-push and kite; take plates when he backs to buy armor.",
       "jungle": "He's slow without W or E. Gank once those are down.",
       "build": "Lethal Tempo. Crit and on-hit.",
       "remember": "Kite the W, true damage the tank."
@@ -76,7 +76,7 @@
         "Don't fight near walls when his R is up."
       ],
       "early": "Farm under tower and survive. Concede some creeps rather than taking his trades.",
-      "spike": "At 5 your R gives HP and resists to survive his all-in.",
+      "spike": "At 5 your R gives HP and resists to survive his all-in; use it defensively, not to start fights.",
       "wave": "Let him push and farm under tower; stack Q on cannon minions.",
       "jungle": "Ask for early ganks when he overextends without W.",
       "build": "Grasp. Armor boots early.",

@@ -21,7 +21,7 @@
         "Don't auto into his active Counter Strike; wait it out."
       ],
       "early": "Poke with Q and farm. He can't trade well into your shield and armor.",
-      "spike": "At 5, R plus jungler makes him an easy kill target.",
+      "spike": "At 5, your R plus your jungler makes him an easy kill target, since his Leap Strike can't outrun it.",
       "wave": "Let him push and farm safely; build armor.",
       "jungle": "Your R sets up the gank; call once his E is down.",
       "build": "Grasp of the Undying. Early armor items and armor boots.",
@@ -58,7 +58,7 @@
       "early": "Even. Track his E and your W cooldowns and only fight when yours is up and his isn't.",
       "spike": "At 5 your R heal zone wins extended fights, as long as he doesn't stun you through it.",
       "wave": "Slow-push and fight in cooldown windows; don't fight inside his full wave.",
-      "jungle": "He's gankable after Q, his only escape.",
+      "jungle": "He's gankable after Q (Leap Strike), his only escape; call it once he's used it on you.",
       "build": "Conqueror. Bruiser items; armor boots.",
       "remember": "Parry the stun, then punish."
     },
