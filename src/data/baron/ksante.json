@@ -1,0 +1,86 @@
+{
+  "enemy": "ksante",
+  "patch": "draft",
+  "reviewed": false,
+  "summary": "Tank who trades with %HP damage from his passive, peels with stuns and knockbacks, and at level 5 can turn into an all-in fighter. He beats bruisers who rely on long fights; true damage and kiting beat him.",
+  "threats": [
+    "Passive (Dauntless Instinct) marks you; his next hit deals bonus %max HP damage.",
+    "Q (Ntofo Strikes) stacks; the third cast is a shockwave that pulls you in.",
+    "W (Path Maker) cuts the damage he takes while charging, then dashes and knocks you back or stuns.",
+    "R (All Out) at 5 kicks you away (through walls if close) and swaps his tankiness for damage."
+  ],
+  "matchups": [
+    {
+      "champion": "fiora",
+      "rating": "good",
+      "confidence": "medium",
+      "why": "Vitals deal true %HP damage, so K'Sante's armor and MR don't matter. Riposte parries his W stun or Q3 pull and turns it back on him.",
+      "trading": [
+        "Hold W (Riposte) for his W dash or Q3 pull; both are trade-defining.",
+        "After the parry, Lunge onto vitals while he's stunned.",
+        "If he goes All Out (R), he's lost his tankiness. That's your window to kill him.",
+        "Don't fight with your back to a wall; R can kick you through it."
+      ],
+      "early": "Trade on vitals from level 1. Make him use Q stacks on the wave, not on you.",
+      "spike": "At 5 your R heal zone wins extended fights; his R makes him squishier, not stronger against you.",
+      "wave": "Slow-push and fight in his cooldown windows.",
+      "jungle": "He has strong peel. Gank after he's used W.",
+      "build": "Conqueror. Bruiser items; armor boots.",
+      "remember": "Parry the W or Q3, then hit vitals."
+    },
+    {
+      "champion": "vayne",
+      "rating": "good",
+      "confidence": "medium",
+      "why": "W (Silver Bolts) true %HP damage ignores his tank stats, and Vayne out-ranges him. Condemn knocks him back during his W dash.",
+      "trading": [
+        "Auto him whenever he walks up; his Q range is short.",
+        "Tumble (Q) away from his Q3 pull.",
+        "Condemn him into a wall when he charges W.",
+        "Don't stand near walls when his R is up."
+      ],
+      "early": "Kite and farm. He can't reach you without landing W.",
+      "spike": "At 5 his R kicks you toward his team or tower. Stay away from walls.",
+      "wave": "Slow-push and kite.",
+      "jungle": "He's slow without W or E. Gank once those are down.",
+      "build": "Lethal Tempo. Crit and on-hit.",
+      "remember": "Kite the W, true damage the tank."
+    },
+    {
+      "champion": "darius",
+      "rating": "neutral",
+      "confidence": "low",
+      "why": "Darius out-damages K'Sante early with Hemorrhage stacks, but W (Path Maker) cuts the damage K'Sante takes and knocks Darius out of range mid-combo. The lane comes down to who wastes their key spell first: your E or his W.",
+      "trading": [
+        "Bait his W with a walk-up first; E (Apprehend) pull only once W is on cooldown.",
+        "Stack Hemorrhage quickly with W (Crippling Strike) and autos before he can knock you away.",
+        "Walk inside or out of his Q3 shockwave path. Don't get pulled into a bad position.",
+        "When he's All Out (R), he loses his resistances. That's when your R execute is strongest."
+      ],
+      "early": "Levels 1–3 slightly favor you if you trade while his W is down. Don't extend into a full Q3 rotation.",
+      "spike": "At 5 your R resets on kill; his R can kick you away from the fight. Fight in open space away from walls.",
+      "wave": "Slow-push and trade when he walks up to farm.",
+      "jungle": "He's gankable once W and E (Footwork) are both down.",
+      "build": "Conqueror. Armor-pen items; anti-heal isn't a priority.",
+      "remember": "Bait the W, then pull."
+    },
+    {
+      "champion": "nasus",
+      "rating": "bad",
+      "confidence": "low",
+      "why": "K'Sante's Q poke and %HP passive damage bully Nasus early, and his W knockback stops Nasus walking up to stack. Nasus can only farm safely and outscale.",
+      "trading": [
+        "W (Wither) him the moment he charges W to slow his follow-up.",
+        "Stack Q on minions when his Q is on cooldown; avoid standing in his Q3 range.",
+        "E (Spirit Fire) lowers his armor, which helps your Q stacks hit harder later.",
+        "Don't fight near walls when his R is up."
+      ],
+      "early": "Farm under tower and survive. Concede some creeps rather than taking his trades.",
+      "spike": "At 5 your R gives HP and resists to survive his all-in.",
+      "wave": "Let him push and farm under tower; stack Q on cannon minions.",
+      "jungle": "Ask for early ganks when he overextends without W.",
+      "build": "Grasp. Armor boots early.",
+      "remember": "Survive and stack."
+    }
+  ]
+}

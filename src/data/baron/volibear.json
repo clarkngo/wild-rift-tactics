@@ -1,0 +1,86 @@
+{
+  "enemy": "volibear",
+  "patch": "draft",
+  "reviewed": false,
+  "summary": "All-in bruiser with a fast run-in stun, heavy sustain from W, and a level 5 tower-disabling dive. He wins brawls early; ranged champions that kite him and anyone who denies his W heal can beat him.",
+  "threats": [
+    "Q (Thundering Smash) gives speed toward you; his next auto stuns.",
+    "W (Frenzied Maul) marks you; the second W on a marked target heals him for missing HP.",
+    "E (Sky Splitter) is a delayed bolt that slows; if he's inside it, he gets a shield.",
+    "R (Stormbringer) at 5: leaps in and disables towers, so dives become lethal."
+  ],
+  "matchups": [
+    {
+      "champion": "vayne",
+      "rating": "good",
+      "confidence": "medium",
+      "why": "Vayne out-ranges and out-kites him, and W (Silver Bolts) true damage shreds his bulk. E (Condemn) knocks him back during his Q run-in.",
+      "trading": [
+        "Auto him whenever he walks up; he can't reach you without Q.",
+        "When he Qs at you, Tumble (Q) away or Condemn him back.",
+        "Stand next to a wall so Condemn can stun him.",
+        "Step out of the Sky Splitter circle before it lands."
+      ],
+      "early": "Kite and farm. You have the range advantage; don't let him walk you down.",
+      "spike": "At 5 his R dive is lethal near towers. Play away from tower when you're low.",
+      "wave": "Slow-push and kite; don't let the wave crash into your tower if you're low.",
+      "jungle": "He has no escape besides Q speed. Gank when it's down.",
+      "build": "Lethal Tempo. Crit and on-hit; armor boots if behind.",
+      "remember": "Kite the Q, Condemn the run-in."
+    },
+    {
+      "champion": "kennen",
+      "rating": "good",
+      "confidence": "medium",
+      "why": "Kennen out-ranges Volibear and E (Lightning Rush) is fast enough to run from his Q speed boost. Volibear has to walk through poke to trade, and Kennen's stun cuts his all-in short.",
+      "trading": [
+        "Auto + Q (Thundering Shuriken) when he steps up to farm; each hit builds your stun marks.",
+        "The moment he activates Q, E away. Don't let the empowered auto reach you.",
+        "With two marks on him, Q or W (Electrical Surge) for the stun when he commits, then walk back.",
+        "Never stand inside his Sky Splitter circle; walk out before it lands."
+      ],
+      "early": "Win the poke war at levels 1–3. He can't heal through poke without landing W twice.",
+      "spike": "At 5 his R can dive you under tower. Keep E up when the wave is near your tower, and use your R to stun him off.",
+      "wave": "Hold the wave on your side so he has to run through poke to reach you.",
+      "jungle": "Once he's used Q, he's slow and gankable. Ping your jungler then.",
+      "build": "Electrocute. AP items; boots early for spacing.",
+      "remember": "Rush away from the Q, stun on the way back."
+    },
+    {
+      "champion": "fiora",
+      "rating": "neutral",
+      "confidence": "medium",
+      "why": "Riposte parries Volibear's Q stun and stuns him back, and vitals' true damage cuts through his HP. But if he lands both W bites, his heal out-sustains her in long fights.",
+      "trading": [
+        "Hold W (Riposte) for his Q stun. That's the trade-winner.",
+        "After the parry, Lunge onto vitals and get out before his second W bite.",
+        "Step out of the Sky Splitter circle; fighting inside it gives him a shield.",
+        "If he lands Q while your W is down, disengage and wait for it."
+      ],
+      "early": "Even. Trade only when your W is up and his Q is down.",
+      "spike": "At 5 your R heal zone counters his W sustain, but his R tower dive threatens you. Fight away from your tower when low.",
+      "wave": "Slow-push and fight in cooldown windows.",
+      "jungle": "He's slow without Q. Gank once he's used it.",
+      "build": "Conqueror. Bruiser items with anti-heal.",
+      "remember": "Parry the Q stun, then punish before he bites twice."
+    },
+    {
+      "champion": "nasus",
+      "rating": "bad",
+      "confidence": "medium",
+      "why": "Volibear wins every early brawl: Q stun into W heal out-trades Nasus before his stacks matter. Nasus can only farm safely and outscale.",
+      "trading": [
+        "W (Wither) him as he Qs at you to slow his run-in.",
+        "Stack Q only when his Q is down.",
+        "E (Spirit Fire) to reduce his armor before you trade back.",
+        "Don't trade inside Sky Splitter."
+      ],
+      "early": "Give up some creeps and farm under tower.",
+      "spike": "At 5 his R tower dive is lethal. Stay healthy near tower; your R gives HP to survive.",
+      "wave": "Farm under tower; stack Q on cannon minions.",
+      "jungle": "Ask for an early gank when he overextends.",
+      "build": "Grasp. Armor boots and anti-heal.",
+      "remember": "Survive and stack."
+    }
+  ]
+}

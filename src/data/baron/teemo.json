@@ -1,0 +1,103 @@
+{
+  "enemy": "teemo",
+  "patch": "draft",
+  "reviewed": false,
+  "summary": "Ranged poke champion who wins lane by harassing melee players and blinding their autos. He's fragile and has no hard CC; anyone who can reach him with spells (not autos) or tank his poke until level 5 makes his life hard.",
+  "threats": [
+    "Q (Blinding Dart) blinds you, so your autos miss. It's his only real defensive tool; track its cooldown.",
+    "Toxic Shot (E) adds poison to every auto. Standing near the wave means taking free damage.",
+    "W (Move Quick) gives him burst speed to kite away or chase.",
+    "R (Noxious Trap) at level 5: mushrooms slow and poison. Brush and river get dangerous to walk through."
+  ],
+  "matchups": [
+    {
+      "champion": "pantheon",
+      "rating": "good",
+      "confidence": "medium",
+      "why": "Pantheon's damage is mostly spells, so Blinding Dart barely matters. W (Shield Vault) is a point-and-click dash and stun that reaches Teemo from range, and Comet Spear out-pokes him early.",
+      "trading": [
+        "Throw empowered Q (at 5 Mortal Will stacks) whenever he steps up to last-hit.",
+        "W onto him, then Q + autos during the stun. If he blinds you, keep casting Q instead of auto-ing.",
+        "Hold E (Aegis Assault) to block his auto poke when he tries to trade back.",
+        "After W, walk back. Don't chase him through Move Quick."
+      ],
+      "early": "Levels 1–3 are yours. Take the push and look for W + Q all-ins once he's below ~60%.",
+      "spike": "At 5 he can start placing mushrooms; walk around brush. Your R lets you roam if he's hiding under tower.",
+      "wave": "Slow-push and crash; take plates while he can't stop you.",
+      "jungle": "W stun is easy gank setup. Call your jungler when he pushes past the middle of the lane.",
+      "build": "Electrocute or Conqueror. Lethality items; MR boots if his poke is still hurting.",
+      "remember": "Spells reach him, autos don't. Stun, spear, repeat."
+    },
+    {
+      "champion": "jayce",
+      "rating": "good",
+      "confidence": "medium",
+      "why": "Cannon-form Jayce matches Teemo's range and has far longer poke through Acceleration Gate. Shock Blast isn't affected by blind, so Teemo loses every range trade.",
+      "trading": [
+        "Gated Cannon Q whenever he walks up to farm. He can't answer from that range.",
+        "If he blinds you, swap to spells: Q and Hammer E still hit.",
+        "Hammer Q onto him only when his W is down so he can't Move Quick out.",
+        "Stay out of brush he's had time to shroom."
+      ],
+      "early": "Win the poke war from level 1. Push him low and make him back.",
+      "spike": "His shrooms at 5 slow you; buy sweeper-style vision or walk around brush. Your lane pressure shouldn't drop.",
+      "wave": "Push and take plates. Freeze only if you need to back off.",
+      "jungle": "Teemo is squishy with no CC. If he overextends, Hammer E knocks him toward your jungler.",
+      "build": "Electrocute or Phase Rush. Lethality items.",
+      "remember": "You out-range him. Make every trade a long-range one."
+    },
+    {
+      "champion": "malphite",
+      "rating": "neutral",
+      "confidence": "medium",
+      "why": "Teemo's damage is magic, so Malphite's armor does nothing, but Q (Seismic Shard) is a point-and-click poke that blind can't stop. You won't kill him alone, and he can't kill you.",
+      "trading": [
+        "Q him each time it's off cooldown; spells can't miss to blind.",
+        "Don't walk into the wave to auto-farm while he's poking. Last-hit with Q if you must.",
+        "Once you're level 5, R + jungler is the kill threat. Track his Move Quick."
+      ],
+      "early": "Farm with Q and accept some chip damage. Buy an early MR item if he's winning.",
+      "spike": "R at 5 gives you a gank threat. His mushrooms make walking up harder.",
+      "wave": "Let him push and farm under tower.",
+      "jungle": "Your R plus your jungler kills him. Call it when his W is down.",
+      "build": "Aftershock. Early MR (Mercury's Treads or an MR item).",
+      "remember": "Buy MR, Q poke, wait for R."
+    },
+    {
+      "champion": "darius",
+      "rating": "bad",
+      "confidence": "high",
+      "why": "Darius needs to stand next to his opponent, and Teemo kites him with blind and Move Quick. A blinded Darius can't stack Hemorrhage with autos, and his only gap closer is E.",
+      "trading": [
+        "Don't walk at him while Q (Blinding Dart) is up. Wait for him to use it on a wave or trade.",
+        "E pull him only when he's in range and W is on cooldown.",
+        "Use brush to hide your approach so he can't pre-emptively kite.",
+        "Once you land E, Q + W immediately. Don't auto into a blind."
+      ],
+      "early": "Give up some creeps under tower. Your goal is reaching items and level 5 without dying to poke.",
+      "spike": "At 5 your R gives kill threat if you land E. Watch for mushrooms in brush.",
+      "wave": "Let him push and farm under tower; don't walk into the wave.",
+      "jungle": "Ask for ganks; he has no hard CC. Call when his W is down.",
+      "build": "Conqueror. Ghost for chasing. MR boots early.",
+      "remember": "Wait out blind, then pull."
+    },
+    {
+      "champion": "garen",
+      "rating": "bad",
+      "confidence": "medium",
+      "why": "Garen can't fight back at range, and constant Teemo autos stop his passive regen. Blind cuts his empowered Q auto; his only chance is reaching Teemo with Q speed when blind is down.",
+      "trading": [
+        "Wait for Blinding Dart to go on cooldown before you Q in.",
+        "Q also removes slows, so use it to walk through mushrooms.",
+        "Spin (E) through him if he's close; blind doesn't stop your spin.",
+        "Back off after each trade; staying in lets him poke you more."
+      ],
+      "early": "Concede some creeps under tower. Buy MR early.",
+      "spike": "At 5 your R executes him if he gets low. Mushrooms make chasing risky.",
+      "wave": "Let him push; farm under tower.",
+      "jungle": "Ask for ganks; your Q silence makes him easy to finish.",
+      "build": "Conqueror or Phase Rush. Ghost for chasing. MR boots.",
+      "remember": "Wait for blind, then Q."
+    }
+  ]
+}

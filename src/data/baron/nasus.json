@@ -1,0 +1,104 @@
+{
+  "enemy": "nasus",
+  "patch": "draft",
+  "reviewed": false,
+  "summary": "Scaling champion who farms Q stacks early and becomes a huge threat late. He's weak at levels 1–5, so the plan is to deny stacks, punish every last-hit attempt, and win before his scaling matters.",
+  "threats": [
+    "Q (Siphoning Strike) gains permanent damage on every kill. Each stack he gets makes the late game harder for you.",
+    "W (Wither) slows your movement and attack speed, increasing over time.",
+    "E (Spirit Fire) lowers your armor in its area.",
+    "R (Fury of the Sands) at 5 gives bonus HP and armor/MR, plus a damage aura."
+  ],
+  "matchups": [
+    {
+      "champion": "darius",
+      "rating": "good",
+      "confidence": "high",
+      "why": "Darius bullies Nasus out of lane: every time Nasus walks up to Q a creep, he's in E pull range. Darius out-damages him heavily early and denies his stacks.",
+      "trading": [
+        "Pull him with E when he walks up to stack Q.",
+        "Stack Hemorrhage with W and autos; he can't trade back early.",
+        "Hit him with the outer edge of Q for bonus damage and healing.",
+        "Back off when he Withers you; your attack speed drops."
+      ],
+      "early": "Bully him at levels 1–3 and deny Q stacks.",
+      "spike": "At 5 your R resets on kill. His R makes him tankier, so execute before he uses it.",
+      "wave": "Freeze near your tower so he has to walk up to farm.",
+      "jungle": "Wither is his only defensive tool. Gank when it's on cooldown.",
+      "build": "Conqueror. Rush damage; add armor only if his Wither + E trades start hurting.",
+      "remember": "Pull him off every stack."
+    },
+    {
+      "champion": "renekton",
+      "rating": "good",
+      "confidence": "high",
+      "why": "Renekton's early E-W-Q burst out-damages Nasus and zones him off stacks. Renekton wins the lane decisively if he trades every time Nasus walks up.",
+      "trading": [
+        "E in, W stun, Q, then recast E to dash out, ideally when he walks up to stack.",
+        "Use full Fury for the empowered W stun.",
+        "Don't stay in after the trade; his Wither slows your escape if you linger.",
+        "Freeze the wave and zone him so he can't walk up for stacks."
+      ],
+      "early": "Bully him at levels 1–3 and deny Q stacks; take plates when he backs.",
+      "spike": "At 5 your R makes all-ins stronger. Kill him before his R and stacks catch up.",
+      "wave": "Freeze near your tower so he must walk through your E range.",
+      "jungle": "His only escape is Ghost/Flash. Gank when he walks up.",
+      "build": "Conqueror. Bruiser items; armor boots aren't needed early.",
+      "remember": "Deny every stack."
+    },
+    {
+      "champion": "garen",
+      "rating": "good",
+      "confidence": "high",
+      "why": "Garen's Q silence stops Nasus mid-stack, and his early trades out-damage him. Garen wins the lane and can deny stacks.",
+      "trading": [
+        "Q silence him when he walks up to stack; a silenced Nasus can't Wither you.",
+        "E spin while he's silenced, then walk away.",
+        "Back off after short trades to let your passive regen.",
+        "If he Withers you, walk out; you lose attack speed and movement."
+      ],
+      "early": "Bully him at levels 1–3 and deny Q stacks.",
+      "spike": "At 5 your R executes him if he's low; his R makes him tankier, so time it.",
+      "wave": "Freeze near your tower so he must walk up to farm.",
+      "jungle": "Gank when Wither is down; your Q speed lets you chase.",
+      "build": "Conqueror. Armor boots.",
+      "remember": "Silence the stack."
+    },
+    {
+      "champion": "malphite",
+      "rating": "neutral",
+      "confidence": "medium",
+      "why": "Malphite's Q poke chips Nasus as he farms, but Malphite has little kill pressure alone. Nasus farms stacks safely, so the lane is decided by jungle pressure.",
+      "trading": [
+        "Q poke him whenever he walks up to stack; the speed steal makes his chase harder.",
+        "E (Ground Slam) slows his attack speed, cutting his Q damage.",
+        "Avoid extended trades; his Wither slows your attack speed and movement.",
+        "Keep your shield up before he walks up to stack."
+      ],
+      "early": "Farm and poke. Neither of you can kill the other alone.",
+      "spike": "At 5 your R sets up ganks. Call your jungler before his stacks grow.",
+      "wave": "Slow-push so he has to farm in your Q range.",
+      "jungle": "Gank when Wither is down.",
+      "build": "Grasp. Armor boots.",
+      "remember": "Poke the stacks."
+    },
+    {
+      "champion": "tryndamere",
+      "rating": "bad",
+      "confidence": "medium",
+      "why": "Wither slows Tryndamere's attack speed and movement, shutting down his auto-based damage. Nasus wins trades whenever Wither is up.",
+      "trading": [
+        "Trade only when Wither is on cooldown. It slows your attack speed and movement.",
+        "Use E (Spinning Slash) to get in or out before he can Wither you.",
+        "Use Q (Bloodlust) to heal off his trades.",
+        "Back off once he's Withered you; you lose most of your damage."
+      ],
+      "early": "Farm and build Fury. Trade only in his cooldown windows.",
+      "spike": "At 5 your R keeps you alive in an all-in, but his R gives him HP and resists. Don't force fights.",
+      "wave": "Farm under tower and split-push later.",
+      "jungle": "Gank when his W is down.",
+      "build": "Lethal Tempo. Crit items.",
+      "remember": "Trade when Wither is down."
+    }
+  ]
+}
