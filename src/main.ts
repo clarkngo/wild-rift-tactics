@@ -2,6 +2,7 @@ import './style.css';
 import { SECTIONS } from './sections';
 import { renderHome } from './pages/home';
 import { installPortraitFallback } from './shared/dom';
+import { installSfx } from './shared/sfx';
 
 const app = document.getElementById('app')!;
 const nav = document.getElementById('nav')!;
@@ -32,5 +33,6 @@ function route() {
 }
 
 installPortraitFallback();
+installSfx(document.getElementById('sfx-toggle') as HTMLButtonElement);
 window.addEventListener('hashchange', route);
 route();
