@@ -1,0 +1,86 @@
+{
+  "enemy": "camille",
+  "patch": "draft",
+  "reviewed": false,
+  "summary": "Scaling duelist who is weak at levels 1–3 and dangerous once she has items. Her trades come from wall-dash E stuns and true-damage second Q. Punish her early, and stay away from walls when E is up.",
+  "threats": [
+    "Q (Precision Protocol): a second Q after a short delay deals bonus true damage.",
+    "W (Tactical Sweep): the outer edge of the cone slows you and heals her.",
+    "E (Hookshot) grapples a wall, then dashes off it; it stuns if it hits you.",
+    "R (Hextech Ultimatum) at 5 locks you in a zone with her, cutting off escape."
+  ],
+  "matchups": [
+    {
+      "champion": "renekton",
+      "rating": "good",
+      "confidence": "medium",
+      "why": "Renekton's early burst out-trades Camille at levels 1–3, when she has no items. He can zone her off farm and snowball before her scaling kicks in.",
+      "trading": [
+        "E in, W stun, Q, then E back out. Get your trade done before her second Q is ready.",
+        "Walk inside her W cone, not on its outer edge, to avoid the slow and heal.",
+        "Don't fight near walls when her E is up.",
+        "Use full Fury for empowered W when she commits."
+      ],
+      "early": "Levels 1–3 are your window. Trade aggressively and deny her farm.",
+      "spike": "At 5 your R makes your all-in stronger, but her R traps you. Fight in open space.",
+      "wave": "Slow-push and crash for plates while she's weak.",
+      "jungle": "She escapes with E off walls. Gank in the middle of the lane, away from walls.",
+      "build": "Conqueror. Bruiser items; armor boots.",
+      "remember": "Win early, before her items."
+    },
+    {
+      "champion": "darius",
+      "rating": "good",
+      "confidence": "medium",
+      "why": "Darius out-damages Camille early with Hemorrhage stacks, and E pull stops her hookshot escapes. She can't trade with him before items.",
+      "trading": [
+        "E (Apprehend) pull her when she E's off a wall toward you.",
+        "Stack Hemorrhage with autos and W before she can disengage.",
+        "Stay inside her W cone to avoid the slow and heal.",
+        "Walk away from walls she could hookshot off."
+      ],
+      "early": "Bully her at levels 1–3 and look for an all-in at 3+ stacks.",
+      "spike": "At 5 your R resets on kill. Her R can trap you, so fight in the open.",
+      "wave": "Slow-push and crash.",
+      "jungle": "She escapes with E. Gank away from walls.",
+      "build": "Conqueror. Armor boots.",
+      "remember": "Pull her mid-air."
+    },
+    {
+      "champion": "fiora",
+      "rating": "neutral",
+      "confidence": "medium",
+      "why": "Riposte parries Camille's E stun and turns it back on her, but her true-damage Q and shield trade well against Fiora. Even matchup decided by who uses their key spell first.",
+      "trading": [
+        "Hold W (Riposte) for her E stun. A parried Hookshot leaves her stunned and in vitals range.",
+        "Lunge onto vitals and get out before her second Q (true damage) is ready.",
+        "Stand away from walls when her E is up; she needs one to hookshot.",
+        "Step inside her W cone, not on the edge, to avoid the slow and heal."
+      ],
+      "early": "Even. She's weak at levels 1–3, so trade when your W is up and her E is down.",
+      "spike": "At 5 your R heal zone wins extended fights, but her R traps you with her. Keep W for after the R lands.",
+      "wave": "Slow-push and fight in cooldown windows, away from walls.",
+      "jungle": "She escapes with E off walls. Gank in the middle of the lane, away from terrain.",
+      "build": "Conqueror. Bruiser items; armor boots.",
+      "remember": "Parry the hookshot."
+    },
+    {
+      "champion": "malphite",
+      "rating": "bad",
+      "confidence": "medium",
+      "why": "Camille's second Q is true damage that ignores Malphite's armor, and her passive shield blocks his poke. She out-trades him and scales better.",
+      "trading": [
+        "Q (Seismic Shard) her when she walks up; it's targeted and can't be dodged.",
+        "E (Ground Slam) slows her attack speed during trades, which weakens her Q2 follow-up.",
+        "Don't trade into her shield; poke once to make her passive pop first.",
+        "Stand away from walls when her E is up; she needs one to hookshot onto you."
+      ],
+      "early": "Farm and poke safely. You won't win extended trades against her true damage.",
+      "spike": "At 5 your R gives your jungler a lockdown. She's slippery without it.",
+      "wave": "Let her push and farm under tower; build health, not just armor.",
+      "jungle": "Gank away from walls; your R makes her escape harder.",
+      "build": "Aftershock or Grasp. Health items; armor alone doesn't stop true damage.",
+      "remember": "Poke and wait for R."
+    }
+  ]
+}

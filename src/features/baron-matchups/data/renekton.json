@@ -1,0 +1,86 @@
+{
+  "enemy": "renekton",
+  "patch": "draft",
+  "reviewed": false,
+  "summary": "The classic early-game lane bully. He dashes in with E, stuns with W, heals off Q, and gets stronger whenever his Fury bar is half full. He falls off later, so the goal against him is to survive his early pressure without losing too much farm.",
+  "threats": [
+    "Fury: at 50+ Fury his next spell is empowered. A full bar means a longer stun or a bigger heal; watch it before trading.",
+    "W (Ruthless Predator) stuns; empowered W stuns longer and breaks shields.",
+    "E (Slice and Dice) dashes in; if it hits a unit, he can recast to dash again, often back out.",
+    "R (Dominus) at 5 gives bonus HP and a damage aura, making all-ins much stronger."
+  ],
+  "matchups": [
+    {
+      "champion": "malphite",
+      "rating": "good",
+      "confidence": "medium",
+      "why": "Renekton's damage is physical and comes in short bursts, which Malphite's armor and passive shield absorb. Malphite's Q poke and E attack-speed slow cut his trades, and Renekton can't kill him through stacked armor.",
+      "trading": [
+        "Q (Seismic Shard) him when he walks up; the speed steal makes his E follow-up harder to land.",
+        "Keep Granite Shield up before a trade. It soaks his first burst.",
+        "When he E's in, E (Ground Slam) immediately to slow his autos.",
+        "Don't stand next to his minions; his E dashes through them to reach you."
+      ],
+      "early": "Take a quiet lane and Q poke. Don't fight a full Fury Renekton at levels 1–3.",
+      "spike": "At 5 your R gives you kill threat with a jungler, and his R doesn't let him out-trade your armor.",
+      "wave": "Let him push and farm safely; your armor makes his tower dives weak.",
+      "jungle": "Your R is great gank setup; call your jungler when he's pushed past the middle of the lane.",
+      "build": "Grasp. Early armor: Plated Steelcaps and Bramble Vest.",
+      "remember": "Armor up, Q and walk away."
+    },
+    {
+      "champion": "kennen",
+      "rating": "good",
+      "confidence": "medium",
+      "why": "Kennen is ranged and can poke Renekton without letting him trade back. E (Lightning Rush) outruns his E dash, and Kennen's mark stun interrupts his all-in.",
+      "trading": [
+        "Auto + Q (Thundering Shuriken) poke when he walks up to farm.",
+        "E away the moment he E's in, before he can W stun you.",
+        "Stand away from his minions so his E has nothing to dash through.",
+        "With two marks on him, finish the stun when he commits."
+      ],
+      "early": "Win the poke war at levels 1–3 and deny his Fury build-up.",
+      "spike": "At 5 your R plus stun stops his dive.",
+      "wave": "Hold the wave on your side so he must walk through poke.",
+      "jungle": "Once he's used E, he's slow and gankable.",
+      "build": "Electrocute. AP items; boots early.",
+      "remember": "Rush away from the E, stun on the way back."
+    },
+    {
+      "champion": "darius",
+      "rating": "neutral",
+      "confidence": "medium",
+      "why": "Both are early bullies. Renekton wins short trades with E-W-Q, but Darius wins extended fights once Hemorrhage stacks. The champion who controls trade length wins the lane.",
+      "trading": [
+        "When he E's in, E (Apprehend) him right away so he can't recast E and dash back out.",
+        "Stack Hemorrhage with W and autos while he's stuck in melee range. Long fights are yours.",
+        "Walk inside his Q (Cull the Meek) area; don't give him a full heal off minions and you.",
+        "If his Fury bar is full, wait for him to spend it before you commit."
+      ],
+      "early": "Even. He wants short E-W-Q trades; you want long fights. Don't give him free trades where he dashes out before your stacks build.",
+      "spike": "At 5 both get stronger. His R adds HP and a damage aura; your R resets on kill. Count your stacks before going in.",
+      "wave": "Slow-push so trades happen near his minions, where his E can dash out; freeze if you need him to walk to you.",
+      "jungle": "His only escape is the E recast. Call your jungler once he's used both dashes.",
+      "build": "Conqueror. Armor boots against his burst.",
+      "remember": "Make it a long fight."
+    },
+    {
+      "champion": "nasus",
+      "rating": "bad",
+      "confidence": "high",
+      "why": "Renekton is one of Nasus's worst early matchups: E-W-Q trades out-damage him, and Renekton can zone him off every stack. Nasus wins only if he survives to mid-game.",
+      "trading": [
+        "W (Wither) him when he E's in to slow his escape.",
+        "Stack Q only when his E is on cooldown.",
+        "Don't stand next to minions; his E dashes through them to reach you.",
+        "Back off when his Fury bar is full."
+      ],
+      "early": "Give up some creeps and farm under tower.",
+      "spike": "At 5 your R gives HP and resists; use it to survive his all-in, not to start one.",
+      "wave": "Farm under tower; stack Q on cannon minions.",
+      "jungle": "Ask for an early gank when he overextends with E down. He has no escape without it.",
+      "build": "Grasp. Armor boots early; Bramble Vest cuts his Q healing.",
+      "remember": "Survive and stack."
+    }
+  ]
+}

@@ -30,10 +30,15 @@ You are two experts working together:
 
 ## Code layout
 
-- `src/data/champions.ts`: Baron lane roster (id, display name, Data Dragon image key).
-- `src/data/baron/<enemy-id>.json`: one file per enemy; auto-loaded via `import.meta.glob`.
-- `src/types.ts`: the data schema. `src/main.ts`: hash-routed UI (`#/baron/<enemy>`).
-- To add an enemy: create `src/data/baron/<id>.json` matching `EnemyMatchups`; `npm run build` runs `scripts/validate-data.mjs` (schema, ids, mirror-rating consistency).
+The site is split into **sections**, each mounted at `#/<route>/...` and listed in the header and home page.
+
+- `src/main.ts`: hash router; `LEGACY_ROUTES` redirects old links (e.g. `#/baron/x` → `#/baron-matchups/x`).
+- `src/sections.ts`: the `Section` interface and the `SECTIONS` registry. To add a section, create
+  `src/features/<name>/index.ts` exporting a `Section` and add it to the registry.
+- `src/pages/home.ts`: landing page listing all sections.
+- `src/shared/`: cross-section code: champion roster (`champions.ts`), `Champion` type, DOM helpers (`esc`, `portrait`).
+- `src/features/baron-matchups/`: the Baron matchups section (`index.ts`, `types.ts`, `data/<enemy-id>.json`).
+- To add an enemy: create `src/features/baron-matchups/data/<id>.json` matching `EnemyMatchups`; `npm run build` runs `scripts/validate-data.mjs` (schema, ids, mirror-rating consistency).
 
 ## Commands
 

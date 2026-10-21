@@ -17,5 +17,5 @@ deploys to GitHub Pages via `.github/workflows/static.yml` (Pages source must be
 
 ## Adding matchups
 
-Add `src/data/baron/<enemy-id>.json` (see `src/types.ts` and existing files). Keep
+Add `src/features/baron-matchups/data/<enemy-id>.json` (see `src/features/baron-matchups/types.ts` and existing files). Keep
 `reviewed: false` until a high-elo player has checked it. See `CLAUDE.md` for content rules.
