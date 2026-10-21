@@ -1,0 +1,104 @@
+{
+  "enemy": "kennen",
+  "patch": "draft",
+  "reviewed": false,
+  "summary": "Ranged AP poke champion who bullies melee laners with autos and shuriken, and stuns anyone who takes three marks. He's squishy with one escape (E), so champions who can reach him through it, or who out-range him, beat him.",
+  "threats": [
+    "Passive (Mark of the Storm): three marks stun you. Count the marks on your champion before trading.",
+    "Q (Thundering Shuriken) is long-range poke that applies a mark.",
+    "E (Lightning Rush) makes him fast and lets him pass through units; it's his only escape.",
+    "R (Slicing Maelstrom) at 5 is a big AoE stun storm; don't dive him while it's up."
+  ],
+  "matchups": [
+    {
+      "champion": "pantheon",
+      "rating": "good",
+      "confidence": "medium",
+      "why": "Pantheon's W (Shield Vault) is a point-and-click dash and stun that reaches Kennen from range, even through Lightning Rush if Pantheon times it after the dash. His early burst kills Kennen before he can stack marks.",
+      "trading": [
+        "W onto him when he walks up to poke, then Q and autos during the stun.",
+        "Hold E (Aegis Assault) facing him to block his shuriken poke.",
+        "Wait for him to use E before you W, so he can't rush away.",
+        "Back off when you have two marks on you; the third stuns."
+      ],
+      "early": "Levels 1–3 are yours. Trade aggressively whenever his E is down.",
+      "spike": "At 5 his R stuns you if you dive. Bait it, then W onto him once it's used.",
+      "wave": "Slow-push and crash; take plates while he can't contest.",
+      "jungle": "W stun sets up ganks. Call when his E is down.",
+      "build": "Conqueror or Electrocute. Lethality items; MR boots.",
+      "remember": "Wait for E, then W."
+    },
+    {
+      "champion": "jayce",
+      "rating": "neutral",
+      "confidence": "medium",
+      "why": "Both are ranged poke champions. Jayce's gated Shock Blast out-ranges Kennen, but Kennen's E dodges it and his stun interrupts Jayce's Hammer all-in. The lane comes down to who wins the poke war.",
+      "trading": [
+        "Gated Cannon Q when he's farming; it out-ranges his poke.",
+        "Don't Hammer-Q in with two marks on you; the third stuns.",
+        "Hammer E (Thundering Blow) him away if he Lightning Rushes in.",
+        "Stand behind minions so his shuriken hits them instead of you."
+      ],
+      "early": "Even. Trade poke and don't let him stack marks on you for free.",
+      "spike": "At 5 his R makes your Hammer all-ins risky; stay in cannon form and poke.",
+      "wave": "Slow-push and trade poke when his Q is on cooldown.",
+      "jungle": "Gank when his E is down; he has no escape.",
+      "build": "Electrocute or Phase Rush. Lethality items.",
+      "remember": "Out-range him, don't dive him."
+    },
+    {
+      "champion": "fiora",
+      "rating": "bad",
+      "confidence": "medium",
+      "why": "Kennen out-ranges Fiora and pokes her every time she walks up; she has to Lunge onto him to trade, and he just E's away. Riposte only blocks one stun, not the poke pattern.",
+      "trading": [
+        "Hold W (Riposte) for his third-mark stun and stun him back.",
+        "Lunge (Q) onto him only when his E is down.",
+        "Stand behind minions to block his shuriken.",
+        "Don't chase him through E; he's faster."
+      ],
+      "early": "Farm safely and accept some poke; wait for him to waste his E first.",
+      "spike": "At 5 his R stuns you if you dive. Wait for it to be used before committing.",
+      "wave": "Let him push and farm under tower; don't walk through his poke.",
+      "jungle": "Ask for ganks; he has no escape once E is down.",
+      "build": "Conqueror. MR boots and an early MR item.",
+      "remember": "Parry the stun, wait out E."
+    },
+    {
+      "champion": "renekton",
+      "rating": "bad",
+      "confidence": "medium",
+      "why": "Kennen pokes Renekton from range and E's away from his dash, so Renekton can't land his early burst. Renekton's lane bully pattern doesn't work against a champion he can't reach.",
+      "trading": [
+        "E (Slice and Dice) in only when his E is on cooldown.",
+        "W stun him immediately on landing so he can't stack the third mark.",
+        "Stand behind minions to block his shuriken.",
+        "Don't chase him through Lightning Rush."
+      ],
+      "early": "Farm safely and accept some poke; wait for him to waste his E first.",
+      "spike": "At 5 his R stuns you if you dive. Wait for it to be used before committing.",
+      "wave": "Let him push and farm under tower; don't walk through his poke.",
+      "jungle": "Ask for ganks; he has no escape once E is down.",
+      "build": "Conqueror. MR boots and an early MR item.",
+      "remember": "Dive only when E is down."
+    },
+    {
+      "champion": "volibear",
+      "rating": "bad",
+      "confidence": "medium",
+      "why": "Kennen out-ranges Volibear and E outruns his Q speed boost, so Volibear has to walk through poke to trade. His stun cuts Volibear's all-in short.",
+      "trading": [
+        "Q (Thundering Smash) toward him only when his E is on cooldown.",
+        "W (Frenzied Maul) him twice to heal through his poke.",
+        "Stand behind minions to block his shuriken.",
+        "Don't chase him through Lightning Rush."
+      ],
+      "early": "Farm safely and accept some poke; wait for him to waste his E first.",
+      "spike": "At 5 your R lets you dive past his tower, but his R stuns you; bait it first.",
+      "wave": "Let him push and farm under tower; don't walk through his poke.",
+      "jungle": "Ask for ganks; he has no escape once E is down.",
+      "build": "Conqueror or Grasp. MR boots and an early MR item.",
+      "remember": "Dive only when E is down."
+    }
+  ]
+}

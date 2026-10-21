@@ -1,0 +1,86 @@
+{
+  "enemy": "gwen",
+  "patch": "draft",
+  "reviewed": false,
+  "summary": "Scaling AP skirmisher who shreds tanks with %HP magic damage and true-damage Q centres. She's weak at levels 1–3 and strong once she has items. Bully her early, and fight her outside her mist, not inside it.",
+  "threats": [
+    "Q (Snip Snip!) stacks with her autos; the final snip's centre deals true damage.",
+    "W (Hallowed Mist) blocks damage from anyone outside the mist. Step inside it to hit her.",
+    "E (Skip 'n Slash) dashes and gives her attack speed for an extended trade.",
+    "R (Needlework) at 5 throws needles that slow, up to three casts. It's how she catches you running."
+  ],
+  "matchups": [
+    {
+      "champion": "pantheon",
+      "rating": "good",
+      "confidence": "medium",
+      "why": "Pantheon's level 1–5 burst out-damages Gwen before her items, and W (Shield Vault) stuns her point-and-click even if she's in her mist. He can win the lane decisively before her scaling matters.",
+      "trading": [
+        "Empowered Q poke whenever she walks up to farm.",
+        "W stun her when she E's in, then Q and autos during the stun.",
+        "Step inside her mist to hit her; Q from outside gets blocked.",
+        "E (Aegis Assault) to block her Q snips when she commits."
+      ],
+      "early": "Levels 1–3 are yours. Trade aggressively and deny her farm before her first item.",
+      "spike": "At 5 your R gives roam pressure; her R lets her catch you if you overstay.",
+      "wave": "Slow-push and crash; take plates while she can't contest.",
+      "jungle": "W stun sets up ganks. Call when her E is down.",
+      "build": "Conqueror or Electrocute. Lethality items; MR boots.",
+      "remember": "Win early, step into the mist."
+    },
+    {
+      "champion": "renekton",
+      "rating": "good",
+      "confidence": "medium",
+      "why": "Renekton's early E-W-Q burst out-trades Gwen at levels 1–3, and his W stun interrupts her Q stacking. He can zone her off farm and snowball before her scaling kicks in.",
+      "trading": [
+        "E in, W stun, Q, then recast E to dash out before she stacks her Q.",
+        "Step inside her mist to hit her; attacks from outside are blocked.",
+        "Use full Fury for empowered W when she commits.",
+        "Back off when she has a full Q stack ready."
+      ],
+      "early": "Levels 1–3 are your window. Trade aggressively and deny her farm.",
+      "spike": "At 5 your R makes all-ins stronger; her R slows you if you chase.",
+      "wave": "Slow-push and crash for plates while she's weak.",
+      "jungle": "She escapes with E. Gank once she's used it.",
+      "build": "Conqueror. Bruiser items; MR boots.",
+      "remember": "Win early, before her items."
+    },
+    {
+      "champion": "fiora",
+      "rating": "neutral",
+      "confidence": "medium",
+      "why": "Riposte parries Gwen's R slow or Q true damage, and vitals deal true damage through her bulk. But her mist blocks Fiora's damage from outside, and she scales just as well into side lane.",
+      "trading": [
+        "Hold W (Riposte) for her final Q snip or her R.",
+        "Step inside her mist to hit vitals; damage from outside is blocked.",
+        "Trade when her E is on cooldown; she can't keep up attack speed.",
+        "Lunge out before her full Q stack lands."
+      ],
+      "early": "Even. Trade when her E is down and your W is up; otherwise farm and wait.",
+      "spike": "At 5 your R heal zone wins extended fights, but her R slows you if you chase.",
+      "wave": "Slow-push and fight in her cooldown windows.",
+      "jungle": "She escapes with E. Gank once she's used it.",
+      "build": "Conqueror. Bruiser items; MR boots.",
+      "remember": "Parry the snip, fight inside the mist."
+    },
+    {
+      "champion": "malphite",
+      "rating": "bad",
+      "confidence": "medium",
+      "why": "Gwen's magic damage and true-damage Q centres ignore Malphite's armor, and her mist blocks his Q poke from outside. She out-trades him in every extended fight and scales better.",
+      "trading": [
+        "Q (Seismic Shard) her when she walks up to farm, before she can use W.",
+        "Don't trade into a full Q stack; walk out of its centre.",
+        "Step inside her mist if you need to hit her.",
+        "Buy MR early; armor won't help here."
+      ],
+      "early": "Farm safely and accept some poke. Rush an MR item before trading.",
+      "spike": "At 5 your R plus your jungler can kill her if she's already used E.",
+      "wave": "Let her push and farm under tower; she can't dive you early.",
+      "jungle": "Ask for ganks once her E is down; your R makes her escape hard.",
+      "build": "Grasp. MR boots and early MR items.",
+      "remember": "Buy MR, not armor."
+    }
+  ]
+}

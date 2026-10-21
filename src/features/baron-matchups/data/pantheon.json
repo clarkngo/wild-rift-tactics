@@ -1,0 +1,104 @@
+{
+  "enemy": "pantheon",
+  "patch": "draft",
+  "reviewed": false,
+  "summary": "Early-game burst bully with point-and-click stun and long-range spear poke. He's strongest at levels 1–5 and falls off later. Survive his early pressure with armor and sustain, and he has little left to offer in lane.",
+  "threats": [
+    "Q (Comet Spear) is long-range poke; empowered at 5 Mortal Will stacks, it deals bonus damage and slows.",
+    "W (Shield Vault) is a point-and-click dash and stun. It's how he starts every all-in.",
+    "E (Aegis Assault) blocks damage from the front, including tower shots.",
+    "R (Grand Starfall) at 5 lets him roam across the map. Ping when he disappears from lane."
+  ],
+  "matchups": [
+    {
+      "champion": "malphite",
+      "rating": "good",
+      "confidence": "medium",
+      "why": "Pantheon's burst is physical, which Malphite's armor and passive shield absorb. He can't kill Malphite early, and Malphite's targeted Q pokes him every time he walks up.",
+      "trading": [
+        "Q (Seismic Shard) him when he walks up to farm.",
+        "Keep Granite Shield up before he W's in; it soaks his first burst.",
+        "E (Ground Slam) when he's in melee range to slow his autos.",
+        "Stand behind minions so his spear hits them instead."
+      ],
+      "early": "Farm safely and Q poke. Build armor early; he can't kill you through it.",
+      "spike": "At 5 his R lets him roam. Ping when he disappears and push his tower.",
+      "wave": "Let him push and farm under tower; he can't dive you through armor.",
+      "jungle": "Your R sets up ganks. Call when his W is down.",
+      "build": "Grasp. Plated Steelcaps and early armor.",
+      "remember": "Armor up, out-scale him."
+    },
+    {
+      "champion": "garen",
+      "rating": "good",
+      "confidence": "low",
+      "why": "Garen's passive regen undoes Pantheon's poke, and W (Courage) tenacity shortens his stun. Garen's Q silence stops Pantheon casting during a trade, and he out-scales Pantheon in side lane.",
+      "trading": [
+        "Q silence him when he W's in, so he can't follow up with spear.",
+        "Use W (Courage) as his stun lands to cut its duration.",
+        "Back off after trades to let Perseverance regen.",
+        "Stand behind minions to block his spear poke."
+      ],
+      "early": "Farm and regen through his poke; trade with Q when he walks up.",
+      "spike": "At 5 his R lets him roam. Ping when he disappears and push his tower.",
+      "wave": "Slow-push and trade when his W is on cooldown.",
+      "jungle": "Gank when his W is down; he has no escape without it.",
+      "build": "Conqueror. Armor boots against his burst.",
+      "remember": "Regen the poke, silence the dive."
+    },
+    {
+      "champion": "darius",
+      "rating": "neutral",
+      "confidence": "medium",
+      "why": "Pantheon's early burst and poke out-trade Darius at range, but Darius wins any extended fight once he pulls Pantheon in. The lane comes down to whether Darius lands E before Pantheon's stun.",
+      "trading": [
+        "E (Apprehend) pull him when he walks up to farm.",
+        "Stack Hemorrhage quickly before his E blocks your damage.",
+        "Walk around his E shield; it only blocks damage from the front.",
+        "Stand behind minions to block his spear poke."
+      ],
+      "early": "Even. Trade when his W is on cooldown so he can't stun you out of your combo.",
+      "spike": "At 5 his R lets him roam; your R resets on kill. Push his tower if he roams.",
+      "wave": "Slow-push and trade on his cooldown windows.",
+      "jungle": "He has no escape without W. Gank when it's down.",
+      "build": "Conqueror. Armor boots against his burst.",
+      "remember": "Pull before he stuns."
+    },
+    {
+      "champion": "teemo",
+      "rating": "bad",
+      "confidence": "medium",
+      "why": "Pantheon's damage is mostly spells, so Teemo's blind barely helps. His W is a point-and-click dash and stun that reaches Teemo from range, and his spear out-pokes Teemo's autos.",
+      "trading": [
+        "Stand behind minions to block his spear poke.",
+        "Blind him as soon as he W's in to cut his auto damage.",
+        "Move Quick away after the stun ends.",
+        "Shroom his approach paths at 5 to slow his dive."
+      ],
+      "early": "Farm safely and accept some poke; don't trade while his W is available.",
+      "spike": "At 5 his R lets him roam. Ping when he disappears and push his tower.",
+      "wave": "Let him push and farm under tower; don't walk into his spear range.",
+      "jungle": "Ask for ganks; he has no escape once W is down.",
+      "build": "Electrocute. AP items; armor boots.",
+      "remember": "Hide behind minions, shroom the dive."
+    },
+    {
+      "champion": "fiora",
+      "rating": "bad",
+      "confidence": "medium",
+      "why": "Pantheon's level 1–5 burst out-damages Fiora, and his spear pokes her off farm. She can only win by parrying his W stun, and he can bait her Riposte with spear poke first.",
+      "trading": [
+        "Hold W (Riposte) for his W stun and stun him back.",
+        "Don't Riposte his spear poke; save it for the stun.",
+        "Stand behind minions to block his spear.",
+        "Lunge onto vitals only when his W is on cooldown."
+      ],
+      "early": "Farm safely and accept some poke; trade only after parrying his W.",
+      "spike": "At 5 his R lets him roam. Ping when he disappears and push his tower.",
+      "wave": "Let him push and farm under tower; you outscale him later.",
+      "jungle": "Ask for ganks once his W is down; he has no other escape.",
+      "build": "Conqueror. Armor boots against his burst.",
+      "remember": "Parry the stun, not the spear."
+    }
+  ]
+}

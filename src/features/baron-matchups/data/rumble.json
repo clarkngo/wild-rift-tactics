@@ -1,0 +1,86 @@
+{
+  "enemy": "rumble",
+  "patch": "draft",
+  "reviewed": false,
+  "summary": "AP mech bully who burns you with a short-range flamethrower and kites with harpoon slows. He manages a Heat bar: high Heat empowers his spells, but overheating silences him for a few seconds. Punish the overheat and stay out of flamethrower range.",
+  "threats": [
+    "Q (Flamespitter) is a short-range cone that deals heavy damage over time; walk out of it.",
+    "Heat: past 50 Heat his spells are empowered; at 100 he overheats and can't cast for a few seconds.",
+    "E (Electro Harpoon) slows you; two harpoons stack the slow so he can kite and chase.",
+    "R (The Equalizer) at 5 lays down a burning line that slows. Don't fight inside it."
+  ],
+  "matchups": [
+    {
+      "champion": "jayce",
+      "rating": "good",
+      "confidence": "medium",
+      "why": "Jayce out-ranges Rumble's flamethrower with gated Shock Blast, so Rumble has to walk through poke to trade. Hammer E knocks Rumble away whenever he gets close enough to burn.",
+      "trading": [
+        "Gated Cannon Q when he walks up to farm; it out-ranges his flamethrower.",
+        "Hammer E (Thundering Blow) him away when he closes in for Flamespitter.",
+        "Sidestep his harpoons so he can't stack the slow on you.",
+        "Trade hard when he overheats; he can't cast for a few seconds."
+      ],
+      "early": "Poke from range at levels 1–3; he can't reach you without walking through Shock Blast.",
+      "spike": "At 5 his R slows you if you stand in it. Poke from outside the burning line.",
+      "wave": "Slow-push and take plates while he can't contest from range.",
+      "jungle": "He's slow without his harpoon. Gank when he's overheated or out of position.",
+      "build": "Electrocute or Phase Rush. Lethality items; MR boots.",
+      "remember": "Poke from range, punish the overheat."
+    },
+    {
+      "champion": "mordekaiser",
+      "rating": "good",
+      "confidence": "low",
+      "why": "Mordekaiser's W (Indestructible) shield absorbs Rumble's burn, and his R isolates Rumble where his slows and kiting matter less. Mordekaiser wins any extended fight inside his Realm.",
+      "trading": [
+        "Q (Obliterate) him when he walks up to farm.",
+        "W (Indestructible) to absorb his flamethrower damage.",
+        "E (Death's Grasp) pull him into your Q for burst.",
+        "Walk out of his flamethrower cone rather than trading inside it."
+      ],
+      "early": "Trade with Q and shield; he out-damages you in long flamethrower trades early.",
+      "spike": "At 5 your R takes him into a 1v1 where his kite is limited. Use it after he's used E.",
+      "wave": "Slow-push and trade when the wave is with you; don't fight in his full wave.",
+      "jungle": "He's slow without his harpoon. Gank when he's overheated.",
+      "build": "Conqueror. Magic-pen bruiser items; MR boots.",
+      "remember": "Shield the burn, realm the kite."
+    },
+    {
+      "champion": "malphite",
+      "rating": "neutral",
+      "confidence": "medium",
+      "why": "Rumble's damage is magic, so Malphite's armor doesn't help, but Malphite's Q poke and R give him kill pressure with a jungler. Neither can kill the other alone early, so the lane is decided by MR timing and ganks.",
+      "trading": [
+        "Q (Seismic Shard) him when he walks up to farm, then walk away.",
+        "Walk out of his flamethrower cone rather than trading inside it.",
+        "Trade when he overheats; he can't cast for a few seconds.",
+        "Buy MR early; armor won't help here."
+      ],
+      "early": "Farm safely and Q poke. Rush an MR item before taking any extended trades.",
+      "spike": "At 5 your R plus your jungler kills him; his R slows your follow-up, so commit together.",
+      "wave": "Slow-push and roam once your R is up; he can't follow quickly.",
+      "jungle": "Your R sets up ganks. Call when he's overheated or out of position.",
+      "build": "Grasp. MR boots and early MR items.",
+      "remember": "Buy MR, wait for R."
+    },
+    {
+      "champion": "darius",
+      "rating": "bad",
+      "confidence": "low",
+      "why": "Rumble's harpoon slows let him kite Darius while his flamethrower burns, so Darius rarely gets the extended melee fight he needs. Darius has to land E pull to win any trade.",
+      "trading": [
+        "E (Apprehend) pull him only when he's in range and his E is on cooldown.",
+        "Walk out of his flamethrower cone rather than trading inside it.",
+        "Trade hard when he overheats; he can't cast for a few seconds.",
+        "Don't chase him through his harpoon slows."
+      ],
+      "early": "Farm safely and accept some burn; wait for him to overheat or waste E.",
+      "spike": "At 5 his R slows you; your R execute needs him in range, so wait for him to commit.",
+      "wave": "Let him push and farm under tower; don't walk into his flamethrower.",
+      "jungle": "Ask for ganks; he's slow without his harpoon.",
+      "build": "Conqueror. Ghost for chasing. MR boots.",
+      "remember": "Pull when he overheats."
+    }
+  ]
+}

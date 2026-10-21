@@ -1,0 +1,86 @@
+{
+  "enemy": "shen",
+  "patch": "draft",
+  "reviewed": false,
+  "summary": "Tank whose lane is about short trades and map pressure. He blocks autos with W, taunts with E, and at level 5 can ult to save a teammate anywhere. Spell damage and %HP damage beat him; ping his R when he leaves lane.",
+  "threats": [
+    "W (Spirit's Refuge) blocks auto-attacks for allies in the zone. Spell damage still hits.",
+    "E (Shadow Dash) dashes and taunts; it's his engage and his escape.",
+    "Q (Twilight Assault) empowers his autos with %HP damage when he pulls his spirit blade through you.",
+    "R (Stand United) at 5: he shields and teleports to an ally anywhere. Ping when he leaves lane."
+  ],
+  "matchups": [
+    {
+      "champion": "gwen",
+      "rating": "good",
+      "confidence": "medium",
+      "why": "Gwen's damage is magic and her Q is a spell, so Shen's W can't block it. Her %HP damage shreds his tankiness, and her mist blocks his taunt follow-up from outside.",
+      "trading": [
+        "Stack Q with autos, then land the centre of the final snip for true damage.",
+        "Use W (Hallowed Mist) to block his damage from outside the mist.",
+        "E (Skip 'n Slash) to close distance after he's used his taunt.",
+        "Don't auto into his W zone; use your Q instead."
+      ],
+      "early": "Trade with full-stack Q and back off. He can't out-trade your %HP damage.",
+      "spike": "At 5 he'll R to help other lanes. Ping it, then push his tower or take plates.",
+      "wave": "Slow-push so he has to choose between ulting and losing plates.",
+      "jungle": "His escape is E. Gank once he's used it.",
+      "build": "Conqueror. AP bruiser items with %HP damage.",
+      "remember": "Spells beat his W."
+    },
+    {
+      "champion": "mordekaiser",
+      "rating": "good",
+      "confidence": "medium",
+      "why": "Mordekaiser's damage is all spells, so Shen's W does nothing against it. His Q isolation damage chunks Shen, and his R takes Shen out of the fight entirely.",
+      "trading": [
+        "Q (Obliterate) him when he walks up to farm; spells ignore his W.",
+        "E (Death's Grasp) pull him into your Q for burst.",
+        "Use W (Indestructible) to absorb his Q-empowered autos.",
+        "Walk sideways out of his E taunt path."
+      ],
+      "early": "Trade freely with Q; his W doesn't block it and he can't trade back well.",
+      "spike": "At 5 your R takes him into a 1v1. He'll R to other lanes; ping it and push his tower.",
+      "wave": "Slow-push and pressure his tower; make him choose between ulting and losing plates.",
+      "jungle": "His escape is E. Gank once he's used it.",
+      "build": "Conqueror. Magic-pen bruiser items.",
+      "remember": "Spells beat his W."
+    },
+    {
+      "champion": "darius",
+      "rating": "neutral",
+      "confidence": "medium",
+      "why": "Darius out-damages Shen in extended fights with Hemorrhage stacks, but Shen's W blocks Darius's autos and his E taunt disrupts the combo. The lane is about Darius trading when W is down.",
+      "trading": [
+        "E (Apprehend) pull him when his W is on cooldown.",
+        "Use Q, not autos, while his W is up; spells still hit.",
+        "Walk sideways out of his E taunt path.",
+        "Hit the outer edge of Q on him for damage and healing."
+      ],
+      "early": "Even. Trade when his W is down so your autos and Hemorrhage actually land.",
+      "spike": "At 5 he'll R to other lanes. Ping it, then push his tower or take plates.",
+      "wave": "Slow-push so he has to choose between ulting and losing plates.",
+      "jungle": "His escape is E. Gank once he's used it.",
+      "build": "Conqueror. Armor boots.",
+      "remember": "Trade when W is down."
+    },
+    {
+      "champion": "tryndamere",
+      "rating": "bad",
+      "confidence": "medium",
+      "why": "Tryndamere's damage is all autos, and Shen's W blocks them entirely. Shen's E taunt forces Tryndamere into bad trades, and he can't out-damage Shen's tankiness in lane.",
+      "trading": [
+        "Don't auto into his W zone; walk out and wait for it to end.",
+        "Use E (Spinning Slash) to dodge his E taunt path.",
+        "Trade only when his W is on cooldown.",
+        "Use Q (Bloodlust) to heal off his poke instead of trading back."
+      ],
+      "early": "Farm and build Fury. Trade only when his W is on cooldown.",
+      "spike": "At 5 he'll R to other lanes. Ping it, then push his tower or split-push.",
+      "wave": "Slow-push and split-push when he leaves lane to ult.",
+      "jungle": "His escape is E. Gank once he's used it.",
+      "build": "Lethal Tempo. Crit and attack speed.",
+      "remember": "Wait out his W."
+    }
+  ]
+}

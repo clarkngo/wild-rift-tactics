@@ -1,0 +1,86 @@
+{
+  "enemy": "drmundo",
+  "patch": "draft",
+  "reviewed": false,
+  "summary": "Regen tank who's weak at levels 1–3 and nearly unkillable once he has HP items and R. He pokes with cleavers and runs through CC. The plan against him: bully him early, buy anti-heal, and use %HP or true damage.",
+  "threats": [
+    "Q (Infected Bonesaw) deals %current-HP damage and slows; it's his main poke and last-hit tool.",
+    "His passive lets him ignore the first CC in a fight. Don't open with your stun; bait the canister first.",
+    "E (Blunt Force Trauma) gets stronger the lower his HP is, so he hits harder when you've poked him down.",
+    "R (Maximum Dosage) at 5 gives huge regen and speed; he heals back to full from low HP."
+  ],
+  "matchups": [
+    {
+      "champion": "vayne",
+      "rating": "good",
+      "confidence": "medium",
+      "why": "Vayne's W (Silver Bolts) deals true %max-HP damage, so Mundo's HP stacking makes him more vulnerable, not less. She out-ranges him and kites his run-ins, and he has no gap closer besides walking.",
+      "trading": [
+        "Auto him whenever he walks up to farm; three hits procs Silver Bolts.",
+        "Sidestep his Q cleaver by walking behind minions or Tumbling (Q) sideways.",
+        "Don't open with Condemn; his passive canister ignores the first CC.",
+        "Back off when he activates R; kite him until it ends."
+      ],
+      "early": "Kite and farm. He can't reach you, and every trade adds up to true damage.",
+      "spike": "At 5 his R heals him through your poke; don't chase, wait for it to end.",
+      "wave": "Slow-push and take plates while he can't contest.",
+      "jungle": "He's slow without R. Gank when it's down.",
+      "build": "Lethal Tempo. Crit and on-hit; an early anti-heal item.",
+      "remember": "True damage beats HP."
+    },
+    {
+      "champion": "gwen",
+      "rating": "good",
+      "confidence": "medium",
+      "why": "Gwen's damage is magic and %max HP, so Mundo's HP stacking feeds her. W (Hallowed Mist) blocks his Q poke from outside the mist, and she out-trades him in extended fights.",
+      "trading": [
+        "Stack Q with autos, then land the centre of the final snip for true damage.",
+        "Pop W when he throws Q to block the cleaver.",
+        "E (Skip 'n Slash) to close distance and stick to him.",
+        "Don't open with CC; his passive ignores the first one."
+      ],
+      "early": "Trade with full-stack Q and back off before his E damage climbs.",
+      "spike": "At 5 his R heals him back to full; your R lets you keep pressure from range.",
+      "wave": "Slow-push and trade when the wave is with you.",
+      "jungle": "He's slow without R. Gank when it's down.",
+      "build": "Conqueror. AP bruiser items with %HP damage; anti-heal.",
+      "remember": "%HP damage beats HP."
+    },
+    {
+      "champion": "darius",
+      "rating": "good",
+      "confidence": "medium",
+      "why": "Darius out-damages Mundo at levels 1–3 before his HP items, and Hemorrhage stacks plus Q healing win every extended fight early. Mundo's R heal is easier to beat with anti-heal from your build.",
+      "trading": [
+        "E (Apprehend) pull him when he walks up to Q a minion.",
+        "Stack Hemorrhage with W and autos; he can't trade back early.",
+        "Hit the outer edge of Q on him for damage and healing.",
+        "Don't R him while his R is active; wait for it to end."
+      ],
+      "early": "Bully him at levels 1–3 and deny farm; he's at his weakest here.",
+      "spike": "At 5 his R regen out-heals your bleed. Back off during it and execute once it ends.",
+      "wave": "Freeze near your tower so he has to walk up to farm.",
+      "jungle": "He's slow without R. Gank when it's down.",
+      "build": "Conqueror. Anti-heal item early.",
+      "remember": "Win early, anti-heal his R."
+    },
+    {
+      "champion": "malphite",
+      "rating": "neutral",
+      "confidence": "medium",
+      "why": "Tank vs tank: Malphite's Q poke chips Mundo, but Mundo's regen undoes it. Neither can kill the other alone, so the lane is decided by who roams and teamfights better.",
+      "trading": [
+        "Q (Seismic Shard) him when he walks up to farm.",
+        "Stand behind minions to block his Q cleaver.",
+        "Don't trade long; he out-sustains you.",
+        "Use E (Ground Slam) to slow his attack speed if he trades."
+      ],
+      "early": "Farm and Q poke. Neither of you can kill the other alone, so don't waste HP.",
+      "spike": "At 5 both of you can roam; ward river and track where his R regen takes him.",
+      "wave": "Slow-push and roam once your R is up; he can't follow quickly.",
+      "jungle": "Your R plus your jungler kills him once his R is down.",
+      "build": "Grasp. Health and armor items.",
+      "remember": "Farm, roam, out-teamfight."
+    }
+  ]
+}
