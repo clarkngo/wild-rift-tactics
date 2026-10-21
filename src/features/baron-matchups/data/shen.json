@@ -61,7 +61,7 @@
       "spike": "At 5 he'll R to other lanes. Ping it, then push his tower or take plates.",
       "wave": "Slow-push so he has to choose between ulting and losing plates.",
       "jungle": "His escape is E. Gank once he's used it.",
-      "build": "Conqueror. Armor boots.",
+      "build": "Conqueror. Armor boots against his autos.",
       "remember": "Trade when W is down."
     },
     {
@@ -75,7 +75,7 @@
         "Trade only when his W is on cooldown.",
         "Use Q (Bloodlust) to heal off his poke instead of trading back."
       ],
-      "early": "Farm and build Fury. Trade only when his W is on cooldown.",
+      "early": "Farm and build Fury. Trade only when his W is on cooldown and can block nothing.",
       "spike": "At 5 he'll R to other lanes. Ping it, then push his tower or split-push.",
       "wave": "Slow-push and split-push when he leaves lane to ult.",
       "jungle": "His escape is E. Gank once he's used it.",
