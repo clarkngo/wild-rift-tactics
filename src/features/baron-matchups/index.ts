@@ -105,11 +105,6 @@ function renderEnemy(app: HTMLElement, id: string) {
         <p>${esc(data.summary)}</p>
       </div>
     </section>
-    ${
-      data.reviewed
-        ? ''
-        : `<p class="notice">Draft content, not yet reviewed by a high-elo player. Patch: ${esc(data.patch)}.</p>`
-    }
     <section class="threats">
       <h2>What ${esc(enemy.name)} wants to do</h2>
       <ul>${data.threats.map((t) => `<li>${esc(t)}</li>`).join('')}</ul>
