@@ -1,0 +1,86 @@
+{
+  "enemy": "singed",
+  "patch": "draft",
+  "reviewed": false,
+  "summary": "Tanky troll who runs around with Poison Trail, flings you into his team, and proxy-farms behind your tower. The golden rule: never chase Singed. Ranged poke and %HP damage beat him; melee champions who chase him lose.",
+  "threats": [
+    "Q (Poison Trail) leaves poison behind him, so chasing him means running through it.",
+    "E (Fling) throws you behind him; combined with W (Mega Adhesive), you get rooted in the goo.",
+    "Passive (Noxious Slipstream) speeds him up when he passes near champions.",
+    "R (Insanity Potion) at 5 gives him a huge stat boost for fights and roams."
+  ],
+  "matchups": [
+    {
+      "champion": "jayce",
+      "rating": "good",
+      "confidence": "medium",
+      "why": "Jayce pokes Singed out of lane with gated Shock Blast and never needs to chase him. Singed has no way to reach Jayce from range, and Hammer E knocks him away if he runs in.",
+      "trading": [
+        "Gated Cannon Q whenever he walks up to farm.",
+        "Hammer E him away when he runs in for Fling.",
+        "Never chase him through his Poison Trail.",
+        "Stand away from walls so his Fling can't pin you."
+      ],
+      "early": "Poke from range at levels 1–3; he can't trade back or reach you without Fling.",
+      "spike": "At 5 his R gives him a big stat boost. Keep distance and poke rather than all-in.",
+      "wave": "Slow-push and take plates; don't let him proxy farm behind your tower.",
+      "jungle": "He escapes by running. Gank only when he's past mid-lane.",
+      "build": "Electrocute or Phase Rush. Lethality items.",
+      "remember": "Poke, don't chase."
+    },
+    {
+      "champion": "vayne",
+      "rating": "good",
+      "confidence": "medium",
+      "why": "Vayne's W (Silver Bolts) true damage shreds Singed's tankiness, and she can kite him without chasing through poison. Condemn knocks him away when he runs in for Fling.",
+      "trading": [
+        "Auto him whenever he walks up; he can't reach you without Fling.",
+        "Condemn him away when he runs in for Fling.",
+        "Never chase him through his Poison Trail; let him come to you.",
+        "Tumble (Q) away from his W goo before he can Fling you into it."
+      ],
+      "early": "Kite and farm. He can't kill you without his jungler, so poke him off the wave.",
+      "spike": "At 5 his R gives him a big stat boost; keep distance and don't fight inside his goo.",
+      "wave": "Slow-push and take plates; don't let him proxy farm.",
+      "jungle": "He escapes by running. Gank only when he's past mid-lane.",
+      "build": "Lethal Tempo. Crit and on-hit; %HP items.",
+      "remember": "Kite, don't chase."
+    },
+    {
+      "champion": "darius",
+      "rating": "neutral",
+      "confidence": "low",
+      "why": "Darius can pull Singed out of his poison and bleed him down, but Singed's Fling and run-away playstyle make Darius chase, and chasing Singed is how Darius loses. The lane comes down to whether Darius lands E without chasing.",
+      "trading": [
+        "E (Apprehend) pull him when he walks up to Fling you.",
+        "Never chase him through his Poison Trail.",
+        "Stack Hemorrhage while he's stuck in melee range.",
+        "Stand away from walls so his Fling can't pin you."
+      ],
+      "early": "Even. Farm and pull him when he walks up to Fling you; don't chase.",
+      "spike": "At 5 his R makes him faster and tankier; your R resets on kill.",
+      "wave": "Freeze near your tower so he has to walk up to farm.",
+      "jungle": "He escapes by running. Gank only when he's past mid-lane.",
+      "build": "Conqueror. MR boots against his poison.",
+      "remember": "Pull, don't chase."
+    },
+    {
+      "champion": "malphite",
+      "rating": "neutral",
+      "confidence": "low",
+      "why": "Tank vs tank: Malphite's Q poke chips Singed, but Singed's poison damage is magic, so Malphite's armor doesn't help. Neither can kill the other alone, so the lane is decided by roams.",
+      "trading": [
+        "Q (Seismic Shard) him when he walks up to farm.",
+        "Never chase him through his Poison Trail.",
+        "E (Ground Slam) when he's in melee range.",
+        "Stand away from walls so his Fling can't pin you."
+      ],
+      "early": "Farm and Q poke. Neither of you can kill the other alone, so don't waste HP.",
+      "spike": "At 5 both of you can roam; ward river and track where his R goes.",
+      "wave": "Slow-push and roam once your R is up; don't let him proxy farm.",
+      "jungle": "Your R sets up ganks. Call when he's past mid-lane.",
+      "build": "Aftershock. MR boots against his poison.",
+      "remember": "Poke, don't chase."
+    }
+  ]
+}

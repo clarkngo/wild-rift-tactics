@@ -1,0 +1,86 @@
+{
+  "enemy": "mordekaiser",
+  "patch": "draft",
+  "reviewed": false,
+  "summary": "Slow juggernaut with heavy magic damage, a shield that converts into healing, and a level 5 ult that traps you alone with him. He has no dash, so kiting and dodging his Q and E are how you beat him.",
+  "threats": [
+    "Q (Obliterate) is his main damage and hits harder on an isolated target; don't stand alone in front of him.",
+    "E (Death's Grasp) pulls you in and gives him magic penetration. It's his only way to stick to you.",
+    "Passive (Darkness Rise): after three hits he gets a damage aura, so long fights favor him.",
+    "R (Realm of Death) at 5 takes you into a 1v1 and steals your stats. Your team can't help you."
+  ],
+  "matchups": [
+    {
+      "champion": "vayne",
+      "rating": "good",
+      "confidence": "medium",
+      "why": "Mordekaiser has no dash, so Vayne kites him all lane. W (Silver Bolts) true damage ignores his shield-turned-HP, and Condemn knocks him out of Q range.",
+      "trading": [
+        "Auto him whenever he walks up to farm; he can't reach you without E.",
+        "Tumble (Q) sideways out of his E pull and Q.",
+        "Condemn him into a wall if he walks at you.",
+        "Inside his R, keep kiting; he still needs to land Q to win."
+      ],
+      "early": "Kite and farm. He's slow, so never let him walk into melee range for free.",
+      "spike": "At 5 his R traps you with him. Keep Tumble ready to dodge his Q inside the realm.",
+      "wave": "Slow-push and kite; take plates when he backs.",
+      "jungle": "He has no escape. Gank whenever he's past mid-lane.",
+      "build": "Lethal Tempo. Crit and on-hit; MR boots against his magic damage.",
+      "remember": "Kite, dodge Q, true damage."
+    },
+    {
+      "champion": "fiora",
+      "rating": "good",
+      "confidence": "medium",
+      "why": "Riposte parries Mordekaiser's E pull and stuns him back, and vitals' true damage ignores his shield. Fiora even wins inside his R because the realm makes it a pure 1v1, which is her strength.",
+      "trading": [
+        "Hold W (Riposte) for his E pull; parry it and stun him back.",
+        "Lunge onto vitals and back off before his passive aura builds.",
+        "Dodge his Q by Lunging sideways; it's a narrow cone.",
+        "Inside his R, save W for his Q to block his main damage."
+      ],
+      "early": "Trade on vitals from level 1 and push him under tower; he's slow to answer.",
+      "spike": "At 5 his R makes it a 1v1. Your R heal zone and vitals win it if you parry his Q.",
+      "wave": "Slow-push and take plates while he's stuck farming under tower.",
+      "jungle": "He has no escape. Gank once he's used E.",
+      "build": "Conqueror. Bruiser items; MR boots.",
+      "remember": "Parry the pull, Riposte the Q in the realm."
+    },
+    {
+      "champion": "darius",
+      "rating": "neutral",
+      "confidence": "medium",
+      "why": "Both are slow juggernauts. Darius out-damages Mordekaiser early with bleed stacks, but Mordekaiser's shield and Q isolation damage trade back hard. The lane comes down to who lands their pull first.",
+      "trading": [
+        "E (Apprehend) pull him when he walks up; stack Hemorrhage fast.",
+        "Step out of his E pull path and Q cone.",
+        "Hit the outer edge of Q on him to heal through his shield.",
+        "Back off when his passive aura is active."
+      ],
+      "early": "Even. Trade when his E is down; you can't reach him if he's holding it for your pull.",
+      "spike": "At 5 his R traps you; your R resets on kill. Count stacks before going in.",
+      "wave": "Slow-push and trade on cooldown windows.",
+      "jungle": "He has no escape. Gank when he's past mid-lane.",
+      "build": "Conqueror. MR boots against his magic damage.",
+      "remember": "Pull first, stack fast."
+    },
+    {
+      "champion": "malphite",
+      "rating": "bad",
+      "confidence": "high",
+      "why": "Mordekaiser's damage is magic, so Malphite's armor stacking does nothing. His R steals Malphite's stats and isolates him from his jungler, and Malphite can't kill him alone.",
+      "trading": [
+        "Q (Seismic Shard) him when he walks up to farm, then walk away with the speed.",
+        "Step out of his E pull path; that's his only way to reach you.",
+        "Don't stand next to minions alone; his Q hurts more on an isolated target.",
+        "Buy MR early; armor won't help you here."
+      ],
+      "early": "Farm safely, accept some poke, and rush an MR item before trading at all.",
+      "spike": "At 5 his R removes you from your team. Stay near your tower when his R is up.",
+      "wave": "Let him push and farm under tower; he can't dive you early.",
+      "jungle": "Ask for ganks; your R and your jungler can kill him once his R is down.",
+      "build": "Grasp. MR boots and early MR items.",
+      "remember": "Buy MR, not armor."
+    }
+  ]
+}

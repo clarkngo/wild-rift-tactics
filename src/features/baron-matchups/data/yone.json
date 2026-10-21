@@ -1,0 +1,86 @@
+{
+  "enemy": "yone",
+  "patch": "draft",
+  "reviewed": false,
+  "summary": "Scaling skirmisher who deals mixed damage, so neither armor nor MR alone stops him. He's weak at levels 1–3 and strong once he has crit items. Punish his early short range, and dodge his Q3 knockup.",
+  "threats": [
+    "Q (Mortal Steel) stacks; the third cast dashes and knocks up.",
+    "E (Soul Unbound) sends him out in spirit form; when it ends, he snaps back and repeats a share of the damage he dealt.",
+    "W (Spirit Cleave) gives him a shield based on champions hit.",
+    "R (Fate Sealed) at 5 dashes through and knocks up everyone in a line."
+  ],
+  "matchups": [
+    {
+      "champion": "renekton",
+      "rating": "good",
+      "confidence": "medium",
+      "why": "Renekton's early burst out-trades Yone at levels 1–3, when he has no items. Renekton can zone him off farm and snowball before his crit scaling kicks in.",
+      "trading": [
+        "E in, W stun, Q, then recast E to dash out before his Q3 is ready.",
+        "Use full Fury for empowered W when he commits.",
+        "Step sideways out of his Q3 dash path.",
+        "Don't chase him in E spirit form; he'll snap back to safety."
+      ],
+      "early": "Levels 1–3 are your window. Trade aggressively and deny his farm.",
+      "spike": "At 5 your R makes all-ins stronger, but his R knocks you up. Fight in open space.",
+      "wave": "Slow-push and crash for plates while he's weak.",
+      "jungle": "He escapes with E snapback. Gank once he's used it.",
+      "build": "Conqueror. Bruiser items; armor boots.",
+      "remember": "Win early, before his items."
+    },
+    {
+      "champion": "pantheon",
+      "rating": "good",
+      "confidence": "medium",
+      "why": "Pantheon's level 1–5 damage out-trades Yone, and W (Shield Vault) stun interrupts his Q3 knockup setups. E (Aegis Assault) blocks his damage from the front.",
+      "trading": [
+        "Throw empowered Q (at 5 Mortal Will stacks) when he walks up to farm.",
+        "W (Shield Vault) stun him as he Q3-dashes in to cancel the knockup follow-up.",
+        "Hold E (Aegis Assault) facing him to block his trade damage.",
+        "Don't chase him in E spirit form; he'll snap back to safety and you'll eat the mark damage."
+      ],
+      "early": "Levels 1–3 are yours. Trade aggressively and deny farm before his first item.",
+      "spike": "At 5 your R gives roam pressure; use it if he's farming safely.",
+      "wave": "Slow-push and crash; take plates while he can't stop you.",
+      "jungle": "W stun is easy gank setup. Call when his E is down.",
+      "build": "Conqueror or Electrocute. Lethality items.",
+      "remember": "Stun the Q3."
+    },
+    {
+      "champion": "fiora",
+      "rating": "neutral",
+      "confidence": "medium",
+      "why": "Riposte parries Yone's Q3 knockup and stuns him back, but his mixed damage and E snapback trade well against Fiora. Even matchup decided by who wastes their key spell first.",
+      "trading": [
+        "Hold W (Riposte) for his Q3 knockup and stun him back.",
+        "Hit a vital, then back off before his E snapback repeats the damage.",
+        "Don't chase him in E spirit form; he'll snap back to safety.",
+        "Only commit to extended trades while his Q3 is on cooldown."
+      ],
+      "early": "Even. Trade when his Q3 is down and your W is up; otherwise farm.",
+      "spike": "At 5 your R heal zone wins extended fights; his R knocks you up.",
+      "wave": "Slow-push and fight in cooldown windows.",
+      "jungle": "He escapes with E snapback. Gank once he's used it.",
+      "build": "Conqueror. Bruiser items; armor boots.",
+      "remember": "Parry the Q3."
+    },
+    {
+      "champion": "nasus",
+      "rating": "bad",
+      "confidence": "low",
+      "why": "Yone's Q pokes Nasus every time he walks up to stack, and his mixed damage makes Nasus's itemization awkward. Nasus can only farm safely and outscale.",
+      "trading": [
+        "W (Wither) him as he Q3-dashes in to slow his follow-up.",
+        "Stack Q on minions only when his Q3 is on cooldown.",
+        "Don't chase him in E spirit form; he'll snap back to safety.",
+        "Back off once he has two Q stacks; the next Q is the knockup."
+      ],
+      "early": "Give up some creeps and farm under tower. Don't trade into his Q poke.",
+      "spike": "At 5 your R gives HP and resists to survive his all-in, but don't start one.",
+      "wave": "Farm under tower; stack Q on cannon minions.",
+      "jungle": "Ask for an early gank when he overextends without E.",
+      "build": "Grasp. Armor boots early.",
+      "remember": "Survive and stack."
+    }
+  ]
+}

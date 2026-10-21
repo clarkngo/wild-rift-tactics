@@ -1,0 +1,104 @@
+{
+  "enemy": "tryndamere",
+  "patch": "draft",
+  "reviewed": false,
+  "summary": "Auto-attack split-pusher who builds Fury for crit chance and can't die for a few seconds once his R is up. His damage is all autos, so armor, attack-speed slows, blinds and auto-dodges shut him down.",
+  "threats": [
+    "Fury: more Fury means more crit chance. Watch his bar before trading.",
+    "Q (Bloodlust) spends Fury to heal; he'll trade, then heal off the damage.",
+    "E (Spinning Slash) dashes and its cooldown drops on crits. It's his engage and his escape.",
+    "R (Undying Rage) at 5 stops him dying for a few seconds; don't waste your burst into it."
+  ],
+  "matchups": [
+    {
+      "champion": "jax",
+      "rating": "good",
+      "confidence": "high",
+      "why": "Tryndamere's damage is almost all autos, and Counter Strike dodges every one while charging the stun. Jax wins every trade where E is up, and his R resists blunt Tryndamere's crits later.",
+      "trading": [
+        "Activate E (Counter Strike) the moment he Spinning Slashes onto you.",
+        "Leap Strike (Q) onto him after the stun lands and trade with W (Empower).",
+        "Don't trade while your E is on cooldown; he'll crit you down.",
+        "When he activates R, back off and wait it out instead of feeding it damage."
+      ],
+      "early": "Bully him whenever your E is up; he can't auto into it, and he has to trade to build Fury.",
+      "spike": "At 5 his R makes all-ins risky. Your R gives armor and MR; trade into his R with E up.",
+      "wave": "Slow-push and fight in his cooldown windows.",
+      "jungle": "He escapes with E. Gank after he's used it.",
+      "build": "Conqueror. Armor boots against his crits.",
+      "remember": "Counter Strike the Spinning Slash."
+    },
+    {
+      "champion": "malphite",
+      "rating": "good",
+      "confidence": "high",
+      "why": "Malphite's armor and E attack-speed slow negate Tryndamere's auto-based damage, and his targeted Q poke chips Tryndamere before he can trade. Tryndamere can't kill him through stacked armor.",
+      "trading": [
+        "Q (Seismic Shard) him whenever he walks up to farm.",
+        "E (Ground Slam) as soon as he's in melee range to slow his attack speed.",
+        "Keep Granite Shield up before he engages.",
+        "Save your R for after his Undying Rage expires."
+      ],
+      "early": "Poke with Q and farm safely; he can't trade into your armor.",
+      "spike": "At 5 your R plus your jungler kills him, as long as his R is already down.",
+      "wave": "Let him push; farm under tower and build armor.",
+      "jungle": "Your R sets up ganks. Call when his E and R are down.",
+      "build": "Grasp of the Undying. Plated Steelcaps and Thornmail.",
+      "remember": "Armor up, slow his attacks."
+    },
+    {
+      "champion": "nasus",
+      "rating": "good",
+      "confidence": "medium",
+      "why": "Wither slows Tryndamere's attack speed and movement, cutting most of his damage. Nasus wins every trade where Wither is up and scales just as hard into the split-push game.",
+      "trading": [
+        "W (Wither) him as soon as he Spinning Slashes onto you.",
+        "Trade back with Q while he's Withered.",
+        "Stack Q on minions when he's not threatening you.",
+        "Save R for after his Undying Rage expires."
+      ],
+      "early": "Farm Q stacks and trade only with Wither up; he can't fight back while slowed.",
+      "spike": "At 5 your R gives HP and resists; his R still stops him dying, so don't overcommit.",
+      "wave": "Farm under tower and stack Q on every last hit.",
+      "jungle": "He escapes with E. Gank after he's used it.",
+      "build": "Grasp. Armor boots and Frozen Heart-style attack-speed-slow armor.",
+      "remember": "Wither the Spinning Slash."
+    },
+    {
+      "champion": "teemo",
+      "rating": "good",
+      "confidence": "medium",
+      "why": "Blinding Dart makes Tryndamere's autos miss, which is all of his damage. Teemo kites him with Move Quick and pokes him from range, so he can't trade back.",
+      "trading": [
+        "Auto + Toxic Shot poke whenever he walks up to farm.",
+        "Blind him the moment he Spinning Slashes onto you; his autos are all his damage.",
+        "Move Quick away after the blind lands rather than trading back.",
+        "Shroom his approach paths at 5 so he can't run you down."
+      ],
+      "early": "Poke freely from level 1; he can't reach you without burning E, and you're out of range when it's down.",
+      "spike": "At 5 your mushrooms slow his approach. His R still stops him dying, so blind and walk away.",
+      "wave": "Hold the wave on your side so he has to walk through your poke.",
+      "jungle": "He escapes with E. Gank after he's used it.",
+      "build": "Electrocute. AP items; armor boots if he gets fed.",
+      "remember": "Blind the slash."
+    },
+    {
+      "champion": "darius",
+      "rating": "neutral",
+      "confidence": "medium",
+      "why": "Darius bullies Tryndamere early with bleed stacks, but Tryndamere's crits and Undying Rage beat Darius once he has items. The lane is Darius's to win early and Tryndamere's to win late.",
+      "trading": [
+        "E (Apprehend) pull him when he walks up to farm.",
+        "Stack Hemorrhage quickly before he can crit you down.",
+        "Don't waste your R on him while his Undying Rage is active.",
+        "Back off when his Fury bar is full."
+      ],
+      "early": "Bully him at levels 1–3 and deny farm before his crit kicks in.",
+      "spike": "At 5 his R stops your R execute. Wait for Undying Rage to expire, then dunk him.",
+      "wave": "Freeze near your tower so he has to walk up to farm.",
+      "jungle": "He escapes with E. Gank after he's used it.",
+      "build": "Conqueror. Armor boots against his crits.",
+      "remember": "Win early, don't execute into Undying Rage."
+    }
+  ]
+}

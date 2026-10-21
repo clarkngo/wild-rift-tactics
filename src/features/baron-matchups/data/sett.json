@@ -1,0 +1,86 @@
+{
+  "enemy": "sett",
+  "patch": "draft",
+  "reviewed": false,
+  "summary": "Early brawler who wins short melee trades with alternating punches, then turns damage he takes into a true-damage W. He has no ranged option and only one gap closer (Q speed), so kiting and denying his Grit build-up beat him.",
+  "threats": [
+    "Grit: damage he takes fills his Grit bar, and W (Haymaker) spends it for a shield and a true-damage centre hit.",
+    "E (Facebreaker) pulls champions on both sides of him together; it stuns if he catches someone on each side.",
+    "Q (Knuckle Down) gives speed toward champions and empowers his next two punches.",
+    "R (The Show Stopper) at 5: suplexes you, dealing damage to everyone where you land."
+  ],
+  "matchups": [
+    {
+      "champion": "vayne",
+      "rating": "good",
+      "confidence": "medium",
+      "why": "Sett has no ranged option, so Vayne kites him all lane. W (Silver Bolts) true damage shreds his HP, and Condemn knocks him back when he uses Q speed to run at her.",
+      "trading": [
+        "Auto him whenever he walks up to farm; he can't reach you without Q.",
+        "When he Qs at you, Tumble (Q) away or Condemn him back.",
+        "Stand next to a wall so Condemn can stun him.",
+        "Don't stand still in front of a full Grit bar; walk out of the W centre line."
+      ],
+      "early": "Kite and farm. He wants to brawl, so never let him get into melee range for free.",
+      "spike": "At 5 his R can suplex you into his team or tower. Play away from tower when you're low.",
+      "wave": "Slow-push and kite; take plates when he backs.",
+      "jungle": "He has no escape besides Q speed. Gank when it's down.",
+      "build": "Lethal Tempo. Crit and on-hit; armor boots if behind.",
+      "remember": "Kite the Q, dodge the Haymaker centre."
+    },
+    {
+      "champion": "fiora",
+      "rating": "good",
+      "confidence": "medium",
+      "why": "Riposte parries Sett's E stun or W Haymaker and stuns him back, and vitals' true damage cuts through his HP. Fiora wins every trade where he wastes his key spell into her W.",
+      "trading": [
+        "Hold W (Riposte) for his W Haymaker or E stun.",
+        "Lunge onto vitals, then get out before his Grit bar fills.",
+        "Don't let him trade alternating punches with you for free; Q away.",
+        "If he Ws into your Riposte, punish with a full vitals combo."
+      ],
+      "early": "Trade on vitals from level 1 and deny his Grit build-up by keeping trades short.",
+      "spike": "At 5 your R heal zone wins extended fights; his R is a threat near his tower.",
+      "wave": "Slow-push and take plates while he can't trade back.",
+      "jungle": "He's slow without Q. Gank once he's used it.",
+      "build": "Conqueror. Bruiser items; armor boots.",
+      "remember": "Parry the Haymaker."
+    },
+    {
+      "champion": "darius",
+      "rating": "neutral",
+      "confidence": "medium",
+      "why": "Both are early brawlers. Darius wins extended fights once Hemorrhage stacks, but Sett's W Haymaker turns the damage Darius deals into a true-damage burst. The lane comes down to who controls trade length.",
+      "trading": [
+        "E (Apprehend) pull him when he walks up, then stack Hemorrhage quickly.",
+        "Step out of his W centre line; the true damage is in the middle.",
+        "Hit the outer edge of Q on him to heal through his punches.",
+        "Back off when his Grit bar is full and his W is up."
+      ],
+      "early": "Even. Force long fights where your stacks matter more than his Grit.",
+      "spike": "At 5 your R resets on kill; his R can suplex you. Count stacks before going in.",
+      "wave": "Slow-push and trade on cooldown windows.",
+      "jungle": "He escapes with Q speed. Gank after he's used it.",
+      "build": "Conqueror. Armor boots; Sett's early damage is physical.",
+      "remember": "Stack fast, dodge the Haymaker."
+    },
+    {
+      "champion": "nasus",
+      "rating": "bad",
+      "confidence": "medium",
+      "why": "Sett's punches out-trade Nasus early, and every time Nasus walks up to stack Q he's in range for an E stun and W true-damage burst. Nasus can only farm safely and outscale.",
+      "trading": [
+        "W (Wither) him when he Qs at you to slow his run-in and his punches.",
+        "Stack Q only when his Q is on cooldown.",
+        "Step out of his W centre line; it deals true damage.",
+        "Back off once his Grit bar is full."
+      ],
+      "early": "Give up some creeps and farm under tower. Don't trade into his punches.",
+      "spike": "At 5 your R gives HP and resists to survive his all-in, but don't start one.",
+      "wave": "Farm under tower; stack Q on cannon minions.",
+      "jungle": "Ask for an early gank when he overextends without Q.",
+      "build": "Grasp. Armor boots early.",
+      "remember": "Survive and stack."
+    }
+  ]
+}

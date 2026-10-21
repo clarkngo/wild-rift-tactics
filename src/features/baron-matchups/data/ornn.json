@@ -1,0 +1,86 @@
+{
+  "enemy": "ornn",
+  "patch": "draft",
+  "reviewed": false,
+  "summary": "Tank with safe poke and huge teamfight CC. In lane he trades with W and Q, and his combos knock you up against terrain or his own pillar. He has low kill pressure alone, so true damage, %HP damage, and magic damage beat him.",
+  "threats": [
+    "W (Bellows Breath) makes your target Brittle; his next CC on a Brittle target deals bonus %HP damage and lasts longer.",
+    "Q (Volcanic Rupture) slows and raises a pillar; E (Searing Charge) into the pillar or a wall knocks you up.",
+    "He's unstoppable during W; you can't interrupt it.",
+    "R (Call of the Forge God) at 5: a long-range ram that knocks up. His roam and teamfight engage are strong."
+  ],
+  "matchups": [
+    {
+      "champion": "vayne",
+      "rating": "good",
+      "confidence": "medium",
+      "why": "Vayne's W (Silver Bolts) deals true %HP damage, so Ornn's tank stats don't matter. She out-ranges and kites him, and Condemn can push him away when he charges in.",
+      "trading": [
+        "Auto him whenever he walks up; he can't reach you without E.",
+        "Tumble (Q) away from his Q pillar before he E's into it.",
+        "Condemn him into a wall when he charges at you.",
+        "Step back out of W range; Brittle makes his next CC hurt."
+      ],
+      "early": "Kite and farm. He can't kill you without his jungler, so poke freely.",
+      "spike": "At 5 his R can knock you up from long range; watch for it with his jungler nearby.",
+      "wave": "Slow-push and kite; take plates when he backs.",
+      "jungle": "He's slow without E. Gank once he's used it.",
+      "build": "Lethal Tempo. Crit and on-hit; Blade of the Ruined King-style %HP items.",
+      "remember": "Kite, true damage, avoid walls."
+    },
+    {
+      "champion": "fiora",
+      "rating": "good",
+      "confidence": "medium",
+      "why": "Vitals deal true %HP damage, so Ornn's armor and HP don't save him. Riposte parries his E knockup or R ram and stuns him back, and he has no way to escape her Lunge.",
+      "trading": [
+        "Hold W (Riposte) for his E knockup or R ram.",
+        "Hit vitals, then back off before his W makes you Brittle.",
+        "Avoid fighting next to walls or his pillar.",
+        "Q (Lunge) away from his W flamethrower."
+      ],
+      "early": "Trade on vitals from level 1 and push him under tower; he can't trade back.",
+      "spike": "At 5 your R heal zone wins any extended fight; his R is a threat if his jungler follows.",
+      "wave": "Slow-push, crash, and take plates while he's stuck under tower.",
+      "jungle": "He's slow without E. Gank once he's used it.",
+      "build": "Conqueror. Bruiser items; armor boots.",
+      "remember": "Parry the charge, hit vitals."
+    },
+    {
+      "champion": "mordekaiser",
+      "rating": "good",
+      "confidence": "medium",
+      "why": "Mordekaiser's damage is magic and his Realm of Death isolates Ornn from his jungler and steals his stats. Ornn's teamfight value disappears if he's losing every 1v1.",
+      "trading": [
+        "Q (Obliterate) him when he walks up to farm.",
+        "E (Death's Grasp) pull him into your Q for burst.",
+        "Use W (Indestructible) to absorb his W poke.",
+        "Avoid fighting near walls or his pillar."
+      ],
+      "early": "Trade freely; he can't kill you alone and his W poke is weak against your shield.",
+      "spike": "At 5 your R removes him from the fight and steals his stats.",
+      "wave": "Push and pressure his tower; he can't stop you.",
+      "jungle": "Ward river; his R can turn a gank on your jungler.",
+      "build": "Conqueror. Magic-pen bruiser items.",
+      "remember": "Magic damage beats armor."
+    },
+    {
+      "champion": "malphite",
+      "rating": "neutral",
+      "confidence": "medium",
+      "why": "Tank vs tank: neither champion can kill the other alone. Malphite's Q poke and Ornn's W poke trade evenly, so the lane is decided by jungle pressure and who roams better at 5.",
+      "trading": [
+        "Q (Seismic Shard) him when he walks up to farm.",
+        "Step back out of his W; Brittle makes his next CC hurt.",
+        "Avoid fighting near walls or his pillar.",
+        "Use your E (Ground Slam) to slow his attack speed if he trades."
+      ],
+      "early": "Farm and Q poke. Neither of you can kill the other alone, so don't take bad trades.",
+      "spike": "At 5 both R's set up ganks and roams; ward river and track where his R goes.",
+      "wave": "Slow-push and roam once you both have R.",
+      "jungle": "Your R plus your jungler kills him. Call when his E is down.",
+      "build": "Grasp. Armor and MR items.",
+      "remember": "Farm, ward, out-roam."
+    }
+  ]
+}

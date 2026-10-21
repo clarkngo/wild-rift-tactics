@@ -1,0 +1,104 @@
+{
+  "enemy": "jayce",
+  "patch": "draft",
+  "reviewed": false,
+  "summary": "Ranged poke champion who swaps between cannon and hammer forms. He bullies melee champions from range, then dives in with Hammer Q for burst. He's mana-hungry and squishy, so anyone who can reach him or tank the poke beats him.",
+  "threats": [
+    "Cannon Q (Shock Blast) through E (Acceleration Gate) is long-range poke; stay behind minions.",
+    "Hammer E (Thundering Blow) knocks you away, and he uses it to escape when you finally reach him.",
+    "Hammer Q (To the Skies) is a gap closer for burst all-ins.",
+    "He's mana-hungry; once he's low on mana, he can't trade."
+  ],
+  "matchups": [
+    {
+      "champion": "pantheon",
+      "rating": "good",
+      "confidence": "medium",
+      "why": "Pantheon's W (Shield Vault) is a point-and-click dash and stun that reaches Jayce from range, and E (Aegis Assault) blocks his Shock Blast from the front. Pantheon wins every trade once he closes the gap.",
+      "trading": [
+        "W onto him when he walks up, then Q + autos during the stun.",
+        "E to block his Shock Blast when he pokes; face him while you do.",
+        "Don't walk at him in a straight line; dodge his gated Q.",
+        "After W, walk back if he's used Hammer E; don't get knocked into his tower."
+      ],
+      "early": "Levels 1–3 are yours: he can't out-trade a stun into Q burst. Trade aggressively and deny his farm.",
+      "spike": "At 5 your R gives roam pressure; use it if he's hiding under tower.",
+      "wave": "Slow-push and crash; take plates while he can't stop you.",
+      "jungle": "W stun is easy gank setup. Call your jungler when he pushes past mid-lane.",
+      "build": "Conqueror or Electrocute. Lethality items.",
+      "remember": "Block the Shock Blast, then stun."
+    },
+    {
+      "champion": "malphite",
+      "rating": "good",
+      "confidence": "medium",
+      "why": "Jayce's poke is physical, so Malphite's armor and shield absorb most of it. Malphite's targeted Q poke chips him from range, and once Malphite has R, Jayce can't safely stand anywhere in lane.",
+      "trading": [
+        "Q (Seismic Shard) him whenever he walks up to poke; it's targeted and he can't dodge it.",
+        "Stand behind your minions so his Shock Blast hits them, not you.",
+        "Keep Granite Shield up; walk out of poke range to let it recharge after it pops.",
+        "If he Hammer-Q's in, E (Ground Slam) to slow his attack speed and trade back."
+      ],
+      "early": "Farm safely behind minions and Q poke. Build armor early to blunt his poke.",
+      "spike": "At 5, R lets you engage on him from range with your jungler.",
+      "wave": "Let him push and farm under tower; he can't dive you through your armor.",
+      "jungle": "Your R sets up ganks. Call when he's pushed past mid-lane.",
+      "build": "Grasp of the Undying. Plated Steelcaps and early armor.",
+      "remember": "Armor up, Q poke, wait for R."
+    },
+    {
+      "champion": "kennen",
+      "rating": "neutral",
+      "confidence": "medium",
+      "why": "Both are ranged poke champions. Kennen's stun interrupts Jayce's all-in and E (Lightning Rush) dodges his gated Q, but Jayce out-ranges Kennen with gated Shock Blast. The lane comes down to who wins the poke war.",
+      "trading": [
+        "Q (Thundering Shuriken) poke when he walks up to farm; each hit builds your stun marks.",
+        "E (Lightning Rush) sideways when he places Acceleration Gate; gated Shock Blast is his only real damage.",
+        "If he Hammer-Q's in with two marks on him, W (Electrical Surge) for the stun and trade back.",
+        "Stand behind your minions so his ungated Shock Blast explodes on them."
+      ],
+      "early": "Even. Trade poke and don't take his gated Q for free; he spends a lot of mana doing it.",
+      "spike": "At 5 your R plus stun stops his all-in; his poke still trades evenly.",
+      "wave": "Slow-push and trade poke when his Q is on cooldown.",
+      "jungle": "He's an easy gank target when he's low on mana and can't use Hammer E to escape.",
+      "build": "Electrocute. AP items; early boots for dodging.",
+      "remember": "Dodge the gate, stun the dive."
+    },
+    {
+      "champion": "darius",
+      "rating": "bad",
+      "confidence": "medium",
+      "why": "Jayce pokes Darius out of lane with gated Shock Blast, and Hammer E knocks Darius away mid-combo. Darius can only win if he lands E pull, and Jayce rarely gives him the chance.",
+      "trading": [
+        "Stand behind minions to block his Shock Blast.",
+        "E (Apprehend) pull him only when he's in range and Hammer E is on cooldown.",
+        "Once you land E, stack Hemorrhage immediately; he'll try to knock you off.",
+        "Don't chase him through his tower range."
+      ],
+      "early": "Farm safely behind minions. Accept some poke and wait for him to overextend.",
+      "spike": "At 5 your R gives kill threat if you land E. One pull plus R can kill him from half HP.",
+      "wave": "Let him push and farm under tower; don't walk into his poke.",
+      "jungle": "Ask for ganks; he's squishy once he's out of position.",
+      "build": "Conqueror. Ghost for chasing. Armor boots early.",
+      "remember": "Wait behind minions, pull when Hammer E is down."
+    },
+    {
+      "champion": "teemo",
+      "rating": "bad",
+      "confidence": "medium",
+      "why": "Jayce matches Teemo's range and far out-pokes him with gated Shock Blast. Teemo's blind only stops autos, and Jayce's damage is mostly spells, so Teemo loses every range trade.",
+      "trading": [
+        "Stand behind minions to block his Shock Blast.",
+        "Blind him when he Hammer-Q's in, then Move Quick away.",
+        "Poke him only when his Q is on cooldown.",
+        "Place mushrooms at 5 to block his approach."
+      ],
+      "early": "Farm safely behind minions and accept some poke. Don't try to win range trades with him.",
+      "spike": "At 5 your mushrooms make his all-ins risky. Place them on his approach paths and in river.",
+      "wave": "Let him push and farm under tower with autos.",
+      "jungle": "Ask for ganks; he's squishy once he's out of position.",
+      "build": "Electrocute. AP items; MR boots aren't needed (his damage is physical).",
+      "remember": "Hide behind minions, shroom the approach."
+    }
+  ]
+}
