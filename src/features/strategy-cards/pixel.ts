@@ -149,6 +149,10 @@ const SWORD = ['....#', '...#.', '#.#..', '.#...', '#.#..'];
 const ORB = ['.PP.', 'PWPP', 'PPPP', '.PP.'];
 const SKULL = ['.###.', '#.#.#', '#####', '.###.', '.#.#.'];
 const HERALD = ['.PPP.', 'PWPWP', 'PPPPP', 'P.P.P'];
+const POTION = ['.S.', 'RRR', 'RWR', 'RRR'];
+const BARON = ['.PPPPPPP.', 'PPWPPPWPP', 'PPPPPPPPP', 'PP.PPP.PP', 'P..P.P..P'];
+const STUN = ['#...#', '.#.#.', '..#..', '.#.#.', '#...#'];
+const FLASH = ['YYYYY', 'Y...Y', 'Y.Y.Y', 'Y...Y', 'YYYYY'];
 
 export type Team = 'ally' | 'enemy' | 'jungle';
 
@@ -179,6 +183,12 @@ export const sword = (x: number, y: number, fill: string = C.white) => sprite(SW
 export const orb = (x: number, y: number) => sprite(ORB, x, y, { P: C.purple, W: C.white });
 export const skull = (x: number, y: number) => sprite(SKULL, x, y, { '#': C.white });
 export const herald = (x: number, y: number) => sprite(HERALD, x, y, { P: C.purple, W: C.white });
+export const potion = (x: number, y: number) => sprite(POTION, x, y, { S: C.stone, R: C.enemy, W: C.white });
+export const baron = (x: number, y: number) => sprite(BARON, x, y, { P: C.purple, W: C.white });
+export const stun = (x: number, y: number) => sprite(STUN, x, y, { '#': C.ward });
+/** Summoner-spell slot icon; pass `used` to cross it out. */
+export const flashIcon = (x: number, y: number, used = false) =>
+  sprite(FLASH, x, y, { Y: used ? C.muted : C.ward }) + (used ? sprite(['#...#', '.#.#.', '..#..', '.#.#.', '#...#'], x, y, { '#': C.enemy }) : '');
 
 /** Horizontal or vertical arrow with a 3px head. */
 export function arrow(x1: number, y1: number, x2: number, y2: number, fill: string = C.gold) {
