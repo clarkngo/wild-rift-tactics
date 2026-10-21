@@ -8,6 +8,10 @@ const ROUTE = 'baron-matchups';
 const files = import.meta.glob<EnemyMatchups>('./data/*.json', { eager: true, import: 'default' });
 const baronData = new Map(Object.values(files).map((f) => [f.enemy, f]));
 
+/** Whether an enemy has a matchup page; lets other sections link to it. */
+export const hasMatchups = (id: string) => baronData.has(id);
+export const matchupUrl = (id: string) => `#/${ROUTE}/${id}`;
+
 const RATING_META: Record<Rating, { label: string; hint: string }> = {
   good: { label: 'Good picks', hint: 'You win lane or trades comfortably' },
   neutral: { label: 'Skill matchups', hint: 'Even, decided by cooldown tracking and waves' },
@@ -115,7 +119,7 @@ function renderEnemy(app: HTMLElement, id: string) {
 export const baronMatchups: Section = {
   route: ROUTE,
   title: 'Baron Lane Matchups',
-  navLabel: 'Baron Matchups',
+  navLabel: 'Matchups',
   description: `Pick the enemy Baron laner and see what beats it, with trading and laning micro. ${baronData.size} champions covered.`,
   render(app, [enemyId]) {
     if (enemyId) renderEnemy(app, enemyId);
