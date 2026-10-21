@@ -253,20 +253,6 @@ a.scard-art:focus-visible { outline: 2px solid var(--gold); outline-offset: -2px
 .scard-detail ol { margin: 0; padding-left: 22px; }
 .scard-detail li + li { margin-top: 6px; }
 
-.scard-actions { display: flex; flex-wrap: wrap; gap: 8px; }
-.scard-actions button {
-  font: inherit;
-  font-size: 14px;
-  min-height: 40px;
-  padding: 6px 14px;
-  border-radius: 8px;
-  border: 1px solid var(--border);
-  background: var(--surface-2);
-  color: var(--text);
-  cursor: pointer;
-}
-.scard-actions button:first-child { background: var(--gold); border-color: var(--gold); color: var(--bg); font-weight: 600; }
-.scard-actions button:hover, .scard-actions button:focus-visible { border-color: var(--gold); outline: none; }
 
 .chips { display: flex; flex-wrap: wrap; gap: 8px; }
 .chip {
@@ -287,18 +273,6 @@ a.chip:hover, a.chip:focus-visible { border-color: var(--gold); outline: none; }
 .pager { display: flex; justify-content: space-between; gap: 12px; margin-top: 20px; font-size: 14px; }
 .pager a { text-decoration: none; }
 
-.toast {
-  position: fixed;
-  left: 50%;
-  bottom: 24px;
-  transform: translateX(-50%);
-  padding: 10px 16px;
-  border-radius: 999px;
-  background: var(--gold);
-  color: var(--bg);
-  font-weight: 600;
-  z-index: 20;
-}
 
 .empty { color: var(--muted); }
 

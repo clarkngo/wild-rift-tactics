@@ -1,15 +1,16 @@
 import {
-  C, W, arrow, burst, champ, coin, heart, herald, hpBar, laneScene, minion, move, orb, rect, scaled, shield,
-  show, skull, sword, text, tower, ward, wave,
+  C, W, arrow, baron, burst, champ, coin, dragon, flashIcon, heart, herald, hpBar, laneScene, minion, move, orb, potion, rect,
+  scaled, shield, show, skull, stun, sword, text, tower, ward, wave,
 } from './pixel';
 
-export type Category = 'micro' | 'macro' | 'items' | 'counters';
+export type Category = 'micro' | 'macro' | 'items' | 'counters' | 'support';
 
 export const CATEGORIES: Record<Category, { label: string; accent: string; blurb: string }> = {
   micro: { label: 'Laning micro', accent: C.gold, blurb: 'Trades, spacing and wave control in lane.' },
   macro: { label: 'Macro', accent: C.green, blurb: 'When to push, roam, recall and take objectives.' },
   items: { label: 'Itemization', accent: C.purple, blurb: 'What to buy, and when, based on the enemy.' },
   counters: { label: 'Class counters', accent: C.ally, blurb: 'Which champion types beat which.' },
+  support: { label: 'Support', accent: C.allySup, blurb: 'Dragon lane support: peel, engage, vision and roams.' },
 };
 
 export interface StrategyCard {
@@ -154,6 +155,108 @@ export const CARDS: StrategyCard[] = [
       + arrow(38, 55, 26, 55, C.enemy) + text('NO', 16, 53, C.enemy),
   },
 
+  {
+    id: 'level-2-first',
+    category: 'micro',
+    title: 'HIT LEVEL 2 FIRST',
+    takeaway: 'FIRST TO LV2 WINS THE TRADE',
+    summary: 'Whoever reaches level 2 first has a second ability before the other laner. That is the strongest all-in window of the early game.',
+    tips: [
+      'Hit the first wave hard enough to finish it a little before your opponent does.',
+      'Track your XP bar: the moment you level, walk forward and trade with both spells.',
+      'If they will hit level 2 first, step back until you level too.',
+    ],
+    scene: () =>
+      laneScene()
+      + wave(56, 39, 'ally', 2) + wave(66, 39, 'enemy', 2)
+      + text('XP', 30, 14, C.gold) + rect(40, 15, 30, 3, '#00000088')
+      + show(rect(40, 15, 12, 3, C.gold), [1, 0, 0, 0, 0], 3)
+      + show(rect(40, 15, 22, 3, C.gold), [0, 1, 0, 0, 0], 3)
+      + show(rect(40, 15, 30, 3, C.gold) + text('LV2!', 74, 14, C.gold), [0, 0, 1, 1, 1], 3)
+      + move(champ(44, 37, 'ally'), [[0, 0], [0, 0], [0, 0], [16, 0], [8, 0]], 3)
+      + champ(80, 37, 'enemy') + text('LV1', 78, 28, C.enemy)
+      + show(burst(80, 36), [0, 0, 0, 1, 0], 3),
+  },
+  {
+    id: 'level-5-ult-spike',
+    category: 'micro',
+    title: 'LEVEL 5: ULTS COME ONLINE',
+    takeaway: 'HIT 5 FIRST, FIGHT FIRST',
+    summary: 'In Wild Rift ultimates unlock at level 5. Being one level ahead at that moment means you have an ult and they do not.',
+    tips: [
+      'Count the XP race before level 5 the same way you do for level 2.',
+      'If you hit 5 first, trade or all-in immediately; the window closes when they level.',
+      'If they hit 5 first, respect their ult and back off until you have yours.',
+    ],
+    scene: () =>
+      laneScene()
+      + champ(52, 37, 'ally') + text('LV5', 50, 28, C.gold)
+      + champ(78, 37, 'enemy') + text('LV4', 76, 28, C.enemy)
+      + show(scaled(2, 74, 33, burst(0, 0, C.gold)), [0, 1, 1, 0], 2.4)
+      + show(text('ULT!', 46, 14, C.gold), [0, 1, 1, 0], 2.4)
+      + show(hpBar(76, 34, 9, 0.3, C.enemy), [0, 0, 1, 1], 2.4),
+  },
+  {
+    id: 'punish-flash-down',
+    category: 'micro',
+    title: 'NO FLASH? GO IN',
+    takeaway: 'TRACK FLASH. PUNISH THE WINDOW',
+    summary: 'Flash has a long cooldown. Once your opponent uses it, they cannot escape an all-in or a gank until it comes back.',
+    tips: [
+      'When they Flash, note the time; it is down for minutes, not seconds.',
+      'Tell your jungler: a gank on a laner without Flash almost always works.',
+      'Play aggressive while it is down; play safe the moment it is back.',
+    ],
+    scene: () =>
+      laneScene()
+      + show(flashIcon(58, 14) + text('READY', 66, 14, C.ward), [1, 1, 0, 0, 0, 0], 3.6)
+      + show(flashIcon(58, 14, true) + text('DOWN', 66, 14, C.enemy), [0, 0, 1, 1, 1, 1], 3.6)
+      + move(champ(84, 37, 'enemy'), [[0, 0], [0, 0], [10, 0], [10, 0], [10, 0], [10, 0]], 3.6)
+      + show(burst(84, 38, C.ward), [0, 1, 0, 0, 0, 0], 3.6)
+      + move(champ(48, 37, 'ally'), [[0, 0], [0, 0], [0, 0], [16, 0], [34, 0], [34, 0]], 3.6)
+      + show(skull(95, 28), [0, 0, 0, 0, 0, 1], 3.6),
+  },
+  {
+    id: 'no-tower-trades',
+    category: 'micro',
+    title: "DON'T TRADE UNDER THEIR TOWER",
+    takeaway: "TOWER SHOTS HURT. DON'T DIVE",
+    summary: 'Early towers deal heavy damage and focus you the moment you hit an enemy champion near them. A trade you win in the open becomes a trade you lose under their tower.',
+    tips: [
+      'If they are standing under their tower, farm instead; they are already losing gold.',
+      'Only dive with your jungler, with a kill guaranteed, and with a minion wave to take tower aggro.',
+      'Hitting their champion under tower switches tower aggro to you immediately.',
+    ],
+    examples: { label: 'Safe-farm champions who sit under tower', champions: ['nasus', 'kayle', 'malphite'] },
+    scene: () =>
+      laneScene()
+      + champ(110, 37, 'enemy')
+      + move(champ(88, 37, 'ally') + hpBar(86, 34, 9, 1), [[0, 0], [10, 0], [10, 0], [10, 0], [0, 0]], 3)
+      + show(burst(110, 36), [0, 1, 0, 0, 0], 3)
+      + show(rect(103, 40, 17, 1, C.ward) + rect(101, 39, 2, 3, C.ward), [0, 0, 1, 1, 0], 3)
+      + show(hpBar(96, 34, 9, 0.3, C.enemy), [0, 0, 0, 1, 0], 3)
+      + text('TOWER AGGRO', 40, 14, C.enemy),
+  },
+  {
+    id: 'hide-in-brush',
+    category: 'micro',
+    title: 'USE BRUSH TO HIDE',
+    takeaway: 'UNSEEN = UNDODGEABLE',
+    summary: 'Standing in brush hides your position. Your opponent cannot react to an attack or skillshot that starts from somewhere they cannot see.',
+    tips: [
+      'Walk into lane brush when the wave is in the middle so they lose track of you.',
+      'Start trades or skillshots from the brush; they cannot pre-dodge what they cannot see.',
+      'Never face-check enemy brush without vision; they can do the same to you.',
+    ],
+    scene: () =>
+      laneScene({ brush: false })
+      + rect(46, 49, 22, 10, C.brush)
+      + show(champ(54, 50, 'ally'), [0, 0, 1, 0], 3)
+      + show(rect(54, 50, 5, 7, C.ally + '55'), [1, 1, 0, 0], 3)
+      + champ(76, 37, 'enemy') + show(text('?', 77, 28, C.enemy), [1, 1, 0, 0], 3)
+      + show(rect(62, 44, 12, 1, C.gold) + burst(76, 36), [0, 0, 1, 1], 3),
+  },
+
   // ---- Macro ---------------------------------------------------------------
   {
     id: 'crash-then-recall',
@@ -237,6 +340,68 @@ export const CARDS: StrategyCard[] = [
     },
   },
 
+  {
+    id: 'take-plates',
+    category: 'macro',
+    title: 'TAKE TOWER PLATES',
+    takeaway: 'EARLY PLATES ARE FREE GOLD',
+    summary: 'Early in the game, each tower plate you break gives gold. When your opponent recalls or dies, your wave plus you can take plates for a big gold lead.',
+    tips: [
+      'Opponent recalled or dead? Push the wave into their tower and hit plates.',
+      'Bring a minion wave so the tower targets minions, not you.',
+      'Plates stop paying out after the early game, so use these windows while they last.',
+    ],
+    scene: () =>
+      laneScene()
+      + wave(112, 39, 'ally', 3) + champ(104, 37, 'ally')
+      + show(burst(120, 36), [1, 0, 1, 0], 2)
+      + move(coin(118, 28), [[0, 0], [-2, -4], [-4, -8], [-6, -12]], 2)
+      + move(coin(122, 26), [[0, 0], [2, -4], [4, -8], [6, -12]], 2, 1)
+      + text('+GOLD', 70, 14, C.gold)
+      + text('ENEMY: RECALLED', 4, 52, C.muted),
+  },
+  {
+    id: 'jungler-seen-elsewhere',
+    category: 'macro',
+    title: 'JUNGLER SEEN BOT? PUSH TOP',
+    takeaway: "USE THEIR JUNGLER'S POSITION",
+    summary: 'When the enemy jungler shows up on the other side of the map, they cannot gank you for a while. That is your window to push, trade hard, or take plates.',
+    tips: [
+      'Watch the minimap: a jungler seen bot or mid cannot reach Baron lane quickly.',
+      'Use the window to shove, trade aggressively, or take plates.',
+      'When they disappear again, assume they are walking to you and back off.',
+    ],
+    scene: () => {
+      let out = rect(42, 12, 46, 47, C.grassDark);
+      out += rect(42, 12, 3, 47, C.lane) + rect(42, 12, 46, 3, C.lane);
+      out += rect(85, 12, 3, 47, C.lane) + rect(42, 56, 46, 3, C.lane);
+      for (let i = 0; i < 20; i++) out += rect(45 + i * 2, 53 - i * 2, 2, 2, C.lane);
+      out += show(rect(78, 50, 3, 3, C.enemy) + text('!', 82, 44, C.enemy), [1, 0], 1);
+      out += move(rect(60, 12, 3, 3, C.ally), [[0, 0], [4, 0], [8, 0], [12, 0]], 3);
+      out += text('JUNGLER:', 92, 46, C.enemy) + text('BOT', 92, 52, C.enemy);
+      out += text('YOU:', 4, 16, C.ally) + text('PUSH', 4, 22, C.ally);
+      return out;
+    },
+  },
+  {
+    id: 'shove-before-baron',
+    category: 'macro',
+    title: 'SHOVE BEFORE BARON',
+    takeaway: 'YOUR WAVE BUYS THE BARON',
+    summary: 'Baron sits next to your lane. Before your team starts it, push your wave so the enemy laner is stuck clearing minions instead of contesting.',
+    tips: [
+      'When your team pings Baron, crash your wave first, then walk to the pit.',
+      'A wave pushing into their tower forces someone to leave the Baron fight to defend.',
+      'If your wave is pushing toward your tower, Baron is a much riskier call.',
+    ],
+    scene: () =>
+      laneScene()
+      + rect(56, 12, 10, 20, C.river) + scaled(2, 34, 14, baron(0, 0))
+      + wave(112, 39, 'ally', 4) + champ(104, 37, 'enemy') + text('STUCK', 96, 28, C.enemy)
+      + move(champ(86, 37, 'ally'), [[0, 0], [-12, 0], [-24, -8], [-32, -14], [-32, -14]], 3)
+      + show(burst(44, 18, C.purple), [0, 0, 0, 1, 0], 3),
+  },
+
   // ---- Itemization ---------------------------------------------------------
   {
     id: 'buy-what-they-deal',
@@ -315,6 +480,47 @@ export const CARDS: StrategyCard[] = [
       + show(shield(62, 28, C.stone) + text('BACK 1', 54, 40, C.stone), [0, 0, 1, 1], 3)
       + arrow(74, 32, 86, 32, C.muted)
       + show(scaled(2, 92, 24, shield(0, 0, C.stone)) + text('LATER', 92, 40, C.muted), [0, 0, 0, 1], 3),
+  },
+
+  {
+    id: 'ahead-or-behind',
+    category: 'items',
+    title: 'AHEAD? BUY DAMAGE',
+    takeaway: 'BEHIND? BUY RESISTS FIRST',
+    summary: 'Your lead or deficit should change your next item. Ahead, damage lets you snowball; behind, defense keeps you alive long enough to scale.',
+    tips: [
+      'Ahead in gold or kills: finish your damage item and keep pressuring.',
+      'Behind: buy the resistance that matches their damage before more damage.',
+      'Even: follow your normal core build.',
+    ],
+    scene: () =>
+      text('AHEAD', 10, 14, C.green) + arrow(20, 34, 20, 22, C.green)
+      + scaled(3, 30, 24, sword(0, 0, C.gold)) + text('DAMAGE', 26, 44, C.gold)
+      + rect(63, 14, 1, 40, '#26324d')
+      + text('BEHIND', 72, 14, C.enemy) + arrow(84, 22, 84, 34, C.enemy)
+      + scaled(3, 94, 22, shield(0, 0, C.stone)) + text('RESISTS', 88, 44, C.stone)
+      + show(rect(26, 52, 24, 1, C.gold), [1, 0], 1.6) + show(rect(88, 52, 28, 1, C.stone), [0, 1], 1.6),
+  },
+  {
+    id: 'carry-potions',
+    category: 'items',
+    title: 'CARRY A POTION EARLY',
+    takeaway: 'POTIONS WIN CLOSE TRADES',
+    summary: 'A cheap health potion heals you over time after a trade. In an even lane, the player who drinks potions stays healthy enough to win the next trade.',
+    tips: [
+      'Grab a potion on early backs while you are still laning.',
+      'Drink after a trade, not before; it heals over time.',
+      'Stop buying them once you have sustain items or are out of lane.',
+    ],
+    scene: () =>
+      laneScene({ towers: false })
+      + champ(50, 37, 'ally') + champ(78, 37, 'enemy') + hpBar(76, 34, 9, 0.5, C.enemy)
+      + scaled(2, 32, 14, potion(0, 0))
+      + show(hpBar(48, 34, 9, 0.45, C.enemy), [1, 0, 0, 0], 3)
+      + show(hpBar(48, 34, 9, 0.6), [0, 1, 0, 0], 3)
+      + show(hpBar(48, 34, 9, 0.75), [0, 0, 1, 0], 3)
+      + show(hpBar(48, 34, 9, 0.9), [0, 0, 0, 1], 3)
+      + show(text('+', 58, 30, C.heal), [0, 1, 1, 1], 3),
   },
 
   // ---- Class counters ------------------------------------------------------
@@ -398,6 +604,218 @@ export const CARDS: StrategyCard[] = [
       + move(rect(12, 37, 2, 10, C.white), [[0, 0], [26, 0], [52, 0], [78, 0], [104, 0]], 4)
       + show(scaled(3, 20, 14, champ(0, 0, 'enemy')) + text('BULLY', 40, 22, C.enemy), [1, 1, 0, 0, 0], 4)
       + show(scaled(3, 94, 14, champ(0, 0, 'ally')) + text('SCALER', 68, 22, C.ally), [0, 0, 0, 1, 1], 4),
+  },
+  {
+    id: 'cc-the-dash',
+    category: 'counters',
+    title: 'SAVE CC FOR THEIR DASH',
+    takeaway: 'STUN THE DIVE, NOT THE WALK',
+    summary: 'Dash-heavy fighters like Irelia, Camille and Riven win by dashing onto you. Holding your stun or knock-up for the moment they commit stops the whole combo.',
+    tips: [
+      'Do not waste your CC poking; keep it for when they commit to an engage.',
+      'Hit them as their dash lands, when they cannot react.',
+      'Once your CC is down, back off until it comes back.',
+    ],
+    examples: { label: 'Dash-reliant fighters', champions: ['irelia', 'camille', 'riven', 'yone', 'renekton'] },
+    scene: () =>
+      laneScene({ towers: false })
+      + champ(44, 37, 'ally')
+      + move(champ(92, 37, 'enemy'), [[0, 0], [-16, 0], [-32, 0], [-32, 0], [-32, 0]], 2.5)
+      + show(rect(66, 40, 18, 1, C.enemy + '88'), [0, 1, 0, 0, 0], 2.5)
+      + show(stun(61, 29), [0, 0, 1, 1, 0], 2.5)
+      + show(text('STUNNED', 50, 14, C.ward), [0, 0, 1, 1, 0], 2.5),
+  },
+
+
+  // ---- Support (Dragon lane) -----------------------------------------------
+  {
+    id: 'peel-for-carry',
+    category: 'support',
+    title: 'PEEL FOR YOUR CARRY',
+    takeaway: 'PROTECT THE ONE WHO SCALES',
+    summary: "Your ADC deals most of your team's damage later on. When an enemy diver jumps on them, your shields, knock-backs and stuns are worth more on them than on anyone else.",
+    tips: [
+      'Stay close enough to your ADC that your peel spell can reach them.',
+      'Hold your knock-back or stun until the diver commits, not before.',
+      "Peel tools to look for: Janna's tornado, Braum's shield, Lulu's polymorph.",
+    ],
+    scene: () =>
+      laneScene()
+      + champ(30, 37, 'ally') + text('ADC', 28, 50, C.ally)
+      + champ(44, 37, 'allySup') + text('SUP', 42, 50, C.allySup)
+      + move(champ(84, 37, 'enemy'), [[0, 0], [-16, 0], [-48, 0], [-48, 0], [-30, 0], [-14, 0]], 3.6)
+      + show(shield(30, 27, C.allySup), [0, 0, 1, 1, 0, 0], 3.6)
+      + show(burst(38, 36, C.allySup), [0, 0, 0, 1, 0, 0], 3.6)
+      + show(text('PEEL!', 52, 14, C.allySup), [0, 0, 1, 1, 1, 0], 3.6),
+  },
+  {
+    id: 'engage-on-mistake',
+    category: 'support',
+    title: 'ENGAGE ON THEIR MISTAKE',
+    takeaway: 'WAIT FOR THE MISSTEP, THEN GO',
+    summary: 'Engage supports like Leona, Alistar and Nautilus win lane by catching an enemy who steps too far forward. Engaging on a player who is already in position just gets you killed.',
+    tips: [
+      'Wait for their ADC to walk past their own minions to last-hit.',
+      "Engage when your ADC is close enough to follow up; an engage your ADC can't follow is wasted.",
+      'Back off if their support is holding a knock-back or disengage spell.',
+    ],
+    scene: () =>
+      laneScene()
+      + wave(62, 39, 'ally', 2) + wave(76, 39, 'enemy', 2)
+      + champ(38, 37, 'ally') + champ(50, 37, 'allySup') + text('SUP', 48, 50, C.allySup)
+      + champ(104, 37, 'enemySup')
+      + move(champ(94, 37, 'enemy'), [[0, 0], [-14, 0], [-28, 0], [-28, 0], [-28, 0]], 3)
+      + show(rect(55, 40, 11, 1, C.allySup), [0, 0, 1, 0, 0], 3)
+      + show(stun(66, 29), [0, 0, 0, 1, 1], 3)
+      + show(text('MISSTEP', 46, 14, C.enemy), [0, 1, 1, 0, 0], 3),
+  },
+  {
+    id: 'minions-block-hooks',
+    category: 'support',
+    title: 'STAY BEHIND YOUR MINIONS',
+    takeaway: 'MINIONS BLOCK HOOKS',
+    summary: 'Hooks from Thresh, Blitzcrank and Nautilus hit the first unit in their path. Standing behind your minions makes them land on a minion instead of you.',
+    tips: [
+      'Keep a minion between you and their hook support at all times.',
+      'When your wave dies, step back until the next one arrives.',
+      'Playing the hook support? Look for gaps in their wave, not long-range guesses.',
+    ],
+    scene: () =>
+      laneScene()
+      + champ(28, 37, 'ally') + champ(40, 37, 'allySup')
+      + wave(58, 39, 'ally', 3)
+      + champ(100, 37, 'enemySup')
+      + move(rect(92, 40, 5, 1, C.enemySup), [[0, 0], [-12, 0], [-24, 0], [-33, 0], [-33, 0]], 2.5)
+      + show(burst(57, 37, C.enemySup), [0, 0, 0, 1, 0], 2.5)
+      + show(text('BLOCKED', 50, 14, C.green), [0, 0, 0, 1, 1], 2.5),
+  },
+  {
+    id: 'ward-before-dragon',
+    category: 'support',
+    title: 'WARD BEFORE DRAGON',
+    takeaway: 'VISION WINS DRAGON FIGHTS',
+    summary: 'Dragon fights are won by the team that sees the other coming. Ward the river and the pit entrance before Dragon spawns, then group up.',
+    tips: [
+      'Ward the river and Dragon pit entrances about a minute before it spawns.',
+      'Clear their wards near the pit so they have to fight blind.',
+      'Walk into unwarded river with your ADC and jungler, never alone.',
+    ],
+    scene: () =>
+      laneScene({ brush: false })
+      + rect(58, 10, 12, 23, C.river) + scaled(2, 59, 14, dragon(0, 0))
+      + show(ward(46, 16), [0, 1, 1, 1, 1], 3)
+      + show(ward(78, 18), [0, 0, 1, 1, 1], 3)
+      + show(ward(62, 27), [0, 0, 0, 1, 1], 3)
+      + champ(36, 37, 'ally') + champ(48, 37, 'allySup')
+      + text('VISION', 86, 24, C.ward),
+  },
+  {
+    id: 'roam-after-crash',
+    category: 'support',
+    title: 'CRASH, THEN ROAM MID',
+    takeaway: 'NEVER LEAVE YOUR ADC 1V2',
+    summary: 'When the wave is crashing into their tower, a support can walk to mid or help the jungler without leaving the ADC in danger.',
+    tips: [
+      "Crash the wave first so your ADC isn't left facing a big enemy wave alone.",
+      "Tell your ADC you're leaving so they play safe near tower.",
+      'Come back when the next wave arrives; long roams leave your ADC exposed.',
+    ],
+    scene: () => {
+      let out = rect(42, 12, 46, 47, C.grassDark);
+      out += rect(42, 12, 3, 47, C.lane) + rect(42, 12, 46, 3, C.lane);
+      out += rect(85, 12, 3, 47, C.lane) + rect(42, 56, 46, 3, C.lane);
+      for (let i = 0; i < 20; i++) out += rect(45 + i * 2, 53 - i * 2, 2, 2, C.lane);
+      out += rect(85, 30, 3, 5, C.enemy) + show(burst(84, 24), [1, 1, 0, 0], 3);
+      out += rect(84, 50, 3, 3, C.ally);
+      out += move(rect(84, 44, 3, 3, C.allySup), [[0, 0], [-8, -2], [-14, -6], [-18, -10]], 3);
+      out += text('1. CRASH', 2, 20, C.white) + show(text('2. ROAM', 2, 28, C.allySup), [0, 0, 1, 1], 3);
+      out += text('ADC:', 92, 46, C.ally) + text('SAFE', 92, 52, C.ally);
+      return out;
+    },
+  },
+  {
+    id: 'zone-off-cs',
+    category: 'support',
+    title: 'ZONE THEM OFF CS',
+    takeaway: "THREATEN, DON'T OVERCOMMIT",
+    summary: 'Every time their ADC walks up to last-hit, a support stepping forward threatens a trade. Often they back off and miss the creep entirely.',
+    tips: [
+      'Step slightly ahead of your ADC when their ADC walks up to last-hit.',
+      "Threaten, don't commit: walk forward, then step back if they retreat.",
+      "Watch their support; zoning only works if you aren't walking into their engage.",
+    ],
+    scene: () =>
+      laneScene()
+      + wave(58, 39, 'ally', 2)
+      + show(minion(66, 40, 'ally') + hpBar(65, 37, 5, 0.15, C.enemy), [1, 1, 1, 0], 3)
+      + champ(34, 37, 'ally')
+      + move(champ(48, 37, 'allySup'), [[0, 0], [0, 0], [12, 0], [0, 0]], 3)
+      + move(champ(92, 37, 'enemy'), [[0, 0], [-12, 0], [0, 0], [0, 0]], 3)
+      + show(text('THREAT', 46, 14, C.allySup), [0, 0, 1, 0], 3)
+      + show(text('-CS', 66, 28, C.enemy), [0, 0, 0, 1], 3),
+  },
+  {
+    id: 'leave-last-hits',
+    category: 'support',
+    title: 'LEAVE LAST HITS TO YOUR ADC',
+    takeaway: 'THEIR GOLD WINS YOUR GAME',
+    summary: 'Your ADC needs gold to carry. Supports should avoid taking minion kills, except when the ADC is not there to take them.',
+    tips: [
+      'Do not hit low-HP minions when your ADC is nearby.',
+      'If your ADC recalls or dies, take the wave rather than letting it die to tower.',
+      'Your job is vision, protection and pressure; their job is farming.',
+    ],
+    scene: () =>
+      laneScene()
+      + show(minion(62, 40, 'enemy') + hpBar(61, 37, 5, 0.15, C.enemy), [1, 1, 0, 0], 3)
+      + champ(34, 37, 'ally') + text('ADC', 32, 50, C.ally)
+      + champ(50, 37, 'allySup') + text('SUP', 48, 50, C.allySup)
+      + show(arrow(56, 40, 60, 40, C.allySup) + text('X', 57, 30, C.enemy), [1, 0, 0, 0], 3)
+      + show(arrow(40, 44, 60, 44, C.ally), [0, 1, 0, 0], 3)
+      + show(coin(32, 28) + text('+GOLD', 38, 28, C.gold), [0, 0, 1, 1], 3),
+  },
+  {
+    id: 'recall-together',
+    category: 'support',
+    title: 'RECALL TOGETHER',
+    takeaway: "DON'T LEAVE YOUR ADC 1V2",
+    summary: 'If the support recalls alone, the ADC is left alone against two enemies and is easy to dive. Crash the wave and recall at the same time.',
+    tips: [
+      'Crash the wave together, then recall together.',
+      'If one of you has to stay, play near tower and avoid trades.',
+      'Walk back to lane together so you never take a 2v2 trade alone.',
+    ],
+    scene: () => {
+      const strip = (y: number, label: string, fill: string) => text(label, 2, y, fill) + rect(0, y + 7, W, 9, C.lane);
+      let out = rect(0, 10, W, 51, C.grass) + strip(12, 'TOGETHER', C.green) + strip(36, 'ALONE', C.enemy);
+      out += champ(40, 20, 'ally') + champ(50, 20, 'allySup');
+      out += show(rect(39, 18, 7, 10, C.ally + '55') + rect(49, 18, 7, 10, C.allySup + '55'), [0, 1, 1, 0], 3);
+      out += show(text('SAFE', 66, 21, C.green), [0, 0, 1, 1], 3);
+      out += champ(40, 44, 'ally') + show(champ(50, 44, 'allySup'), [1, 0, 0, 0], 3);
+      out += move(champ(84, 44, 'enemy') + champ(94, 44, 'enemySup'), [[0, 0], [0, 0], [-24, 0], [-30, 0]], 3);
+      out += show(skull(41, 37), [0, 0, 0, 1], 3);
+      return out;
+    },
+  },
+  {
+    id: 'support-triangle',
+    category: 'support',
+    title: 'ENGAGE > POKE > ENCHANTER',
+    takeaway: 'COUNTER-PICK THEIR SUPPORT',
+    summary: 'Most supports fall into three types. Engage supports dive poke mages, poke mages out-damage enchanter heals from range, and enchanters peel and shield to shut down engage.',
+    tips: [
+      'Engage (Leona, Alistar, Nautilus) beats poke: get on top of fragile mages.',
+      'Poke (Lux, Seraphine, Karma) beats enchanters: out-damage their heals from range.',
+      'Enchanters (Janna, Lulu, Nami) beat engage: shield, knock back and peel the dive.',
+    ],
+    scene: () =>
+      text('ENGAGE', 6, 26, C.enemySup) + text('POKE', 54, 26, C.purple) + text('ENCHANTER', 88, 26, C.allySup)
+      + arrow(31, 28, 50, 28, C.white) + arrow(71, 28, 84, 28, C.white)
+      + rect(105, 33, 1, 15, C.white) + rect(17, 48, 89, 1, C.white) + arrow(17, 48, 17, 34, C.white)
+      + text('EACH BEATS THE NEXT', 26, 52, C.muted)
+      + show(text('ENGAGE', 6, 26, C.white), [1, 0, 0], 3)
+      + show(text('POKE', 54, 26, C.white), [0, 1, 0], 3)
+      + show(text('ENCHANTER', 88, 26, C.white), [0, 0, 1], 3),
   },
 ];
 
