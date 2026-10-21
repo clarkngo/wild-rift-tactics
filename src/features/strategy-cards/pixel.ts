@@ -28,6 +28,9 @@ export const C = {
   green: '#4fd18b',
   heal: '#5cff9d',
   ward: '#f7d35c',
+  allySup: '#4fe0d0',
+  enemySup: '#ffa04d',
+  dragon: '#ff8a3d',
 } as const;
 
 /** 3×5 glyphs, five rows of three pixels each ('#' = on). */
@@ -152,21 +155,26 @@ const HERALD = ['.PPP.', 'PWPWP', 'PPPPP', 'P.P.P'];
 const POTION = ['.S.', 'RRR', 'RWR', 'RRR'];
 const BARON = ['.PPPPPPP.', 'PPWPPPWPP', 'PPPPPPPPP', 'PP.PPP.PP', 'P..P.P..P'];
 const STUN = ['#...#', '.#.#.', '..#..', '.#.#.', '#...#'];
+const DRAGON = ['..OO.', '.OOOO', 'OOWO.', '.OOOO', 'O.O.O'];
 const FLASH = ['YYYYY', 'Y...Y', 'Y.Y.Y', 'Y...Y', 'YYYYY'];
 
-export type Team = 'ally' | 'enemy' | 'jungle';
+/** Supports get their own colours so a 2v2 lane stays readable. */
+export type Team = 'ally' | 'enemy' | 'jungle' | 'allySup' | 'enemySup';
 
-const teamColor = (t: Team) => (t === 'enemy' ? C.enemy : t === 'jungle' ? C.purple : C.ally);
+const TEAM_COLOR: Record<Team, string> = {
+  ally: C.ally, enemy: C.enemy, jungle: C.purple, allySup: C.allySup, enemySup: C.enemySup,
+};
+const teamColor = (t: Team) => TEAM_COLOR[t];
 
 export const champ = (x: number, y: number, team: Team) =>
   sprite(CHAMP, x, y, { H: C.skin, B: teamColor(team) });
 
 export const minion = (x: number, y: number, team: Team) =>
-  sprite(MINION, x, y, { M: team === 'enemy' ? C.enemyDark : C.allyDark });
+  sprite(MINION, x, y, { M: team === 'enemy' || team === 'enemySup' ? C.enemyDark : C.allyDark });
 
 export function wave(x: number, y: number, team: Team, count = 3, gap = 4) {
   let out = '';
-  for (let i = 0; i < count; i++) out += minion(x + (team === 'enemy' ? i : -i) * gap, y + (i % 2) * 3, team);
+  for (let i = 0; i < count; i++) out += minion(x + (team === 'enemy' || team === 'enemySup' ? i : -i) * gap, y + (i % 2) * 3, team);
   return out;
 }
 
@@ -185,6 +193,7 @@ export const skull = (x: number, y: number) => sprite(SKULL, x, y, { '#': C.whit
 export const herald = (x: number, y: number) => sprite(HERALD, x, y, { P: C.purple, W: C.white });
 export const potion = (x: number, y: number) => sprite(POTION, x, y, { S: C.stone, R: C.enemy, W: C.white });
 export const baron = (x: number, y: number) => sprite(BARON, x, y, { P: C.purple, W: C.white });
+export const dragon = (x: number, y: number) => sprite(DRAGON, x, y, { O: C.dragon, W: C.white });
 export const stun = (x: number, y: number) => sprite(STUN, x, y, { '#': C.ward });
 /** Summoner-spell slot icon; pass `used` to cross it out. */
 export const flashIcon = (x: number, y: number, used = false) =>
