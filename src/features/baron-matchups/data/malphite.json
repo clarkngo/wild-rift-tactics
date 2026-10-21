@@ -32,14 +32,14 @@
       "champion": "gwen",
       "rating": "good",
       "confidence": "medium",
-      "why": "Gwen's magic damage and the true-damage centre of Q ignore Malphite's armor. W (Hallowed Mist) blocks his Q poke from outside the mist.",
+      "why": "Gwen's magic damage and the true-damage centre of Q ignore Malphite's armor, so his main defensive stat is wasted. W (Hallowed Mist) blocks his Q poke from outside the mist, and he has no way to out-trade her.",
       "trading": [
         "Stack Q with autos, then land the centre of the final snip for true damage.",
         "Pop W when he Qs you to block the poke.",
         "E (Skip 'n Slash) to close distance and hit his shield before trading."
       ],
       "early": "Trade with full-stack Q and back off before his E slows your attack speed.",
-      "spike": "At 5, R adds ranged damage and outscales him in side lane.",
+      "spike": "At 5, your R adds ranged damage and you outscale him in side lane; his R is only a threat with his jungler.",
       "wave": "Slow-push and trade when the wave is with you.",
       "jungle": "Ward river; play near your jungler when his R is up.",
       "build": "Conqueror. AP bruiser items.",
@@ -55,7 +55,7 @@
         "Q into E only after his shield is down; your spin pops it fast.",
         "When he uses E on you, back off. Your attack speed is crippled."
       ],
-      "early": "Even. Farm and look for short trades when his Q is down.",
+      "early": "Even. Farm and look for short Q + E trades when his Q (Seismic Shard) is on cooldown.",
       "spike": "At 5, your R can execute him after your jungler engages. His R is an engage threat for his jungler.",
       "wave": "Slow-push to keep pressure; stay out of his engage range.",
       "jungle": "Ward river; play near your jungler when his R is up.",

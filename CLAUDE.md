@@ -38,7 +38,7 @@ The site is split into **sections**, each mounted at `#/<route>/...` and listed 
 - `src/pages/home.ts`: landing page listing all sections.
 - `src/shared/`: cross-section code: champion roster (`champions.ts`), `Champion` type, DOM helpers (`esc`, `portrait`).
 - `src/features/baron-matchups/`: the Baron matchups section (`index.ts`, `types.ts`, `data/<enemy-id>.json`).
-- To add an enemy: create `src/features/baron-matchups/data/<id>.json` matching `EnemyMatchups`; `npm run build` runs `scripts/validate-data.mjs` (schema, ids, mirror-rating consistency).
+- To add an enemy: create `src/features/baron-matchups/data/<id>.json` matching `EnemyMatchups`; `npm run build` runs `scripts/validate-data.mjs` (schema, ids, minimum field lengths, mirror-rating consistency).
 
 ## Commands
 

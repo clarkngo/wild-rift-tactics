@@ -1,4 +1,5 @@
-// Validates src/features/baron-matchups/data/*.json: schema, champion ids, and mirror-rating consistency.
+// Validates src/features/baron-matchups/data/*.json: schema, champion ids, minimum detail,
+// and mirror-rating consistency.
 import { readFileSync, readdirSync } from 'node:fs';
 
 const dir = new URL('../src/features/baron-matchups/data/', import.meta.url);
@@ -7,7 +8,10 @@ const roster = new Set(
 );
 const RATINGS = ['good', 'neutral', 'bad'];
 const MIRROR = { good: 'bad', neutral: 'neutral', bad: 'good' };
-const STRING_FIELDS = ['why', 'early', 'spike', 'wave', 'jungle', 'build', 'remember'];
+// Minimum lengths so entries stay specific rather than one-line generic advice.
+const MIN_LENGTH = { why: 140, early: 60, spike: 60, wave: 40, jungle: 40, build: 25, remember: 12 };
+const MIN_TRADING_STEPS = 3;
+const MIN_TRADING_STEP_LENGTH = 35;
 const errors = [];
 const ratings = new Map(); // "pick>enemy" -> rating
 
@@ -23,8 +27,13 @@ for (const file of readdirSync(dir).filter((f) => f.endsWith('.json'))) {
     if (!roster.has(m.champion)) at('not in champions.ts');
     if (!RATINGS.includes(m.rating)) at(`bad rating "${m.rating}"`);
     if (!['high', 'medium', 'low'].includes(m.confidence)) at(`bad confidence "${m.confidence}"`);
-    if (!Array.isArray(m.trading) || !m.trading.length) at('needs trading steps');
-    for (const f of STRING_FIELDS) if (typeof m[f] !== 'string' || !m[f].trim()) at(`missing ${f}`);
+    if (!Array.isArray(m.trading) || m.trading.length < MIN_TRADING_STEPS) at(`needs ${MIN_TRADING_STEPS}+ trading steps`);
+    else if (m.trading.some((t) => typeof t !== 'string' || t.length < MIN_TRADING_STEP_LENGTH))
+      at(`trading steps must be ${MIN_TRADING_STEP_LENGTH}+ characters`);
+    for (const [f, min] of Object.entries(MIN_LENGTH)) {
+      if (typeof m[f] !== 'string' || !m[f].trim()) at(`missing ${f}`);
+      else if (m[f].length < min) at(`${f} is too thin (${m[f].length} chars, min ${min})`);
+    }
     ratings.set(`${m.champion}>${d.enemy}`, m.rating);
   }
 }
