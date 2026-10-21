@@ -1,0 +1,102 @@
+{
+  "enemy": "malphite",
+  "patch": "draft",
+  "reviewed": false,
+  "summary": "Armor-stacking tank with annoying Q poke and a game-changing R. Safe and poke-heavy in lane but low kill pressure alone. Magic damage, true damage, and %HP damage beat him; auto-attackers struggle.",
+  "threats": [
+    "Q (Seismic Shard) is point-and-click poke that steals your move speed.",
+    "E (Ground Slam) cuts your attack speed and scales with his armor.",
+    "Granite Shield (passive) absorbs your first hit; it returns if he goes ~10s unhit.",
+    "R (Unstoppable Force) at 5: a gank or teamfight engage from long range. Track it."
+  ],
+  "matchups": [
+    {
+      "champion": "mordekaiser",
+      "rating": "good",
+      "confidence": "high",
+      "why": "Mordekaiser deals magic damage, so Malphite's armor stacking does nothing. R (Realm of Death) isolates Malphite where nobody can save him, and steals his stats.",
+      "trading": [
+        "Q (Obliterate) the moment his Granite Shield is down; isolated Q hits hard.",
+        "When he Qs you, walk forward and trade back; you win any extended trade.",
+        "E (Death's Grasp) pull into Q when he walks up to last-hit.",
+        "Use W (Indestructible) after taking poke to recover HP."
+      ],
+      "early": "Win the wave and trade freely. He can poke but can't stop your all-in.",
+      "spike": "At 5, R removes him from his jungler's help and steals his armor and HP. A 1v1 in the Realm is almost always yours.",
+      "wave": "Slow-push and crash into his tower to deny farm and plates.",
+      "jungle": "You don't need ganks to win. Ward river; his R can turn a gank on your jungler.",
+      "build": "Conqueror. Magic-pen bruiser items; boots that suit the enemy team comp.",
+      "remember": "He builds armor; you deal magic. Don't let him farm for free."
+    },
+    {
+      "champion": "gwen",
+      "rating": "good",
+      "confidence": "medium",
+      "why": "Gwen's magic damage and the true-damage centre of Q ignore Malphite's armor. W (Hallowed Mist) blocks his Q poke from outside the mist.",
+      "trading": [
+        "Stack Q with autos, then land the centre of the final snip for true damage.",
+        "Pop W when he Qs you to block the poke.",
+        "E (Skip 'n Slash) to close distance and hit his shield before trading."
+      ],
+      "early": "Trade with full-stack Q and back off before his E slows your attack speed.",
+      "spike": "At 5, R adds ranged damage and outscales him in side lane.",
+      "wave": "Slow-push and trade when the wave is with you.",
+      "jungle": "Ward river; play near your jungler when his R is up.",
+      "build": "Conqueror. AP bruiser items.",
+      "remember": "True damage beats armor."
+    },
+    {
+      "champion": "garen",
+      "rating": "neutral",
+      "confidence": "medium",
+      "why": "Garen's damage is physical and Malphite's armor reduces it, but Garen's passive regen undoes most of his poke. Neither champion can really kill the other alone, so it plays out as a farm lane.",
+      "trading": [
+        "Don't stand in front of the wave; his Q poke resets your regen.",
+        "Q into E only after his shield is down; your spin pops it fast.",
+        "When he uses E on you, back off. Your attack speed is crippled."
+      ],
+      "early": "Even. Farm and look for short trades when his Q is down.",
+      "spike": "At 5, your R can execute him after your jungler engages. His R is an engage threat for his jungler.",
+      "wave": "Slow-push to keep pressure; stay out of his engage range.",
+      "jungle": "Ward river; play near your jungler when his R is up.",
+      "build": "Conqueror. Armor-pen items.",
+      "remember": "Pop the shield, then trade."
+    },
+    {
+      "champion": "jax",
+      "rating": "bad",
+      "confidence": "high",
+      "why": "Jax's damage comes from autos and on-hit, exactly what Malphite's armor and E (Ground Slam) attack-speed slow shut down. Malphite's Q is targeted spell poke that Counter Strike can't dodge, so Jax gets chipped every time he walks up.",
+      "trading": [
+        "Hit his Granite Shield with one auto before any trade; don't start a fight into the shield.",
+        "Use E (Counter Strike) as you Leap in to absorb his Ground Slam's AoE damage, then stun.",
+        "Trade only while his E is on cooldown; once your attack speed is slowed, walk away.",
+        "Don't chase him through his wave; he Q-pokes and walks off with your speed."
+      ],
+      "early": "Concede some poke and farm. One short Leap + Counter Strike trade when his E is down is fine; extended fights aren't.",
+      "spike": "At 5 your R makes all-ins closer, but his R lets his jungler kill you. Respect his R before stepping up.",
+      "wave": "Let him push into you and farm under tower; your scaling outlasts his lane pressure.",
+      "jungle": "He has no escape besides R. If you can get him low while his R is down, your jungler can finish him.",
+      "build": "Conqueror. Rush a damage item, then mix in bruiser items; don't overbuild attack speed early, since his E cuts it anyway.",
+      "remember": "Pop the shield first, trade only when his E is down."
+    },
+    {
+      "champion": "tryndamere",
+      "rating": "bad",
+      "confidence": "high",
+      "why": "Tryndamere is pure autos and crit, and Malphite's armor plus E (Ground Slam) slow deletes his damage. Malphite's targeted Q also chips him for free, while Tryndamere's Fury only grows if he trades.",
+      "trading": [
+        "Use Q (Bloodlust) to heal off Malphite's poke instead of trading back at low Fury.",
+        "Only E (Spinning Slash) in when his Ground Slam is on cooldown; reset it on crits.",
+        "Back off after his E lands; your autos are crippled for the duration.",
+        "W (Mocking Shout) to slow him if he tries to walk you down."
+      ],
+      "early": "Farm, build Fury, and heal off poke. Don't take trades into a full Granite Shield.",
+      "spike": "At 5 your R keeps you alive in an all-in, but his R lets his jungler commit too. Track his level.",
+      "wave": "Farm under tower; you want to reach items and split-push later, not win lane.",
+      "jungle": "Ask for ganks when his R is on cooldown; your R prevents you dying in a 2v2.",
+      "build": "Lethal Tempo or Conqueror. Armor pen early; crit items once he stops itemizing pure armor.",
+      "remember": "Heal through the poke and split-push later."
+    }
+  ]
+}

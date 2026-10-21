@@ -1,0 +1,103 @@
+{
+  "enemy": "darius",
+  "patch": "draft",
+  "reviewed": false,
+  "summary": "Lane bully who wants to stack Hemorrhage and snowball off one won extended fight. He has no real gap closer besides E pull, so kiting and disengage beat him; standing still in melee range loses.",
+  "threats": [
+    "Outer edge of Q (Decimate) deals bonus damage and heals him: never stand on the blade's ring.",
+    "E (Apprehend) pull defines his threat range. When it's on cooldown he is very vulnerable.",
+    "5 stacks of Hemorrhage give Noxian Might. Don't extend a fight once he has 3+ stacks on you.",
+    "R (Noxian Guillotine) at level 5 executes and resets on kill, so low-HP fights become lethal."
+  ],
+  "matchups": [
+    {
+      "champion": "teemo",
+      "rating": "good",
+      "confidence": "medium",
+      "why": "Teemo's range and Blinding Dart cut Darius's damage at the source: a blinded Darius misses autos, so he can't stack Hemorrhage or land W. Move Quick lets you walk out of E range, and he has no other way to reach you.",
+      "trading": [
+        "Auto + Toxic Shot when he walks up to last-hit, then step back out of E range.",
+        "Save Q (Blinding Dart) for when he commits; blind him the moment he starts auto-ing or casts W.",
+        "When he casts Q, walk fully out of the blade or inside it. Never stay on the outer ring.",
+        "If he lands E, blind immediately and Move Quick away. Don't trade back."
+      ],
+      "early": "Level 1 is your window: he can't reach you without burning E. Poke freely and make him choose between creeps and HP.",
+      "spike": "At 5, place mushrooms (R) in river and tri-brush to stop ganks and slow his approach. Respect his R: if you're under ~40% and he has 4+ stacks, back off.",
+      "wave": "Keep the wave slightly on your side so he must walk through your poke to farm, and your jungler can collapse on him.",
+      "jungle": "Darius has no escape once E is down. Ping your jungler when he wastes E on a wave or misses it on you.",
+      "build": "Electrocute for kill pressure or Phase Rush for safety. Get boots early to kite; build armor if he gets ahead.",
+      "remember": "Blind the W, dodge the ring, stay out of E range."
+    },
+    {
+      "champion": "jayce",
+      "rating": "good",
+      "confidence": "medium",
+      "why": "Cannon-form Jayce can poke Darius out of lane before Darius ever reaches him. Hammer E (Thundering Blow) knocks him away mid-combo, buying time to swap back to range and kite.",
+      "trading": [
+        "Cannon Q (boosted through Acceleration Gate when mana allows) when he steps forward for creeps.",
+        "If he walks at you: Hammer E to knock him back, swap to cannon, and walk away.",
+        "Only use Hammer Q in when his E is on cooldown, then get out before he stacks you.",
+        "Never take an extended hand-to-hand trade; Jayce wins on burst, not sustain."
+      ],
+      "early": "Lv 1–3: cannon autos plus Q poke. Keep him low so he can't contest the wave without risking a fight at low HP.",
+      "spike": "Your power doesn't spike at 5 like his does. Darius's R gives him a real kill threat, so get your poke done early and play farther back once he's level 5.",
+      "wave": "If you've poked him down, freeze near your tower so he has to walk through Cannon Q range to farm.",
+      "jungle": "Call your jungler when he's below half. Hammer E can knock him straight into your jungler.",
+      "build": "Electrocute or Phase Rush. Lethality items; buy armor boots early if he's snowballing.",
+      "remember": "Knock him off you with Hammer E, never brawl."
+    },
+    {
+      "champion": "malphite",
+      "rating": "neutral",
+      "confidence": "high",
+      "why": "Malphite's armor and passive shield blunt Darius's early trades, and Q steals his move speed so he can't chase. But Darius's damage stays high with armor pen and bleed, so you won't kill him; you just won't lose.",
+      "trading": [
+        "Q (Seismic Shard) when he walks up, then walk away with the stolen speed.",
+        "E (Ground Slam) once he's auto-ing you; slower attacks mean fewer Hemorrhage stacks.",
+        "Keep Granite Shield up. Don't take minion aggro that pops it right before a trade.",
+        "Never stand in melee range while his Q is off cooldown."
+      ],
+      "early": "Farm safely and Q poke. You won't win a level 1–3 all-in, so aim for a quiet lane.",
+      "spike": "At 5 your R gives kill threat with a jungler and an escape. With armor, you can survive his R.",
+      "wave": "Let him push and farm under tower. Darius struggles to dive Malphite.",
+      "jungle": "Your R is great gank setup. Ping your jungler when R is up and he's pushed past the middle of the lane.",
+      "build": "Grasp of the Undying. Early armor plus anti-heal (Bramble Vest into Thornmail) cuts his Q healing.",
+      "remember": "Shield up, slow his attacks with E, Q and walk away."
+    },
+    {
+      "champion": "garen",
+      "rating": "neutral",
+      "confidence": "medium",
+      "why": "Garen's Q silence stops Darius casting E or Q mid-trade, and W gives tenacity against his slow and pull. Darius still wins long fights at full stacks, so trade short and let your passive regen between trades.",
+      "trading": [
+        "Q right after he uses E, or as he walks forward, so he can't answer with spells.",
+        "Don't spin (E) through a full fight. He'll reach 5 stacks and out-sustain you with Q heals.",
+        "Disengage after each short trade to let Perseverance regen. He has no sustain besides Q.",
+        "When he winds up Q, walk into him (inside the blade) to deny the heal."
+      ],
+      "early": "Levels 1–2 are even. Short Q trades only; don't extend.",
+      "spike": "Both ults execute at 5. Track his HP and be the one to land the first execute.",
+      "wave": "Slow-push and take short trades when he steps up. Freeze if he gets ahead.",
+      "jungle": "He's gankable after he uses E. Your Q gives your jungler the silence window.",
+      "build": "Conqueror. Armor boots and an anti-heal item if he snowballs.",
+      "remember": "Silence him before he combos, and never sit at 5 stacks."
+    },
+    {
+      "champion": "nasus",
+      "rating": "bad",
+      "confidence": "high",
+      "why": "Darius denies Nasus's farming: every Q stack you go for puts you in his E and auto range. He out-damages you heavily before level 5 and can zone you off the wave entirely.",
+      "trading": [
+        "Don't trade. Last-hit with Q only when his E is on cooldown.",
+        "If he engages, W (Wither) him to cut his attack and move speed, then walk away.",
+        "If he gets 3+ stacks on you, disengage immediately."
+      ],
+      "early": "Give up some creeps. Your goal is surviving to level 5 with a reasonable Q stack count.",
+      "spike": "R gives you extra HP and resists, but still avoid 1v1s until you have items and stacks.",
+      "wave": "Let him push and farm with Q under tower. Never overextend.",
+      "jungle": "Ask for an early gank: he has to push to pressure you. Call it when his E is down.",
+      "build": "Grasp or Phase Rush. Armor boots early; Bramble Vest for anti-heal.",
+      "remember": "Survive and stack. You win the 25-minute game, not the 3-minute one."
+    }
+  ]
+}

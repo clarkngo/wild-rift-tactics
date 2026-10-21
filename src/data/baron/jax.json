@@ -1,0 +1,84 @@
+{
+  "enemy": "jax",
+  "patch": "draft",
+  "reviewed": false,
+  "summary": "Scales into a dominant split-pusher. Early he relies on Counter Strike (E) to win trades; trade when it's on cooldown and slow his attack speed to deny his on-hit scaling.",
+  "threats": [
+    "E (Counter Strike) dodges autos for about 2s, reduces AoE damage, then stuns.",
+    "Q (Leap Strike) gap-closes onto you, minions, or wards.",
+    "R (Grandmaster's Might) at level 5 gives armor/MR and extra on-hit damage.",
+    "Gets stronger with every item and wants a long game."
+  ],
+  "matchups": [
+    {
+      "champion": "malphite",
+      "rating": "good",
+      "confidence": "high",
+      "why": "Jax's damage is mostly physical autos, which Malphite's armor and E attack-speed slow hard-counter. Q poke and speed steal let Malphite dictate trades.",
+      "trading": [
+        "Q (Seismic Shard) poke when he walks up.",
+        "E (Ground Slam) as soon as he jumps in to slow his attack speed.",
+        "Don't auto into his active Counter Strike; wait it out."
+      ],
+      "early": "Poke with Q and farm. He can't trade well into your shield and armor.",
+      "spike": "At 5, R plus jungler makes him an easy kill target.",
+      "wave": "Let him push and farm safely; build armor.",
+      "jungle": "Your R sets up the gank; call once his E is down.",
+      "build": "Grasp of the Undying. Early armor items and armor boots.",
+      "remember": "Armor up and slow his attacks."
+    },
+    {
+      "champion": "garen",
+      "rating": "neutral",
+      "confidence": "medium",
+      "why": "Counter Strike only reduces Garen's E spin (it's AoE, not an auto), and Q's silence stops Jax casting E at all. Garen wins short early trades; Jax wins once he has items and R.",
+      "trading": [
+        "Q (Decisive Strike) him before he presses E. A silenced Jax can't Counter Strike.",
+        "If he's already in Counter Strike, don't Q into it. Walk out of the stun radius and wait ~2s.",
+        "After it ends, Q + E spin and walk away before he gets a second rotation.",
+        "Avoid long fights from level 5 on; his R armor/MR plus on-hit outscales your spin."
+      ],
+      "early": "Levels 1–3 favor you on short trades. Look for Q trades when he steps up to last-hit.",
+      "spike": "Your R executes if he's low, but his R makes him far tankier. Don't commit to an all-in unless the execute math is there.",
+      "wave": "Slow-push while you're winning trades; freeze if he gets ahead so he must walk to you.",
+      "jungle": "He escapes with Q (Leap Strike) onto wards or minions. Gank after he's used it.",
+      "build": "Conqueror. Armor boots against his autos.",
+      "remember": "Silence the Counter Strike, then walk."
+    },
+    {
+      "champion": "fiora",
+      "rating": "neutral",
+      "confidence": "medium",
+      "why": "Both are cooldown duelists: Riposte parries Jax's Counter Strike stun, and vitals' true damage ignores his R resists. But Counter Strike dodges her autos. Whoever wastes their parry first loses.",
+      "trading": [
+        "Hold W (Riposte) until his Counter Strike stun goes off, then parry it and stun him back.",
+        "While his E is active, Lunge away; don't auto into the dodge window.",
+        "Once his E is down and your W is up, commit with vitals for an extended trade."
+      ],
+      "early": "Even. Track his E and your W cooldowns and only fight when yours is up and his isn't.",
+      "spike": "At 5 your R heal zone wins extended fights, as long as he doesn't stun you through it.",
+      "wave": "Slow-push and fight in cooldown windows; don't fight inside his full wave.",
+      "jungle": "He's gankable after Q, his only escape.",
+      "build": "Conqueror. Bruiser items; armor boots.",
+      "remember": "Parry the stun, then punish."
+    },
+    {
+      "champion": "tryndamere",
+      "rating": "bad",
+      "confidence": "high",
+      "why": "Tryndamere's damage is almost all autos, and Counter Strike dodges every one while charging the stun. Jax wins every trade where E is up, and his R resists blunt Tryndamere's crits later.",
+      "trading": [
+        "When he presses E, walk away. Never auto into Counter Strike.",
+        "Use W (Mocking Shout) to slow him if he chases after the stun.",
+        "Trade only in the window after his E ends; that's ~10s of free autos.",
+        "Use Q (Bloodlust) to heal off trades you lose instead of staying in."
+      ],
+      "early": "Play safe and farm. Your Fury needs time; don't take trades when his E is up.",
+      "spike": "Your R stops you dying, but Jax's R plus E still out-trades you. Use R to escape, not to all-in.",
+      "wave": "Farm under tower and split-push later; avoid long trades in lane.",
+      "jungle": "Ask for a gank when his E and Q are both down.",
+      "build": "Lethal Tempo or Conqueror. Crit and attack speed; armor boots if behind.",
+      "remember": "Wait out Counter Strike, then go."
+    }
+  ]
+}
