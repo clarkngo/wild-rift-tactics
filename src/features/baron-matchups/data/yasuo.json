@@ -1,0 +1,104 @@
+{
+  "enemy": "yasuo",
+  "patch": "draft",
+  "reviewed": false,
+  "summary": "Mobile crit skirmisher who dashes through minions, blocks projectiles with Wind Wall, and shields with his passive Flow. He wants extended trades in the middle of a minion wave. Point-and-click CC, non-projectile damage, and early burst beat him.",
+  "threats": [
+    "Q (Steel Tempest) stacks; the third cast is a tornado that knocks up.",
+    "W (Wind Wall) blocks projectiles. Don't waste skillshot poke or projectile CC while it's up.",
+    "E (Sweeping Blade) dashes through units; he weaves through the wave to reach you.",
+    "R (Last Breath) at 5 follows up any knockup, from his tornado or a teammate's."
+  ],
+  "matchups": [
+    {
+      "champion": "irelia",
+      "rating": "good",
+      "confidence": "low",
+      "why": "Wind Wall can't block Irelia's melee damage, and she dashes through the same minions Yasuo uses. Her E stun interrupts his tornado setups, and she wins extended trades at max passive stacks.",
+      "trading": [
+        "Q (Bladesurge) through minions to stay on him when he Sweeping Blades away.",
+        "Land E (Flawless Duet) after he's used his tornado, so he can't knock you up.",
+        "Fight with 3+ passive stacks; his Flow shield soaks your opening damage.",
+        "Don't stand in a straight line with him when his tornado is ready."
+      ],
+      "early": "Even at level 1, then favored. Trade when his tornado is on cooldown.",
+      "spike": "At 5 his R needs a knockup; deny his tornado and he can't use it on you.",
+      "wave": "Keep low-HP minions near him so you have dash targets.",
+      "jungle": "He escapes by dashing through minions. Gank when the wave is pushed toward you.",
+      "build": "Conqueror. Bruiser items; armor boots.",
+      "remember": "Stun after the tornado."
+    },
+    {
+      "champion": "renekton",
+      "rating": "good",
+      "confidence": "medium",
+      "why": "Renekton's early E-W-Q burst out-trades Yasuo at levels 1–3, and none of it can be blocked by Wind Wall. His W stun cancels Yasuo's tornado setup, and Renekton zones him off farm before his crit items.",
+      "trading": [
+        "E in, W stun, Q, then recast E to dash out before his tornado is ready.",
+        "Use full Fury for empowered W when he commits.",
+        "Pop his Flow shield with an auto or Q before committing your burst.",
+        "Don't chase him through his wave; he'll Sweeping Blade away."
+      ],
+      "early": "Levels 1–3 are your window. Trade aggressively and deny his farm.",
+      "spike": "At 5 your R makes all-ins stronger; his R needs a knockup, so dodge his tornado.",
+      "wave": "Slow-push and crash for plates while he's weak; freeze if you get ahead.",
+      "jungle": "He escapes by dashing through minions. Gank when the wave is pushed toward you.",
+      "build": "Conqueror. Bruiser items; armor boots.",
+      "remember": "Win early, dodge the tornado."
+    },
+    {
+      "champion": "pantheon",
+      "rating": "good",
+      "confidence": "medium",
+      "why": "Pantheon's W (Shield Vault) is a dash, not a projectile, so Wind Wall can't block it, and it stuns him before he can dash away. Pantheon's early burst kills Yasuo before his crit items.",
+      "trading": [
+        "W stun him and burst with autos during the stun; Wind Wall can't stop it.",
+        "Throw Q (Comet Spear) only when his Wind Wall is on cooldown; it blocks the spear.",
+        "Hold E (Aegis Assault) to block his autos and tornado from the front.",
+        "Pop his Flow shield with an auto before committing your burst."
+      ],
+      "early": "Levels 1–3 are yours. Trade aggressively whenever he walks up to farm.",
+      "spike": "At 5 your R gives roam pressure; his R needs a knockup, so dodge his tornado.",
+      "wave": "Slow-push and crash; take plates while he can't contest.",
+      "jungle": "W stun sets up ganks. Call when he's pushed past mid-lane.",
+      "build": "Conqueror or Electrocute. Lethality items; armor boots.",
+      "remember": "W can't be Wind Walled."
+    },
+    {
+      "champion": "darius",
+      "rating": "neutral",
+      "confidence": "medium",
+      "why": "Darius wins any extended fight once he pulls Yasuo in, and Wind Wall can't block E (Apprehend). But Yasuo's dashes through the wave dodge Darius's Q blade, and his tornado knockup interrupts Darius's combo.",
+      "trading": [
+        "E (Apprehend) pull him when he dashes in; Wind Wall doesn't block it.",
+        "Stack Hemorrhage quickly before his Flow shield and crits out-trade you.",
+        "Don't chase him through his wave; he'll Sweeping Blade away.",
+        "Walk out of the line of his tornado when it's ready."
+      ],
+      "early": "Even. Trade when his tornado is on cooldown and force long fights.",
+      "spike": "At 5 his R needs a knockup; your R resets on kill. Count stacks before going in.",
+      "wave": "Freeze near your tower so he has no minions to dash through toward you.",
+      "jungle": "He escapes by dashing through minions. Gank when the wave is pushed toward you.",
+      "build": "Conqueror. Armor boots against his crits.",
+      "remember": "Pull through the Wind Wall."
+    },
+    {
+      "champion": "jayce",
+      "rating": "bad",
+      "confidence": "low",
+      "why": "Wind Wall blocks Jayce's Shock Blast, which is most of his poke, and Yasuo dashes through the wave to reach him. Jayce has to bait Wind Wall before his poke lands, and Yasuo wins close-range trades.",
+      "trading": [
+        "Bait Wind Wall with an ungated Shock Blast, then throw the gated one.",
+        "Hammer E (Thundering Blow) him away when he dashes in.",
+        "Don't Hammer-Q onto him; he out-trades you at close range.",
+        "Stay out of the line of his tornado when it's ready."
+      ],
+      "early": "Farm safely and poke only when his Wind Wall is on cooldown.",
+      "spike": "At 5 his R needs a knockup; dodge his tornado and he can't all-in you.",
+      "wave": "Let him push and farm under tower; don't let him dash through a wave to you.",
+      "jungle": "Ask for ganks; Hammer E knocks him into your jungler.",
+      "build": "Electrocute or Phase Rush. Lethality items; armor boots.",
+      "remember": "Bait the Wind Wall first."
+    }
+  ]
+}
