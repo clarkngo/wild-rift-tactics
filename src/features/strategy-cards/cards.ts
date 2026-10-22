@@ -1,9 +1,9 @@
 import {
-  C, W, arrow, baron, burst, champ, coin, dragon, flashIcon, heart, herald, hpBar, laneScene, minion, move, orb, potion, rect,
+  C, W, arrow, baron, burst, camp, champ, coin, dot, dragon, flashIcon, miniMap, heart, herald, hpBar, laneScene, minion, move, orb, potion, rect,
   scaled, shield, show, skull, stun, sword, text, tower, ward, wave,
 } from './pixel';
 
-export type Category = 'micro' | 'macro' | 'items' | 'counters' | 'support';
+export type Category = 'micro' | 'macro' | 'items' | 'counters' | 'support' | 'jungle';
 
 export const CATEGORIES: Record<Category, { label: string; accent: string; blurb: string }> = {
   micro: { label: 'Laning micro', accent: C.gold, blurb: 'Trades, spacing and wave control in lane.' },
@@ -11,6 +11,7 @@ export const CATEGORIES: Record<Category, { label: string; accent: string; blurb
   items: { label: 'Itemization', accent: C.purple, blurb: 'What to buy, and when, based on the enemy.' },
   counters: { label: 'Class counters', accent: C.ally, blurb: 'Which champion types beat which.' },
   support: { label: 'Support', accent: C.allySup, blurb: 'Dragon lane support: peel, engage, vision and roams.' },
+  jungle: { label: 'Jungle', accent: C.pink, blurb: 'Clears, ganks, counter-jungling and objectives.' },
 };
 
 export interface StrategyCard {
@@ -816,6 +817,180 @@ export const CARDS: StrategyCard[] = [
       + show(text('ENGAGE', 6, 26, C.white), [1, 0, 0], 3)
       + show(text('POKE', 54, 26, C.white), [0, 1, 0], 3)
       + show(text('ENCHANTER', 88, 26, C.white), [0, 0, 1], 3),
+  },
+
+  // ---- Jungle ----------------------------------------------------------------
+  {
+    id: 'plan-first-clear',
+    category: 'jungle',
+    title: 'PLAN YOUR FIRST CLEAR',
+    takeaway: 'END YOUR CLEAR NEAR A LANE',
+    summary: 'Your first clear decides where you can be for your first gank. Plan it so you finish next to the lane you want to gank, not on the far side of the map.',
+    tips: [
+      'Start on the side opposite to where you want to finish.',
+      'Pick the lane to finish near: one with CC, an overextended enemy, or a strong early laner.',
+      'If the lane is not set up when you arrive, keep farming instead of forcing it.',
+    ],
+    scene: () => {
+      const { out, at } = miniMap();
+      return out
+        + camp(...at(10, 20), C.ally) + camp(...at(8, 28)) + camp(...at(14, 34)) + camp(...at(22, 38), C.dragon) + camp(...at(30, 40))
+        + move(dot(...at(9, 19), C.purple), [[0, 0], [-2, 8], [4, 14], [12, 18], [20, 20], [26, 22]], 3.6)
+        + show(burst(...at(34, 42), C.pink), [0, 0, 0, 0, 0, 1], 3.6)
+        + text('BUFF', 4, 20, C.ally) + text('CAMPS', 4, 28, C.green) + text('GANK!', 4, 36, C.pink);
+    },
+  },
+  {
+    id: 'gank-overextended',
+    category: 'jungle',
+    title: 'GANK OVEREXTENDED LANES',
+    takeaway: 'PUSHED + NO FLASH = GO',
+    summary: 'The best gank target is a laner who has pushed toward your tower and has no Flash. They are far from safety with no escape.',
+    tips: [
+      'Look for enemies past the middle of the lane, especially against an ally who is freezing.',
+      'Check their summoner spells: no Flash makes almost any gank work.',
+      'Skip lanes pushed into the enemy tower; you will waste time and risk a dive.',
+    ],
+    scene: () =>
+      laneScene()
+      + champ(12, 37, 'ally') + wave(26, 39, 'ally', 2) + wave(30, 39, 'enemy', 3)
+      + champ(46, 37, 'enemy')
+      + flashIcon(38, 14, true) + text('NO FLASH', 46, 14, C.enemy)
+      + move(champ(62, 20, 'jungle'), [[0, 0], [0, 0], [-4, 8], [-8, 16], [-8, 16]], 3)
+      + show(stun(46, 28), [0, 0, 0, 1, 0], 3)
+      + show(skull(46, 28), [0, 0, 0, 0, 1], 3),
+  },
+  {
+    id: 'gank-from-behind',
+    category: 'jungle',
+    title: 'GANK FROM BEHIND',
+    takeaway: 'CUT OFF THEIR WAY HOME',
+    summary: 'Ganks fail when the enemy simply walks back to their tower. Come in from their side of the lane so running away means running into you.',
+    tips: [
+      'Path through river or the enemy-side brush so you arrive between them and their tower.',
+      'Ask your laner to hold their CC until you are in position.',
+      'Use lane brush and river entrances to approach; do not walk straight up the lane.',
+    ],
+    scene: () =>
+      laneScene()
+      + move(champ(30, 37, 'ally'), [[0, 0], [0, 0], [10, 0], [20, 0], [28, 0]], 3)
+      + move(champ(64, 37, 'enemy'), [[0, 0], [0, 0], [8, 0], [8, 0], [6, 0]], 3)
+      + move(champ(108, 50, 'jungle'), [[0, 0], [-12, -6], [-24, -13], [-28, -13], [-28, -13]], 3)
+      + show(text('BLOCKED', 58, 14, C.pink), [0, 0, 0, 1, 1], 3)
+      + show(skull(71, 28), [0, 0, 0, 0, 1], 3),
+  },
+  {
+    id: 'counter-gank',
+    category: 'jungle',
+    title: 'COUNTER-GANK THEIR GANKS',
+    takeaway: 'BE WHERE THEIR JUNGLER GOES',
+    summary: 'When you can predict where the enemy jungler is going, be nearby. Their 2v1 becomes a 2v2 they did not plan for.',
+    tips: [
+      'Track their clear: a jungler seen on one buff is heading to the lanes on that side.',
+      'Wait in a bush near the lane that looks gankable to them.',
+      'Engage after they use their CC, not before.',
+    ],
+    scene: () => {
+      const { out, at } = miniMap();
+      return out
+        + dot(...at(18, 0), C.ally) + dot(...at(26, 0), C.enemy)
+        + move(dot(...at(24, 14), C.enemy), [[0, 0], [0, -4], [0, -8], [0, -10]], 3)
+        + move(dot(...at(8, 14), C.purple), [[0, 0], [4, -4], [8, -8], [12, -10]], 3)
+        + show(burst(...at(20, 0), C.pink), [0, 0, 0, 1], 3)
+        + text('THEY:', 92, 12, C.enemy) + text('GANK', 92, 18, C.enemy)
+        + text('YOU:', 4, 12, C.purple) + text('WAIT', 4, 18, C.purple)
+        + show(text('2V2', 92, 30, C.pink), [0, 0, 1, 1], 3);
+    },
+  },
+  {
+    id: 'invade-when-seen',
+    category: 'jungle',
+    title: 'SEEN BOT? INVADE TOP SIDE',
+    takeaway: "TAKE CAMPS THEY CAN'T DEFEND",
+    summary: 'When the enemy jungler shows on one side of the map, their camps on the other side are unguarded. Taking them slows their gold and experience.',
+    tips: [
+      'Only invade after their jungler is seen far away, for example ganking bot while you are top-side.',
+      'Make sure your nearby laners have priority so they can follow if it is contested.',
+      'Leave before their jungler can walk back; a stolen camp is not worth a death.',
+    ],
+    scene: () => {
+      const { out, at } = miniMap();
+      return out
+        + show(camp(...at(22, 8), C.enemy), [1, 1, 0, 0], 3) + show(camp(...at(30, 10)), [1, 1, 1, 0], 3)
+        + camp(...at(38, 22))
+        + show(dot(...at(30, 42), C.enemy) + text('!', ...at(34, 36), C.enemy), [1, 0], 1)
+        + move(dot(...at(10, 18), C.purple), [[0, 0], [10, -10], [18, -8], [26, 2]], 3)
+        + text('INVADE', 4, 14, C.purple)
+        + text('THEM:', 92, 40, C.enemy) + text('BOT', 92, 46, C.enemy);
+    },
+  },
+  {
+    id: 'smite-last',
+    category: 'jungle',
+    title: 'SMITE AT THE LAST MOMENT',
+    takeaway: 'SMITE TO SECURE, NOT TO START',
+    summary: 'Smite deals a big burst of damage to monsters. Used early, it leaves the objective open for the enemy jungler to steal; save it for the final hit.',
+    tips: [
+      "Watch the objective's HP and smite when it drops below your Smite damage.",
+      'If the enemy jungler is close, be ready to smite a little earlier.',
+      'Never open with Smite on an objective; hold it until the end.',
+    ],
+    scene: () =>
+      show(scaled(4, 54, 18, dragon(0, 0)), [1, 1, 1, 1, 0], 3.5)
+      + show(hpBar(44, 13, 40, 1), [1, 0, 0, 0, 0], 3.5)
+      + show(hpBar(44, 13, 40, 0.6), [0, 1, 0, 0, 0], 3.5)
+      + show(hpBar(44, 13, 40, 0.25, C.enemy), [0, 0, 1, 0, 0], 3.5)
+      + show(hpBar(44, 13, 40, 0.08, C.enemy), [0, 0, 0, 1, 0], 3.5)
+      + show(rect(63, 10, 2, 30, C.ward) + text('SMITE!', 82, 24, C.ward), [0, 0, 0, 1, 0], 3.5)
+      + show(text('SECURED', 50, 30, C.green), [0, 0, 0, 0, 1], 3.5)
+      + champ(28, 40, 'jungle') + champ(104, 40, 'enemy') + text('?', 105, 32, C.enemy),
+  },
+  {
+    id: 'early-to-objectives',
+    category: 'jungle',
+    title: 'BE EARLY TO OBJECTIVES',
+    takeaway: 'ARRIVE BEFORE IT SPAWNS',
+    summary: 'Objectives are won by whoever arrives first with vision and their team. Show up before the spawn, not when it is already being fought over.',
+    tips: [
+      'Track when Dragon and Herald spawn, and plan your clear to be nearby.',
+      'Ping your team well before the spawn so laners can push and walk over.',
+      'Ward the pit and clear their vision before it spawns.',
+    ],
+    scene: () => {
+      const { out, at } = miniMap();
+      return out
+        + dragon(...at(32, 31))
+        + text('DRAGON', 4, 12, C.dragon)
+        + show(text('0:30', 4, 22, C.white), [1, 0, 0, 0], 4)
+        + show(text('0:20', 4, 22, C.white), [0, 1, 0, 0], 4)
+        + show(text('0:10', 4, 22, C.white), [0, 0, 1, 0], 4)
+        + show(text('UP!', 4, 22, C.dragon), [0, 0, 0, 1], 4)
+        + move(dot(...at(10, 38), C.ally) + dot(...at(16, 42), C.ally) + dot(...at(20, 30), C.purple), [[0, 0], [6, -2], [12, -4], [14, -4]], 4)
+        + show(dot(...at(44, 20), C.enemy) + dot(...at(42, 26), C.enemy) + text('LATE', 92, 26, C.enemy), [0, 0, 0, 1], 4)
+        + show(text('FIRST', 92, 44, C.green), [0, 0, 0, 1], 4);
+    },
+  },
+  {
+    id: 'trade-cross-map',
+    category: 'jungle',
+    title: "CAN'T CONTEST? TRADE",
+    takeaway: 'TAKE SOMETHING ELSEWHERE',
+    summary: 'If the enemy team is taking an objective you cannot contest, do not flip a losing fight. Take something on the other side of the map at the same time.',
+    tips: [
+      'Cannot win the fight at Dragon? Take Herald, a tower, or their camps instead.',
+      'Make the call early so your team moves together.',
+      'Only contest if you have more people there or better vision.',
+    ],
+    scene: () => {
+      const { out, at } = miniMap();
+      return out
+        + dragon(...at(32, 31)) + dot(...at(28, 27), C.enemy) + dot(...at(37, 28), C.enemy) + dot(...at(34, 37), C.enemy)
+        + show(burst(...at(32, 31), C.enemy), [0, 1, 0, 1], 2)
+        + herald(...at(9, 10)) + dot(...at(15, 14), C.purple) + dot(...at(8, 16), C.ally)
+        + show(burst(...at(9, 9), C.ally), [1, 0, 1, 0], 2)
+        + text('YOU:', 4, 12, C.ally) + text('HERALD', 4, 18, C.ally)
+        + text('THEY:', 92, 40, C.enemy) + text('DRAGON', 92, 46, C.enemy);
+    },
   },
 ];
 
