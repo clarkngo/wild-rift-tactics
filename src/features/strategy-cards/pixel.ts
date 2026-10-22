@@ -31,6 +31,7 @@ export const C = {
   allySup: '#4fe0d0',
   enemySup: '#ffa04d',
   dragon: '#ff8a3d',
+  pink: '#ff7ad9',
 } as const;
 
 /** 3×5 glyphs, five rows of three pixels each ('#' = on). */
@@ -246,3 +247,25 @@ export function card({ title, takeaway, scene, accent }: { title: string; takeaw
 /** Draw content authored at (0,0) scaled up by `s` and placed at (x, y). */
 export const scaled = (s: number, x: number, y: number, content: string) =>
   `<g transform="translate(${x} ${y}) scale(${s})">${content}</g>`;
+
+/**
+ * Square minimap: three lanes, the river (top-left to bottom-right), both bases, and
+ * camps in each team's jungle. Ally side is bottom-left. Returns markup plus a `at` helper
+ * that converts map-local coordinates (0 to size) to scene coordinates.
+ */
+export function miniMap(x0 = 40, y0 = 12, size = 48) {
+  const at = (x: number, y: number): [number, number] => [x0 + x, y0 + y];
+  let out = rect(x0, y0, size, size, C.grassDark);
+  for (let i = 0; i < (size - 6) / 2; i++) out += rect(x0 + 3 + i * 2, y0 + 3 + i * 2, 2, 2, C.river);
+  for (let i = 0; i < (size - 6) / 2; i++) out += rect(x0 + 3 + i * 2, y0 + size - 5 - i * 2, 2, 2, C.lane);
+  out += rect(x0, y0, 3, size, C.lane) + rect(x0, y0, size, 3, C.lane);
+  out += rect(x0 + size - 3, y0, 3, size, C.lane) + rect(x0, y0 + size - 3, size, 3, C.lane);
+  out += rect(x0, y0 + size - 6, 6, 6, C.ally) + rect(x0 + size - 6, y0, 6, 6, C.enemy);
+  return { out, at };
+}
+
+/** Jungle camp marker. */
+export const camp = (x: number, y: number, fill: string = C.green) => rect(x, y, 2, 2, fill);
+
+/** Small square map marker for a champion. */
+export const dot = (x: number, y: number, fill: string) => rect(x, y, 3, 3, fill);
