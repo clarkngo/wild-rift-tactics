@@ -157,6 +157,7 @@ const ORB = ['.PP.', 'PWPP', 'PPPP', '.PP.'];
 const SKULL = ['.###.', '#.#.#', '#####', '.###.', '.#.#.'];
 const HERALD = ['.PPP.', 'PWPWP', 'PPPPP', 'P.P.P'];
 const BARON = ['.PPPPPPP.', 'PPWPPPWPP', 'PPPPPPPPP', 'PP.PPP.PP', 'P..P.P..P'];
+const BOOT = ['BB..', 'BB..', 'BB..', 'BBBB', 'BBBB'];
 const STUN = ['#...#', '.#.#.', '..#..', '.#.#.', '#...#'];
 const DRAGON = ['..OO.', '.OOOO', 'OOWO.', '.OOOO', 'O.O.O'];
 const FLASH = ['YYYYY', 'Y...Y', 'Y.Y.Y', 'Y...Y', 'YYYYY'];
@@ -196,6 +197,7 @@ export const skull = (x: number, y: number) => sprite(SKULL, x, y, { '#': C.whit
 export const herald = (x: number, y: number) => sprite(HERALD, x, y, { P: C.purple, W: C.white });
 export const baron = (x: number, y: number) => sprite(BARON, x, y, { P: C.purple, W: C.white });
 export const dragon = (x: number, y: number) => sprite(DRAGON, x, y, { O: C.dragon, W: C.white });
+export const boot = (x: number, y: number, fill: string = C.ward) => sprite(BOOT, x, y, { B: fill });
 export const stun = (x: number, y: number) => sprite(STUN, x, y, { '#': C.ward });
 /** Summoner-spell slot icon; pass `used` to cross it out. */
 export const flashIcon = (x: number, y: number, used = false) =>

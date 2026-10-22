@@ -1,5 +1,5 @@
 import {
-  C, W, arrow, baron, burst, camp, champ, coin, dot, dragon, flashIcon, miniMap, heart, herald, hpBar, laneScene, minion, move, orb, rect,
+  C, W, arrow, baron, boot, burst, camp, champ, coin, dot, dragon, flashIcon, miniMap, heart, herald, hpBar, laneScene, minion, move, orb, rect,
   scaled, shield, show, skull, stun, sword, text, tower, ward, wave, type Team,
 } from './pixel';
 
@@ -412,6 +412,53 @@ export const CARDS: StrategyCard[] = [
   },
 
   // ---- Itemization ---------------------------------------------------------
+  {
+    id: 'first-item-or-boots',
+    category: 'items',
+    title: 'FIRST ITEM OR BOOTS?',
+    takeaway: 'SPIKE FIRST, THEN BOOTS',
+    summary: 'Most champions get their biggest early power spike from finishing their first core item, so the default is to build it first and buy boots right after. Buy boots earlier when movement matters more than damage.',
+    tips: [
+      'Default: finish your first core item, then boots. That item is your first big power spike.',
+      'Boots early if your lane is full of skillshots to dodge, or a ranged champion keeps kiting you.',
+      'Boots early on roaming roles (jungle, mid, support), where reaching fights first matters most.',
+    ],
+    scene: () =>
+      text('DEFAULT', 4, 18, C.white)
+      + scaled(2, 50, 14, sword(0, 0, C.gold)) + text('1', 52, 27, C.muted)
+      + arrow(64, 19, 78, 19, C.gold)
+      + scaled(2, 84, 14, boot(0, 0)) + text('2', 86, 27, C.muted)
+      + rect(4, 33, 120, 1, '#26324d')
+      + text('DODGE/ROAM', 4, 42, C.white)
+      + scaled(2, 50, 38, boot(0, 0)) + text('1', 52, 51, C.muted)
+      + arrow(64, 43, 78, 43, C.ward)
+      + scaled(2, 84, 38, sword(0, 0, C.gold)) + text('2', 86, 51, C.muted)
+      + show(rect(2, 25, 100, 1, C.gold), [1, 0], 2.4)
+      + show(rect(2, 49, 100, 1, C.ward), [0, 1], 2.4),
+  },
+  {
+    id: 'enchant-boots',
+    category: 'items',
+    title: 'ENCHANT BOOTS TO COUNTER',
+    takeaway: 'STASIS: BURST. QUICKSILVER: CC',
+    summary: 'In Wild Rift, boots can be upgraded with an enchant that adds an active effect. Pick the one that answers the enemy\'s biggest threat to you, usually once your core items are done.',
+    tips: [
+      'Stasis: a few seconds of invulnerability, but you cannot act. Use it to survive assassins and big burst.',
+      'Quicksilver: removes crowd control on you. Take it against stuns and knock-ups that lock you down.',
+      'Both have long cooldowns; save the active for the moment that would otherwise kill you.',
+    ],
+    scene: () =>
+      text('STASIS', 14, 14, C.ward)
+      + scaled(2, 22, 26, champ(0, 0, 'ally'))
+      + show(rect(21, 25, 12, 16, C.ward + '99'), [0, 1, 1, 0], 3)
+      + show(burst(36, 30, C.enemy) + burst(14, 34, C.enemy), [0, 1, 1, 0], 3)
+      + show(text('SAFE', 18, 48, C.green), [0, 0, 1, 1], 3)
+      + rect(63, 14, 1, 40, '#26324d')
+      + text('QUICKSILVER', 74, 14, C.white)
+      + scaled(2, 90, 26, champ(0, 0, 'ally'))
+      + show(stun(92, 18), [1, 1, 0, 0], 3)
+      + show(text('FREE', 88, 48, C.green), [0, 0, 1, 1], 3),
+  },
   {
     id: 'buy-what-they-deal',
     category: 'items',
