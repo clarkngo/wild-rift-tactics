@@ -25,6 +25,8 @@ You are two experts working together:
 - Every matchup has: `why` (2–3 sentences tied to kits and power spikes), `trading` (concrete
   steps), `early` (Lv 1–3), `spike` (Lv 4–5, ults online), `wave`, `jungle`, `build`, `remember`.
 - `bad` matchups still explain how to survive if you're already locked in.
+- Wild Rift is not PC LoL: e.g. there are no health potions in the shop. Check any item or system
+  you mention actually exists in Wild Rift before writing it into a matchup or strategy card.
 - Each enemy file has a `patch` and a `reviewed` flag. Leave `reviewed: false` until a
   high-elo player has checked the content.
 

@@ -155,7 +155,6 @@ const SWORD = ['....#', '...#.', '#.#..', '.#...', '#.#..'];
 const ORB = ['.PP.', 'PWPP', 'PPPP', '.PP.'];
 const SKULL = ['.###.', '#.#.#', '#####', '.###.', '.#.#.'];
 const HERALD = ['.PPP.', 'PWPWP', 'PPPPP', 'P.P.P'];
-const POTION = ['.S.', 'RRR', 'RWR', 'RRR'];
 const BARON = ['.PPPPPPP.', 'PPWPPPWPP', 'PPPPPPPPP', 'PP.PPP.PP', 'P..P.P..P'];
 const STUN = ['#...#', '.#.#.', '..#..', '.#.#.', '#...#'];
 const DRAGON = ['..OO.', '.OOOO', 'OOWO.', '.OOOO', 'O.O.O'];
@@ -194,7 +193,6 @@ export const sword = (x: number, y: number, fill: string = C.white) => sprite(SW
 export const orb = (x: number, y: number) => sprite(ORB, x, y, { P: C.purple, W: C.white });
 export const skull = (x: number, y: number) => sprite(SKULL, x, y, { '#': C.white });
 export const herald = (x: number, y: number) => sprite(HERALD, x, y, { P: C.purple, W: C.white });
-export const potion = (x: number, y: number) => sprite(POTION, x, y, { S: C.stone, R: C.enemy, W: C.white });
 export const baron = (x: number, y: number) => sprite(BARON, x, y, { P: C.purple, W: C.white });
 export const dragon = (x: number, y: number) => sprite(DRAGON, x, y, { O: C.dragon, W: C.white });
 export const stun = (x: number, y: number) => sprite(STUN, x, y, { '#': C.ward });

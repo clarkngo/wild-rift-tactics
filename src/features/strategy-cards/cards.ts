@@ -1,5 +1,5 @@
 import {
-  C, W, arrow, baron, burst, camp, champ, coin, dot, dragon, flashIcon, miniMap, heart, herald, hpBar, laneScene, minion, move, orb, potion, rect,
+  C, W, arrow, baron, burst, camp, champ, coin, dot, dragon, flashIcon, miniMap, heart, herald, hpBar, laneScene, minion, move, orb, rect,
   scaled, shield, show, skull, stun, sword, text, tower, ward, wave,
 } from './pixel';
 
@@ -431,9 +431,9 @@ export const CARDS: StrategyCard[] = [
   {
     id: 'anti-heal',
     category: 'items',
-    title: 'HEALERS NEED ANTI-HEAL',
+    title: 'VS HEALERS: BUY ANTI-HEAL',
     takeaway: 'BUY IT EARLY, NOT LAST',
-    summary: 'Some Baron laners win by out-healing your damage. An anti-heal item cuts that healing; buy it as an early component when your opponent is one of them.',
+    summary: 'Some champions win by out-healing your damage. When you face one, buy an anti-heal item to cut their healing, and buy it early as a component rather than as your last item.',
     tips: [
       'Buy the cheap anti-heal component on your first or second back, not as your final item.',
       'It matters most against champions whose kit heals in every trade.',
@@ -488,42 +488,23 @@ export const CARDS: StrategyCard[] = [
   {
     id: 'ahead-or-behind',
     category: 'items',
-    title: 'AHEAD? BUY DAMAGE',
-    takeaway: 'BEHIND? BUY RESISTS FIRST',
-    summary: 'Your lead or deficit should change your next item. Ahead, damage lets you snowball; behind, defense keeps you alive long enough to scale.',
+    title: 'FAR AHEAD? PROTECT THE LEAD',
+    takeaway: "THEY'LL FOCUS YOU. BUY DEFENSE",
+    summary: 'A big lead makes you the enemy team\'s main target and puts a shutdown bounty on your head. Once your core damage is done, a defensive item keeps you alive, and dying once can hand the whole lead back.',
     tips: [
-      'Ahead in gold or kills: finish your damage item and keep pressuring.',
-      'Behind: buy the resistance that matches their damage before more damage.',
-      'Even: follow your normal core build.',
+      'Slightly ahead: finish your core damage item first so the lead turns into kill pressure.',
+      'Far ahead: expect to be focused. Add a defensive item that answers their biggest threat to you.',
+      'Behind: buy cheap defensive components to survive and farm, not damage you cannot use safely.',
     ],
     scene: () =>
-      text('AHEAD', 10, 14, C.green) + arrow(20, 34, 20, 22, C.green)
-      + scaled(3, 30, 24, sword(0, 0, C.gold)) + text('DAMAGE', 26, 44, C.gold)
-      + rect(63, 14, 1, 40, '#26324d')
-      + text('BEHIND', 72, 14, C.enemy) + arrow(84, 22, 84, 34, C.enemy)
-      + scaled(3, 94, 22, shield(0, 0, C.stone)) + text('RESISTS', 88, 44, C.stone)
-      + show(rect(26, 52, 24, 1, C.gold), [1, 0], 1.6) + show(rect(88, 52, 28, 1, C.stone), [0, 1], 1.6),
-  },
-  {
-    id: 'carry-potions',
-    category: 'items',
-    title: 'CARRY A POTION EARLY',
-    takeaway: 'POTIONS WIN CLOSE TRADES',
-    summary: 'A cheap health potion heals you over time after a trade. In an even lane, the player who drinks potions stays healthy enough to win the next trade.',
-    tips: [
-      'Grab a potion on early backs while you are still laning.',
-      'Drink after a trade, not before; it heals over time.',
-      'Stop buying them once you have sustain items or are out of lane.',
-    ],
-    scene: () =>
-      laneScene({ towers: false })
-      + champ(50, 37, 'ally') + champ(78, 37, 'enemy') + hpBar(76, 34, 9, 0.5, C.enemy)
-      + scaled(2, 32, 14, potion(0, 0))
-      + show(hpBar(48, 34, 9, 0.45, C.enemy), [1, 0, 0, 0], 3)
-      + show(hpBar(48, 34, 9, 0.6), [0, 1, 0, 0], 3)
-      + show(hpBar(48, 34, 9, 0.75), [0, 0, 1, 0], 3)
-      + show(hpBar(48, 34, 9, 0.9), [0, 0, 0, 1], 3)
-      + show(text('+', 58, 30, C.heal), [0, 1, 1, 1], 3),
+      text('AHEAD', 12, 14, C.green)
+      + scaled(3, 16, 22, sword(0, 0, C.gold)) + text('CORE DMG', 8, 42, C.gold)
+      + rect(50, 14, 1, 40, '#26324d')
+      + text('FAR AHEAD', 74, 14, C.green)
+      + champ(84, 30, 'ally')
+      + show(arrow(70, 33, 81, 33, C.enemy) + arrow(102, 33, 91, 33, C.enemy) + arrow(86, 52, 86, 39, C.enemy), [1, 1, 0, 0], 3)
+      + show(text('FOCUSED', 72, 22, C.enemy), [1, 1, 0, 0], 3)
+      + show(scaled(2, 79, 26, shield(0, 0, C.stone)) + text('DEFENSE', 72, 50, C.stone), [0, 0, 1, 1], 3),
   },
 
   // ---- Class counters ------------------------------------------------------
