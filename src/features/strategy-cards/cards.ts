@@ -3,7 +3,7 @@ import {
   scaled, shield, show, skull, stun, sword, text, tower, ward, wave,
 } from './pixel';
 
-export type Category = 'micro' | 'macro' | 'items' | 'counters' | 'support' | 'jungle';
+export type Category = 'micro' | 'macro' | 'items' | 'counters' | 'support' | 'jungle' | 'mid' | 'dragon';
 
 export const CATEGORIES: Record<Category, { label: string; accent: string; blurb: string }> = {
   micro: { label: 'Laning micro', accent: C.gold, blurb: 'Trades, spacing and wave control in lane.' },
@@ -12,6 +12,8 @@ export const CATEGORIES: Record<Category, { label: string; accent: string; blurb
   counters: { label: 'Class counters', accent: C.ally, blurb: 'Which champion types beat which.' },
   support: { label: 'Support', accent: C.allySup, blurb: 'Dragon lane support: peel, engage, vision and roams.' },
   jungle: { label: 'Jungle', accent: C.pink, blurb: 'Clears, ganks, counter-jungling and objectives.' },
+  mid: { label: 'Mid lane', accent: C.mid, blurb: 'Roams, river priority, mana and playing around assassins.' },
+  dragon: { label: 'Dragon lane', accent: C.dragon, blurb: 'Playing ADC: kiting, farming, positioning and your support.' },
 };
 
 export interface StrategyCard {
@@ -991,6 +993,295 @@ export const CARDS: StrategyCard[] = [
         + text('YOU:', 4, 12, C.ally) + text('HERALD', 4, 18, C.ally)
         + text('THEY:', 92, 40, C.enemy) + text('DRAGON', 92, 46, C.enemy);
     },
+  },
+
+  // ---- Mid lane ----------------------------------------------------------------
+  {
+    id: 'mid-shove-and-roam',
+    category: 'mid',
+    title: 'SHOVE, THEN ROAM',
+    takeaway: 'MID PRIO = MAP CONTROL',
+    summary: 'Mid is the shortest lane, so a mid laner who pushes first can reach either side lane quickly. Push the wave, then roam while their mid is stuck clearing it.',
+    tips: [
+      'Push the wave into their tower before you leave, or you lose minions and tower plates.',
+      'Roam to a lane with a gankable enemy, preferably with your jungler nearby.',
+      'Ping before you leave so your side laners can set up the fight.',
+    ],
+    scene: () => {
+      const { out, at } = miniMap();
+      const [tx, ty] = at(31, 13);
+      return out + rect(tx, ty, 3, 4, C.enemy)
+        + move(dot(...at(22, 22), C.mid), [[0, 0], [4, -4], [4, -4], [10, 6], [14, 14], [16, 20]], 3.6)
+        + show(burst(...at(28, 12), C.mid), [0, 1, 1, 0, 0, 0], 3.6)
+        + dot(...at(36, 44), C.enemy)
+        + show(skull(...at(35, 38)), [0, 0, 0, 0, 0, 1], 3.6)
+        + text('1. PUSH', 4, 14, C.white) + show(text('2. ROAM', 4, 22, C.mid), [0, 0, 0, 1, 1, 1], 3.6);
+    },
+  },
+  {
+    id: 'mid-ping-missing',
+    category: 'mid',
+    title: 'PING WHEN MID GOES MISSING',
+    takeaway: 'MISSING? PING IT FAST',
+    summary: 'When your lane opponent disappears, they are usually walking to a side lane. A quick ping gives your teammates the seconds they need to back off.',
+    tips: [
+      'Ping as soon as they leave vision, not after someone dies.',
+      'Push their wave while they are gone; you get gold and plates for free.',
+      'If you know where they went, follow; arriving second still turns a 2v1 into a 2v2.',
+    ],
+    scene: () =>
+      laneScene({ brush: false })
+      + champ(40, 37, 'ally')
+      + show(champ(80, 37, 'enemy'), [1, 1, 0, 0, 0], 3)
+      + show(text('?', 81, 37, C.enemy), [0, 0, 1, 1, 1], 3)
+      + show(arrow(82, 31, 82, 20, C.enemy) + arrow(82, 50, 82, 58, C.enemy), [0, 0, 0, 1, 1], 3)
+      + show(text('TOP?', 88, 16, C.enemy) + text('BOT?', 88, 54, C.enemy), [0, 0, 0, 1, 1], 3)
+      + show(text('MIA!', 34, 14, C.ward), [0, 0, 0, 1, 1], 3),
+  },
+  {
+    id: 'mid-follow-or-punish',
+    category: 'mid',
+    title: 'THEY ROAM? FOLLOW OR PUNISH',
+    takeaway: 'NEVER JUST STAND THERE',
+    summary: 'When their mid roams, you have two good answers: follow them to the fight, or punish by taking their tower plates. Standing in lane doing neither loses you both.',
+    tips: [
+      'If you can arrive in time, follow and turn their 2v1 into a 2v2.',
+      'If you are too far, push their wave and hit their tower instead.',
+      'Ping your side lanes either way so they know mid is missing.',
+    ],
+    scene: () => {
+      const { out, at } = miniMap();
+      const [tx, ty] = at(31, 13);
+      return out + rect(tx, ty, 3, 4, C.enemy)
+        + move(dot(...at(26, 20), C.enemy), [[0, 0], [4, 4], [8, 10], [12, 18]], 3)
+        + move(dot(...at(20, 26), C.mid), [[0, 0], [6, -6], [8, -9], [8, -9]], 3)
+        + show(burst(...at(30, 11), C.mid), [0, 0, 1, 1], 3)
+        + text('THEY:', 4, 14, C.enemy) + text('ROAM', 4, 20, C.enemy)
+        + text('YOU:', 92, 14, C.mid) + text('PLATES', 92, 20, C.mid);
+    },
+  },
+  {
+    id: 'mid-river-priority',
+    category: 'mid',
+    title: 'FIRST TO RIVER WINS FIGHTS',
+    takeaway: 'PUSH, THEN HELP YOUR JUNGLER',
+    summary: 'River skirmishes near mid are decided by who arrives first. If your wave is pushed and theirs is not, you can join your jungler while their mid is stuck in lane.',
+    tips: [
+      'Keep the wave pushed toward their side when your jungler is nearby.',
+      'Walk into river with your jungler, not after the fight has started.',
+      'If your wave is pushed toward you, do not leave; their mid arrives first.',
+    ],
+    scene: () =>
+      laneScene({ brush: false })
+      + rect(58, 10, 10, 24, C.river)
+      + wave(100, 39, 'ally', 4) + champ(110, 37, 'enemy') + text('STUCK', 100, 28, C.enemy)
+      + champ(60, 14, 'jungle') + champ(46, 24, 'enemy')
+      + move(champ(80, 37, 'ally'), [[0, 0], [-6, -6], [-12, -14], [-14, -20], [-14, -20]], 3)
+      + show(text('2V1', 28, 14, C.mid), [0, 0, 1, 1, 1], 3)
+      + show(skull(46, 17), [0, 0, 0, 0, 1], 3),
+  },
+  {
+    id: 'mid-ward-both-sides',
+    category: 'mid',
+    title: 'WARD BOTH SIDES OF MID',
+    takeaway: 'TWO ENTRANCES, TWO WARDS',
+    summary: 'Mid can be ganked from both sides of the river. A ward on one side only covers half the danger; ward both before you push past the middle.',
+    tips: [
+      'Place one ward on each river entrance near mid.',
+      'If you only have one, ward the side the enemy jungler was last seen heading toward.',
+      'When a ward spots someone, back off before they reach you.',
+    ],
+    scene: () =>
+      laneScene({ brush: false })
+      + rect(52, 12, 14, 8, C.brush) + rect(52, 51, 14, 7, C.brush)
+      + show(ward(57, 13), [0, 1, 1, 1, 1], 3)
+      + show(ward(57, 52), [0, 0, 1, 1, 1], 3)
+      + show(champ(70, 51, 'enemy') + text('!', 76, 51, C.enemy), [0, 0, 0, 1, 1], 3)
+      + move(champ(70, 37, 'ally'), [[0, 0], [0, 0], [0, 0], [-14, 0], [-28, 0]], 3),
+  },
+  {
+    id: 'mid-save-mana',
+    category: 'mid',
+    title: 'SAVE MANA FOR TRADES',
+    takeaway: 'LAST-HIT WITH AUTOS EARLY',
+    summary: 'Mages who spend all their mana clearing waves have nothing left when the enemy all-ins. Early on, last-hit with autos and keep mana for trades and defense.',
+    tips: [
+      'Use spells on the wave only when you need to push for a roam or a recall.',
+      'Trade with spells when the enemy walks up to last-hit, not on minions.',
+      'If you are out of mana, play back; you cannot win a trade without spells.',
+    ],
+    scene: () => {
+      const strip = (y: number, label: string, fill: string) => text(label, 2, y, fill) + rect(0, y + 7, W, 9, C.lane);
+      let out = rect(0, 10, W, 51, C.grass) + strip(12, 'SPELLS ON WAVE', C.enemy) + strip(36, 'AUTOS ON WAVE', C.green);
+      out += champ(30, 20, 'ally') + wave(64, 22, 'enemy', 2);
+      out += show(hpBar(28, 18, 9, 1, C.mana), [1, 0, 0, 0], 3) + show(hpBar(28, 18, 9, 0.1, C.mana), [0, 1, 1, 1], 3);
+      out += show(burst(64, 21, C.mana), [0, 1, 0, 0], 3) + show(text('NO MANA', 70, 12, C.mana), [0, 0, 1, 1], 3);
+      out += move(champ(92, 20, 'enemy'), [[0, 0], [0, 0], [-40, 0], [-50, 0]], 3) + show(burst(32, 19, C.enemy), [0, 0, 0, 1], 3);
+      out += champ(30, 44, 'ally') + hpBar(28, 42, 9, 1, C.mana) + wave(64, 46, 'enemy', 2);
+      out += move(champ(92, 44, 'enemy'), [[0, 0], [0, 0], [-40, 0], [-50, 0]], 3) + show(burst(44, 43, C.mana), [0, 0, 0, 1], 3);
+      return out;
+    },
+  },
+  {
+    id: 'mid-hold-escape',
+    category: 'mid',
+    title: 'HOLD YOUR ESCAPE',
+    takeaway: 'DODGE THE ALL-IN, NOT THE POKE',
+    summary: 'Against assassins like Zed, Akali or Fizz, your Flash or dash is your life. Use it on their real all-in, after they commit, not on harmless poke.',
+    tips: [
+      'Know their all-in pattern; most assassins dash in before their big damage.',
+      'Use your escape after their dash lands, not before.',
+      'Without your escape, play far back until it comes back up.',
+    ],
+    scene: () =>
+      laneScene({ towers: false, brush: false })
+      + show(champ(44, 37, 'ally') + flashIcon(43, 27), [1, 1, 1, 0, 0], 3)
+      + show(champ(24, 37, 'ally') + flashIcon(23, 27, true) + burst(44, 37, C.ward), [0, 0, 0, 1, 1], 3)
+      + move(champ(96, 37, 'enemy'), [[0, 0], [0, 0], [-44, 0], [-44, 0], [-44, 0]], 3)
+      + show(rect(56, 40, 40, 1, C.enemy + '88'), [0, 0, 1, 0, 0], 3)
+      + show(text('NOT YET', 36, 14, C.muted), [1, 1, 0, 0, 0], 3)
+      + show(text('NOW!', 42, 14, C.ward), [0, 0, 1, 1, 1], 3),
+  },
+
+  // ---- Dragon lane (ADC) -----------------------------------------------------
+  {
+    id: 'adc-kite',
+    category: 'dragon',
+    title: 'ATTACK, STEP, ATTACK',
+    takeaway: 'MOVE BETWEEN EVERY AUTO',
+    summary: 'ADCs deal damage with autos, but standing still lets melee champions reach you. Step back between each auto so you keep hitting while staying out of reach.',
+    tips: [
+      'Auto, then move during the time before your next auto is ready.',
+      'Kite backward from melee champions and sideways from skillshots.',
+      'More attack speed means less time to move; practice the rhythm in practice mode.',
+    ],
+    scene: () =>
+      laneScene({ towers: false })
+      + move(champ(50, 37, 'enemy'), [[0, 0], [4, 0], [8, 0], [12, 0], [16, 0], [20, 0]], 3)
+      + move(champ(80, 37, 'ally'), [[0, 0], [0, 0], [6, 0], [6, 0], [12, 0], [12, 0]], 3)
+      + show(rect(66, 40, 4, 1, C.gold), [1, 0, 1, 0, 1, 0], 3)
+      + show(text('AUTO', 52, 14, C.gold), [1, 0, 1, 0, 1, 0], 3)
+      + show(text('STEP', 52, 14, C.white), [0, 1, 0, 1, 0, 1], 3),
+  },
+  {
+    id: 'adc-farm-first',
+    category: 'dragon',
+    title: 'FARM FIRST, FIGHT SECOND',
+    takeaway: 'EVERY MINION IS PART OF AN ITEM',
+    summary: 'ADCs are the most item-dependent role. Missed minions mean later items, and an ADC without items cannot carry fights.',
+    tips: [
+      'Prioritize last hits over poke unless the trade is clearly free.',
+      'Under tower, learn the rhythm: tower shots plus one or two autos finish minions.',
+      'Do not leave a big wave to die under your tower to chase a fight you are not needed in.',
+    ],
+    scene: () =>
+      laneScene()
+      + champ(28, 37, 'allySup') + champ(40, 37, 'ally') + wave(60, 39, 'enemy', 4, 4)
+      + arrow(46, 42, 56, 42, C.gold)
+      + show(coin(60, 29), [1, 0, 0, 0], 2.4) + show(coin(64, 29), [0, 1, 0, 0], 2.4)
+      + show(coin(68, 29), [0, 0, 1, 0], 2.4) + show(coin(72, 29), [0, 0, 0, 1], 2.4)
+      + show(text('CS 10', 88, 14, C.gold), [1, 0, 0, 0], 2.4) + show(text('CS 11', 88, 14, C.gold), [0, 1, 0, 0], 2.4)
+      + show(text('CS 12', 88, 14, C.gold), [0, 0, 1, 0], 2.4) + show(text('CS 13', 88, 14, C.gold), [0, 0, 0, 1], 2.4),
+  },
+  {
+    id: 'adc-stay-behind-frontline',
+    category: 'dragon',
+    title: 'STAY BEHIND YOUR FRONTLINE',
+    takeaway: 'HIT THE CLOSEST SAFE TARGET',
+    summary: 'In teamfights, the ADC wins by staying alive and attacking whoever is in range. Stand behind your tanks and hit the closest enemy instead of walking forward for the backline.',
+    tips: [
+      'Keep your tank or bruiser between you and the enemy team.',
+      'Auto the closest enemy you can hit safely, even if it is their tank.',
+      'Only reach for their carry once their engage and dive tools are used.',
+    ],
+    scene: () =>
+      scaled(3, 52, 20, champ(0, 0, 'ally')) + text('FRONT', 50, 46, C.ally)
+      + champ(24, 34, 'ally') + text('YOU', 22, 46, C.gold)
+      + move(champ(100, 34, 'enemy'), [[0, 0], [-14, 0], [-28, 0], [-28, 0]], 3)
+      + show(burst(70, 33, C.ally), [0, 0, 1, 1], 3)
+      + show(rect(30, 37, 40, 1, C.gold), [0, 0, 1, 0], 3)
+      + show(text('BLOCKED', 80, 14, C.ally), [0, 0, 1, 1], 3),
+  },
+  {
+    id: 'adc-trade-with-support',
+    category: 'dragon',
+    title: 'TRADE WHEN YOUR SUPPORT IS NEAR',
+    takeaway: 'NO SUPPORT? NO TRADE',
+    summary: "Dragon lane is a 2v2. Trades go your way when your support's damage, shields and CC are there with you; alone, you are just a 1v2 target.",
+    tips: [
+      'Look at your support before you step up to trade.',
+      'If your support roams or recalls, farm safely near your tower.',
+      'Follow up on your support\'s engage immediately; a late follow-up wastes it.',
+    ],
+    scene: () => {
+      const strip = (y: number, label: string, fill: string) => text(label, 2, y, fill) + rect(0, y + 7, W, 9, C.lane);
+      let out = rect(0, 10, W, 51, C.grass) + strip(12, 'SUPPORT HERE', C.green) + strip(36, 'SUPPORT GONE', C.enemy);
+      out += champ(30, 20, 'ally') + champ(40, 20, 'allySup') + champ(80, 20, 'enemy') + champ(90, 20, 'enemySup');
+      out += show(burst(80, 19), [0, 1, 0, 1], 3) + show(hpBar(78, 18, 9, 0.4, C.enemy), [0, 0, 1, 1], 3);
+      out += champ(30, 44, 'ally');
+      out += move(champ(80, 44, 'enemy') + champ(90, 44, 'enemySup'), [[0, 0], [-16, 0], [-30, 0], [-36, 0]], 3);
+      out += show(skull(31, 53), [0, 0, 0, 1], 3);
+      return out;
+    },
+  },
+  {
+    id: 'adc-farm-near-team',
+    category: 'dragon',
+    title: 'FARM WAVES NEAR YOUR TEAM',
+    takeaway: 'SAFE FARM BEATS LONELY FARM',
+    summary: 'After laning, ADCs still need gold, but a side wave far from the team is where they get caught. Take waves your team can protect, and leave the far ones to a side laner.',
+    tips: [
+      'Farm the lane closest to where your team is grouped.',
+      'If you must take a far side wave, do it right after the enemy shows elsewhere.',
+      'Never walk into a side lane alone when three or more enemies are missing.',
+    ],
+    scene: () => {
+      const { out, at } = miniMap();
+      return out
+        + dot(...at(20, 24), C.ally) + dot(...at(25, 20), C.ally) + dot(...at(24, 27), C.allySup)
+        + dot(...at(30, 13), C.enemy) + dot(...at(33, 16), C.enemy) + dot(...at(28, 9), C.enemy)
+        + show(dot(...at(15, 30), C.gold) + text('SAFE', 4, 30, C.green), [1, 1, 0, 0], 3)
+        + show(dot(...at(1, 8), C.gold) + skull(...at(4, 2)) + text('ALONE', 4, 30, C.enemy), [0, 0, 1, 1], 3)
+        + text('ADC', 4, 14, C.gold);
+    },
+  },
+  {
+    id: 'adc-engage-range',
+    category: 'dragon',
+    title: 'KNOW THEIR ENGAGE RANGE',
+    takeaway: 'ONE STEP OUTSIDE = SAFE',
+    summary: "Engage supports like Leona, Nautilus and Thresh have a fixed engage range. Standing just outside it lets you farm while their engage has nothing to hit.",
+    tips: [
+      "Learn the range of their support's engage spell and stay just outside it.",
+      'Step forward to last-hit, then step back out of range.',
+      'When their engage is on cooldown, you can trade freely for a few seconds.',
+    ],
+    scene: () =>
+      laneScene({ towers: false })
+      + champ(100, 37, 'enemySup')
+      + rect(72, 50, 28, 1, C.enemySup) + rect(72, 48, 1, 5, C.enemySup) + text('RANGE', 78, 53, C.enemySup)
+      + champ(52, 37, 'allySup') + champ(62, 37, 'ally')
+      + move(rect(94, 40, 5, 1, C.enemySup), [[0, 0], [-10, 0], [-22, 0], [-22, 0]], 2.4)
+      + show(text('SHORT!', 64, 14, C.green), [0, 0, 1, 1], 2.4),
+  },
+  {
+    id: 'adc-no-facecheck',
+    category: 'dragon',
+    title: 'NEVER FACE-CHECK BRUSH',
+    takeaway: 'LET THE TANK CHECK IT',
+    summary: 'Walking into an unwarded bush as the ADC is the fastest way to die. Let your tank or support check it, or ward it first.',
+    tips: [
+      'Treat every unwarded bush near objectives as if an enemy is inside.',
+      'Ward it, or let a tankier teammate walk in first.',
+      'Use a skillshot or an auto on the bush edge if your champion can reveal it.',
+    ],
+    scene: () =>
+      laneScene({ brush: false })
+      + rect(60, 50, 22, 9, C.brush)
+      + show(text('?', 70, 43, C.enemy), [1, 1, 0, 0], 3)
+      + show(champ(70, 51, 'enemy'), [0, 0, 1, 1], 3)
+      + move(champ(40, 38, 'ally'), [[0, 0], [12, 6], [22, 12], [22, 12]], 3)
+      + show(skull(62, 42), [0, 0, 0, 1], 3),
   },
 ];
 
