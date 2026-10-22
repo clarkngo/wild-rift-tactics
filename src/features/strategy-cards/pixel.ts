@@ -32,6 +32,8 @@ export const C = {
   enemySup: '#ffa04d',
   dragon: '#ff8a3d',
   pink: '#ff7ad9',
+  mid: '#8fd3ff',
+  mana: '#3d7dff',
 } as const;
 
 /** 3×5 glyphs, five rows of three pixels each ('#' = on). */
