@@ -34,6 +34,7 @@ export const C = {
   pink: '#ff7ad9',
   mid: '#8fd3ff',
   mana: '#3d7dff',
+  lime: '#b8f35c',
 } as const;
 
 /** 3×5 glyphs, five rows of three pixels each ('#' = on). */

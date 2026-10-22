@@ -1,9 +1,9 @@
 import {
   C, W, arrow, baron, burst, camp, champ, coin, dot, dragon, flashIcon, miniMap, heart, herald, hpBar, laneScene, minion, move, orb, rect,
-  scaled, shield, show, skull, stun, sword, text, tower, ward, wave,
+  scaled, shield, show, skull, stun, sword, text, tower, ward, wave, type Team,
 } from './pixel';
 
-export type Category = 'micro' | 'macro' | 'items' | 'counters' | 'support' | 'jungle' | 'mid' | 'dragon';
+export type Category = 'micro' | 'macro' | 'items' | 'counters' | 'support' | 'jungle' | 'mid' | 'dragon' | 'teamfight';
 
 export const CATEGORIES: Record<Category, { label: string; accent: string; blurb: string }> = {
   micro: { label: 'Laning micro', accent: C.gold, blurb: 'Trades, spacing and wave control in lane.' },
@@ -14,6 +14,7 @@ export const CATEGORIES: Record<Category, { label: string; accent: string; blurb
   jungle: { label: 'Jungle', accent: C.pink, blurb: 'Clears, ganks, counter-jungling and objectives.' },
   mid: { label: 'Mid lane', accent: C.mid, blurb: 'Roams, river priority, mana and playing around assassins.' },
   dragon: { label: 'Dragon lane', accent: C.dragon, blurb: 'Playing ADC: kiting, farming, positioning and your support.' },
+  teamfight: { label: 'Team fights', accent: C.lime, blurb: 'When to fight, who does what, and how to win the fight.' },
 };
 
 export interface StrategyCard {
@@ -27,6 +28,11 @@ export interface StrategyCard {
   examples?: { label: string; champions: string[] };
   scene: () => string;
 }
+
+/** A row of champions at the given x positions. */
+const team = (xs: number[], y: number, t: Team) => xs.map((x) => champ(x, y, t)).join('');
+/** Small ultimate-ready (gold) or on-cooldown (grey) marker. */
+const ultIcon = (x: number, y: number, up: boolean) => rect(x, y, 3, 3, up ? C.gold : C.stoneDark);
 
 export const CARDS: StrategyCard[] = [
   // ---- Laning micro --------------------------------------------------------
@@ -1263,6 +1269,172 @@ export const CARDS: StrategyCard[] = [
       + show(champ(70, 51, 'enemy'), [0, 0, 1, 1], 3)
       + move(champ(40, 38, 'ally'), [[0, 0], [12, 6], [22, 12], [22, 12]], 3)
       + show(skull(62, 42), [0, 0, 0, 1], 3),
+  },
+
+  // ---- Team fights -------------------------------------------------------------
+  {
+    id: 'tf-count-ults',
+    category: 'teamfight',
+    title: 'COUNT ULTS BEFORE FIGHTING',
+    takeaway: 'MORE ULTS UP = TAKE THE FIGHT',
+    summary: 'Ultimates decide most team fights. Before you commit, compare how many big ults your team has ready against theirs.',
+    tips: [
+      'Watch for enemy ults being used in skirmishes; that is your window to force a fight.',
+      'If your key ult (your engage or your carry\'s) is down, play for time instead.',
+      'Ping your own ult status so the team knows when you are ready.',
+    ],
+    scene: () =>
+      rect(0, 10, W, 51, C.grass)
+      + team([8, 20, 32, 44, 56], 34, 'ally') + team([70, 82, 94, 106, 118], 34, 'enemy')
+      + [8, 20, 32, 44, 56].map((x, i) => ultIcon(x + 1, 28, i !== 2)).join('')
+      + [70, 82, 94, 106, 118].map((x, i) => ultIcon(x + 1, 28, i === 1 || i === 3)).join('')
+      + text('ULTS: 4', 14, 16, C.gold) + text('ULTS: 2', 80, 16, C.muted)
+      + show(text('FIGHT!', 52, 50, C.lime), [1, 0], 1.2),
+  },
+  {
+    id: 'tf-count-heads',
+    category: 'teamfight',
+    title: "DON'T FIGHT DOWN A PLAYER",
+    takeaway: '4V5 LOSES. WAIT FOR FIVE',
+    summary: 'A team fight with one player missing is usually lost before it starts. If someone is dead, recalling or far away, back off until you are even.',
+    tips: [
+      'Check the scoreboard and minimap before committing: who is dead, who is missing?',
+      'If you are down a player, give up the objective rather than the fight.',
+      'If they are down a player, that is the moment to force.',
+    ],
+    scene: () =>
+      rect(0, 10, W, 51, C.grass)
+      + team([8, 20, 32, 44], 30, 'ally') + text('?', 57, 31, C.muted)
+      + team([70, 82, 94, 106, 118], 30, 'enemy')
+      + text('4', 26, 16, C.ally) + text('V', 60, 16, C.white) + text('5', 92, 16, C.enemy)
+      + show(text('BACK OFF', 48, 48, C.enemy), [1, 1, 0], 2.4)
+      + show(text('WAIT FOR 5', 44, 48, C.lime), [0, 0, 1], 2.4),
+  },
+  {
+    id: 'tf-know-your-job',
+    category: 'teamfight',
+    title: 'KNOW YOUR TEAMFIGHT JOB',
+    takeaway: 'ENGAGE, PEEL OR DEAL DAMAGE',
+    summary: 'Every champion has one main job in a fight. Tanks start it, carries deal damage from safety, and supports or peelers keep the carries alive.',
+    tips: [
+      'Engage: go in first and land your CC on as many enemies as possible.',
+      'Damage: hit the closest safe target and stay alive; dead carries deal no damage.',
+      'Peel: stay next to your carry and stop whoever dives them.',
+    ],
+    scene: () =>
+      text('ENGAGE', 4, 14, C.ally) + scaled(3, 10, 22, champ(0, 0, 'ally')) + arrow(28, 32, 38, 32, C.ally)
+      + rect(43, 14, 1, 40, '#26324d')
+      + text('DAMAGE', 48, 14, C.gold) + scaled(3, 54, 24, sword(0, 0, C.gold))
+      + rect(86, 14, 1, 40, '#26324d')
+      + text('PEEL', 98, 14, C.allySup) + scaled(3, 98, 22, shield(0, 0, C.allySup))
+      + show(rect(4, 50, 36, 1, C.ally), [1, 0, 0], 3) + show(rect(48, 50, 34, 1, C.gold), [0, 1, 0], 3)
+      + show(rect(92, 50, 30, 1, C.allySup), [0, 0, 1], 3),
+  },
+  {
+    id: 'tf-engage-together',
+    category: 'teamfight',
+    title: 'ENGAGE AS FIVE, NOT ONE',
+    takeaway: 'ONE ENGAGE, FOUR FOLLOW',
+    summary: 'An engage only works if your team can follow it. Going in alone, or before your team is in range, just trades one life for nothing.',
+    tips: [
+      'Engage when your team is close enough to reach the fight within a second or two.',
+      'Ping before you go so everyone commits at the same time.',
+      'If your engage goes in alone, the rest of the team should back off, not trickle in.',
+    ],
+    scene: () => {
+      const strip = (y: number, label: string, fill: string) => text(label, 2, y, fill) + rect(0, y + 7, W, 9, C.lane);
+      let out = rect(0, 10, W, 51, C.grass) + strip(12, 'ALONE', C.enemy) + strip(36, 'TOGETHER', C.lime);
+      out += team([10, 20, 30, 40], 20, 'ally') + team([90, 100, 110], 20, 'enemy');
+      out += move(champ(50, 20, 'ally'), [[0, 0], [20, 0], [32, 0], [32, 0]], 3) + show(skull(83, 13), [0, 0, 0, 1], 3);
+      out += team([90, 100, 110], 44, 'enemy');
+      out += move(team([10, 20, 30, 40, 50], 44, 'ally'), [[0, 0], [14, 0], [26, 0], [30, 0]], 3);
+      out += show(burst(92, 43, C.lime), [0, 0, 1, 1], 3);
+      return out;
+    },
+  },
+  {
+    id: 'tf-bait-ult',
+    category: 'teamfight',
+    title: 'BAIT THEIR KEY ULT',
+    takeaway: 'THEIR ULT IS DOWN? NOW FIGHT',
+    summary: 'Some ults win fights on their own, like Malphite or Ornn engaging onto your whole team. Get them used on one tanky target first, then take the fight.',
+    tips: [
+      'Know which enemy ult wins them the fight, and who it will be aimed at.',
+      'Let a tanky teammate step forward to draw it out.',
+      'The moment it is used, commit; you have its full cooldown to win.',
+    ],
+    examples: { label: 'Fight-winning ults to bait', champions: ['malphite', 'ornn', 'kennen', 'sett'] },
+    scene: () =>
+      rect(0, 10, W, 51, C.grass)
+      + team([10, 20, 30], 36, 'ally') + team([92, 104, 116], 36, 'enemy')
+      + show(ultIcon(93, 30, true), [1, 1, 0, 0], 3) + show(ultIcon(93, 30, false), [0, 0, 1, 1], 3)
+      + move(champ(42, 36, 'ally'), [[0, 0], [12, 0], [12, 0], [12, 0]], 3)
+      + show(burst(54, 35, C.enemy) + text('ULT USED', 40, 16, C.enemy), [0, 0, 1, 0], 3)
+      + show(text('NOW FIGHT', 42, 16, C.lime) + arrow(36, 50, 80, 50, C.lime), [0, 0, 0, 1], 3),
+  },
+  {
+    id: 'tf-chokepoints',
+    category: 'teamfight',
+    title: 'FIGHT AT CHOKEPOINTS',
+    takeaway: 'AOE ULTS LOVE NARROW PATHS',
+    summary: 'In narrow jungle paths, enemies have no room to spread out. Teams with area-of-effect ults should fight there; teams without should avoid them.',
+    tips: [
+      'With AoE ults on your team, catch them as they walk through narrow jungle paths.',
+      'Without AoE, fight in open areas such as river and lanes.',
+      'Do not walk through a chokepoint toward an enemy team with AoE ults up.',
+    ],
+    examples: { label: 'AoE ults that punish chokepoints', champions: ['malphite', 'kennen', 'rumble', 'ornn'] },
+    scene: () =>
+      rect(0, 10, W, 51, C.grassDark)
+      + rect(40, 10, 48, 18, C.stoneDark) + rect(40, 44, 48, 17, C.stoneDark)
+      + rect(0, 28, W, 16, C.grass)
+      + team([52, 62, 72], 33, 'enemy')
+      + champ(16, 33, 'ally')
+      + show(scaled(3, 55, 28, burst(0, 0, C.lime)), [0, 0, 1, 1], 3)
+      + show(text('HIT 3!', 98, 33, C.lime), [0, 0, 1, 1], 3)
+      + text('NARROW', 50, 14, C.white),
+  },
+  {
+    id: 'tf-spread-vs-aoe',
+    category: 'teamfight',
+    title: 'SPREAD OUT VS AOE ULTS',
+    takeaway: "DON'T LET ONE ULT HIT FIVE",
+    summary: 'Against AoE ults like Malphite, Kennen or Rumble, standing in a clump lets one ult decide the fight. Spread out so it can only catch one or two of you.',
+    tips: [
+      'Keep a few steps between yourself and your teammates when their AoE ult is up.',
+      'Carries especially: never stand next to your tank when the enemy has a big AoE engage.',
+      'Once the ult is used, group back up and fight.',
+    ],
+    examples: { label: 'AoE ults to spread against', champions: ['malphite', 'kennen', 'rumble', 'gragas'] },
+    scene: () => {
+      const strip = (y: number, label: string, fill: string) => text(label, 2, y, fill) + rect(0, y + 7, W, 9, C.lane);
+      let out = rect(0, 10, W, 51, C.grass) + strip(12, 'CLUMPED', C.enemy) + strip(36, 'SPREAD', C.lime);
+      out += team([44, 50, 56, 62], 20, 'ally') + show(scaled(3, 46, 18, burst(0, 0, C.enemy)), [0, 1, 1, 0], 3);
+      out += show(text('X4', 74, 20, C.enemy), [0, 0, 1, 1], 3);
+      out += team([20, 44, 68, 92], 44, 'ally') + show(scaled(2, 40, 43, burst(0, 0, C.enemy)), [0, 1, 1, 0], 3);
+      out += show(text('X1', 104, 44, C.lime), [0, 0, 1, 1], 3);
+      return out;
+    },
+  },
+  {
+    id: 'tf-take-objectives',
+    category: 'teamfight',
+    title: 'WON THE FIGHT? TAKE OBJECTIVES',
+    takeaway: "DON'T CHASE INTO THE FOG",
+    summary: 'After winning a fight, the reward is the objective: Baron, Dragon or towers. Chasing survivors into unwarded jungle is how won fights turn into lost ones.',
+    tips: [
+      'Count how many enemies are dead and for how long; that is your window.',
+      'Go straight to the nearest objective: Baron, Dragon or a tower.',
+      'Let the survivors run; a tower is worth more than a risky last kill.',
+    ],
+    scene: () =>
+      rect(0, 10, W, 51, C.grass) + rect(88, 10, 40, 51, '#05080f')
+      + text('FOG', 100, 14, C.muted)
+      + scaled(2, 20, 16, baron(0, 0)) + text('BARON', 18, 30, C.purple)
+      + skull(52, 44) + skull(60, 48) + skull(68, 42)
+      + show(champ(96, 36, 'enemy') + text('?', 97, 28, C.enemy), [1, 1, 1, 1], 3)
+      + move(team([56, 66, 76], 30, 'ally'), [[0, 0], [-10, -4], [-20, -8], [-24, -10]], 3)
+      + show(burst(26, 18, C.purple), [0, 0, 1, 1], 3),
   },
 ];
 
