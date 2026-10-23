@@ -1,9 +1,10 @@
 import {
-  C, W, arrow, baron, burst, camp, champ, coin, dot, dragon, flashIcon, miniMap, heart, herald, hpBar, laneScene, minion, move, orb, rect,
+  C, W, arrow, baron, boot, box, burst, camp, champ, coin, dot, dragon, face, flashIcon, miniMap, playIcon, speaker, heart, herald, hpBar, laneScene, minion, move, orb, rect,
   scaled, shield, show, skull, stun, sword, text, tower, ward, wave, type Team,
 } from './pixel';
 
-export type Category = 'micro' | 'macro' | 'items' | 'counters' | 'support' | 'jungle' | 'mid' | 'dragon' | 'teamfight';
+export type Category =
+  | 'micro' | 'macro' | 'items' | 'counters' | 'support' | 'jungle' | 'mid' | 'dragon' | 'teamfight' | 'mindset';
 
 export const CATEGORIES: Record<Category, { label: string; accent: string; blurb: string }> = {
   micro: { label: 'Laning micro', accent: C.gold, blurb: 'Trades, spacing and wave control in lane.' },
@@ -15,6 +16,7 @@ export const CATEGORIES: Record<Category, { label: string; accent: string; blurb
   mid: { label: 'Mid lane', accent: C.mid, blurb: 'Roams, river priority, mana and playing around assassins.' },
   dragon: { label: 'Dragon lane', accent: C.dragon, blurb: 'Playing ADC: kiting, farming, positioning and your support.' },
   teamfight: { label: 'Team fights', accent: C.lime, blurb: 'When to fight, who does what, and how to win the fight.' },
+  mindset: { label: 'Mindset', accent: C.calm, blurb: 'Tilt, overconfidence, comebacks and getting better every game.' },
 };
 
 export interface StrategyCard {
@@ -411,7 +413,111 @@ export const CARDS: StrategyCard[] = [
       + show(burst(44, 18, C.purple), [0, 0, 0, 1, 0], 3),
   },
 
+  {
+    id: 'never-idle',
+    category: 'macro',
+    title: 'NEVER BE IDLE',
+    takeaway: 'ALWAYS HAVE A NEXT GOAL',
+    summary: 'Standing around waiting is wasted gold and wasted map pressure. Every few seconds, ask what your next goal is: a wave to catch, a ward to place, a camp to take, or an objective to set up.',
+    tips: [
+      'After a fight or a recall, pick your next goal before you start walking.',
+      'In order of value: a wave about to reach a tower, vision before an objective, a free camp, then grouping.',
+      'If nothing needs doing on your side of the map, move toward the next objective and ward it.',
+    ],
+    scene: () =>
+      rect(0, 10, W, 51, C.grass)
+      + champ(60, 22, 'ally') + text('NEXT GOAL?', 44, 14, C.green)
+      + wave(22, 46, 'ally', 3) + text('WAVE', 6, 54, C.white)
+      + ward(45, 44) + text('WARD', 38, 54, C.white)
+      + scaled(2, 75, 45, rect(0, 0, 2, 2, C.green)) + text('CAMP', 70, 54, C.white)
+      + herald(104, 45) + text('OBJ', 102, 54, C.white)
+      + move(box(4, 41, 24, 19, C.green), [[0, 0], [32, 0], [64, 0], [94, 0]], 4),
+  },
+  {
+    id: 'catch-wave-on-the-way',
+    category: 'macro',
+    title: 'CATCH A WAVE ON YOUR WAY',
+    takeaway: 'NO WASTED WALKING',
+    summary: 'When you walk across the map to a fight or an objective, path through a lane with a wave in it. You arrive with the same timing and a wave\'s worth of extra gold.',
+    tips: [
+      'Coming back from a recall? Walk through the lane that has a wave about to hit your tower.',
+      'Only take the detour if you still arrive before the fight or objective starts.',
+      'Never take a wave in a lane where enemies are missing and you have no vision.',
+    ],
+    scene: () =>
+      laneScene({ brush: false })
+      + show(wave(64, 39, 'enemy', 3), [1, 1, 0, 0], 3)
+      + show(coin(64, 28) + text('+GOLD', 70, 28, C.gold), [0, 0, 1, 0], 3)
+      + move(champ(14, 37, 'ally'), [[0, 0], [30, 0], [44, 0], [70, 0]], 3)
+      + arrow(100, 32, 100, 18, C.green) + text('TO OBJ', 104, 14, C.green),
+  },
+  {
+    id: 'ward-before-recall',
+    category: 'macro',
+    title: 'WARD BEFORE YOU RECALL',
+    takeaway: 'LEAVE VISION, NOT NOTHING',
+    summary: 'Before you recall, place a ward on the side your opponents will come from. You return to lane knowing where the enemy jungler is, instead of guessing.',
+    tips: [
+      'Do not recall with a full ward charge; put it down first.',
+      'Ward the river or jungle entrance the enemy jungler would use to gank you when you return.',
+      'Near an objective? Ward it before you leave so your team keeps vision while you shop.',
+    ],
+    scene: () =>
+      laneScene()
+      + show(ward(95, 15), [0, 1, 1, 1, 1], 3.6)
+      + show(champ(84, 37, 'ally'), [1, 1, 1, 0, 0], 3.6)
+      + show(rect(83, 30, 7, 15, C.ally + '66') + text('RECALL', 72, 52, C.ally), [0, 0, 1, 0, 0], 3.6)
+      + show(champ(100, 14, 'enemy') + text('!', 106, 14, C.enemy) + text('SEEN', 36, 14, C.green), [0, 0, 0, 0, 1], 3.6),
+  },
+
   // ---- Itemization ---------------------------------------------------------
+  {
+    id: 'first-item-or-boots',
+    category: 'items',
+    title: 'FIRST ITEM OR BOOTS?',
+    takeaway: 'SPIKE FIRST, THEN BOOTS',
+    summary: 'Most champions get their biggest early power spike from finishing their first core item, so the default is to build it first and buy boots right after. Buy boots earlier when movement matters more than damage.',
+    tips: [
+      'Default: finish your first core item, then boots. That item is your first big power spike.',
+      'Boots early if your lane is full of skillshots to dodge, or a ranged champion keeps kiting you.',
+      'Boots early on roaming roles (jungle, mid, support), where reaching fights first matters most.',
+    ],
+    scene: () =>
+      text('DEFAULT', 4, 18, C.white)
+      + scaled(2, 50, 14, sword(0, 0, C.gold)) + text('1', 52, 27, C.muted)
+      + arrow(64, 19, 78, 19, C.gold)
+      + scaled(2, 84, 14, boot(0, 0)) + text('2', 86, 27, C.muted)
+      + rect(4, 33, 120, 1, '#26324d')
+      + text('DODGE/ROAM', 4, 42, C.white)
+      + scaled(2, 50, 38, boot(0, 0)) + text('1', 52, 51, C.muted)
+      + arrow(64, 43, 78, 43, C.ward)
+      + scaled(2, 84, 38, sword(0, 0, C.gold)) + text('2', 86, 51, C.muted)
+      + show(rect(2, 25, 100, 1, C.gold), [1, 0], 2.4)
+      + show(rect(2, 49, 100, 1, C.ward), [0, 1], 2.4),
+  },
+  {
+    id: 'enchant-boots',
+    category: 'items',
+    title: 'ENCHANT BOOTS TO COUNTER',
+    takeaway: 'STASIS: BURST. QUICKSILVER: CC',
+    summary: 'In Wild Rift, boots can be upgraded with an enchant that adds an active effect. Pick the one that answers the enemy\'s biggest threat to you, usually once your core items are done.',
+    tips: [
+      'Stasis: a few seconds of invulnerability, but you cannot act. Use it to survive assassins and big burst.',
+      'Quicksilver: removes crowd control on you. Take it against stuns and knock-ups that lock you down.',
+      'Both have long cooldowns; save the active for the moment that would otherwise kill you.',
+    ],
+    scene: () =>
+      text('STASIS', 14, 14, C.ward)
+      + scaled(2, 22, 26, champ(0, 0, 'ally'))
+      + show(rect(21, 25, 12, 16, C.ward + '99'), [0, 1, 1, 0], 3)
+      + show(burst(36, 30, C.enemy) + burst(14, 34, C.enemy), [0, 1, 1, 0], 3)
+      + show(text('SAFE', 18, 48, C.green), [0, 0, 1, 1], 3)
+      + rect(63, 14, 1, 40, '#26324d')
+      + text('QUICKSILVER', 74, 14, C.white)
+      + scaled(2, 90, 26, champ(0, 0, 'ally'))
+      + show(stun(92, 18), [1, 1, 0, 0], 3)
+      + show(text('FREE', 88, 48, C.green), [0, 0, 1, 1], 3),
+  },
   {
     id: 'buy-what-they-deal',
     category: 'items',
@@ -1435,6 +1541,127 @@ export const CARDS: StrategyCard[] = [
       + show(champ(96, 36, 'enemy') + text('?', 97, 28, C.enemy), [1, 1, 1, 1], 3)
       + move(team([56, 66, 76], 30, 'ally'), [[0, 0], [-10, -4], [-20, -8], [-24, -10]], 3)
       + show(burst(26, 18, C.purple), [0, 0, 1, 1], 3),
+  },
+
+  // ---- Mindset -----------------------------------------------------------------
+  {
+    id: 'reset-dont-tilt',
+    category: 'mindset',
+    title: "DIED? RESET, DON'T TILT",
+    takeaway: "ONE DEATH ISN'T THE GAME",
+    summary: 'A death feels huge, but most games are decided much later. Tilted players force bad fights to "get it back". Calm players take the next good decision.',
+    tips: [
+      'Use the death timer: take a breath and look at the map instead of the chat.',
+      'Ask "why did I die?" once, then pick your next goal for when you respawn.',
+      'Do not try to win it back in one play; that is how one death becomes three.',
+    ],
+    scene: () =>
+      rect(0, 10, W, 51, C.bg)
+      + show(scaled(3, 56, 24, skull(0, 0)) + text('DIED', 56, 46, C.enemy), [1, 0, 0], 3.6)
+      + show(scaled(3, 54, 24, face(0, 0, 'calm')) + text('BREATHE', 50, 46, C.calm), [0, 1, 0], 3.6)
+      + show(champ(30, 32, 'ally') + arrow(40, 35, 86, 35, C.green) + text('NEXT GOAL', 88, 32, C.green), [0, 0, 1], 3.6),
+  },
+  {
+    id: 'mute-the-noise',
+    category: 'mindset',
+    title: 'MUTE THE NOISE',
+    takeaway: 'PLAY THE GAME, NOT THE CHAT',
+    summary: 'Arguing in chat makes everyone play worse, including you. If someone is flaming, mute them and keep your attention on the game.',
+    tips: [
+      'Mute anyone who is flaming, early; you lose nothing that helps you win.',
+      'Use pings for information, not to blame.',
+      'Typing mid-game costs you attention you need for the map.',
+    ],
+    scene: () =>
+      rect(0, 10, W, 51, C.bg)
+      + rect(8, 14, 62, 40, '#131c2e')
+      + show(text('?!?!', 12, 18, C.enemy), [1, 1, 0, 0], 3)
+      + show(text('BAD JG', 12, 26, C.enemy), [1, 1, 0, 0], 3)
+      + show(text('FF?!', 12, 34, C.enemy), [0, 1, 0, 0], 3)
+      + show(scaled(3, 30, 24, face(0, 0, 'angry')), [0, 1, 0, 0], 3)
+      + show(scaled(2, 86, 22, speaker(0, 0)) + stun(92, 26), [0, 0, 1, 1], 3)
+      + show(text('MUTED', 82, 40, C.calm) + scaled(3, 28, 24, face(0, 0, 'calm')), [0, 0, 1, 1], 3),
+  },
+  {
+    id: 'stay-disciplined',
+    category: 'mindset',
+    title: 'AHEAD? STAY DISCIPLINED',
+    takeaway: 'LEADS ARE LOST BY OVERREACHING',
+    summary: 'Being ahead makes risky plays feel safe. A fed player who walks alone into fog gives the enemy their shutdown gold and their comeback.',
+    tips: [
+      'Keep warding and tracking the jungler, even when you are winning lane.',
+      'Turn your lead into objectives with your team, not solo kills in their jungle.',
+      'When you have a big bounty, play like losing it would cost the game; it might.',
+    ],
+    scene: () =>
+      rect(0, 10, W, 51, C.grass) + rect(84, 10, 44, 51, '#05080f')
+      + text('FOG', 100, 14, C.muted)
+      + move(champ(40, 34, 'ally') + coin(40, 26) + coin(45, 26), [[0, 0], [16, 0], [34, 0], [44, 0]], 3)
+      + show(team([96, 106, 116], 34, 'enemy'), [0, 0, 1, 1], 3)
+      + show(skull(85, 26) + text('SHUTDOWN', 34, 50, C.gold), [0, 0, 0, 1], 3),
+  },
+  {
+    id: 'play-for-comeback',
+    category: 'mindset',
+    title: 'BEHIND? PLAY FOR THE COMEBACK',
+    takeaway: 'WAIT FOR THEIR MISTAKE',
+    summary: 'Few Wild Rift games are over early. The team that is behind wins by staying alive, farming, and punishing the moment the leading team gets careless.',
+    tips: [
+      'Stop taking even fights; farm safely and keep everyone alive.',
+      'Play near your towers and wait for the enemy to overextend or split up.',
+      'When they make a mistake, punish it as a team; kills on fed enemies are worth extra gold.',
+    ],
+    scene: () => {
+      const pts: [number, number][] = [[8, 34], [28, 46], [48, 52], [62, 50], [76, 42], [96, 30], [120, 22]];
+      let line = '';
+      for (let i = 0; i < pts.length - 1; i++) {
+        const [x1, y1] = pts[i];
+        const [x2, y2] = pts[i + 1];
+        for (let x = x1; x < x2; x += 2) line += rect(x, Math.round(y1 + ((y2 - y1) * (x - x1)) / (x2 - x1)), 2, 2, x < 62 ? C.enemy : C.green);
+      }
+      return rect(0, 10, W, 51, C.bg)
+        + rect(8, 36, 112, 1, C.stoneDark) + text('EVEN', 104, 39, C.muted)
+        + line
+        + show(burst(60, 46, C.gold) + text('MISTAKE!', 50, 56, C.gold), [0, 1, 1, 0], 3)
+        + text('FARM + WAIT', 14, 14, C.enemy) + text('COMEBACK', 86, 14, C.green);
+    },
+  },
+  {
+    id: 'fix-one-mistake',
+    category: 'mindset',
+    title: 'FIX ONE MISTAKE PER GAME',
+    takeaway: 'BLAME LESS, LEARN MORE',
+    summary: 'You cannot control your teammates, only your own play. After each game, pick one mistake you made and focus on fixing it next game.',
+    tips: [
+      'After the game, ask: what was my worst death or decision, and why?',
+      'Pick one thing to fix next game, like "ward before pushing" or "track Flash".',
+      'Watching your own replays teaches more than blaming the team.',
+    ],
+    scene: () =>
+      rect(0, 10, W, 51, C.bg)
+      + rect(12, 16, 50, 34, '#131c2e') + box(12, 16, 50, 34, C.stoneDark)
+      + scaled(3, 31, 25, playIcon(0, 0)) + text('REPLAY', 26, 52, C.muted)
+      + text('1 MISTAKE', 70, 22, C.enemy)
+      + show(arrow(84, 30, 84, 38, C.white), [0, 1, 1], 3)
+      + show(text('1 FIX', 76, 42, C.green), [0, 0, 1], 3),
+  },
+  {
+    id: 'take-a-break',
+    category: 'mindset',
+    title: 'LOST TWO? TAKE A BREAK',
+    takeaway: 'TILTED QUEUES LOSE MORE GAMES',
+    summary: 'Losing streaks feed themselves: frustration leads to rushed decisions, which lead to more losses. A short break after a couple of losses resets your focus.',
+    tips: [
+      'Set a stop rule before you play, like "two losses in a row, then a break".',
+      'Step away from the screen for a few minutes; get water, stretch.',
+      'Queue again only when you feel calm, not when you want revenge.',
+    ],
+    scene: () =>
+      rect(0, 10, W, 51, C.bg)
+      + scaled(3, 10, 24, text('L', 0, 0, C.enemy)) + scaled(3, 26, 24, text('L', 0, 0, C.enemy))
+      + show(scaled(3, 50, 24, face(0, 0, 'calm')) + text('BREAK', 48, 46, C.calm), [0, 1, 1, 1], 3.6)
+      + show(arrow(76, 32, 92, 32, C.green), [0, 0, 1, 1], 3.6)
+      + show(scaled(3, 98, 24, text('W', 0, 0, C.green)), [0, 0, 0, 1], 3.6),
   },
 ];
 
