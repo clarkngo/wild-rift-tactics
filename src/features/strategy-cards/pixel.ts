@@ -35,6 +35,7 @@ export const C = {
   mid: '#8fd3ff',
   mana: '#3d7dff',
   lime: '#b8f35c',
+  calm: '#c9a0ff',
 } as const;
 
 /** 3×5 glyphs, five rows of three pixels each ('#' = on). */
@@ -158,6 +159,10 @@ const SKULL = ['.###.', '#.#.#', '#####', '.###.', '.#.#.'];
 const HERALD = ['.PPP.', 'PWPWP', 'PPPPP', 'P.P.P'];
 const BARON = ['.PPPPPPP.', 'PPWPPPWPP', 'PPPPPPPPP', 'PP.PPP.PP', 'P..P.P..P'];
 const BOOT = ['BB..', 'BB..', 'BB..', 'BBBB', 'BBBB'];
+const FACE_CALM = ['.#####.', '##.#.##', '#######', '#.###.#', '##...##', '.#####.'];
+const FACE_ANGRY = ['.#####.', '##.#.##', '#######', '##...##', '#.###.#', '.#####.'];
+const SPEAKER = ['..#', '.##', '###', '###', '.##', '..#'];
+const PLAY = ['#..', '##.', '###', '##.', '#..'];
 const STUN = ['#...#', '.#.#.', '..#..', '.#.#.', '#...#'];
 const DRAGON = ['..OO.', '.OOOO', 'OOWO.', '.OOOO', 'O.O.O'];
 const FLASH = ['YYYYY', 'Y...Y', 'Y.Y.Y', 'Y...Y', 'YYYYY'];
@@ -198,6 +203,14 @@ export const herald = (x: number, y: number) => sprite(HERALD, x, y, { P: C.purp
 export const baron = (x: number, y: number) => sprite(BARON, x, y, { P: C.purple, W: C.white });
 export const dragon = (x: number, y: number) => sprite(DRAGON, x, y, { O: C.dragon, W: C.white });
 export const boot = (x: number, y: number, fill: string = C.ward) => sprite(BOOT, x, y, { B: fill });
+/** 7x6 face: calm (smile) or angry (frown). */
+export const face = (x: number, y: number, mood: 'calm' | 'angry') =>
+  sprite(mood === 'calm' ? FACE_CALM : FACE_ANGRY, x, y, { '#': mood === 'calm' ? C.calm : C.enemy });
+export const speaker = (x: number, y: number, fill: string = C.white) => sprite(SPEAKER, x, y, { '#': fill });
+export const playIcon = (x: number, y: number, fill: string = C.white) => sprite(PLAY, x, y, { '#': fill });
+/** One-pixel outline rectangle. */
+export const box = (x: number, y: number, w: number, h: number, fill: string) =>
+  rect(x, y, w, 1, fill) + rect(x, y + h - 1, w, 1, fill) + rect(x, y, 1, h, fill) + rect(x + w - 1, y, 1, h, fill);
 export const stun = (x: number, y: number) => sprite(STUN, x, y, { '#': C.ward });
 /** Summoner-spell slot icon; pass `used` to cross it out. */
 export const flashIcon = (x: number, y: number, used = false) =>
