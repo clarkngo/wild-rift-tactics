@@ -63,6 +63,24 @@
       "remember": "Pop the shield, then trade."
     },
     {
+      "champion": "sion",
+      "rating": "neutral",
+      "confidence": "low",
+      "why": "Both tanks farm and scale, and neither kills the other alone early. Malphite's armor and passive shield soak Sion's physical poke, while Sion's E armor shred and growing HP let him out-last Malphite in long fights. The lane is decided by roams and ults.",
+      "trading": [
+        "E (Roar of the Slayer) him to shred armor before you trade; time it after his passive shield has popped.",
+        "Charge Q only when he's slowed or committed; he walks out of the side if you charge it in the open.",
+        "Shield with W when he Q's you, then recast it for damage as he walks away with the stolen speed.",
+        "Don't trade autos into E (Ground Slam); its attack-speed slow wins melee trades for him."
+      ],
+      "early": "Farm safely and poke with E. Neither of you wins much damage early, so don't burn HP chasing his Q.",
+      "spike": "At 5 both R's are long-range engages. Ping his R when he leaves lane and match the roam with yours.",
+      "wave": "Slow-push and roam with R once it's up. Crash the wave first so he loses plates if he follows.",
+      "jungle": "Your Q and R both set up ganks. Call when his passive shield and E are down.",
+      "build": "Grasp of the Undying. Black Cleaver against his armor; armor boots.",
+      "remember": "Out-roam him, shred the armor."
+    },
+    {
       "champion": "jax",
       "rating": "bad",
       "confidence": "high",

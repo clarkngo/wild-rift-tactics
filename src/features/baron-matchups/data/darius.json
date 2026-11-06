@@ -98,6 +98,24 @@
       "jungle": "Ask for an early gank: he has to push to pressure you. Call it when his E is down.",
       "build": "Grasp or Phase Rush. Armor boots early; Bramble Vest for anti-heal.",
       "remember": "Survive and stack. You win the 25-minute game, not the 3-minute one."
+    },
+    {
+      "champion": "sion",
+      "rating": "bad",
+      "confidence": "medium",
+      "why": "Darius wins extended melee fights, and Sion is a slow tank who has to stand near him to farm. Hemorrhage stacks out-damage Sion's shield, and Darius's E pull can drag Sion out of a charged Q. If you're locked in, give up early trades and scale.",
+      "trading": [
+        "E (Roar of the Slayer) him from range to poke, then walk away; never take an extended trade.",
+        "Charge Q only when his E is on cooldown; otherwise he pulls you and cancels it.",
+        "Shield with W as he commits, and recast it before his Hemorrhage reaches 5 stacks.",
+        "Stand away from the outer ring of his Q (Decimate); it heals him and hits hard."
+      ],
+      "early": "Farm safely and give up contested creeps. He wins levels 1–3 and every long trade.",
+      "spike": "At 5 his R executes; back off when you have 3+ stacks on you. Use your R to roam, not to fight him.",
+      "wave": "Let him push and farm under tower; he has no gap closer besides E to dive you.",
+      "jungle": "He has no escape once E is down. Ask for a gank then, and stun him with Q for your jungler.",
+      "build": "Grasp of the Undying. Armor boots and Thornmail; you out-scale him in team fights.",
+      "remember": "Survive, scale, out-team-fight him."
     }
   ]
 }
