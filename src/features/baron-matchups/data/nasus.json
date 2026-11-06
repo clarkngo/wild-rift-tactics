@@ -83,6 +83,24 @@
       "remember": "Poke the stacks, deny the scaling."
     },
     {
+      "champion": "mordekaiser",
+      "rating": "good",
+      "confidence": "low",
+      "why": "Mordekaiser's Q poke and E pull punish Nasus every time he walks up to stack, and his magic damage goes through Nasus's early armor. Wither slows Mordekaiser but he has no dash to lose. Deny stacks early, because Nasus out-scales once his Q gets big.",
+      "trading": [
+        "Q (Obliterate) him when he walks up alone to a low-HP minion for a stack.",
+        "E (Death's Grasp) pull him out of tower range and into your Q.",
+        "Shield with W (Indestructible) before he Withers you so your trade lasts longer.",
+        "Back off when Wither is on you; your autos and Q speed suffer while slowed."
+      ],
+      "early": "Levels 1–3 are your window. Poke him off contested creeps and make every Q stack cost him HP.",
+      "spike": "At 5 your R takes him away from his tower and steals his stats. Ult when Wither is on cooldown.",
+      "wave": "Slow-push into his tower so he has to stack Q under tower fire.",
+      "jungle": "He has no escape besides Wither. Gank when it's down and pull him into your jungler.",
+      "build": "Conqueror. Magic-pen bruiser items; armor boots.",
+      "remember": "Deny the stacks, realm on Wither CD."
+    },
+    {
       "champion": "malphite",
       "rating": "neutral",
       "confidence": "medium",

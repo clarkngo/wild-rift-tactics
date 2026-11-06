@@ -65,6 +65,24 @@
       "remember": "W can't be Wind Walled."
     },
     {
+      "champion": "mordekaiser",
+      "rating": "good",
+      "confidence": "medium",
+      "why": "Mordekaiser's Q and E aren't projectiles, so Yasuo's Wind Wall can't block them. Yasuo needs to dash in through the wave, which puts him right in your Q range, and your R takes him away from the minions he dashes off.",
+      "trading": [
+        "Q (Obliterate) him at the end of his dash; he lands right where you aim it.",
+        "E (Death's Grasp) pull him when he walks up to farm; Wind Wall can't stop it.",
+        "Shield with W (Indestructible) when his tornado knocks you up to soak the follow-up.",
+        "Stand away from the wave so he has fewer minions to dash through to reach you."
+      ],
+      "early": "Trade with Q when he dashes in. His passive shield soaks one hit, so trade after it's popped.",
+      "spike": "At 5 your R takes him away from the minions he dashes through. Fight him there.",
+      "wave": "Slow-push and trade when he walks up; a thinner wave gives him fewer dashes.",
+      "jungle": "He escapes through minions. Gank when the wave is on his side so he has nothing to dash off.",
+      "build": "Conqueror. Magic-pen bruiser items; armor boots.",
+      "remember": "Wind Wall doesn't stop you."
+    },
+    {
       "champion": "darius",
       "rating": "neutral",
       "confidence": "medium",

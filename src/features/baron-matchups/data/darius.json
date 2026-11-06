@@ -83,6 +83,24 @@
       "remember": "Silence him before he combos, and never sit at 5 stacks."
     },
     {
+      "champion": "mordekaiser",
+      "rating": "neutral",
+      "confidence": "medium",
+      "why": "Both are slow juggernauts. Darius out-damages Mordekaiser early with Hemorrhage stacks, but Mordekaiser's W shield and isolated Q trade back hard. The lane comes down to who lands their pull first and who fights inside the other's cooldown window.",
+      "trading": [
+        "Q (Obliterate) him when he walks up alone to farm; isolated Q hits much harder.",
+        "Hold E (Death's Grasp) until his E is on cooldown, then pull him into your Q.",
+        "Shield with W (Indestructible) as his Hemorrhage stacks build, then recast to heal.",
+        "Walk out of the outer ring of his Q (Decimate); it heals him and adds stacks."
+      ],
+      "early": "Even. Trade with Q when he farms, and back off once he has 3+ Hemorrhage stacks on you.",
+      "spike": "At 5 your R takes him away from his jungler and steals his stats. Ult before he has stacks on you so his R can't execute you.",
+      "wave": "Slow-push and trade on his E cooldown; don't fight in his full wave.",
+      "jungle": "He has no escape once E is down. Gank then, and pull him into your jungler.",
+      "build": "Conqueror. Magic-pen bruiser items; armor boots against his autos.",
+      "remember": "Pull second, realm before stacks."
+    },
+    {
       "champion": "nasus",
       "rating": "bad",
       "confidence": "high",

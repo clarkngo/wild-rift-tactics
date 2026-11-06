@@ -96,6 +96,24 @@
       "jungle": "She escapes with Lunge. Gank once Lunge or Riposte is on cooldown.",
       "build": "Grasp of the Undying. Armor boots; avoid relying on HP stacking alone.",
       "remember": "Bait the parry, then Q."
+    },
+    {
+      "champion": "mordekaiser",
+      "rating": "bad",
+      "confidence": "medium",
+      "why": "Riposte parries Mordekaiser's E pull and stuns him back, and vitals' true damage ignores his shield. Fiora wins inside his R because it makes the fight a pure 1v1. If you're locked in, poke with Q and hold your R for team fights.",
+      "trading": [
+        "Q (Obliterate) her when she walks up to farm; it's your safest damage and she has to Riposte or eat it.",
+        "Only cast E (Death's Grasp) after she has used Riposte; otherwise she parries it and stuns you.",
+        "Shield with W (Indestructible) when she Lunges onto a vital, then recast to heal.",
+        "Don't take long trades; her vitals heal her and refund Lunge every time she hits one."
+      ],
+      "early": "Farm safely and Q poke. Back off when she has Riposte up and you're in Lunge range.",
+      "spike": "At 5 don't R her in lane; she wins the 1v1. Save it for a carry in team fights.",
+      "wave": "Let her push and farm under tower; ping your jungler when she shoves.",
+      "jungle": "She escapes with Lunge. Gank once Lunge or Riposte is on cooldown and pull her into your jungler.",
+      "build": "Conqueror. Armor boots; Zhonya's Hourglass to survive her R.",
+      "remember": "Bait Riposte, then E."
     }
   ]
 }

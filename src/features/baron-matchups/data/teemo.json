@@ -98,6 +98,24 @@
       "jungle": "Ask for ganks; your Q silence makes him easy to finish.",
       "build": "Conqueror or Phase Rush. Ghost for chasing. MR boots.",
       "remember": "Wait for blind, then Q."
+    },
+    {
+      "champion": "mordekaiser",
+      "rating": "bad",
+      "confidence": "low",
+      "why": "Teemo out-ranges Mordekaiser and kites him with Move Quick, and Mordekaiser has no dash to close the gap. Blind does little to your spell damage, but you take poke every time you walk up. If you're locked in, farm safely and use your R to win the fight he can't kite.",
+      "trading": [
+        "Q (Obliterate) him only when he walks into range to last-hit; don't chase him through poke.",
+        "E (Death's Grasp) pull him when he's in range and Move Quick is on cooldown.",
+        "Shield with W (Indestructible) to absorb his poke, then recast to heal.",
+        "Walk around mushrooms at 5; buy Oracle Lens if he covers your side of the map."
+      ],
+      "early": "Farm safely and accept some poke. He out-trades you at range, but your spells ignore his blind.",
+      "spike": "At 5 your R takes him into a 1v1 where he can't kite away. Pull him with E first, then ult.",
+      "wave": "Let him push and farm under tower; he can't dive you.",
+      "jungle": "He escapes with Move Quick. Gank when it's on cooldown.",
+      "build": "Conqueror. MR boots and magic-pen bruiser items.",
+      "remember": "Pull, then realm."
     }
   ]
 }
