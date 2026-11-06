@@ -117,6 +117,24 @@
       "jungle": "Ask for ganks; she has only Tumble to escape.",
       "build": "Conqueror. Armor boots against her autos.",
       "remember": "Pull when Tumble is down."
+    },
+    {
+      "champion": "sion",
+      "rating": "bad",
+      "confidence": "medium",
+      "why": "Vayne out-ranges Sion and her W (Silver Bolts) true %max HP damage punishes his HP stacking. Tumble dodges his charged Q, and he has no gap closer before level 5. If you're locked in, give up the lane and win with roams and team fights.",
+      "trading": [
+        "Throw E (Roar of the Slayer) through a minion so the knockback reaches her at range.",
+        "Charge Q only after she has used Tumble; she dashes out of it otherwise.",
+        "Shield with W before walking up to farm so her poke hits the shield first.",
+        "Don't farm next to walls; her Condemn into a wall stuns you."
+      ],
+      "early": "Farm safely and accept losing some creeps. She out-trades you at range every level early.",
+      "spike": "At 5 your R is your engage. Use it on her from fog or with your jungler, not head-on in lane.",
+      "wave": "Let her push and farm under tower; ping your jungler when she shoves without Tumble.",
+      "jungle": "She dies to ganks without Tumble. Call your jungler and stun her with Q.",
+      "build": "Grasp of the Undying. Armor boots and Randuin's Omen against her crits.",
+      "remember": "Survive lane, win team fights."
     }
   ]
 }

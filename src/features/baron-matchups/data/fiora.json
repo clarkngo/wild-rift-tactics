@@ -78,6 +78,24 @@
       "jungle": "Ask for a gank early. She's weak to CC chains once W is used.",
       "build": "Phase Rush to kite away. Armor boots.",
       "remember": "Make her use W before you commit."
+    },
+    {
+      "champion": "sion",
+      "rating": "bad",
+      "confidence": "medium",
+      "why": "Fiora's vitals deal true %max HP damage, so your HP stacking feeds her. Riposte parries your charged Q and stuns you back, which takes away your main engage. If you're locked in, poke with E, scale, and win as a team-fight tank.",
+      "trading": [
+        "Throw E (Roar of the Slayer) when she walks up; it's spell damage she has to Riposte or eat.",
+        "Charge Q only after she has used Riposte; otherwise she parries it and stuns you.",
+        "Shield with W when she Lunges onto a vital, then recast it as she backs off.",
+        "Turn so her vitals aren't facing her approach; don't let her chain vitals for free."
+      ],
+      "early": "Farm safely and poke with E. Don't take short trades into her Q-into-vital pattern.",
+      "spike": "At 5 her R wins duels; don't fight it. Use your R to roam or join fights while she's in a side lane.",
+      "wave": "Let her push and farm under tower; ping her when she shoves so your jungler can collapse.",
+      "jungle": "She escapes with Lunge. Gank once Lunge or Riposte is on cooldown.",
+      "build": "Grasp of the Undying. Armor boots; avoid relying on HP stacking alone.",
+      "remember": "Bait the parry, then Q."
     }
   ]
 }

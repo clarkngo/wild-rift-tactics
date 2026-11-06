@@ -65,6 +65,24 @@
       "remember": "Silence the stack."
     },
     {
+      "champion": "sion",
+      "rating": "good",
+      "confidence": "low",
+      "why": "Sion's E poke and charged Q punish Nasus every time he walks up to stack Q, and W (Soul Furnace) shields Sion through Nasus's early trades. Deny stacks early, because Nasus out-scales once his Q gets big.",
+      "trading": [
+        "E (Roar of the Slayer) him when he walks up to last-hit; through a minion the knockback hits harder.",
+        "Charge Q (Decimating Smash) as he commits to a stack on a low minion so he has to choose between the stack and the stun.",
+        "Shield with W before trading, then recast it for the %max HP explosion as he walks away.",
+        "Back off when he casts Wither; don't stand slowed in melee range trading autos."
+      ],
+      "early": "Levels 1–3 are your window. Poke him off contested creeps with E and make every Q stack cost him HP.",
+      "spike": "At 5 your R can engage from long range. Pair it with your jungler; his R gives him HP and resists, so don't fight it alone.",
+      "wave": "Slow-push into his tower so he has to stack Q under tower fire, then roam or take plates.",
+      "jungle": "He has no escape besides Wither. Call your jungler when he walks up to stack with Wither on cooldown.",
+      "build": "Grasp of the Undying. Black Cleaver or Sunfire Aegis; armor boots.",
+      "remember": "Poke the stacks, deny the scaling."
+    },
+    {
       "champion": "malphite",
       "rating": "neutral",
       "confidence": "medium",

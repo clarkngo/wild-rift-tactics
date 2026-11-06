@@ -81,6 +81,24 @@
       "jungle": "Ask for ganks once her E is down; your R makes her escape hard.",
       "build": "Grasp. MR boots and early MR items.",
       "remember": "Buy MR, not armor."
+    },
+    {
+      "champion": "sion",
+      "rating": "bad",
+      "confidence": "medium",
+      "why": "Gwen's Q and passive deal %max HP magic damage, so the bigger you get the harder she hits. Her W (Hallowed Mist) blocks your poke from outside, and her E dash makes your charged Q hard to land. If you're locked in, buy MR and play for team fights.",
+      "trading": [
+        "E (Roar of the Slayer) her before she has Q stacks, then back off.",
+        "Walk into her Hallowed Mist to hit her; your spells can't reach her from outside it.",
+        "Charge Q only after she has used E (Skip 'n Slash) so she can't dash out of it.",
+        "Shield with W as she stacks Q, and step out of the centre of her final snip."
+      ],
+      "early": "Levels 1–2 are close. Poke with E and avoid long fights once she has Q stacks.",
+      "spike": "At 5 her R slows you on the way out. Use your R to roam instead of fighting her in lane.",
+      "wave": "Let her push and farm under tower; she can't dive you easily before her items.",
+      "jungle": "She has no reliable escape once E is down. Gank then and stun her with Q.",
+      "build": "Grasp of the Undying. MR boots and an early MR item.",
+      "remember": "Buy MR, don't trade into stacks."
     }
   ]
 }
