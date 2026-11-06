@@ -84,6 +84,24 @@
       "remember": "Pull him in, out-trade the tank."
     },
     {
+      "champion": "mordekaiser",
+      "rating": "good",
+      "confidence": "low",
+      "why": "Mordekaiser's damage is magic and his R steals Sion's stats, so Sion's big HP pool works against him inside the realm. Sion is slow and can't kite your Q, and your shield soaks his E poke.",
+      "trading": [
+        "Q (Obliterate) him when he walks up alone to farm; isolated Q hits much harder.",
+        "Walk out of the side of his charged Q, then E (Death's Grasp) pull him into your Q.",
+        "Shield with W (Indestructible) when his E hits you, then recast to heal.",
+        "Back off when his W shield is up; the explosion hurts if you stay in range."
+      ],
+      "early": "Trade with Q when he farms. He can't out-trade your magic damage early.",
+      "spike": "At 5 your R steals his stats and takes him away from his tower. Ult after he's used Q.",
+      "wave": "Slow-push and take plates while he can't contest.",
+      "jungle": "He has no escape before R. Gank once his Q is on cooldown so he can't stun your jungler.",
+      "build": "Conqueror. Magic-pen bruiser items; Liandry's Torment for his HP.",
+      "remember": "Realm him, steal his HP."
+    },
+    {
       "champion": "malphite",
       "rating": "neutral",
       "confidence": "low",
