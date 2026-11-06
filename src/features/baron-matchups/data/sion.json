@@ -1,0 +1,123 @@
+{
+  "enemy": "sion",
+  "patch": "draft",
+  "reviewed": false,
+  "summary": "Slow, scaling tank who pokes with his E, threatens a big stun with a charged Q, and gains permanent max HP from kills. He wants to farm safely and become unkillable; punish him early, dodge the charged Q, and use %HP or true damage once he's big.",
+  "threats": [
+    "Q (Decimating Smash) charges in a long rectangle. Fully charged, it knocks up and stuns; walk out the side, not straight back.",
+    "E (Roar of the Slayer) slows and shreds armor. If it hits a minion, the minion is knocked back through you.",
+    "W (Soul Furnace) shields him, then can be recast to explode for %max HP magic damage. Back off when the shield is up.",
+    "Passive (Glory in Death): when he dies he revives briefly with fast autos. Walk away from the zombie instead of standing on your kill.",
+    "R (Unstoppable Onslaught) at 5: a long charge that can't be stopped by CC and knocks up on impact. Ping it; he can use it to roam or engage."
+  ],
+  "matchups": [
+    {
+      "champion": "vayne",
+      "rating": "good",
+      "confidence": "medium",
+      "why": "Vayne out-ranges Sion and her W (Silver Bolts) true %HP damage gets stronger the more max HP he stacks. Tumble steps out of his charged Q, and he has no gap closer before level 5 to stop her kiting.",
+      "trading": [
+        "Auto him every time he walks up to last-hit, then step back before his E can hit you.",
+        "When he starts charging Q, Tumble (Q) sideways out of the rectangle and auto him during the wind-up.",
+        "Land three-hit Silver Bolts procs, then back off before his W shield explodes on you.",
+        "Save Condemn (E) for his R charge or to push him off you when he walks into melee range."
+      ],
+      "early": "Levels 1–3 are yours: poke him with autos every time he farms. He can only trade back with E, so sidestep it and keep hitting.",
+      "spike": "At 5 his R can engage from long range. Keep Tumble up when he disappears, and walk away from his zombie passive after you kill him.",
+      "wave": "Slow-push and take plates. He wants to farm safely and scale; make every last-hit cost him HP.",
+      "jungle": "He is slow and has no escape before R. Call your jungler when his Q and E are on cooldown.",
+      "build": "Lethal Tempo. On-hit attack speed and crit; Blade of the Ruined King is strong against his HP stacking.",
+      "remember": "Tumble the Q, shred the HP."
+    },
+    {
+      "champion": "fiora",
+      "rating": "good",
+      "confidence": "medium",
+      "why": "Fiora's vitals deal true %max HP damage, so Sion's HP stacking makes her stronger. Riposte parries his charged Q and stuns him back, turning his main engage into her trade window.",
+      "trading": [
+        "Lunge (Q) onto a vital when he walks up, then step back before he can hit you with E.",
+        "Hold W (Riposte) for his fully charged Q; parrying it stuns him and wins the trade.",
+        "If he doesn't charge Q, walk out of the rectangle's side instead of wasting Riposte.",
+        "Trade after his W shield pops or expires so your vitals damage goes into his HP."
+      ],
+      "early": "Short Q-into-vital trades win levels 1–3. Don't stay in melee range when he has W up; the explosion hurts.",
+      "spike": "At 5 your R hits four vitals and its heal zone wins the fight. Use it after he's used Q, and walk away from his zombie.",
+      "wave": "Slow-push and take plates, then split-push once you're ahead. He can't duel you in a side lane later.",
+      "jungle": "He's easy to gank before 5 with no escape. Ping when his Q is down so the stun can't stop your jungler.",
+      "build": "Conqueror. Bruiser items; Blade of the Ruined King for his HP.",
+      "remember": "Parry the charge, hit the vitals."
+    },
+    {
+      "champion": "gwen",
+      "rating": "good",
+      "confidence": "medium",
+      "why": "Gwen's Q and passive deal %max HP magic damage, so the bigger Sion gets the harder she hits him. Her W (Hallowed Mist) blocks his poke from outside, and he struggles to land the charged Q on her E dash.",
+      "trading": [
+        "Stack Q with autos on him, then land the centre of the final snip for true damage.",
+        "Step into W (Hallowed Mist) when he charges Q or throws E so he can't target you from outside.",
+        "E (Skip 'n Slash) sideways out of his charged Q rather than backwards along it.",
+        "Back off when his W shield is up and wait for it to pop before your full combo."
+      ],
+      "early": "Take short Q trades once you have stacks. Level 1–2 is even, so don't take long fights into his E armor shred.",
+      "spike": "At 5 your R adds poke and slows. Fight after his Q is down, and step out of the zombie's range after you kill him.",
+      "wave": "Slow-push and trade when he walks up to farm. You scale better against tanks than he does against you.",
+      "jungle": "He has no escape before R. Gank when his Q is on cooldown so he can't stun your jungler.",
+      "build": "Conqueror. AP bruiser items with %HP damage; magic pen helps against his MR.",
+      "remember": "Mist the poke, snip the HP."
+    },
+    {
+      "champion": "darius",
+      "rating": "good",
+      "confidence": "medium",
+      "why": "Darius wins extended melee fights, and Sion is a slow, immobile tank who has to stand near him to farm. Hemorrhage stacks and the outer edge of Q out-damage Sion's shield, and Darius can pull him back out of a charged Q.",
+      "trading": [
+        "E (Apprehend) pull him when he starts charging Q; the pull cancels the charge and drags him into your Q.",
+        "Hit him with the outer edge of Q (Decimate) for bonus damage and healing.",
+        "Stack Hemorrhage with autos and W, but back off before his W shield explodes on you.",
+        "Walk out of his E slow before he can follow up with a charged Q."
+      ],
+      "early": "Levels 1–3 favour you. Trade every time he walks up to farm; he can't out-trade Hemorrhage stacks.",
+      "spike": "At 5 your R executes and resets on kill. Watch for his zombie after you kill him and walk away from it.",
+      "wave": "Slow-push and trade often, then freeze once you're ahead so he has to walk up to you to farm.",
+      "jungle": "He has no escape before R. Gank once his Q is down so he can't stun your jungler.",
+      "build": "Conqueror. Black Cleaver and bruiser items; armor boots.",
+      "remember": "Pull him in, out-trade the tank."
+    },
+    {
+      "champion": "malphite",
+      "rating": "neutral",
+      "confidence": "low",
+      "why": "Both tanks farm and scale, and neither can kill the other alone early. Malphite's armor and passive shield absorb Sion's physical poke, while Sion out-scales in raw HP. The lane is decided by roams and team-fight ults.",
+      "trading": [
+        "Q (Seismic Shard) him when he walks up to farm, then walk away with the speed you stole.",
+        "Keep Granite Shield up before he throws E; it soaks his poke.",
+        "E (Ground Slam) when he's in melee range to slow his attack speed and cut his trade.",
+        "Walk out of the side of his charged Q rather than straight back."
+      ],
+      "early": "Farm safely and Q poke. Neither of you wins much damage early, so don't take long trades into his W explosion.",
+      "spike": "At 5 both R's are long-range engages. Roam with yours when he's shoved; ping his R when he leaves lane.",
+      "wave": "Slow-push and roam with R once it's up. He's slow to follow if you crash the wave first.",
+      "jungle": "Your R sets up ganks. Call when his Q is on cooldown so he can't stun back.",
+      "build": "Grasp. Plated Steelcaps and armor; Sunfire Aegis for wave clear.",
+      "remember": "Out-roam him, don't out-tank him."
+    },
+    {
+      "champion": "nasus",
+      "rating": "bad",
+      "confidence": "low",
+      "why": "Sion's E poke and charged Q punish Nasus every time he walks up to stack Q, and his shield absorbs Nasus's early damage. Nasus out-scales once he has stacks, but he has to survive a lane where Sion keeps him off the wave.",
+      "trading": [
+        "W (Wither) him when he walks up so his slow trade can't follow you back to tower.",
+        "Stack Q on minions only when his E is on cooldown so he can't poke you as you farm.",
+        "Walk out of the side of his charged Q; never stand still while he's charging it.",
+        "E (Spirit Fire) the wave from range to keep stacking without walking into his poke."
+      ],
+      "early": "Give up contested creeps and farm under tower. Your goal is stacks and items, not trades.",
+      "spike": "At 5 your R gives HP and resists so you can survive his engage, but don't start fights with it.",
+      "wave": "Farm under tower and stack Q on cannon minions. He can't dive you early.",
+      "jungle": "Ask for a gank when his Q is down and he's overextended; he has no escape before R.",
+      "build": "Grasp. Armor boots early; Black Cleaver later for his HP.",
+      "remember": "Survive and stack."
+    }
+  ]
+}

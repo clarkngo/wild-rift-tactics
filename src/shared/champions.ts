@@ -29,6 +29,7 @@ export const BARON_CHAMPIONS: Champion[] = [
   { id: 'sett', name: 'Sett', img: 'Sett' },
   { id: 'shen', name: 'Shen', img: 'Shen' },
   { id: 'singed', name: 'Singed', img: 'Singed' },
+  { id: 'sion', name: 'Sion', img: 'Sion' },
   { id: 'teemo', name: 'Teemo', img: 'Teemo' },
   { id: 'tryndamere', name: 'Tryndamere', img: 'Tryndamere' },
   { id: 'urgot', name: 'Urgot', img: 'Urgot' },
