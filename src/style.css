@@ -274,6 +274,50 @@ a.chip:hover, a.chip:focus-visible { border-color: var(--gold); outline: none; }
 .pager a { text-decoration: none; }
 
 
+/* Class matchups */
+.node-tank { --cls: #5b8def; }
+.node-bruiser { --cls: #e07b39; }
+.node-assassin { --cls: #b366e0; }
+.node-mage { --cls: #3fb6c9; }
+.node-marksman { --cls: #e0c341; }
+.node-enchanter { --cls: #e877b0; }
+.class-chip { text-decoration: none; border-color: var(--cls); }
+.class-chip[aria-current] { color: var(--bg); background: var(--cls); border-color: var(--cls); }
+.loops { display: grid; gap: 8px; margin: 8px 0 0; }
+@media (min-width: 640px) { .loops { grid-template-columns: 1fr 1fr; } }
+.loop { width: 100%; max-width: 360px; height: auto; margin: 0 auto; display: block; }
+.loop-node { fill: color-mix(in srgb, var(--cls) 22%, var(--surface)); stroke: var(--cls); stroke-width: 2.5; }
+.loop a:hover .loop-node, .loop a:focus-visible .loop-node { fill: color-mix(in srgb, var(--cls) 45%, var(--surface)); }
+.loop a:focus { outline: none; }
+.loop-name { fill: var(--text); font-size: 12px; font-weight: 700; }
+.loop-arrow { stroke: var(--muted); stroke-width: 2.5; }
+.loop-head { fill: var(--muted); }
+.loop-label { fill: var(--muted); font-size: 11px; font-style: italic; }
+.loop-note { color: var(--muted); font-size: 14px; margin: 8px 0 0; }
+.section-title { font-size: 1.15rem; margin: 28px 0 10px; }
+.matrix-wrap { overflow-x: auto; }
+.matrix { width: 100%; border-collapse: separate; border-spacing: 3px; font-size: 13px; table-layout: fixed; }
+.matrix caption { caption-side: top; text-align: left; color: var(--muted); padding-bottom: 6px; }
+.matrix caption span { margin-right: 6px; padding: 0 6px; border-radius: 4px; white-space: nowrap; display: inline-block; }
+.matrix th { font-weight: 600; color: var(--muted); padding: 4px 2px; }
+.matrix thead th a { color: var(--text); text-decoration: none; writing-mode: vertical-rl; transform: rotate(180deg); display: inline-block; }
+.matrix tbody th { text-align: right; color: var(--text); font-size: 12px; padding-right: 4px; }
+.matrix colgroup .row-head { width: 74px; }
+.matrix td { text-align: center; padding: 8px 0; border-radius: 6px; font-weight: 700; }
+.cell-good { background: color-mix(in srgb, var(--good) 25%, transparent); color: var(--good); }
+.cell-neutral { background: var(--surface-2); color: var(--muted); }
+.cell-bad { background: color-mix(in srgb, var(--bad) 25%, transparent); color: var(--bad); }
+.class-head { margin-top: 4px; }
+.class-head h1 { margin: 0 0 4px; font-size: 1.8rem; line-height: 1.1; }
+.class-head > p { margin: 0 0 12px; color: var(--muted); }
+.sw { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 12px; }
+.sw div { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 10px 12px; }
+.sw h3 { margin: 0 0 4px; font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--gold); }
+.sw ul { margin: 0; padding-left: 18px; font-size: 14px; }
+.class-dot { width: 14px; height: 14px; border-radius: 999px; background: var(--cls); flex: none; }
+.class-link { margin: 10px 0 0; font-size: 14px; }
+.class-link a { text-decoration: none; }
+
 .empty { color: var(--muted); }
 
 .site-footer {
@@ -302,8 +346,16 @@ a.chip:hover, a.chip:focus-visible { border-color: var(--gold); outline: none; }
 @media (max-width: 400px) {
   .site-header { padding: 12px; gap: 8px; }
   .brand { font-size: 15px; }
-  .header-actions, .site-header nav { gap: 10px; }
+  .header-actions { gap: 8px; }
+  .site-header nav { gap: 8px; }
+  .site-header nav a { font-size: 13px; }
   .sfx-toggle { width: 32px; height: 32px; font-size: 14px; }
+}
+
+/* Three nav links don't fit beside the brand on the narrowest phones: drop them to a second row. */
+@media (max-width: 380px) {
+  .site-header { flex-wrap: wrap; row-gap: 6px; }
+  .header-actions { flex-basis: 100%; justify-content: space-between; }
 }
 
 @media (prefers-reduced-motion: reduce) {

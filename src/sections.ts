@@ -1,5 +1,6 @@
 import { baronMatchups } from './features/baron-matchups';
 import { strategyCards } from './features/strategy-cards';
+import { classMatchups } from './features/class-matchups';
 
 /** A top-level part of the site, mounted at `#/<route>/...`. */
 export interface Section {
@@ -12,4 +13,4 @@ export interface Section {
 }
 
 /** Add new sections here; they appear in the header nav and on the home page. */
-export const SECTIONS: Section[] = [baronMatchups, strategyCards];
+export const SECTIONS: Section[] = [baronMatchups, classMatchups, strategyCards];

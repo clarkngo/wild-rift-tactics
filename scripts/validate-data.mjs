@@ -1,5 +1,5 @@
 // Validates src/features/baron-matchups/data/*.json: schema, champion ids, minimum detail,
-// and mirror-rating consistency.
+// and mirror-rating consistency; plus the class matchup matrix.
 import { readFileSync, readdirSync } from 'node:fs';
 
 const dir = new URL('../src/features/baron-matchups/data/', import.meta.url);
@@ -44,8 +44,27 @@ for (const [key, r] of ratings) {
   if (mirror && mirror !== MIRROR[r]) errors.push(`${pick} is "${r}" into ${enemy}, but ${enemy} is "${mirror}" into ${pick}`);
 }
 
+// Class matchups: every pick/enemy pair present once, mirrors consistent, text not thin.
+const cls = JSON.parse(readFileSync(new URL('../src/features/class-matchups/classes.json', import.meta.url), 'utf8'));
+const classIds = cls.classes.map((c) => c.id);
+const classRatings = new Map();
+for (const m of cls.matchups) {
+  const key = `${m.pick}>${m.enemy}`;
+  if (!classIds.includes(m.pick) || !classIds.includes(m.enemy)) errors.push(`classes.json: unknown class in ${key}`);
+  if (!RATINGS.includes(m.rating)) errors.push(`classes.json: ${key} bad rating "${m.rating}"`);
+  if (classRatings.has(key)) errors.push(`classes.json: duplicate ${key}`);
+  if (!(m.why?.length >= 80) || !(m.tip?.length >= 35)) errors.push(`classes.json: ${key} why/tip too thin`);
+  classRatings.set(key, m.rating);
+}
+for (const a of classIds)
+  for (const b of classIds) {
+    const r = classRatings.get(`${a}>${b}`);
+    if (!r) errors.push(`classes.json: missing ${a}>${b}`);
+    else if (classRatings.get(`${b}>${a}`) !== MIRROR[r]) errors.push(`classes.json: ${a}>${b} is "${r}" but ${b}>${a} isn't "${MIRROR[r]}"`);
+  }
+
 if (errors.length) {
   console.error(`Matchup data errors:\n  ${errors.join('\n  ')}`);
   process.exit(1);
 }
-console.log(`Matchup data OK (${ratings.size} matchups).`);
+console.log(`Matchup data OK (${ratings.size} matchups, ${classRatings.size} class pairs).`);
