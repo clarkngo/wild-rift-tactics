@@ -41,6 +41,8 @@ The site is split into **sections**, each mounted at `#/<route>/...` and listed 
 - `src/shared/`: cross-section code: champion roster (`champions.ts`), `Champion` type, DOM helpers (`esc`, `portrait`).
 - `src/features/baron-matchups/`: the Baron matchups section (`index.ts`, `types.ts`, `data/<enemy-id>.json`).
 - `src/features/strategy-cards/`: shareable pixel-art strategy cards. `pixel.ts` is a tiny SVG toolkit (128×72 grid, 3×5 pixel font, sprites, SMIL `move`/`show` animation helpers); `cards.ts` holds each card's text and scene; `index.ts` renders the grid and detail pages (`#/strategy/<id>`). Pixel titles and takeaways must be uppercase and at most 31 characters.
+- `src/features/class-matchups/`: rock-paper-scissors by class (`index.ts`, `classes.json`). `classes.json` holds 6 classes and every pick-vs-enemy pair (36); the validator checks all pairs exist and mirror ratings agree.
+- `src/features/objectives/`: objective cheat sheet (`index.ts`, `data.ts`), ranked by priority, deep-linkable as `#/objectives/<id>`. It deliberately omits spawn timers, HP and buff numbers because they change between Wild Rift patches.
 - To add an enemy: create `src/features/baron-matchups/data/<id>.json` matching `EnemyMatchups`; `npm run build` runs `scripts/validate-data.mjs` (schema, ids, minimum field lengths, mirror-rating consistency).
 
 ## Commands
