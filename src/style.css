@@ -318,6 +318,20 @@ a.chip:hover, a.chip:focus-visible { border-color: var(--gold); outline: none; }
 .class-link { margin: 10px 0 0; font-size: 14px; }
 .class-link a { text-decoration: none; }
 
+/* Objectives */
+.obj { margin-top: 10px; --rating: var(--gold); scroll-margin-top: 100px; }
+.obj summary { gap: 12px; }
+.obj-icon { flex: none; image-rendering: pixelated; background: #0b1220; border-radius: 8px; padding: 4px; box-sizing: content-box; }
+.obj-rank { flex: none; width: 24px; height: 24px; border-radius: 999px; display: grid; place-items: center; font-size: 13px; font-weight: 700; color: var(--bg); background: var(--gold); }
+.obj-list { margin-top: 24px; }
+.obj-list ol { margin: 0; padding-left: 22px; }
+.obj-list li + li { margin-top: 6px; }
+.obj-trades { width: 100%; border-collapse: collapse; font-size: 15px; }
+.obj-trades th { text-align: left; font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); padding: 0 8px 6px 0; }
+.obj-trades td { padding: 8px 8px 8px 0; border-top: 1px solid var(--border); vertical-align: top; }
+.obj-trades td:first-child { color: var(--bad); width: 40%; }
+.obj-trades td:last-child { color: var(--good); }
+
 .empty { color: var(--muted); }
 
 .site-footer {
