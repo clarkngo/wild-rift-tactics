@@ -83,6 +83,24 @@
       "remember": "Wind Wall doesn't stop you."
     },
     {
+      "champion": "poppy",
+      "rating": "good",
+      "confidence": "medium",
+      "why": "Yasuo reaches you by dashing through minions, and Poppy's W stops those dashes. Wind Wall can't block her melee spells, and her E stuns him into walls before he can stack a tornado.",
+      "trading": [
+        "Cast W (Steadfast Presence) when he starts weaving through the wave toward you.",
+        "E (Heroic Charge) him into a wall once he's grounded in front of you.",
+        "Q (Hammer Shock) where he lands so the second hit catches him.",
+        "Walk away from his tornado; if it hits you, his R can follow."
+      ],
+      "early": "Trade whenever he dashes in. His passive shield soaks one hit, so trade after it's popped.",
+      "spike": "At 5 your R knocks him away before his combo. Hold W for when he dashes to follow up a knock-up.",
+      "wave": "Slow-push so he has fewer minions to dash through to reach you.",
+      "jungle": "He escapes through minions. Gank with W ready to stop his dashes.",
+      "build": "Grasp of the Undying. Plated Steelcaps and armor.",
+      "remember": "W the dash, E into the wall."
+    },
+    {
       "champion": "darius",
       "rating": "neutral",
       "confidence": "medium",

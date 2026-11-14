@@ -47,6 +47,24 @@
       "remember": "Counter Strike her dash-in."
     },
     {
+      "champion": "poppy",
+      "rating": "good",
+      "confidence": "medium",
+      "why": "Irelia's whole kit is dashes, and Poppy's W stops every one of them. Once she's grounded in front of you, E (Heroic Charge) carries her into a wall for a stun and she has no way out.",
+      "trading": [
+        "Cast W (Steadfast Presence) the moment she starts dashing through minions toward you.",
+        "E (Heroic Charge) her into a wall once her dash is stopped for the stun.",
+        "Stand on your thrown buckler to pick up the shield before she commits.",
+        "Walk sideways out of her E (Flawless Duet) blades so she can't stun you back."
+      ],
+      "early": "Trade whenever she dashes in. Without dashes she can't reach you, and your E punishes her near walls.",
+      "spike": "At 5 your R knocks her away or up. Hold W for her R dash and the follow-up Q.",
+      "wave": "Slow-push so she can't stack passive on minions near your tower safely.",
+      "jungle": "She escapes with Q dashes. Gank with W ready to stop them.",
+      "build": "Grasp of the Undying. Plated Steelcaps and armor.",
+      "remember": "W the dash, E into the wall."
+    },
+    {
       "champion": "darius",
       "rating": "neutral",
       "confidence": "medium",

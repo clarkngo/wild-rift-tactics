@@ -99,6 +99,24 @@
       "jungle": "She has no reliable escape once E is down. Gank then and stun her with Q.",
       "build": "Grasp of the Undying. MR boots and an early MR item.",
       "remember": "Buy MR, don't trade into stacks."
+    },
+    {
+      "champion": "poppy",
+      "rating": "bad",
+      "confidence": "medium",
+      "why": "Gwen's %max HP magic damage shreds your tankiness, and her Hallowed Mist blocks your damage from outside. If you're locked in, stop her E dash with W and trade when she has no mist.",
+      "trading": [
+        "Cast W (Steadfast Presence) when she dashes in with E (Skip 'n Slash).",
+        "Walk into her mist to hit her; you can't reach her from outside it.",
+        "E (Heroic Charge) her into a wall before she stacks Q on you.",
+        "Back off before the centre of her final snip lands."
+      ],
+      "early": "Levels 1–2 are close. Trade near walls, and avoid long fights once she has Q stacks.",
+      "spike": "At 5 her R slows you on the way out. Use your R to knock her away when she commits.",
+      "wave": "Let her push and farm under tower; she can't dive you easily before her items.",
+      "jungle": "She has no reliable escape once E is down. Gank with W ready.",
+      "build": "Grasp of the Undying. MR boots and an early MR item.",
+      "remember": "Buy MR, ground her E."
     }
   ]
 }

@@ -81,6 +81,24 @@
       "jungle": "Ask for ganks; your R and your jungler can kill him once his R is down.",
       "build": "Grasp. MR boots and early MR items.",
       "remember": "Buy MR, not armor."
+    },
+    {
+      "champion": "poppy",
+      "rating": "bad",
+      "confidence": "low",
+      "why": "Mordekaiser has no dashes for your W to stop, and his magic damage goes through your armor. His R takes you away from your team and steals your stats. If you're locked in, buy MR and save your R to knock him away.",
+      "trading": [
+        "E (Heroic Charge) him into a wall when he walks up, then walk away.",
+        "Walk out of his Q (Obliterate) line; don't trade isolated in front of him.",
+        "Stay out of E (Death's Grasp) range, or charge him first if he steps closer.",
+        "Q (Hammer Shock) and back off before his passive aura stacks up."
+      ],
+      "early": "Farm safely and trade only near walls. He out-damages you in long trades.",
+      "spike": "At 5 his R takes you into a 1v1. Use your R to knock him away before he can cast it.",
+      "wave": "Let him push and farm under tower; he has no dash to dive you.",
+      "jungle": "He has no escape once E is down. Gank then and wall-stun him.",
+      "build": "Grasp of the Undying. MR boots and MR items.",
+      "remember": "Buy MR, knock him away."
     }
   ]
 }

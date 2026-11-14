@@ -134,6 +134,24 @@
       "jungle": "He has no escape once E is down. Ask for a gank then, and stun him with Q for your jungler.",
       "build": "Grasp of the Undying. Armor boots and Thornmail; you out-scale him in team fights.",
       "remember": "Survive, scale, out-team-fight him."
+    },
+    {
+      "champion": "poppy",
+      "rating": "bad",
+      "confidence": "medium",
+      "why": "Darius doesn't dash, so your W does little, and his E is a pull you can't stop. Hemorrhage stacks out-damage your tankiness in every long trade. If you're locked in, poke and wall-stun him, then back off.",
+      "trading": [
+        "E (Heroic Charge) him into a wall, then walk away before he stacks Hemorrhage.",
+        "Q (Hammer Shock) and step back; don't stand in melee range trading autos.",
+        "Walk out of the outer ring of his Q (Decimate); it heals him.",
+        "Save your R to knock him away when he goes for a 5-stack all-in."
+      ],
+      "early": "Farm safely and avoid long trades. He wins every level 1–3 fight that lasts.",
+      "spike": "At 5 his R executes. Use your R to knock him out of range before he can finish you.",
+      "wave": "Let him push and farm under tower; he has no dash to dive you.",
+      "jungle": "He has no escape once E is down. Ask for a gank then and wall-stun him for your jungler.",
+      "build": "Grasp of the Undying. Armor boots and Thornmail.",
+      "remember": "Wall stun, walk away."
     }
   ]
 }

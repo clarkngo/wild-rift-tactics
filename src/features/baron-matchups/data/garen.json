@@ -63,6 +63,24 @@
       "remember": "Wait out the silence, then stack him."
     },
     {
+      "champion": "poppy",
+      "rating": "neutral",
+      "confidence": "low",
+      "why": "Garen has no dashes for your W to stop, and his passive regen undoes your poke. Neither of you can kill the other early, so the lane comes down to wall stuns and ganks.",
+      "trading": [
+        "E (Heroic Charge) him into a wall when he walks up near the edge of the lane.",
+        "Throw your buckler and pick it up for the shield before he silences you.",
+        "Walk away from his E (Judgment) spin; don't stand in it trading autos.",
+        "Q (Hammer Shock) where he'll be after he dashes in with Q speed."
+      ],
+      "early": "Even. Trade near walls where your E stuns him, and back off when he Q's toward you.",
+      "spike": "At 5 his R executes. Use your R to knock him away when he goes for it.",
+      "wave": "Slow-push and trade when his Q is on cooldown.",
+      "jungle": "He has no escape besides Q speed. Gank when it's down.",
+      "build": "Grasp of the Undying. Armor boots; armor items.",
+      "remember": "Wall stun the walk-up."
+    },
+    {
       "champion": "nasus",
       "rating": "bad",
       "confidence": "high",

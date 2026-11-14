@@ -114,6 +114,24 @@
       "jungle": "She escapes with Lunge. Gank once Lunge or Riposte is on cooldown and pull her into your jungler.",
       "build": "Conqueror. Armor boots; Zhonya's Hourglass to survive her R.",
       "remember": "Bait Riposte, then E."
+    },
+    {
+      "champion": "poppy",
+      "rating": "bad",
+      "confidence": "medium",
+      "why": "Fiora's vitals deal true %max HP damage that ignores your tankiness, and Riposte parries your E stun and stuns you back. If you're locked in, bait Riposte first and use W to stop her Lunge.",
+      "trading": [
+        "Cast W (Steadfast Presence) when she Lunges toward a vital; it stops the dash.",
+        "Only E her after she has used Riposte; otherwise she parries it and stuns you.",
+        "Turn so her vitals aren't facing her approach; don't let her chain vitals for free.",
+        "Q (Hammer Shock) and walk away rather than standing in long trades."
+      ],
+      "early": "Farm safely and trade only when Riposte is down. Her Q-into-vital trades out-damage yours.",
+      "spike": "At 5 your R can knock her away from her heal zone. Save it for her R.",
+      "wave": "Let her push and farm under tower; your E near the tower walls punishes dives.",
+      "jungle": "She escapes with Lunge. Gank with W ready to stop it.",
+      "build": "Grasp of the Undying. Armor boots; avoid relying on HP alone.",
+      "remember": "Bait Riposte, then E."
     }
   ]
 }
