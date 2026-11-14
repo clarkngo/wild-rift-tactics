@@ -83,6 +83,24 @@
       "remember": "Armor up, ult her when Tumble is down."
     },
     {
+      "champion": "poppy",
+      "rating": "good",
+      "confidence": "medium",
+      "why": "Poppy's W stops Vayne's Tumble, so she can't reposition away from your E charge. Once she's grounded, E carries her into a wall for a stun, which is how melee champions catch her.",
+      "trading": [
+        "Cast W (Steadfast Presence) when she Tumbles toward or away from you.",
+        "E (Heroic Charge) her into a wall once she can't Tumble out.",
+        "Walk out of Condemn range when she's near a wall; she can stun you too.",
+        "Stand on your buckler to pick up the shield before you walk into her autos."
+      ],
+      "early": "Trade when she walks up to farm. She's weak early, and your W shuts down her one escape.",
+      "spike": "At 5 your R knocks her away or up. Fight with W ready for her R stealth Tumble.",
+      "wave": "Slow-push and take plates while she can't contest.",
+      "jungle": "She dies to ganks without Tumble. Gank with your W ready to stop it.",
+      "build": "Grasp of the Undying. Plated Steelcaps and Randuin's Omen.",
+      "remember": "Ground the Tumble."
+    },
+    {
       "champion": "sett",
       "rating": "bad",
       "confidence": "medium",

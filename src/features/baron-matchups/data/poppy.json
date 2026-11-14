@@ -1,0 +1,159 @@
+{
+  "enemy": "poppy",
+  "patch": "draft",
+  "reviewed": false,
+  "summary": "Anti-dash tank who stuns you into walls with E and shuts down every dash near her with W. She punishes mobile champions hard, but has low damage and no sustain. Fight her in the open, away from walls, with champions that don't rely on dashes.",
+  "threats": [
+    "E (Heroic Charge) dashes to you and carries you; if you hit a wall, you're stunned. Never trade with a wall behind you.",
+    "W (Steadfast Presence): when active she gains move speed and stops enemy dashes near her. Don't dash while it's up.",
+    "Q (Hammer Shock) slows and hits a second time after a short delay. Walk out of the zone before it explodes.",
+    "Passive (Iron Ambassador): her thrown buckler bounces back; picking it up gives her a shield. Stand on it to deny it.",
+    "R (Keeper's Verdict) at 5: a charged swing knocks you far away, often out of a fight, or a quick tap knocks you up."
+  ],
+  "matchups": [
+    {
+      "champion": "fiora",
+      "rating": "good",
+      "confidence": "medium",
+      "why": "Fiora's vitals deal true %max HP damage that ignores Poppy's armor and HP, and Riposte parries her E wall stun and stuns her back. Lunge is a short dash, so trade when Poppy's W is on cooldown.",
+      "trading": [
+        "Lunge (Q) onto a vital when her W is on cooldown; W stops your dash if it's active.",
+        "Hold W (Riposte) for her E: parrying the charge stuns her and wins the trade.",
+        "Stand away from walls so a missed parry doesn't become a wall stun.",
+        "Step out of her Q zone before the second hit, then re-engage on a fresh vital."
+      ],
+      "early": "Levels 1–3 favor you. Trade Q into vital when she walks up to farm, and back off before she E's you into a wall.",
+      "spike": "At 5 your R vitals shred her HP. Her R can knock you away from your heal zone, so Riposte it or fight near your own tower.",
+      "wave": "Slow-push and take plates, then split-push once you're ahead. She can't duel you in a side lane later.",
+      "jungle": "She has low damage and no sustain. Gank when her E is down so she can't stun your jungler into a wall.",
+      "build": "Conqueror. Bruiser items; Blade of the Ruined King against her HP.",
+      "remember": "Parry the charge, dash after W."
+    },
+    {
+      "champion": "darius",
+      "rating": "good",
+      "confidence": "medium",
+      "why": "Darius doesn't rely on dashes, so Poppy's W does little against him, and his E is a pull she can't stop. Hemorrhage stacks out-damage her tankiness in every extended trade.",
+      "trading": [
+        "E (Apprehend) pull her when she walks up; her W stops dashes, not pulls.",
+        "Hit her with the outer edge of Q (Decimate) for bonus damage and healing.",
+        "Stand on her thrown buckler so she can't pick up the shield.",
+        "Fight in the middle of the lane, away from walls her E can carry you into."
+      ],
+      "early": "Levels 1–3 favor you. Trade every time she walks up; she can't out-trade Hemorrhage stacks.",
+      "spike": "At 5 your R executes. Her R can knock you away, so stack Hemorrhage first and finish before she channels it.",
+      "wave": "Slow-push and freeze once you're ahead so she has to walk up to you to farm.",
+      "jungle": "She escapes with E. Gank once it's on cooldown and pull her into your jungler.",
+      "build": "Conqueror. Black Cleaver against her armor; armor boots.",
+      "remember": "Pull, don't dash."
+    },
+    {
+      "champion": "gwen",
+      "rating": "good",
+      "confidence": "medium",
+      "why": "Gwen's %max HP magic damage shreds Poppy's tanky build, and her Hallowed Mist blocks Poppy's damage from outside. Gwen's E is a short dash, so use it after Poppy's W is spent.",
+      "trading": [
+        "Stack Q with autos, then land the centre of the final snip for true damage.",
+        "Step into W (Hallowed Mist) when she charges in so her follow-up can't reach you from outside.",
+        "Use E (Skip 'n Slash) only when her W is on cooldown; it can't dash through an active W.",
+        "Trade in the open lane, away from walls, so her E can't stun you."
+      ],
+      "early": "Take short Q trades once you have stacks. Avoid fighting near walls at levels 2–3 when she has E.",
+      "spike": "At 5 your R adds slows and poke. Fight after her R is used so she can't knock you out of the fight.",
+      "wave": "Slow-push and trade when she walks up to farm. You out-scale her into side lanes.",
+      "jungle": "She escapes with E. Gank when it's down so she can't stun your jungler into a wall.",
+      "build": "Conqueror. AP bruiser items with %HP damage; magic pen helps.",
+      "remember": "Shred the HP, avoid the walls."
+    },
+    {
+      "champion": "mordekaiser",
+      "rating": "good",
+      "confidence": "low",
+      "why": "Mordekaiser has no dashes for Poppy's W to stop, and his magic damage goes through her early armor. His R takes her away from her team and steals her stats, so her peel and engage stop mattering.",
+      "trading": [
+        "Q (Obliterate) her when she walks up alone to farm; isolated Q hits much harder.",
+        "E (Death's Grasp) pull her into your Q; it's a pull, so her W can't stop it.",
+        "Shield with W (Indestructible) when she charges you, then recast to heal.",
+        "Stay away from walls so her E can't stun you during your combo."
+      ],
+      "early": "Trade with Q when she farms. She has little damage to trade back with.",
+      "spike": "At 5 your R takes her into a 1v1 and steals her stats. Ult after she's used E so she can't stun you inside.",
+      "wave": "Slow-push and take plates while she can't contest.",
+      "jungle": "She escapes with E. Gank once it's down and pull her into your jungler.",
+      "build": "Conqueror. Magic-pen bruiser items; armor boots.",
+      "remember": "No dashes, no problem."
+    },
+    {
+      "champion": "garen",
+      "rating": "neutral",
+      "confidence": "low",
+      "why": "Garen has no dashes for Poppy's W to stop, and his passive regen undoes her low damage. Neither champion can kill the other early, so the lane comes down to wall stuns and ganks.",
+      "trading": [
+        "Q (Decisive Strike) silence her when she walks up so she can't E you into a wall.",
+        "Spin with E (Judgment) after the silence, then walk away before her Q's second hit.",
+        "Use W (Courage) when she charges you to cut the stun and the damage.",
+        "Back off after trades to let Perseverance regen her poke away."
+      ],
+      "early": "Even. Trade with Q silence in the open lane and avoid standing near walls when her E is up.",
+      "spike": "At 5 your R executes. Her R can knock you away first, so use your R when she's already used hers.",
+      "wave": "Slow-push and trade on her E cooldown; don't fight near the river walls.",
+      "jungle": "She escapes with E. Gank when it's down.",
+      "build": "Conqueror. Armor boots; bruiser items.",
+      "remember": "Silence the charge, fight in the open."
+    },
+    {
+      "champion": "irelia",
+      "rating": "bad",
+      "confidence": "medium",
+      "why": "Irelia's whole kit is dashes, and Poppy's W stops every one of them. Poppy's E then stuns Irelia into a wall. If you're locked in, trade only when her W is down and fight in the open.",
+      "trading": [
+        "Only Q (Bladesurge) onto her when her W is on cooldown; an active W stops your dash.",
+        "Stack passive on minions first, then dash in once with full stacks.",
+        "Hold E (Flawless Duet) for her charge so you can stun her as she lands.",
+        "Never trade near a wall; her E will stun you into it."
+      ],
+      "early": "Farm with Q on minions and stay away from walls. Don't start trades while her W is up.",
+      "spike": "At 5 your R slows her and blocks her path. Wait for her W and R before you all-in.",
+      "wave": "Let her push and farm under tower; your dashes on minions are safe there.",
+      "jungle": "Ask for ganks when her E is down; she has no escape without it.",
+      "build": "Conqueror. Bruiser items; Blade of the Ruined King for her HP.",
+      "remember": "Dash after W, not into it."
+    },
+    {
+      "champion": "yasuo",
+      "rating": "bad",
+      "confidence": "medium",
+      "why": "Yasuo dashes through minions to reach you, and Poppy's W stops those dashes. Her E stuns him into walls, and Wind Wall can't block her melee spells. If you're locked in, farm safely and fight when W is down.",
+      "trading": [
+        "Only E (Sweeping Blade) toward her when her W is on cooldown; an active W stops your dash.",
+        "Stack Q (Steel Tempest) on minions so you have a tornado ready without dashing.",
+        "Throw the tornado when she charges you to knock her up before the wall stun.",
+        "Stay in the middle of the lane, away from walls her E can stun you into."
+      ],
+      "early": "Farm with Q and avoid trades while her W is up. Your passive shield helps against her short trades.",
+      "spike": "At 5 your R needs a knock-up; land a tornado after her W ends, then ult.",
+      "wave": "Let her push and farm under tower; don't walk into her E range near walls.",
+      "jungle": "Ask for ganks when her E is down; she has no escape without it.",
+      "build": "Conqueror or Lethal Tempo. Crit items; armor boots.",
+      "remember": "Wait out W, then dash."
+    },
+    {
+      "champion": "vayne",
+      "rating": "bad",
+      "confidence": "medium",
+      "why": "Poppy's W stops Vayne's Tumble, and her E stuns Vayne into walls, which is how melee champions catch her. Vayne's true damage still hurts Poppy, so if you're locked in, kite in the open and fight when W is down.",
+      "trading": [
+        "Auto her when she walks up, but only Tumble (Q) when her W is on cooldown.",
+        "Save Condemn (E) to push her away when she charges you, before she reaches a wall.",
+        "Stand in the middle of the lane, never with a wall behind you.",
+        "Land three-hit Silver Bolts procs when her W is down, then back off."
+      ],
+      "early": "Poke with autos from range and stay away from walls. Back off when she has W up and walks at you.",
+      "spike": "At 5 her R can knock you out of the fight. Keep distance and use your R only when her W is down.",
+      "wave": "Let her push and farm under tower; you out-scale her late.",
+      "jungle": "She escapes with E. Gank when it's down.",
+      "build": "Lethal Tempo. On-hit and crit; Blade of the Ruined King for her HP.",
+      "remember": "No walls, no Tumble into W."
+    }
+  ]
+}
