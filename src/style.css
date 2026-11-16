@@ -332,6 +332,71 @@ a.chip:hover, a.chip:focus-visible { border-color: var(--gold); outline: none; }
 .obj-trades td:first-child { color: var(--bad); width: 40%; }
 .obj-trades td:last-child { color: var(--good); }
 
+/* Worlds 2026 */
+a.filter { text-decoration: none; }
+.wf-final, #prediction, #lanes, #players, #road, #meta, #wild-rift { scroll-margin-top: 100px; }
+.wf-final { margin-top: 4px; padding: 16px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); }
+.wf-vs { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 8px; }
+.wf-team { display: grid; justify-items: center; gap: 2px; text-align: center; padding: 10px 6px; border-radius: 10px; background: var(--surface-2); border-top: 3px solid var(--team); }
+.wf-team strong { font-size: 1.05rem; line-height: 1.2; }
+.wf-team small { color: var(--muted); font-size: 12px; }
+.wf-winner { outline: 2px solid var(--gold); }
+.wf-gen { --team: #c8a24a; }
+.wf-blg { --team: #4fa3e0; }
+.wf-gen-text { color: #c8a24a; }
+.wf-blg-text { color: #4fa3e0; }
+.wf-tag { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: 0.06em; padding: 1px 8px; border-radius: 999px; color: var(--bg); background: var(--team); }
+.wf-v { color: var(--muted); font-size: 13px; text-transform: uppercase; }
+.wf-status { margin: 12px 0 0; font-size: 14px; color: var(--muted); }
+.wf-status.wf-done { color: var(--text); font-size: 1rem; }
+.wf-facts { margin: 12px 0 0; display: grid; gap: 6px; font-size: 14px; }
+.wf-facts div { display: grid; grid-template-columns: 64px 1fr; gap: 8px; }
+.wf-facts dt { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; padding-top: 2px; }
+.wf-facts dd { margin: 0; }
+.wf-conf { font-size: 13px; font-weight: 400; color: var(--muted); margin-left: 6px; }
+.wf-keys { display: grid; gap: 12px; margin-top: 12px; }
+.wf-keys h3 { font-size: 0.95rem; margin: 0 0 6px; }
+.wf-keys h3 small, .wf-sub small, .wf-roster h3 small { font-weight: 400; color: var(--muted); font-size: 13px; }
+.wf-keys ol { margin: 0; padding-left: 20px; }
+.wf-keys li + li { margin-top: 4px; }
+.wf-keys .threats { margin-top: 0; }
+.wf-duels { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.wf-duel { padding: 12px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); }
+.wf-duel p { margin: 8px 0 0; font-size: 14px; color: var(--muted); }
+.wf-duel-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+.wf-role { font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--gold); }
+.wf-edge-tag { font-size: 12px; padding: 1px 8px; border-radius: 999px; border: 1px solid var(--border); color: var(--muted); }
+.wf-edge-gen { color: #c8a24a; border-color: #c8a24a; }
+.wf-edge-blg { color: #4fa3e0; border-color: #4fa3e0; }
+.wf-duel-row { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 6px; }
+.wf-duel-p { display: flex; align-items: center; gap: 8px; min-width: 0; padding: 6px; border-radius: 8px; }
+.wf-duel-p:last-child { flex-direction: row-reverse; text-align: right; }
+.wf-duel-p.wf-edge { background: var(--surface-2); }
+.wf-duel-p .portrait { width: 36px; height: 36px; border-radius: 8px; flex: none; }
+.wf-duel-p span, .wf-pname, .wf-champ > span { display: grid; min-width: 0; }
+.wf-duel-p small, .wf-pname small, .wf-champ small { color: var(--muted); font-size: 12px; font-weight: 400; }
+.wf-rosters { display: grid; gap: 20px; }
+.wf-roster h3 { margin: 0 0 4px; font-size: 1.05rem; display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; }
+.wf-player { --rating: var(--team); }
+.wf-real { margin: 12px 0 0; color: var(--muted); font-size: 14px; }
+.wf-stats { margin: 12px 0 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); gap: 8px; }
+.wf-stats div { background: var(--surface-2); border-radius: 8px; padding: 6px 10px; }
+.wf-stats dt { font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); }
+.wf-stats dd { margin: 2px 0 0; font-weight: 600; }
+.chip small { color: var(--muted); }
+.wf-sub { font-size: 1rem; margin: 18px 0 6px; }
+.wf-bracket { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; font-size: 14px; }
+.wf-bracket li { padding: 8px 12px; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; color: var(--muted); }
+.wf-bracket b { color: var(--text); }
+.wf-bracket .wf-w { color: var(--text); font-weight: 600; }
+.wf-meta td { vertical-align: middle; }
+.wf-meta td:first-child, .wf-meta td:last-child { color: var(--text); width: auto; }
+.wf-meta th:not(:first-child), .wf-meta td:not(:first-child) { text-align: right; width: 56px; }
+.wf-champ { display: flex; align-items: center; gap: 8px; }
+.wf-champ .portrait { width: 28px; height: 28px; border-radius: 6px; flex: none; }
+.wf-sources a { white-space: nowrap; }
+@media (min-width: 640px) { .wf-keys { grid-template-columns: 1fr 1fr; } }
+
 .empty { color: var(--muted); }
 
 .site-footer {
