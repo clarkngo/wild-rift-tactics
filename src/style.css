@@ -407,6 +407,24 @@ a.filter { text-decoration: none; }
 .wf-verdict { margin: 0 0 4px; }
 @media (min-width: 640px) { .wf-games { grid-template-columns: 1fr 1fr; } }
 
+/* Champion guides */
+#stacks, #plans, #lanes, #teams, #build { scroll-margin-top: 100px; }
+.cg-kit { margin: 0; display: grid; gap: 10px; }
+.cg-kit dt { font-weight: 600; }
+.cg-kit dd { margin: 2px 0 0; color: var(--muted); font-size: 15px; }
+.cg-key { display: inline-grid; place-items: center; min-width: 28px; height: 22px; padding: 0 6px; margin-right: 4px; font-size: 12px; border-radius: 6px; background: var(--surface-2); border: 1px solid var(--border); color: var(--gold); }
+.cg-tiers { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.cg-tiers li { display: grid; grid-template-columns: 52px 1fr; gap: 12px; align-items: start; padding: 12px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); }
+.cg-stacks { font-size: 1.5rem; font-weight: 700; color: var(--gold); text-align: center; line-height: 1.2; }
+.cg-tiers li > span:last-child { display: grid; gap: 6px; font-size: 15px; color: var(--muted); }
+.cg-tiers strong { color: var(--text); }
+.cg-bar { height: 6px; border-radius: 999px; background: linear-gradient(90deg, var(--gold) var(--fill), var(--surface-2) var(--fill)); }
+.cg-lane { display: grid; gap: 2px; min-width: 0; }
+.cg-lane small { color: var(--muted); font-size: 13px; }
+.cg-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-top: 2px; }
+.cg-rating { font-size: 12px; font-weight: 600; color: var(--rating); }
+.cg-plan { --rating: var(--gold); scroll-margin-top: 100px; }
+.matchup-body ul { margin: 0; padding-left: 22px; }
 
 .empty { color: var(--muted); }
 
@@ -442,10 +460,13 @@ a.filter { text-decoration: none; }
   .sfx-toggle { width: 32px; height: 32px; font-size: 14px; }
 }
 
-/* Three nav links don't fit beside the brand on the narrowest phones: drop them to a second row. */
-@media (max-width: 380px) {
+/* The nav links don't fit beside the brand on phones: drop them to a second row. */
+@media (max-width: 640px) {
   .site-header { flex-wrap: wrap; row-gap: 6px; }
-  .header-actions { flex-basis: 100%; justify-content: space-between; }
+  .header-actions { flex-basis: 100%; justify-content: space-between; min-width: 0; }
+  /* Too many sections to fit: let the nav row scroll sideways. */
+  .site-header nav { min-width: 0; overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; padding-bottom: 2px; }
+  .site-header nav::-webkit-scrollbar { display: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {
