@@ -116,6 +116,24 @@
       "jungle": "He escapes with Move Quick. Gank when it's on cooldown.",
       "build": "Conqueror. MR boots and magic-pen bruiser items.",
       "remember": "Pull, then realm."
+    },
+    {
+      "champion": "chogath",
+      "rating": "bad",
+      "confidence": "low",
+      "why": "Teemo out-ranges you, and his Blinding Dart cancels your empowered E autos. You have no dash, so he kites you all lane. If you're locked in, farm with E from range and look for Q when he walks up.",
+      "trading": [
+        "Q (Rupture) where he steps to auto you; he walks in to poke.",
+        "Silence him with W (Feral Scream) so he can't use Move Quick to escape.",
+        "Use E (Vorpal Spikes) on the wave so the spikes hit him behind his minions.",
+        "Walk around his mushrooms; never face-check brush."
+      ],
+      "early": "Farm with E and heal with Carnivore. Don't chase him without Q ready.",
+      "spike": "At 5 your R executes him if he's low. Land Q and W first, then Feast.",
+      "wave": "Let him push and farm under tower; Carnivore heals his poke.",
+      "jungle": "Ask for ganks when his W is down; he's easy to catch with Q.",
+      "build": "Grasp. Magic resist items; magic resist boots.",
+      "remember": "Q where he walks, not where he is."
     }
   ]
 }

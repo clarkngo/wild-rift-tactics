@@ -3,6 +3,7 @@ import { strategyCards } from './features/strategy-cards';
 import { classMatchups } from './features/class-matchups';
 import { objectives } from './features/objectives';
 import { worlds2026 } from './features/worlds-2026';
+import { championGuides } from './features/champion-guides';
 
 /** A top-level part of the site, mounted at `#/<route>/...`. */
 export interface Section {
@@ -15,4 +16,4 @@ export interface Section {
 }
 
 /** Add new sections here; they appear in the header nav and on the home page. */
-export const SECTIONS: Section[] = [baronMatchups, classMatchups, objectives, strategyCards, worlds2026];
+export const SECTIONS: Section[] = [baronMatchups, classMatchups, objectives, championGuides, strategyCards, worlds2026];

@@ -14,7 +14,50 @@ export interface Result {
   mvp?: string;
 }
 /** Set once the final is over, e.g. { winner: 'GEN', score: '3–1', mvp: 'Chovy' }. */
-export const RESULT: Result | null = null;
+export const RESULT: Result | null = { winner: 'BLG', score: '3–1', mvp: 'Knight' };
+
+export interface Game {
+  winner: 'GEN' | 'BLG';
+  length: string;
+  /** Kills, Gen.G first. */
+  kills: [number, number];
+  /** Champions by role (Top, Jungle, Mid, Bot, Support). */
+  gen: string[];
+  blg: string[];
+  note: string;
+}
+
+/** The final, game by game (Wikipedia, "2026 League of Legends World Championship final"). */
+export const GAMES: Game[] = [
+  {
+    winner: 'GEN', length: '38:59', kills: [19, 4],
+    gen: ['Olaf', 'Lee Sin', 'Syndra', 'Corki', 'Nami'],
+    blg: ["K'Sante", 'Jarvan IV', 'Locke', 'Kalista', 'Renata Glasc'],
+    note: 'Gen.G won despite BLG taking Dragon Soul and an Elder Dragon, ending a 76-game streak of wins for teams that secured both at international events.',
+  },
+  {
+    winner: 'BLG', length: '53:16', kills: [14, 19],
+    gen: ['Vayne', "Cho'Gath", 'Orianna', 'Ezreal', 'Karma'],
+    blg: ['Gnar', 'Naafiri', 'Cassiopeia', 'Ziggs', 'Camille'],
+    note: 'The longest game of the tournament and the third-longest Worlds final game ever. Viper did 1,776 damage per minute, second-highest in international history.',
+  },
+  {
+    winner: 'BLG', length: '37:39', kills: [8, 20],
+    gen: ['Ambessa', 'Wukong', 'Annie', 'Jhin', 'Rakan'],
+    blg: ['Jax', 'Vi', 'Viktor', 'Taliyah', 'Alistar'],
+    note: 'BLG won comfortably to reach match point.',
+  },
+  {
+    winner: 'BLG', length: '42:58', kills: [11, 21],
+    gen: ['Aurora', 'Pantheon', 'Akali', 'Xayah', 'Lulu'],
+    blg: ['Gwen', 'Nocturne', 'Twisted Fate', 'Yunara', 'Neeko'],
+    note: 'BLG closed out their first World Championship.',
+  },
+];
+
+/** How our pre-final prediction held up. */
+export const VERDICT =
+  'We got it wrong. Gen.G won game 1 easily, but BLG won the 53-minute game 2 and never lost again. Our "How BLG win" list held up: Knight played through mid and won finals MVP, and BLG turned the series into long, messy games.';
 
 export const FINAL = {
   date: 'Saturday 14 November 2026',
@@ -200,6 +243,13 @@ export const META: [string, string, string, number, number, number][] = [
   ['Orianna', 'Orianna', 'Mid', 23, 24, 70],
 ];
 
+export const AFTER_FINAL = [
+  'Bilibili Gaming’s first World Championship, and the LPL’s first since Edward Gaming in 2021.',
+  'It ends the LCK’s run of four straight titles. BLG beat all four Korean teams on the way: Hanwha Life in Swiss, Dplus KIA, T1 and Gen.G in the knockouts.',
+  'Knight is finals MVP, in his sixth Worlds and two years after losing the 2024 final to T1.',
+  'Viper wins his second world title (after 2021 with Edward Gaming). Bin wins at his third final.',
+];
+
 export const STORYLINES = [
   'No T1 in the final for the first time since 2021. T1 had won three straight titles (2023–2025); BLG knocked them out 3–1 in the semifinal.',
   'Chovy vs Knight: the two best mid laners at the event by the numbers, and Chovy’s first Worlds final.',
@@ -218,6 +268,7 @@ export const WILD_RIFT_TAKEAWAYS = [
 export const SOURCES = [
   { label: 'Wikipedia: 2026 League of Legends World Championship', url: 'https://en.wikipedia.org/wiki/2026_League_of_Legends_World_Championship' },
   { label: 'Wikipedia: 2026 Worlds final', url: 'https://en.wikipedia.org/wiki/2026_League_of_Legends_World_Championship_final' },
+  { label: 'Dot Esports: BLG win Worlds 2026', url: 'https://dotesports.com/league-of-legends/news/blg-win-worlds-championship-2026' },
   { label: 'Rift Graphs: Worlds 2026 player and champion stats', url: 'https://riftgraphs.com/players' },
   { label: 'LoL Esports (official)', url: 'https://lolesports.com' },
 ];

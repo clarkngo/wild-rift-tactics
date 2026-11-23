@@ -4,6 +4,7 @@ import type { Champion } from './types';
 export const BARON_CHAMPIONS: Champion[] = [
   { id: 'aatrox', name: 'Aatrox', img: 'Aatrox' },
   { id: 'camille', name: 'Camille', img: 'Camille' },
+  { id: 'chogath', name: "Cho'Gath", img: 'Chogath' },
   { id: 'darius', name: 'Darius', img: 'Darius' },
   { id: 'drmundo', name: 'Dr. Mundo', img: 'DrMundo' },
   { id: 'fiora', name: 'Fiora', img: 'Fiora' },

@@ -81,6 +81,24 @@
       "remember": "Wall stun the walk-up."
     },
     {
+      "champion": "chogath",
+      "rating": "neutral",
+      "confidence": "low",
+      "why": "Garen's Q silence and spin win short trades, but your Q knock-up and W silence stop his combo. Both of you heal, so the lane comes down to who lands crowd control first.",
+      "trading": [
+        "Q (Rupture) him when he runs at you with his Q speed boost.",
+        "Silence him with W (Feral Scream) so he can't use Q while you trade.",
+        "Spike him with E (Vorpal Spikes) and back off before he spins.",
+        "Walk away after trades to let Carnivore heal you on the wave."
+      ],
+      "early": "Even. Trade when he walks up to farm, and back off when he has Q ready.",
+      "spike": "At 5 both R's execute. Feast him when he's low, before he can ult you.",
+      "wave": "Slow-push and trade on his Q cooldown, before Garen can spin.",
+      "jungle": "Your Q and W lock him in place for ganks.",
+      "build": "Grasp. Armor boots; tank items.",
+      "remember": "Knock up the run, silence the spin."
+    },
+    {
       "champion": "nasus",
       "rating": "bad",
       "confidence": "high",

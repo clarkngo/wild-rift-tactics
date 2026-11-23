@@ -1,7 +1,7 @@
 import type { Section } from '../../sections';
 import { esc, portrait } from '../../shared/dom';
 import {
-  BRACKET, DUELS, FINAL, HEAD_TO_HEAD, META, PREDICTION, RESULT, ROLES, SOURCES, STORYLINES, TEAMS, WILD_RIFT_TAKEAWAYS,
+  AFTER_FINAL, BRACKET, DUELS, FINAL, GAMES, HEAD_TO_HEAD, META, PREDICTION, RESULT, ROLES, SOURCES, STORYLINES, TEAMS, VERDICT, WILD_RIFT_TAKEAWAYS,
   type Player, type Team,
 } from './data';
 
@@ -12,6 +12,7 @@ const team = (id: Team['id']) => TEAMS.find((t) => t.id === id)!;
 
 const JUMPS = [
   ['final', 'The final'],
+  ...(RESULT ? ([['games', 'Game by game']] as const) : []),
   ['prediction', 'Prediction'],
   ['lanes', 'Lane duels'],
   ['players', 'Players'],
@@ -45,10 +46,39 @@ function finalCard() {
     </section>`;
 }
 
+function games() {
+  if (!RESULT) return '';
+  const [gen, blg] = TEAMS;
+  const ROLE_ABBR = ['Top', 'Jg', 'Mid', 'Bot', 'Sup'];
+  return `
+    <h2 class="section-title" id="games">Game by game</h2>
+    <ol class="wf-games">${GAMES.map((g, i) => `
+      <li class="wf-game">
+        <div class="wf-duel-head">
+          <span class="wf-role">Game ${i + 1} · ${esc(g.length)}</span>
+          <span class="wf-edge-tag wf-edge-${g.winner.toLowerCase()}">${esc(g.winner)} win ${g.winner === 'GEN' ? g.kills[0] : g.kills[1]}–${g.winner === 'GEN' ? g.kills[1] : g.kills[0]} in kills</span>
+        </div>
+        <table class="wf-comp">
+          <thead><tr><th scope="col"><span class="visually-hidden">Role</span></th><th scope="col" class="wf-gen-text">${esc(gen.id)}</th><th scope="col" class="wf-blg-text">${esc(blg.id)}</th></tr></thead>
+          <tbody>${ROLE_ABBR.map((r, j) => `<tr><th scope="row">${r}</th><td>${esc(g.gen[j])}</td><td>${esc(g.blg[j])}</td></tr>`).join('')}</tbody>
+        </table>
+        <p>${esc(g.note)}</p>
+      </li>`).join('')}
+    </ol>
+    <section class="threats">
+      <h2>What the result means</h2>
+      <ul>${AFTER_FINAL.map((s) => `<li>${esc(s)}</li>`).join('')}</ul>
+    </section>`;
+}
+
 function prediction() {
+  const head = RESULT
+    ? `Our prediction was ${esc(PREDICTION.pick)} <small class="wf-conf">Wrong: ${esc(team(RESULT.winner).name)} won ${esc(RESULT.score)}</small>`
+    : `Our prediction: ${esc(PREDICTION.pick)} <small class="wf-conf">${esc(PREDICTION.confidence)}</small>`;
   return `
     <section class="threats" id="prediction">
-      <h2>Our prediction: ${esc(PREDICTION.pick)} <small class="wf-conf">${esc(PREDICTION.confidence)}</small></h2>
+      <h2>${head}</h2>
+      ${RESULT ? `<p class="wf-verdict">${esc(VERDICT)}</p><h3 class="wf-sub">What we said before the final</h3>` : ''}
       <ul>${PREDICTION.why.map((w) => `<li>${esc(w)}</li>`).join('')}</ul>
       <p class="loop-note">${esc(PREDICTION.experts)}</p>
       <div class="wf-keys">
@@ -168,17 +198,20 @@ function render(app: HTMLElement) {
     <section class="hero">
       <p class="eyebrow">League of Legends esports</p>
       <h1>Worlds 2026 final</h1>
-      <p>Gen.G against Bilibili Gaming: the players, their champions, the lane duels, and who we think wins.</p>
+      <p>${RESULT
+        ? `Bilibili Gaming beat Gen.G ${esc(RESULT.score)} to win the World Championship. Every game of the final, the players, their champions, and how our prediction held up.`
+        : 'Gen.G against Bilibili Gaming: the players, their champions, the lane duels, and who we think wins.'}</p>
     </section>
     <nav class="filters" aria-label="On this page">${JUMPS.map(([id, label]) => `<a class="filter" href="#/${ROUTE}/${id}">${esc(label)}</a>`).join('')}</nav>
     ${finalCard()}
+    ${games()}
     ${prediction()}
     ${lanes()}
     ${players()}
     ${road()}
     ${meta()}
     ${wildRift()}
-    <p class="loop-note wf-sources">Stats are from before the final (Swiss stage to semifinals). Sources:
+    <p class="loop-note wf-sources">Player and champion stats cover the Swiss stage to the semifinals, before the final. Sources:
       ${SOURCES.map((s) => `<a href="${esc(s.url)}" rel="noopener">${esc(s.label)}</a>`).join(' · ')}.</p>`;
 }
 
@@ -186,7 +219,7 @@ export const worlds2026: Section = {
   route: ROUTE,
   title: 'Worlds 2026 Final',
   navLabel: 'Worlds',
-  description: 'Gen.G vs Bilibili Gaming: player profiles, champion pools, lane duels, the meta and our prediction for the League of Legends World Championship final.',
+  description: 'Bilibili Gaming beat Gen.G 3–1: every game of the League of Legends World Championship final, player profiles, champion pools, lane duels and the meta.',
   render(app, [id]) {
     render(app);
     const el = id ? app.querySelector<HTMLElement>(`#${CSS.escape(id)}`) : null;

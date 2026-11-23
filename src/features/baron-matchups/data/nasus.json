@@ -101,6 +101,24 @@
       "remember": "Deny the stacks, realm on Wither CD."
     },
     {
+      "champion": "chogath",
+      "rating": "good",
+      "confidence": "low",
+      "why": "Your Q and E spikes poke Nasus every time he walks up to stack Q, and Carnivore heals you off the same wave. He out-scales later, so take your lead early and keep him off minions.",
+      "trading": [
+        "Q (Rupture) him when he walks up to last-hit with Q.",
+        "Spike him with E (Vorpal Spikes) through his minions as he farms.",
+        "Silence him with W (Feral Scream) so he can't Wither you mid-trade.",
+        "Back off when his W is up; it slows you badly."
+      ],
+      "early": "Trade every time he walks up to farm. Make each stack cost him HP.",
+      "spike": "At 5 your R executes him before his R makes him tanky. Feast when he's low.",
+      "wave": "Slow-push and freeze near your tower so he has to walk up to stack.",
+      "jungle": "Your Q and W lock him in place for ganks.",
+      "build": "Grasp. Tank items; armor boots.",
+      "remember": "Poke every stack."
+    },
+    {
       "champion": "malphite",
       "rating": "neutral",
       "confidence": "medium",

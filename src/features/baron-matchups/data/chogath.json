@@ -1,0 +1,195 @@
+{
+  "enemy": "chogath",
+  "patch": "draft",
+  "reviewed": false,
+  "summary": "Slow, scaling tank who zones with a delayed knock-up, silences with W, and stacks permanent HP with his true-damage ult. He has no dash, so dodge Q, trade while it's on cooldown, and use %HP or true damage once he's big.",
+  "threats": [
+    "Q (Rupture) erupts after a short delay, knocking up and slowing. Walk out sideways the moment you see the marker on the ground.",
+    "W (Feral Scream) silences in a cone, so you can't use abilities. He often follows a landed Q with it to stop you escaping.",
+    "E (Vorpal Spikes): his next three autos fire spikes that slow and hit everything in a line. Don't stand behind your minions in a row.",
+    "Passive (Carnivore): killing units restores his health and mana, so poke only sticks if you keep it up.",
+    "R (Feast) at 5 deals true damage and executes. Each kill on a champion grows him with permanent max HP. Back off when you're in execute range."
+  ],
+  "matchups": [
+    {
+      "champion": "vayne",
+      "rating": "good",
+      "confidence": "medium",
+      "why": "Vayne out-ranges Cho'Gath and her Silver Bolts true %max HP damage grows with every Feast stack he takes. He has no dash, so Tumble dodges his delayed Q and he can't reach her before level 5.",
+      "trading": [
+        "Auto him every time he walks up to last-hit, then step back out of his E spike range.",
+        "When the Q marker appears under you, Tumble (Q) sideways out of it and auto him during the cast.",
+        "Land three-hit Silver Bolts procs, then back off before he can follow with W silence.",
+        "Save Condemn (E) to push him off you if he lands Q and walks into melee range."
+      ],
+      "early": "Levels 1–3 are yours: poke him with autos every time he farms. Keep Tumble up to dodge Q instead of using it to farm.",
+      "spike": "At 5 his R executes you at low HP. Stay healthy, don't fight near his ult range when you're low, and keep kiting.",
+      "wave": "Slow-push and take plates. Every last-hit should cost him HP, even with Carnivore healing him.",
+      "jungle": "He has no dash. Call your jungler when his Q is on cooldown so he can't knock them up.",
+      "build": "Lethal Tempo. On-hit attack speed and crit; Blade of the Ruined King against his HP stacking.",
+      "remember": "Tumble the Q, shred the HP."
+    },
+    {
+      "champion": "fiora",
+      "rating": "good",
+      "confidence": "medium",
+      "why": "Fiora's vitals deal true %max HP damage, so Cho'Gath's Feast stacks make her stronger. Riposte parries his Q knock-up or W silence and stuns him back, and he has no dash to escape her Lunge.",
+      "trading": [
+        "Lunge (Q) onto a vital when he walks up, then step back before his E spikes add up.",
+        "Hold W (Riposte) for his Q knock-up or W silence; parrying either stuns him and wins the trade.",
+        "If he holds Q, walk out of the marker rather than wasting Riposte on autos.",
+        "Trade while his Q is on cooldown; without it he can't stop your follow-up Lunge."
+      ],
+      "early": "Short Q-into-vital trades win levels 1–3. Don't take long fights where his E spikes and passive healing add up.",
+      "spike": "At 5 your R hits four vitals and its heal zone wins the fight. Stay out of his Feast execute range while you finish the vitals.",
+      "wave": "Slow-push and take plates, then split-push once you're ahead. He can't duel you in a side lane later.",
+      "jungle": "He's easy to gank with no dash. Ping when his Q is down so the knock-up can't stop your jungler.",
+      "build": "Conqueror. Bruiser items; Blade of the Ruined King for his HP.",
+      "remember": "Parry the scream, hit the vitals."
+    },
+    {
+      "champion": "gwen",
+      "rating": "good",
+      "confidence": "medium",
+      "why": "Gwen's Q and passive deal %max HP magic damage, so the bigger Cho'Gath grows the harder she hits him. Her W (Hallowed Mist) blocks his Q and spikes from outside, and her E dash steps out of Rupture.",
+      "trading": [
+        "Stack Q with autos on him, then land the centre of the final snip for true damage.",
+        "Step into W (Hallowed Mist) when he casts Q or E so his abilities from outside can't reach you.",
+        "E (Skip 'n Slash) sideways out of the Q marker rather than straight back.",
+        "Trade after his W silence is used so he can't stop your combo halfway."
+      ],
+      "early": "Take short Q trades once you have stacks. Levels 1–2 are even, so don't stand in long fights against his E spikes.",
+      "spike": "At 5 your R adds poke and slows. Fight while you're healthy so his Feast can't execute you.",
+      "wave": "Slow-push and trade when he walks up to farm. You scale better into his HP than he does into you.",
+      "jungle": "He has no dash. Gank when his Q is on cooldown so he can't knock up your jungler.",
+      "build": "Conqueror. AP bruiser items with %HP damage; magic pen helps.",
+      "remember": "Mist the spikes, snip the HP."
+    },
+    {
+      "champion": "darius",
+      "rating": "good",
+      "confidence": "low",
+      "why": "Darius wins long melee fights, and Cho'Gath has no dash to walk away from Hemorrhage stacks. If Darius dodges the Q and pulls him back in, Cho'Gath's healing can't keep up early.",
+      "trading": [
+        "Walk out of the Q marker first, then E (Apprehend) pull him while Q is on cooldown.",
+        "Hit him with the outer edge of Q (Decimate) for bonus damage and healing.",
+        "Stack Hemorrhage with autos and W, but back off if he lands W silence and Q together.",
+        "Fight next to his minions when his E is down so his spikes can't slow you."
+      ],
+      "early": "Levels 1–3 favor you if you dodge Q. Trade every time he walks up to farm.",
+      "spike": "At 5 your R and his R are both executes. Stack Hemorrhage first and finish him before he can Feast you.",
+      "wave": "Slow-push and trade often, then freeze once you're ahead so he has to walk up to you to farm.",
+      "jungle": "He has no dash. Gank once his Q is down and pull him into your jungler.",
+      "build": "Conqueror. Black Cleaver and bruiser items; boots that suit their team.",
+      "remember": "Dodge the Q, then pull."
+    },
+    {
+      "champion": "mordekaiser",
+      "rating": "good",
+      "confidence": "low",
+      "why": "Mordekaiser's R steals Cho'Gath's stats, so his big HP pool works for you inside the realm. He's slow and can't dodge your Q well, and your shield soaks his E spikes.",
+      "trading": [
+        "Q (Obliterate) him when he walks up alone to farm; isolated Q hits much harder.",
+        "Walk out of the Q marker, then E (Death's Grasp) pull him into your Q.",
+        "Shield with W (Indestructible) when his spikes hit you, then recast to heal.",
+        "Don't start a trade right after he silences you; wait for W to end and go again."
+      ],
+      "early": "Trade with Q when he farms. He can't out-trade your magic damage early.",
+      "spike": "At 5 your R steals his stats and takes him away from his tower. Ult after he's used Q.",
+      "wave": "Slow-push and take plates while he can't contest.",
+      "jungle": "He has no dash. Gank once his Q is on cooldown so he can't knock up your jungler.",
+      "build": "Conqueror. Magic-pen bruiser items; Liandry's Torment for his HP.",
+      "remember": "Realm him, steal his HP."
+    },
+    {
+      "champion": "teemo",
+      "rating": "good",
+      "confidence": "low",
+      "why": "Teemo out-ranges Cho'Gath and Blinding Dart cancels his empowered E autos. He has no dash, so Teemo can kite him and poke every time he walks up to farm.",
+      "trading": [
+        "Q (Blinding Dart) him as soon as he uses E so his spikes miss.",
+        "Auto with poison and back off; he can't follow without a dash.",
+        "Keep moving sideways so his Q marker never catches you standing still.",
+        "Drop mushrooms in the brush and on his way back to lane so he loses HP to them."
+      ],
+      "early": "Poke him with autos every time he farms, and keep W (Move Quick) ready to walk out of Q.",
+      "spike": "At 5 his R can execute you. Stay out of melee range when you're low, and let mushrooms do the work.",
+      "wave": "Slow-push and poke. He has to walk through your mushrooms to trade.",
+      "jungle": "Mushroom the river and his side brush; he's easy to gank without a dash.",
+      "build": "Magic-pen AP items; Liandry's Torment for his HP.",
+      "remember": "Blind the spikes, kite the tank."
+    },
+    {
+      "champion": "garen",
+      "rating": "neutral",
+      "confidence": "low",
+      "why": "Garen's Q silence and spin can win short trades, but Cho'Gath's Q knock-up and W silence stop his combo. Both have healing, so the lane comes down to who lands their crowd control first.",
+      "trading": [
+        "Walk out of his Q marker first; you can't spin through a knock-up.",
+        "Q (Decisive Strike) him when his Q is on cooldown so he can't knock you up while you walk in.",
+        "Spin with E (Judgment), then walk away before his E spikes and W silence add up.",
+        "Back off after trades to let Perseverance regen his damage."
+      ],
+      "early": "Even. Trade only after he's used Q, and don't stand in his E spikes behind your minions.",
+      "spike": "At 5 both R's execute. Use yours when he's low, before he can Feast you.",
+      "wave": "Slow-push and trade on his Q cooldown, away from his E spikes.",
+      "jungle": "He has no dash. Gank once his Q is down.",
+      "build": "Conqueror. Bruiser items; magic resist boots against his magic damage.",
+      "remember": "Dodge the Q, then silence him."
+    },
+    {
+      "champion": "nasus",
+      "rating": "bad",
+      "confidence": "low",
+      "why": "Cho'Gath's Q and E spikes poke Nasus every time he walks up to stack Q, and Carnivore heals off the same wave. Nasus out-scales later, but he has to survive a lane where Cho'Gath keeps him off minions.",
+      "trading": [
+        "W (Wither) him when he walks up so he can't follow you after a trade.",
+        "Stack Q on minions only when his Q is on cooldown so he can't knock you up while you farm.",
+        "Walk out of the Q marker; never stand still while he's in range.",
+        "E (Spirit Fire) the wave from range to keep stacking without walking into his spikes."
+      ],
+      "early": "Give up contested creeps and farm under tower. Your goal is stacks and items, not trades.",
+      "spike": "At 5 your R gives HP and resists so you can survive his engage, but don't start fights with it.",
+      "wave": "Farm under tower and stack Q on cannon minions. He can't dive you early.",
+      "jungle": "Ask for a gank when his Q is down; he has no dash to escape.",
+      "build": "Grasp. Magic resist boots; tank items once you have stacks.",
+      "remember": "Survive and stack."
+    },
+    {
+      "champion": "yasuo",
+      "rating": "bad",
+      "confidence": "low",
+      "why": "Wind Wall can't block Cho'Gath's Q or W, and his W silence stops Yasuo's dashes and tornado mid-combo. Cho'Gath's Q knock-up also lands easily when Yasuo dashes into a predictable spot.",
+      "trading": [
+        "Only E (Sweeping Blade) in after his Q is on cooldown; his knock-up catches you at the end of a dash.",
+        "Stack Q (Steel Tempest) on minions so you have a tornado ready without dashing.",
+        "Throw the tornado first and trade before he can silence you with W.",
+        "Back off when he uses E; his spikes slow you and your passive shield won't hold."
+      ],
+      "early": "Farm with Q and avoid trades while his Q and W are up. Your passive shield helps against his spikes.",
+      "spike": "At 5 your R needs a knock-up; land a tornado after he's used W, then ult.",
+      "wave": "Let him push and farm under tower; don't dash into his Q marker.",
+      "jungle": "Ask for ganks when his Q is down; he has no dash.",
+      "build": "Conqueror or Lethal Tempo. Crit items; magic resist boots.",
+      "remember": "Wait out Q and W, then dash."
+    },
+    {
+      "champion": "riven",
+      "rating": "bad",
+      "confidence": "low",
+      "why": "Riven's combo needs every ability in a row, and Cho'Gath's W silence cuts it in half. His Q knock-up catches the end of her dashes, and Carnivore heals back her short trades.",
+      "trading": [
+        "Bait his Q with your first Broken Wings dash, then step back.",
+        "Only commit to a full combo after he's used W, so he can't silence you mid-trade.",
+        "Shield his E spikes with E (Valor) and leave before the third one hits.",
+        "Trade in short bursts and back off; long fights let his passive heal him."
+      ],
+      "early": "Farm safely and trade only when his Q and W are both down. Level 2–3 trades are his to win.",
+      "spike": "At 5 your R adds range and an execute. Stay healthy so his Feast can't execute you first.",
+      "wave": "Let him push and farm under tower until you have items.",
+      "jungle": "Ask for ganks when his Q is down; he has no dash.",
+      "build": "Conqueror. Bruiser items; magic resist boots.",
+      "remember": "Bait the Q, dodge the silence."
+    }
+  ]
+}
