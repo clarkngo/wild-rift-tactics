@@ -3,6 +3,7 @@ import type { Rating } from '../baron-matchups/types';
 import { hasMatchups, matchupUrl } from '../baron-matchups';
 import { esc, portrait } from '../../shared/dom';
 import data from './classes.json';
+import lanesData from './lanes.json';
 
 const ROUTE = 'class-matchups';
 
@@ -21,6 +22,40 @@ interface ClassMatchup {
   why: string;
   tip: string;
 }
+
+interface LaneType {
+  id: string;
+  name: string;
+  /** Label for the matrix, where full names don't fit on a phone. */
+  short: string;
+  identity: string;
+  winCondition: string;
+  examples: ClassInfo['examples'];
+}
+interface LaneMatchup {
+  a: string;
+  b: string;
+  /** From `a`'s point of view. */
+  rating: Rating;
+  confidence: 'high' | 'medium' | 'low';
+  why: string;
+  tip: string;
+}
+interface Lane {
+  id: string;
+  name: string;
+  intro: string;
+  types: LaneType[];
+  matchups: LaneMatchup[];
+  exceptions: { name: string; img: string; id?: string; text: string }[];
+}
+
+const LANES = lanesData.lanes as Lane[];
+/** Which lane breakdown to suggest from each class page. */
+const LANE_FOR_CLASS: Record<string, string> = {
+  tank: 'baron', bruiser: 'baron', assassin: 'mid', mage: 'mid', marksman: 'dragon', enchanter: 'support',
+};
+const FLIP: Record<Rating, Rating> = { good: 'bad', neutral: 'neutral', bad: 'good' };
 
 const CLASSES = data.classes as ClassInfo[];
 const MATCHUPS = data.matchups as ClassMatchup[];
@@ -103,6 +138,93 @@ function matrix() {
     <thead><tr><td></td>${head}</tr></thead><tbody>${rows}</tbody></table></div>`;
 }
 
+function lanePicker(current?: string) {
+  return `<nav class="filters" aria-label="Lane">${LANES.map(
+    (l) => `<a class="filter" href="#/${ROUTE}/lane/${l.id}"${l.id === current ? ' aria-current="page"' : ''}>${esc(l.name)}</a>`,
+  ).join('')}</nav>`;
+}
+
+/** Every matchup involving `typeId`, seen from that type's side. */
+function laneMatchupsFor(lane: Lane, typeId: string) {
+  return lane.matchups
+    .filter((m) => m.a === typeId || m.b === typeId)
+    .map((m) => (m.a === typeId ? { ...m, other: m.b, rating: m.rating } : { ...m, other: m.a, rating: FLIP[m.rating] }));
+}
+
+function laneMatrix(lane: Lane) {
+  const head = lane.types.map((t) => `<th scope="col" title="${esc(t.name)}">${esc(t.short)}</th>`).join('');
+  const rows = lane.types
+    .map((p) => {
+      const cells = lane.types
+        .map((e) => {
+          if (p.id === e.id) return `<td class="cell-self" aria-label="Same type">·</td>`;
+          const m = laneMatchupsFor(lane, p.id).find((x) => x.other === e.id)!;
+          return `<td class="cell-${m.rating}" title="${esc(`${p.name} vs ${e.name}: ${m.rating}`)}"><span aria-hidden="true">${RATING_META[m.rating].mark}</span><span class="visually-hidden">${m.rating}</span></td>`;
+        })
+        .join('');
+      return `<tr><th scope="row" title="${esc(p.name)}">${esc(p.short)}</th>${cells}</tr>`;
+    })
+    .join('');
+  return `<div class="matrix-wrap"><table class="matrix lane-matrix">
+    <caption>Row type into column type: <span class="cell-good">✓ strong</span> <span class="cell-neutral">– even</span> <span class="cell-bad">✗ weak</span></caption>
+    <colgroup><col class="row-head" />${lane.types.map(() => '<col />').join('')}</colgroup>
+    <thead><tr><td></td>${head}</tr></thead><tbody>${rows}</tbody></table></div>`;
+}
+
+function renderLane(app: HTMLElement, id: string) {
+  const lane = LANES.find((l) => l.id === id);
+  if (!lane) {
+    app.innerHTML = `<p class="empty">Unknown lane. <a href="#/${ROUTE}">Back to class matchups</a></p>`;
+    return;
+  }
+  const typeName = (tid: string) => lane.types.find((t) => t.id === tid)!.name;
+  const cards = lane.types
+    .map((t) => {
+      const ms = laneMatchupsFor(lane, t.id);
+      const group = (r: Rating) => {
+        const list = ms.filter((m) => m.rating === r);
+        if (!list.length) return '';
+        return `<h4>${RATING_META[r].label}</h4><ul class="lane-vs">${list
+          .map(
+            (m) => `<li><strong>${esc(typeName(m.other))}</strong>${m.confidence === 'low' ? ' <span class="tag tag-low">low</span>' : ''}: ${esc(m.why)}${
+              r !== 'good' ? `<span class="lane-tip">${esc(m.tip)}</span>` : ''
+            }</li>`,
+          )
+          .join('')}</ul>`;
+      };
+      return `
+        <details class="matchup lane-type" id="${lane.id}-${t.id}">
+          <summary><span class="lane-type-name"><span class="matchup-name">${esc(t.name)}</span><small>${esc(t.examples.map((e) => e.name).join(', '))}</small></span></summary>
+          <div class="matchup-body">
+            <p class="why">${esc(t.identity)}</p>
+            <p class="remember"><strong>Win condition:</strong> ${esc(t.winCondition)}</p>
+            <div class="chips lane-chips">${t.examples.map(exampleChip).join('')}</div>
+            ${group('good')}${group('neutral')}${group('bad')}
+          </div>
+        </details>`;
+    })
+    .join('');
+
+  app.innerHTML = `
+    <a class="back" href="#/${ROUTE}">← Class matchups</a>
+    ${lanePicker(lane.id)}
+    <section class="hero">
+      <p class="eyebrow">Types within a lane</p>
+      <h1>${esc(lane.name)}</h1>
+      <p>${esc(lane.intro)}</p>
+    </section>
+    ${laneMatrix(lane)}
+    <h2 class="section-title">Each type</h2>
+    ${cards}
+    <section class="threats">
+      <h2>Exceptions to the rules</h2>
+      <ul class="lane-exceptions">${lane.exceptions
+        .map((x) => `<li>${exampleChip(x)}<span>${esc(x.text)}</span></li>`)
+        .join('')}</ul>
+    </section>
+    <p class="loop-note">Types are a starting point; the exact champions and their items decide the lane.${lanesData.reviewed ? '' : ' Draft: not yet reviewed by a high-elo player.'}</p>`;
+}
+
 function renderIndex(app: HTMLElement) {
   app.innerHTML = `
     <a class="back" href="#/">← Home</a>
@@ -113,6 +235,9 @@ function renderIndex(app: HTMLElement) {
     ${classPicker()}
     <div class="loops">${LOOPS.map(loopSvg).join('')}</div>
     <p class="loop-note">Also: bruisers grind down tanks, and enchanters stop assassins by shielding and peeling their target.</p>
+    <h2 class="section-title">Types within each lane</h2>
+    <p class="loop-note">Not every marksman, tank or mage plays the same. Pick a lane to see its types, who beats whom, and the exceptions.</p>
+    ${lanePicker()}
     <h2 class="section-title">Every class against every class</h2>
     ${matrix()}
     <p class="loop-note">Class is a starting point. Specific kits override it, so check <a href="#/baron-matchups">Baron matchups</a> for champion-level detail.</p>`;
@@ -170,6 +295,7 @@ function renderClass(app: HTMLElement, id: string) {
         <div><h3>Weaknesses</h3><ul>${enemy.weaknesses.map((s) => `<li>${esc(s)}</li>`).join('')}</ul></div>
       </div>
       <div class="chips">${enemy.examples.map(exampleChip).join('')}</div>
+      ${LANE_FOR_CLASS[enemy.id] ? `<p class="class-link"><a href="#/${ROUTE}/lane/${LANE_FOR_CLASS[enemy.id]}">${esc(LANES.find((l) => l.id === LANE_FOR_CLASS[enemy.id])!.name)}: types, who beats whom, and exceptions →</a></p>` : ''}
     </section>
     ${groups}`;
 }
@@ -179,8 +305,9 @@ export const classMatchups: Section = {
   title: 'Class Matchups',
   navLabel: 'Classes',
   description: 'Rock-paper-scissors by class: which of tank, bruiser, assassin, mage, marksman and enchanter beats which, and how to play it.',
-  render(app, [classId]) {
-    if (classId) renderClass(app, classId);
+  render(app, [classId, laneId]) {
+    if (classId === 'lane') renderLane(app, laneId ?? '');
+    else if (classId) renderClass(app, classId);
     else renderIndex(app);
   },
 };

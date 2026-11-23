@@ -1,5 +1,5 @@
 // Validates src/features/baron-matchups/data/*.json: schema, champion ids, minimum detail,
-// and mirror-rating consistency; plus the class matchup matrix.
+// and mirror-rating consistency; plus the class matchup matrix and per-lane type pairs.
 import { readFileSync, readdirSync } from 'node:fs';
 
 const dir = new URL('../src/features/baron-matchups/data/', import.meta.url);
@@ -63,8 +63,34 @@ for (const a of classIds)
     else if (classRatings.get(`${b}>${a}`) !== MIRROR[r]) errors.push(`classes.json: ${a}>${b} is "${r}" but ${b}>${a} isn't "${MIRROR[r]}"`);
   }
 
+// Lane types (lanes.json): each pair of types in a lane appears exactly
+// once (ratings are stored from one side and mirrored in the UI), ids are known, text not thin.
+const lanes = JSON.parse(readFileSync(new URL('../src/features/class-matchups/lanes.json', import.meta.url), 'utf8'));
+let lanePairs = 0;
+for (const lane of lanes.lanes) {
+  const where = (s) => errors.push(`lanes.json ${lane.id}: ${s}`);
+  const ids = lane.types.map((t) => t.id);
+  const seen = new Set();
+  for (const m of lane.matchups) {
+    const key = [m.a, m.b].sort().join('|');
+    if (!ids.includes(m.a) || !ids.includes(m.b) || m.a === m.b) where(`bad pair ${m.a}/${m.b}`);
+    if (seen.has(key)) where(`duplicate pair ${m.a}/${m.b}`);
+    if (!RATINGS.includes(m.rating)) where(`${m.a}/${m.b} bad rating "${m.rating}"`);
+    if (!['high', 'medium', 'low'].includes(m.confidence)) where(`${m.a}/${m.b} bad confidence`);
+    if (!(m.why?.length >= 60) || !(m.tip?.length >= 40)) where(`${m.a}/${m.b} why/tip too thin`);
+    seen.add(key);
+    lanePairs++;
+  }
+  for (let i = 0; i < ids.length; i++)
+    for (let j = i + 1; j < ids.length; j++)
+      if (!seen.has([ids[i], ids[j]].sort().join('|'))) where(`missing pair ${ids[i]}/${ids[j]}`);
+  const champs = [...lane.types.flatMap((t) => t.examples), ...lane.exceptions];
+  for (const c of champs) if (c.id && !roster.has(c.id)) where(`unknown champion id "${c.id}"`);
+  for (const t of lane.types) if (!(t.identity?.length >= 40) || !(t.winCondition?.length >= 40)) where(`${t.id} identity/winCondition too thin`);
+}
+
 if (errors.length) {
   console.error(`Matchup data errors:\n  ${errors.join('\n  ')}`);
   process.exit(1);
 }
-console.log(`Matchup data OK (${ratings.size} matchups, ${classRatings.size} class pairs).`);
+console.log(`Matchup data OK (${ratings.size} matchups, ${classRatings.size} class pairs, ${lanePairs} lane-type pairs).`);

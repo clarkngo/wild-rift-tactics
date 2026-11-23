@@ -1,0 +1,966 @@
+{
+  "reviewed": false,
+  "lanes": [
+    {
+      "id": "baron",
+      "name": "Baron lane",
+      "intro": "Four kinds of Baron laner. These calls match the site's Baron matchup data: ranged tops won every listed matchup against juggernauts, and juggernauts beat tanks in most.",
+      "types": [
+        {
+          "id": "ranged",
+          "name": "Ranged tops",
+          "short": "Ranged",
+          "identity": "Kite melee champions and poke them off the wave. Weak once a melee champion gets on top of them.",
+          "winCondition": "Poke every time the enemy walks up to farm, and keep the wave near your side so they have to walk through your damage.",
+          "examples": [
+            {
+              "name": "Teemo",
+              "img": "Teemo",
+              "id": "teemo"
+            },
+            {
+              "name": "Kennen",
+              "img": "Kennen",
+              "id": "kennen"
+            },
+            {
+              "name": "Jayce",
+              "img": "Jayce",
+              "id": "jayce"
+            },
+            {
+              "name": "Vayne",
+              "img": "Vayne",
+              "id": "vayne"
+            }
+          ]
+        },
+        {
+          "id": "skirmisher",
+          "name": "Skirmishers",
+          "short": "Skirm.",
+          "identity": "Mobile duelists with dashes, sustain or true damage. Strongest in 1v1s and side lanes.",
+          "winCondition": "Win short trades on cooldowns, then split-push and duel anyone who comes to stop you.",
+          "examples": [
+            {
+              "name": "Fiora",
+              "img": "Fiora",
+              "id": "fiora"
+            },
+            {
+              "name": "Irelia",
+              "img": "Irelia",
+              "id": "irelia"
+            },
+            {
+              "name": "Jax",
+              "img": "Jax",
+              "id": "jax"
+            },
+            {
+              "name": "Yasuo",
+              "img": "Yasuo",
+              "id": "yasuo"
+            },
+            {
+              "name": "Gwen",
+              "img": "Gwen",
+              "id": "gwen"
+            }
+          ]
+        },
+        {
+          "id": "juggernaut",
+          "name": "Juggernauts",
+          "short": "Jugg.",
+          "identity": "Slow, tanky damage dealers with no real dash. Win any long fight they can force.",
+          "winCondition": "Make the enemy fight you in melee range for a long time: walk them down, freeze the wave and punish every mistake.",
+          "examples": [
+            {
+              "name": "Darius",
+              "img": "Darius",
+              "id": "darius"
+            },
+            {
+              "name": "Garen",
+              "img": "Garen",
+              "id": "garen"
+            },
+            {
+              "name": "Mordekaiser",
+              "img": "Mordekaiser",
+              "id": "mordekaiser"
+            },
+            {
+              "name": "Sett",
+              "img": "Sett",
+              "id": "sett"
+            }
+          ]
+        },
+        {
+          "id": "tank",
+          "name": "Tanks",
+          "short": "Tank",
+          "identity": "Survive lane, then engage or peel for the team. They rarely win lane on damage.",
+          "winCondition": "Farm safely, don't feed, and arrive first to team fights and objectives with your ultimate ready.",
+          "examples": [
+            {
+              "name": "Malphite",
+              "img": "Malphite",
+              "id": "malphite"
+            },
+            {
+              "name": "Ornn",
+              "img": "Ornn",
+              "id": "ornn"
+            },
+            {
+              "name": "Sion",
+              "img": "Sion",
+              "id": "sion"
+            },
+            {
+              "name": "Cho'Gath",
+              "img": "Chogath",
+              "id": "chogath"
+            }
+          ]
+        }
+      ],
+      "matchups": [
+        {
+          "a": "ranged",
+          "b": "juggernaut",
+          "rating": "good",
+          "confidence": "high",
+          "why": "Juggernauts have no dash, so a ranged top can poke them on every last-hit and walk away before they connect.",
+          "tip": "As the juggernaut: give up minions rather than health, keep your gap-closer for when they walk up, and ask for early ganks."
+        },
+        {
+          "a": "ranged",
+          "b": "tank",
+          "rating": "good",
+          "confidence": "medium",
+          "why": "Tanks can't punish poke, so ranged tops take free plates and push them under tower all game.",
+          "tip": "As the tank: farm under tower, buy resistances early, and roam with your ultimate once it's up."
+        },
+        {
+          "a": "ranged",
+          "b": "skirmisher",
+          "rating": "neutral",
+          "confidence": "medium",
+          "why": "Skirmishers with dashes through minions, like Irelia and Yasuo, close the gap; ones without get kited.",
+          "tip": "As the ranged top: keep the wave small so there are fewer minions to dash through, and save your escape for their engage."
+        },
+        {
+          "a": "juggernaut",
+          "b": "tank",
+          "rating": "good",
+          "confidence": "high",
+          "why": "Tanks can't escape a juggernaut's long fights, and juggernaut damage keeps scaling into their HP.",
+          "tip": "As the tank: trade only when their key ability is down, and farm under tower until your resistances come online."
+        },
+        {
+          "a": "skirmisher",
+          "b": "juggernaut",
+          "rating": "good",
+          "confidence": "medium",
+          "why": "Skirmishers dodge the one ability juggernauts need to land, like Darius's pull or Garen's silence, and win short trades.",
+          "tip": "As the juggernaut: hold your crowd control until their dash is down, and freeze the wave so they have to walk up to you."
+        },
+        {
+          "a": "skirmisher",
+          "b": "tank",
+          "rating": "neutral",
+          "confidence": "medium",
+          "why": "True and %HP damage skirmishers like Fiora, Gwen and Vayne shred tanks, but crowd-control tanks like Poppy and Malphite stop dash skirmishers cold.",
+          "tip": "Check the exact champions: skirmishers with true damage win, dash-reliant ones lose to tanks with dash-stopping CC."
+        }
+      ],
+      "exceptions": [
+        {
+          "name": "Poppy",
+          "img": "Poppy",
+          "id": "poppy",
+          "text": "A tank who beats dash skirmishers: her W stops dashes near her, which shuts down Irelia and Yasuo."
+        },
+        {
+          "name": "Fiora",
+          "img": "Fiora",
+          "id": "fiora",
+          "text": "A skirmisher who beats tanks: her vitals deal true damage based on max HP, so tank HP makes her stronger."
+        },
+        {
+          "name": "Mordekaiser",
+          "img": "Mordekaiser",
+          "id": "mordekaiser",
+          "text": "A juggernaut who wins even more against tanks: his R steals their stats inside his realm."
+        },
+        {
+          "name": "Malphite",
+          "img": "Malphite",
+          "id": "malphite",
+          "text": "A tank who beats auto-attack skirmishers like Jax: his armor and E attack-speed slow cut their damage."
+        },
+        {
+          "name": "Irelia",
+          "img": "Irelia",
+          "id": "irelia",
+          "text": "A skirmisher who beats ranged tops: she dashes through minions to reach them, which breaks the ranged-beats-melee rule."
+        }
+      ]
+    },
+    {
+      "id": "dragon",
+      "name": "Dragon lane (marksmen)",
+      "intro": "Not every marksman plays the same. Your marksman type decides how hard you trade in lane and when your team should fight.",
+      "types": [
+        {
+          "id": "bully",
+          "name": "Lane bullies",
+          "short": "Bully",
+          "identity": "Strong in levels 1–5 with high damage or long range. They need to build a lead before scaling marksmen catch up.",
+          "winCondition": "Trade hard early, take plates and the first drakes, then end before the other marksman finishes items.",
+          "examples": [
+            {
+              "name": "Draven",
+              "img": "Draven"
+            },
+            {
+              "name": "Lucian",
+              "img": "Lucian"
+            },
+            {
+              "name": "Caitlyn",
+              "img": "Caitlyn"
+            },
+            {
+              "name": "Tristana",
+              "img": "Tristana"
+            }
+          ]
+        },
+        {
+          "id": "hypercarry",
+          "name": "Hypercarries",
+          "short": "Hyper",
+          "identity": "Weak early, the strongest damage in the game late. Need farm and time.",
+          "winCondition": "Survive lane, never miss farm, and fight once your core items or stacks are done.",
+          "examples": [
+            {
+              "name": "Vayne",
+              "img": "Vayne"
+            },
+            {
+              "name": "Kog'Maw",
+              "img": "KogMaw"
+            },
+            {
+              "name": "Jinx",
+              "img": "Jinx"
+            },
+            {
+              "name": "Smolder",
+              "img": "Smolder"
+            }
+          ]
+        },
+        {
+          "id": "utility",
+          "name": "Utility and poke",
+          "short": "Utility",
+          "identity": "Long-range poke, slows or roots that help the team more than raw damage does.",
+          "winCondition": "Poke before fights start, and use your crowd control to set up or stop engages.",
+          "examples": [
+            {
+              "name": "Ashe",
+              "img": "Ashe"
+            },
+            {
+              "name": "Jhin",
+              "img": "Jhin"
+            },
+            {
+              "name": "Ezreal",
+              "img": "Ezreal"
+            },
+            {
+              "name": "Varus",
+              "img": "Varus"
+            }
+          ]
+        },
+        {
+          "id": "skirmisher",
+          "name": "All-in skirmishers",
+          "short": "All-in",
+          "identity": "Short-range marksmen who dash into fights and win close-range brawls with an engage support.",
+          "winCondition": "Pair with an engage support, look for level 2 and 3 all-ins, and snowball off kills.",
+          "examples": [
+            {
+              "name": "Samira",
+              "img": "Samira"
+            },
+            {
+              "name": "Nilah",
+              "img": "Nilah"
+            },
+            {
+              "name": "Kai'Sa",
+              "img": "Kaisa"
+            }
+          ]
+        }
+      ],
+      "matchups": [
+        {
+          "a": "bully",
+          "b": "hypercarry",
+          "rating": "good",
+          "confidence": "high",
+          "why": "Lane bullies punish every last-hit while hypercarries are weak, and can end the lane before the hypercarry scales.",
+          "tip": "As the hypercarry: farm under tower, give up plates rather than deaths, and ask your jungler to play your side."
+        },
+        {
+          "a": "bully",
+          "b": "skirmisher",
+          "rating": "good",
+          "confidence": "medium",
+          "why": "Range and early damage punish a short-range marksman before they can get close enough to all-in.",
+          "tip": "As the skirmisher: wait for your support's engage instead of walking up, and fight only when the bully has used their escape."
+        },
+        {
+          "a": "bully",
+          "b": "utility",
+          "rating": "neutral",
+          "confidence": "low",
+          "why": "Both are strong early; it comes down to who wins the poke war and whose support controls the lane.",
+          "tip": "Play around your support: the lane with the better engage or the better sustain usually wins it."
+        },
+        {
+          "a": "hypercarry",
+          "b": "utility",
+          "rating": "good",
+          "confidence": "medium",
+          "why": "Even lanes, but utility marksmen fall off late, and a farmed hypercarry out-damages them in every fight.",
+          "tip": "As the utility marksman: use your lane lead to take objectives early, before the hypercarry comes online."
+        },
+        {
+          "a": "skirmisher",
+          "b": "hypercarry",
+          "rating": "good",
+          "confidence": "medium",
+          "why": "Immobile hypercarries can't escape an early all-in, so skirmishers snowball before items matter.",
+          "tip": "As the hypercarry: stand behind minions, save your escape for their dash, and play for later fights."
+        },
+        {
+          "a": "utility",
+          "b": "skirmisher",
+          "rating": "good",
+          "confidence": "medium",
+          "why": "Slows, roots and long-range poke keep skirmishers from getting close enough to all-in.",
+          "tip": "As the skirmisher: wait until their crowd control is on cooldown before you dash in."
+        }
+      ],
+      "exceptions": [
+        {
+          "name": "Ezreal",
+          "img": "Ezreal",
+          "text": "A poke marksman with a blink: Arcane Shift lets him escape all-ins that catch other utility marksmen."
+        },
+        {
+          "name": "Tristana",
+          "img": "Tristana",
+          "text": "Both a lane bully and a late carry: she all-ins early with her jump, and her range keeps growing as she levels."
+        },
+        {
+          "name": "Kai'Sa",
+          "img": "Kaisa",
+          "text": "Scales like a hypercarry but dives like a skirmisher once her ultimate is up."
+        },
+        {
+          "name": "Smolder",
+          "img": "Smolder",
+          "text": "Scales from stacks rather than only items, and his slow and ultimate heal help him survive all-ins better than most hypercarries. See the Smolder guide."
+        },
+        {
+          "name": "Ziggs",
+          "img": "Ziggs",
+          "text": "A mage in Dragon lane: out-ranges and out-clears marksmen early, so play him like a poke lane."
+        }
+      ]
+    },
+    {
+      "id": "mid",
+      "name": "Mid lane",
+      "intro": "Mid laners fall into five groups. Mid has no matchup data in the site yet, so these calls are broad and need review.",
+      "types": [
+        {
+          "id": "control",
+          "name": "Control mages",
+          "short": "Control",
+          "identity": "Mid-range area damage and crowd control. They clear waves fast and decide team fights, but struggle once someone gets on top of them.",
+          "winCondition": "Clear waves fast, hold mid priority for your jungler, and save your big area spell for team fights.",
+          "examples": [
+            {
+              "name": "Orianna",
+              "img": "Orianna"
+            },
+            {
+              "name": "Syndra",
+              "img": "Syndra"
+            },
+            {
+              "name": "Viktor",
+              "img": "Viktor"
+            }
+          ]
+        },
+        {
+          "id": "artillery",
+          "name": "Artillery mages",
+          "short": "Artil.",
+          "identity": "The longest range in the game. Poke from screens away with slow skill shots, but have almost no escape.",
+          "winCondition": "Poke the enemy off the wave and before every objective fight, so your team starts fights with the enemy already low.",
+          "examples": [
+            {
+              "name": "Vel'Koz",
+              "img": "Velkoz"
+            },
+            {
+              "name": "Ziggs",
+              "img": "Ziggs"
+            },
+            {
+              "name": "Lux",
+              "img": "Lux"
+            }
+          ]
+        },
+        {
+          "id": "burst",
+          "name": "Burst mages",
+          "short": "Burst",
+          "identity": "Short-range combos that delete one target, often with point-and-click crowd control.",
+          "winCondition": "Land your combo on whoever walks into range, then roam with your lead.",
+          "examples": [
+            {
+              "name": "Annie",
+              "img": "Annie"
+            },
+            {
+              "name": "Veigar",
+              "img": "Veigar"
+            },
+            {
+              "name": "Ahri",
+              "img": "Ahri"
+            }
+          ]
+        },
+        {
+          "id": "assassin",
+          "name": "Assassins",
+          "short": "Assass.",
+          "identity": "Mobile burst that kills squishy targets and escapes. Weak into tanky or crowd-control-heavy lanes.",
+          "winCondition": "Kill or shove your laner, then roam and pick off squishy targets in side lanes.",
+          "examples": [
+            {
+              "name": "Zed",
+              "img": "Zed"
+            },
+            {
+              "name": "Akali",
+              "img": "Akali"
+            },
+            {
+              "name": "Fizz",
+              "img": "Fizz"
+            },
+            {
+              "name": "Katarina",
+              "img": "Katarina"
+            }
+          ]
+        },
+        {
+          "id": "skirmisher",
+          "name": "Melee skirmishers",
+          "short": "Skirm.",
+          "identity": "Melee carries who dash through the wave, sustain and scale. Need the wave to fight.",
+          "winCondition": "Win trades around minions, scale with items, and split-push or flank in fights.",
+          "examples": [
+            {
+              "name": "Yasuo",
+              "img": "Yasuo",
+              "id": "yasuo"
+            },
+            {
+              "name": "Yone",
+              "img": "Yone",
+              "id": "yone"
+            },
+            {
+              "name": "Irelia",
+              "img": "Irelia",
+              "id": "irelia"
+            }
+          ]
+        }
+      ],
+      "matchups": [
+        {
+          "a": "assassin",
+          "b": "control",
+          "rating": "good",
+          "confidence": "medium",
+          "why": "Control mages are immobile, so once an assassin dodges the key skill shot the mage has no escape.",
+          "tip": "As the control mage: farm from max range, keep an escape spell or Flash ready, and ask for jungle help early."
+        },
+        {
+          "a": "skirmisher",
+          "b": "control",
+          "rating": "good",
+          "confidence": "medium",
+          "why": "Dashes through the wave dodge skill shots, and Yasuo's Wind Wall blocks most control-mage spells.",
+          "tip": "As the control mage: shove the wave so there are fewer minions to dash through, and cast after Wind Wall is down."
+        },
+        {
+          "a": "burst",
+          "b": "skirmisher",
+          "rating": "good",
+          "confidence": "low",
+          "why": "Point-and-click stuns and burst punish melee champions who have to walk up to farm.",
+          "tip": "As the skirmisher: trade only when the stun or cage is on cooldown, and use the wave to dash in from an angle."
+        },
+        {
+          "a": "burst",
+          "b": "assassin",
+          "rating": "neutral",
+          "confidence": "low",
+          "why": "Both one-shot each other; whoever lands their combo first wins the trade.",
+          "tip": "Track the other combo's cooldowns and only step up when theirs is down."
+        },
+        {
+          "a": "burst",
+          "b": "control",
+          "rating": "neutral",
+          "confidence": "low",
+          "why": "Control mages out-range burst mages, but burst mages kill them in one combo if they get close.",
+          "tip": "As the control mage: keep your distance. As the burst mage: wait in the brush or behind the wave for them to walk up."
+        },
+        {
+          "a": "assassin",
+          "b": "skirmisher",
+          "rating": "neutral",
+          "confidence": "low",
+          "why": "Skirmishers' shields and sustain blunt assassin burst, but assassins can still out-roam them.",
+          "tip": "As the assassin: don't stay to trade, push and roam. As the skirmisher: punish every roam by taking plates."
+        },
+        {
+          "a": "artillery",
+          "b": "control",
+          "rating": "good",
+          "confidence": "medium",
+          "why": "Artillery mages out-range control mages, so they can poke them off the wave without stepping into their area spells.",
+          "tip": "As the control mage: clear the wave fast so you can step back, and dodge sideways rather than straight back."
+        },
+        {
+          "a": "artillery",
+          "b": "burst",
+          "rating": "good",
+          "confidence": "low",
+          "why": "Burst mages need to get close to land their combo, and artillery mages poke them down before they can walk into range.",
+          "tip": "As the burst mage: wait in the brush or behind the wave, and walk up only after their main poke spell is used."
+        },
+        {
+          "a": "assassin",
+          "b": "artillery",
+          "rating": "good",
+          "confidence": "medium",
+          "why": "Artillery mages have slow skill shots and almost no escape, so an assassin who dodges one spell gets a free kill.",
+          "tip": "As the artillery mage: stand at max range, keep your crowd-control spell for their engage, and ask your jungler to play mid."
+        },
+        {
+          "a": "skirmisher",
+          "b": "artillery",
+          "rating": "good",
+          "confidence": "medium",
+          "why": "Dashes through the wave dodge slow skill shots, and Yasuo's Wind Wall blocks artillery poke.",
+          "tip": "As the artillery mage: shove the wave so there's nothing to dash through, and throw your poke after Wind Wall is down."
+        }
+      ],
+      "exceptions": [
+        {
+          "name": "Galio",
+          "img": "Galio",
+          "text": "A tank mid who reduces incoming magic damage, so he shuts down burst and control mages instead of losing to them."
+        },
+        {
+          "name": "Lux",
+          "img": "Lux",
+          "text": "An artillery mage with a root and a shield, so she can stop an assassin's engage that would kill Vel'Koz or Ziggs."
+        },
+        {
+          "name": "Fizz",
+          "img": "Fizz",
+          "text": "An assassin who also beats burst mages: his untargetable hop dodges their key spell."
+        },
+        {
+          "name": "Annie",
+          "img": "Annie",
+          "text": "A burst mage who punishes assassins: her stun stops them halfway through their combo."
+        },
+        {
+          "name": "Twisted Fate",
+          "img": "TwistedFate",
+          "text": "Plays for the map, not the lane: his ultimate lets him join fights anywhere, so he can lose lane and still win the game."
+        }
+      ]
+    },
+    {
+      "id": "jungle",
+      "name": "Jungle",
+      "intro": "Jungle matchups are about early fights, invades and team fights, not lanes. These calls need review.",
+      "types": [
+        {
+          "id": "fighter",
+          "name": "Fighters and divers",
+          "short": "Fighter",
+          "identity": "Strong early duelists who gank often and dive into the back line in fights.",
+          "winCondition": "Invade and gank early, win the first scuttler fights, and snowball your lanes.",
+          "examples": [
+            {
+              "name": "Lee Sin",
+              "img": "LeeSin"
+            },
+            {
+              "name": "Vi",
+              "img": "Vi"
+            },
+            {
+              "name": "Xin Zhao",
+              "img": "XinZhao"
+            },
+            {
+              "name": "Jarvan IV",
+              "img": "JarvanIV"
+            }
+          ]
+        },
+        {
+          "id": "tank",
+          "name": "Tanks",
+          "short": "Tank",
+          "identity": "Engage and crowd control for the team. Slow clear, but hard to kill.",
+          "winCondition": "Set up ganks with crowd control, and start team fights for your carries.",
+          "examples": [
+            {
+              "name": "Amumu",
+              "img": "Amumu"
+            },
+            {
+              "name": "Rammus",
+              "img": "Rammus"
+            },
+            {
+              "name": "Gragas",
+              "img": "Gragas",
+              "id": "gragas"
+            }
+          ]
+        },
+        {
+          "id": "assassin",
+          "name": "Assassins",
+          "short": "Assassin",
+          "identity": "Pick off squishy targets and escape. Weak to tanky teams.",
+          "winCondition": "Gank squishy lanes, track the enemy carries, and kill whoever walks out of position.",
+          "examples": [
+            {
+              "name": "Kha'Zix",
+              "img": "Khazix"
+            },
+            {
+              "name": "Evelynn",
+              "img": "Evelynn"
+            },
+            {
+              "name": "Rengar",
+              "img": "Rengar"
+            },
+            {
+              "name": "Ekko",
+              "img": "Ekko"
+            }
+          ]
+        },
+        {
+          "id": "farmer",
+          "name": "Farmers",
+          "short": "Farmer",
+          "identity": "Fast clear and strong late game, but few ganks and weak early fights.",
+          "winCondition": "Clear camps efficiently, take objectives when safe, and carry fights once you have items.",
+          "examples": [
+            {
+              "name": "Master Yi",
+              "img": "MasterYi"
+            },
+            {
+              "name": "Shyvana",
+              "img": "Shyvana"
+            },
+            {
+              "name": "Graves",
+              "img": "Graves"
+            }
+          ]
+        }
+      ],
+      "matchups": [
+        {
+          "a": "fighter",
+          "b": "farmer",
+          "rating": "good",
+          "confidence": "medium",
+          "why": "Fighters invade and win early duels, so farmers lose camps and fall behind before they scale.",
+          "tip": "As the farmer: ward your jungle entrances, track their start, and clear on the opposite side to avoid them."
+        },
+        {
+          "a": "tank",
+          "b": "farmer",
+          "rating": "good",
+          "confidence": "medium",
+          "why": "Tanks stop auto-attack farmers with crowd control, and their resistances cut farmer damage in fights.",
+          "tip": "As the farmer: avoid fighting into their crowd control; take objectives while they gank elsewhere."
+        },
+        {
+          "a": "tank",
+          "b": "assassin",
+          "rating": "good",
+          "confidence": "medium",
+          "why": "Assassins can't one-shot a tank, and tank crowd control locks them down when they dive.",
+          "tip": "As the assassin: ignore the tank, flank for the carries, and wait for the tank's engage to be used."
+        },
+        {
+          "a": "fighter",
+          "b": "tank",
+          "rating": "neutral",
+          "confidence": "low",
+          "why": "Fighters win early duels, tanks win team fights; the game decides which phase matters.",
+          "tip": "As the fighter: use your early lead before tank items arrive. As the tank: avoid early 1v1s."
+        },
+        {
+          "a": "fighter",
+          "b": "assassin",
+          "rating": "neutral",
+          "confidence": "low",
+          "why": "Both want early fights; fighters duel better, assassins escape better.",
+          "tip": "Track the other jungler: invade when they're seen on the opposite side."
+        },
+        {
+          "a": "assassin",
+          "b": "farmer",
+          "rating": "neutral",
+          "confidence": "low",
+          "why": "Assassins can kill squishy farmers, but farmers out-scale them if the game goes long.",
+          "tip": "As the assassin: end before the farmer completes items. As the farmer: stay near your team."
+        }
+      ],
+      "exceptions": [
+        {
+          "name": "Rammus",
+          "img": "Rammus",
+          "text": "The tank that hard-counters auto-attack farmers: his taunt and armor turn Master Yi's damage against him."
+        },
+        {
+          "name": "Lee Sin",
+          "img": "LeeSin",
+          "text": "A fighter who falls off: if he doesn't win early, he's weaker than every other type late."
+        },
+        {
+          "name": "Graves",
+          "img": "Graves",
+          "text": "A farmer who also duels early: his burst makes him dangerous to invade."
+        },
+        {
+          "name": "Kayn",
+          "img": "Kayn",
+          "text": "Turns into a fighter or an assassin mid-game depending on the enemy team, so you can't know his type at draft."
+        }
+      ]
+    },
+    {
+      "id": "support",
+      "name": "Support",
+      "intro": "Support types decide how the bot lane plays. These calls are broad and need review.",
+      "types": [
+        {
+          "id": "engage",
+          "name": "Engage tanks",
+          "short": "Engage",
+          "identity": "Tanky supports who start fights with hard crowd control.",
+          "winCondition": "Look for level 2 all-ins and engage whenever the enemy steps up without an escape.",
+          "examples": [
+            {
+              "name": "Leona",
+              "img": "Leona"
+            },
+            {
+              "name": "Nautilus",
+              "img": "Nautilus"
+            },
+            {
+              "name": "Alistar",
+              "img": "Alistar"
+            }
+          ]
+        },
+        {
+          "id": "enchanter",
+          "name": "Enchanters",
+          "short": "Enchanter",
+          "identity": "Heal, shield and speed up their marksman. Win long lanes and long fights.",
+          "winCondition": "Keep your marksman healthy, out-sustain poke, and peel in fights.",
+          "examples": [
+            {
+              "name": "Soraka",
+              "img": "Soraka"
+            },
+            {
+              "name": "Nami",
+              "img": "Nami"
+            },
+            {
+              "name": "Lulu",
+              "img": "Lulu"
+            },
+            {
+              "name": "Janna",
+              "img": "Janna"
+            }
+          ]
+        },
+        {
+          "id": "catcher",
+          "name": "Catchers",
+          "short": "Catcher",
+          "identity": "Hook or pull one target out of position. One good hook wins the lane.",
+          "winCondition": "Stand in the brush, threaten the hook, and punish anyone who walks out from behind minions.",
+          "examples": [
+            {
+              "name": "Blitzcrank",
+              "img": "Blitzcrank"
+            },
+            {
+              "name": "Thresh",
+              "img": "Thresh"
+            },
+            {
+              "name": "Pyke",
+              "img": "Pyke"
+            }
+          ]
+        },
+        {
+          "id": "mage",
+          "name": "Mage and artillery supports",
+          "short": "Mage",
+          "identity": "Long-range poke and area damage, often from artillery mages. Win by chipping the enemy before fights start.",
+          "winCondition": "Poke the enemy off the wave, zone them from farm, and land area spells in fights.",
+          "examples": [
+            {
+              "name": "Lux",
+              "img": "Lux"
+            },
+            {
+              "name": "Vel'Koz",
+              "img": "Velkoz"
+            },
+            {
+              "name": "Zyra",
+              "img": "Zyra"
+            },
+            {
+              "name": "Karma",
+              "img": "Karma"
+            }
+          ]
+        }
+      ],
+      "matchups": [
+        {
+          "a": "engage",
+          "b": "enchanter",
+          "rating": "good",
+          "confidence": "medium",
+          "why": "Hard crowd control locks down the squishy enchanter or their marksman before heals and shields matter.",
+          "tip": "As the enchanter: stay behind your marksman and save your disengage or shield for their engage."
+        },
+        {
+          "a": "mage",
+          "b": "engage",
+          "rating": "good",
+          "confidence": "medium",
+          "why": "Long-range poke wears the engage support down before they can get close enough to start a fight.",
+          "tip": "As the engage support: hide in brush, wait for their poke spell to be used, then engage."
+        },
+        {
+          "a": "enchanter",
+          "b": "mage",
+          "rating": "good",
+          "confidence": "medium",
+          "why": "Heals and shields undo poke, so mage supports run out of mana before they win the lane.",
+          "tip": "As the mage support: focus the marksman with full combos instead of chip poke, and look for kills with your jungler."
+        },
+        {
+          "a": "catcher",
+          "b": "enchanter",
+          "rating": "good",
+          "confidence": "low",
+          "why": "Most enchanters are immobile and squishy, so one hook on them or their marksman is a kill.",
+          "tip": "As the enchanter: stand behind minions and keep your shield for the hooked target."
+        },
+        {
+          "a": "catcher",
+          "b": "mage",
+          "rating": "good",
+          "confidence": "low",
+          "why": "Mage supports have to step forward to poke, which puts them in hook range.",
+          "tip": "As the mage support: poke from behind your minions and only step up when the hook is on cooldown."
+        },
+        {
+          "a": "engage",
+          "b": "catcher",
+          "rating": "good",
+          "confidence": "low",
+          "why": "Tanky engage supports survive a hook and punish the catcher once the hook is on cooldown.",
+          "tip": "As the catcher: hook their marksman, not the tank, and don't throw it when the tank can follow up."
+        }
+      ],
+      "exceptions": [
+        {
+          "name": "Morgana",
+          "img": "Morgana",
+          "text": "Her Black Shield blocks crowd control, including hooks, so catchers can't pick her marksman."
+        },
+        {
+          "name": "Braum",
+          "img": "Braum",
+          "text": "An engage tank whose shield blocks projectiles, including hooks and poke, so he beats catchers and mages."
+        },
+        {
+          "name": "Janna",
+          "img": "Janna",
+          "text": "An enchanter who beats engage: her knock-ups and ultimate push all-ins back out."
+        },
+        {
+          "name": "Pyke",
+          "img": "Pyke",
+          "text": "A catcher who also executes and roams like an assassin, so he snowballs other lanes too."
+        }
+      ]
+    }
+  ]
+}
