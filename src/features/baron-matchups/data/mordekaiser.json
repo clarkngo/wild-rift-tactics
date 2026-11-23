@@ -99,6 +99,24 @@
       "jungle": "He has no escape once E is down. Gank then and wall-stun him.",
       "build": "Grasp of the Undying. MR boots and MR items.",
       "remember": "Buy MR, knock him away."
+    },
+    {
+      "champion": "chogath",
+      "rating": "bad",
+      "confidence": "low",
+      "why": "Mordekaiser's R steals your stats, so your big HP pool works against you inside his realm. His shield soaks your E spikes. If you're locked in, dodge his pull and save W silence for his ult.",
+      "trading": [
+        "Walk out of his E (Death's Grasp) pull range before he can line up his Q.",
+        "Spike him with E (Vorpal Spikes) from range, then back off.",
+        "Silence him with W (Feral Scream) right after his E so he can't follow with Q.",
+        "Fight near your tower so he can't realm you alone."
+      ],
+      "early": "Farm with E and heal with Carnivore. Don't trade into his shield.",
+      "spike": "At 5 his R takes you into a 1v1. Save Q and W for the realm, and Feast him if he's low.",
+      "wave": "Let him push and farm under tower, where he can't realm you alone.",
+      "jungle": "Ask for ganks before his R is up; he has no dash.",
+      "build": "Grasp. Magic resist items; magic resist boots.",
+      "remember": "Save the silence for his realm."
     }
   ]
 }

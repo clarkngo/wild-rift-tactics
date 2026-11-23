@@ -47,6 +47,24 @@
       "remember": "Armor up, slow her combo."
     },
     {
+      "champion": "chogath",
+      "rating": "good",
+      "confidence": "low",
+      "why": "Riven's combo needs every ability in a row, and your W silence cuts it in half. Your Q catches the end of her dashes, and Carnivore heals back her short trades.",
+      "trading": [
+        "Silence her with W (Feral Scream) when she starts her Broken Wings combo.",
+        "Q (Rupture) where her third Broken Wings lands.",
+        "Spike her with E (Vorpal Spikes) through her shield.",
+        "Walk away after your combo and let Carnivore heal you on the wave."
+      ],
+      "early": "Trade when she dashes in. She has to come to you, so hold Q for it.",
+      "spike": "At 5 your R executes her if she's low. Silence her first so she can't R.",
+      "wave": "Slow-push and trade often; she has to walk into your Q to fight back.",
+      "jungle": "Your Q and W lock her for ganks once her dashes are down.",
+      "build": "Grasp. Armor boots; tank items.",
+      "remember": "Silence the combo."
+    },
+    {
       "champion": "fiora",
       "rating": "neutral",
       "confidence": "medium",

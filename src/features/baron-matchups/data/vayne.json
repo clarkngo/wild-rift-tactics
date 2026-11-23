@@ -153,6 +153,24 @@
       "jungle": "She dies to ganks without Tumble. Call your jungler and stun her with Q.",
       "build": "Grasp of the Undying. Armor boots and Randuin's Omen against her crits.",
       "remember": "Survive lane, win team fights."
+    },
+    {
+      "champion": "chogath",
+      "rating": "bad",
+      "confidence": "medium",
+      "why": "Vayne out-ranges Cho'Gath, and her Silver Bolts true %max HP damage gets stronger the more Feast stacks you take. You have no dash, so you have to land Q to trade at all. If you're locked in, farm safely and play for team fights.",
+      "trading": [
+        "Cast Q (Rupture) where she'll Tumble to, not where she's standing.",
+        "Follow a landed Q with W (Feral Scream) to silence her so she can't Tumble away.",
+        "Use E (Vorpal Spikes) on the wave so the spikes hit her behind her minions.",
+        "Back off after your combo; she out-trades you once your Q is on cooldown."
+      ],
+      "early": "Farm with E from behind your minions and let Carnivore heal her poke off the wave. Don't walk at her without Q ready.",
+      "spike": "At 5 your R executes her if she's low. Wait for a landed Q, then Feast.",
+      "wave": "Let her push and farm under tower; Carnivore keeps you healthy there.",
+      "jungle": "She has to Tumble to escape. Ask for ganks when it's on cooldown and land Q on her.",
+      "build": "Grasp. Tank items; armor boots against her autos.",
+      "remember": "Predict the Tumble, then silence."
     }
   ]
 }

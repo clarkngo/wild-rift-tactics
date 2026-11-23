@@ -101,6 +101,24 @@
       "remember": "W the dash, E into the wall."
     },
     {
+      "champion": "chogath",
+      "rating": "good",
+      "confidence": "low",
+      "why": "Wind Wall can't block your Q or W, and your W silence stops his dashes and tornado mid-combo. Your Q lands easily when he dashes into a predictable spot.",
+      "trading": [
+        "Q (Rupture) the spot he's dashing to, like the end of his E through your minions.",
+        "Silence him with W (Feral Scream) right after his first dash.",
+        "Spike him with E (Vorpal Spikes) to slow him as he dashes in.",
+        "Back off when his tornado is ready and your Q is down."
+      ],
+      "early": "Trade when he walks up to farm. He can't dash in without risking your Q.",
+      "spike": "At 5 your R executes him if he's low. Land Q and W first, then Feast.",
+      "wave": "Slow-push and trade often; he's squishy early.",
+      "jungle": "Your Q and W lock him in place for ganks, even through dashes.",
+      "build": "Grasp. Armor boots; tank items.",
+      "remember": "Silence the dash."
+    },
+    {
       "champion": "darius",
       "rating": "neutral",
       "confidence": "medium",

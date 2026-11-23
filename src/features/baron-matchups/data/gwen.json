@@ -117,6 +117,24 @@
       "jungle": "She has no reliable escape once E is down. Gank with W ready.",
       "build": "Grasp of the Undying. MR boots and an early MR item.",
       "remember": "Buy MR, ground her E."
+    },
+    {
+      "champion": "chogath",
+      "rating": "bad",
+      "confidence": "medium",
+      "why": "Gwen's Q and passive deal %max HP magic damage, so your HP stacking feeds her. Her W mist blocks your Q and spikes from outside. If you're locked in, cast your combo before she steps into her mist.",
+      "trading": [
+        "Q (Rupture) where she'll E to, not where she's standing.",
+        "Silence her with W (Feral Scream) before she can cast her mist.",
+        "Walk out of her mist; you can't hit her inside it from outside.",
+        "Trade with E spikes on the wave, then back off before her final Q snip."
+      ],
+      "early": "Farm with E and heal with Carnivore. Don't stand in her Q snips.",
+      "spike": "At 5 your R executes her if she's low. Use it before she gets R slows on you.",
+      "wave": "Let her push and farm under tower; Carnivore heals her poke.",
+      "jungle": "Ask for ganks when her mist and E are both down.",
+      "build": "Grasp. Magic resist items; magic resist boots.",
+      "remember": "Silence before the mist."
     }
   ]
 }

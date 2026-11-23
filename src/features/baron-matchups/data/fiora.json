@@ -132,6 +132,24 @@
       "jungle": "She escapes with Lunge. Gank with W ready to stop it.",
       "build": "Grasp of the Undying. Armor boots; avoid relying on HP alone.",
       "remember": "Bait Riposte, then E."
+    },
+    {
+      "champion": "chogath",
+      "rating": "bad",
+      "confidence": "medium",
+      "why": "Fiora's vitals deal true %max HP damage, so every Feast stack makes her stronger against you. Riposte parries your Q or W and stuns you back. If you're locked in, bait out Riposte before you commit.",
+      "trading": [
+        "Bait Riposte with E (Vorpal Spikes) autos first, then cast Q once it's used.",
+        "Never use Q and W together into a ready Riposte; she parries the first one.",
+        "Q the spot she Lunges to, not where she's standing.",
+        "Back off when she's lined up a vital; give her nothing to proc."
+      ],
+      "early": "Farm from behind minions with E and heal off the wave with Carnivore. Don't take trades while Riposte is up.",
+      "spike": "At 5 her R wins extended fights. Feast her only when she's low and her R is down.",
+      "wave": "Let her push and farm under tower. You're stronger in team fights than she is.",
+      "jungle": "Ask for a gank after she's used Riposte; she has to Lunge to escape.",
+      "build": "Grasp. Tank items; armor boots.",
+      "remember": "Bait Riposte first."
     }
   ]
 }

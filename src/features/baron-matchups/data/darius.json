@@ -152,6 +152,24 @@
       "jungle": "He has no escape once E is down. Ask for a gank then and wall-stun him for your jungler.",
       "build": "Grasp of the Undying. Armor boots and Thornmail.",
       "remember": "Wall stun, walk away."
+    },
+    {
+      "champion": "chogath",
+      "rating": "bad",
+      "confidence": "low",
+      "why": "Darius wins long melee fights, and you have no dash to walk away from Hemorrhage stacks. If he dodges your Q and pulls you, your healing can't keep up early. If you're locked in, land Q first and never fight without it.",
+      "trading": [
+        "Q (Rupture) where he walks to farm, then W (Feral Scream) to silence him before he can pull.",
+        "Walk away while he's silenced; don't stay for a long fight.",
+        "Spike him with E (Vorpal Spikes) from range to slow him as he walks in.",
+        "Stand out of the outer edge of his Q (Decimate)."
+      ],
+      "early": "Farm from range with E and heal with Carnivore. Don't take trades without Q ready.",
+      "spike": "At 5 both R's execute. Feast him when he's low and his Hemorrhage stacks have dropped.",
+      "wave": "Let him push and farm under tower; he can't dive you easily early.",
+      "jungle": "Ask for ganks when his E pull is down; your Q and W lock him in place.",
+      "build": "Grasp. Armor boots; tank items.",
+      "remember": "Q and silence, then walk away."
     }
   ]
 }
